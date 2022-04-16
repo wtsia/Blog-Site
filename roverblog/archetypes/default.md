@@ -1,6 +1,7 @@
----
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-draft: true
----
++++
+author = "Winston Tsia"
+authorlink = ""
+title = "{{ replace .Name "-" " " | title }}"
+date = {{ .Date }}
++++
 

@@ -1,8 +1,8 @@
 BaseURL = "http://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-author = "Hugo Authors"
-title = "Vitae"
+author = "Winston Tsia"
+title = "Rover"
 theme = "hugo-vitae"
 paginate = 5
 enableRobotsTXT = true
