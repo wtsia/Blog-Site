@@ -1,4 +1,4 @@
-BaseURL = "http://example.org/"
+BaseURL = "https://wtsia.github.io/rover/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "Winston Tsia"

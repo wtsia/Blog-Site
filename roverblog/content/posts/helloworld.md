@@ -4,13 +4,9 @@ authorlink = "https://gohugo.io"
 title = "Helloworld"
 date = 2022-04-16T03:39:55-07:00
 tags = [
-    "markdown",
-    "css",
-    "html",
-    "themes",
+    "introduction"
 ]
 categories = [
-    "themes",
-    "syntax",
+    "introduction"
 ]
 +++
