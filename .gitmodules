@@ -1,0 +1,4 @@
+[submodule "roverblog/public"]
+	path = roverblog/public
+	url = https://github.com/wtsia/rover.github.io.git
+	branch = main

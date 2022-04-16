@@ -1,0 +1,4 @@
+baseURL = 'https://rover.github.io'
+languageCode = 'en-us'
+title = 'Rover Blog'
+theme = 'hugo-vitae'
