@@ -13,12 +13,12 @@ https://github.com/wtsia/Blog-Site
 
 cd into the public directory, and push changes to the github repo that holds the static assets, in this submodule run:
 
-``
-git status
-git add .
-git commit 'example message'
-git push origin main
-``
+`
+    git status
+    git add .
+    git commit 'example message'
+    git push origin main
+`
 
 ##### Previewing the site 
 In a terminal within the directory of roverblog, run:
