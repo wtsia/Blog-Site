@@ -1,4 +1,4 @@
-BaseURL = "https://wtsia.github.io/rover/"
+BaseURL = "http://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "Winston Tsia"
@@ -34,16 +34,16 @@ googleAnalytics = ""
 	description = "Vitae is a blog theme for Hugo that focuses on your content."
 
 	# Add pagetitle to homepage <title> tag
-	pagetitle = "All about static site generation"
+	pagetitle = "Rover - Explore information by Winston Tsia"
 
 	# Add a subtitle to your website
-	subtitle = "[Vitae](https://github.com/dataCobra/hugo-vitae) is a blog theme for Hugo that focuses on your content."
+	subtitle = "[Rover](https://wtsia.github.io/rover/) is a blog for teaching or relearning concepts."
 
 	# Add math typesetting with KaTeX (Global with this Param)
 	math = true
 
 	# Optional 80x80 avatar image.
-	avatar = "/img/vitae.jpg"
+	avatar = "/img/about.jpg"
 
 	# Optional favicons for website
 	#favicon = true
@@ -90,7 +90,7 @@ enabled = false
 #defer = true
 
 # sets the mode of the request to an http cors request
-#crossorigin=true
+#crossorigin = true
 
 # executes the script asynchronously (external only)
 #async = true
@@ -144,12 +144,12 @@ weight = 5
 [[params.social]]
 name = "Github"
 icon = "fab fa-github"
-url = "https://github.com/dataCobra/hugo-vitae"
+url = "https://github.com/wtsia"
 
 #[[params.social]]
 #name = "Email"
 #icon = "fas fa-envelope"
-#cmd = "mailto:example@example.com"
+#cmd = "mailto:winstontsia@gmail.com"
 
 [[params.social]]
 name = "RSS"
