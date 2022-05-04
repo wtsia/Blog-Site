@@ -7,7 +7,15 @@ https://github.com/wtsia/rover
 Repo for this:
 https://github.com/wtsia/Blog-Site
 
-## Initialization
+## Basics
+##### Previewing the site 
+In a terminal within the directory of roverblog, run:
+`hugo server`
+
+##### Adding new post
+`hugo new posts/[postname].md`
+
+Notes: This new post draws from the content of default.md
 
 ## Themes
 Obtain hugo themes on the hugo site [here](https://themes.gohugo.io/)
@@ -20,4 +28,4 @@ Hugo static site generator
 [Installation](https://gohugo.io/getting-started/installing/) for hugo:
 
 Windows:
-choco install hugo -confirm
+`choco install hugo -confirm`
