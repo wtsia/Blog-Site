@@ -1,4 +1,4 @@
-BaseURL = "http://example.org/"
+BaseURL = ""
 languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "Winston Tsia"
@@ -43,7 +43,7 @@ googleAnalytics = ""
 	math = true
 
 	# Optional 80x80 avatar image.
-	avatar = "/img/about.jpg"
+	avatar = "/about.jpg"
 
 	# Optional favicons for website
 	#favicon = true

@@ -1,7 +1,7 @@
 +++
 author = "Hugo Authors"
 authorlink = "https://gohugo.io"
-title = "Markdown Syntax Guide 01"
+title = "Markdown Syntax Guide 03"
 date = "2019-03-11"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 tags = [
