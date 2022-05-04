@@ -8,6 +8,18 @@ Repo for this:
 https://github.com/wtsia/Blog-Site
 
 ## Basics
+##### Generating Static Files
+`hugo -t hugo-vitae`
+
+cd into the public directory, and push changes to the github repo that holds the static assets, in this submodule run:
+
+`
+git status
+git add .
+git commit 'example message'
+git push origin main
+`
+
 ##### Previewing the site 
 In a terminal within the directory of roverblog, run:
 `hugo server`
@@ -15,7 +27,7 @@ In a terminal within the directory of roverblog, run:
 ##### Adding new post
 `hugo new posts/[postname].md`
 
-Notes: This new post draws from the content of default.md
+Notes: This new post draws from the content of default.md as a template.
 
 ## Themes
 Obtain hugo themes on the hugo site [here](https://themes.gohugo.io/)
@@ -23,9 +35,12 @@ Obtain hugo themes on the hugo site [here](https://themes.gohugo.io/)
 Vitae [here](https://themes.gohugo.io/themes/hugo-vitae/)
 
 ## Tech Stack
-Hugo static site generator
+##### Hugo static site generator
 
 [Installation](https://gohugo.io/getting-started/installing/) for hugo:
 
 Windows:
 `choco install hugo -confirm`
+
+##### Hugo-vitae
+https://github.com/dataCobra/hugo-vitae
