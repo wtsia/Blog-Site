@@ -1,4 +1,4 @@
-BaseURL = ""
+BaseURL = "https://wtsia.github.io/rover/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "Winston Tsia"
@@ -25,7 +25,7 @@ googleAnalytics = ""
 	#darkmode = true
 
 	# Use homepage.md instead of a list of posts
-	homepage = false
+	homepage = true
 
 	# Add meta keywords in head part (Site Keywords or Tags of Page)
 	keywords = ["hugo","vitae","theme","static"]
@@ -49,10 +49,10 @@ googleAnalytics = ""
 	#favicon = true
 
 	# Add list of sections that should show up on the homepage
-	mainSections = ["post"]
+	mainSections = ["posts"]
 
 	# Add list of Sections/Types that should no be considered by RSS
-	#nofeedSections = ["post"]
+	#nofeedSections = [""]
 
 	# Deactivate Taxonomies for specific page types
 	#disableTaxoTypes = [""]
@@ -122,7 +122,7 @@ weight = 1
 
 [[menu.main]]
 name = "All Posts"
-url = "/post"
+url = "/posts"
 weight = 2
 
 [[menu.main]]
