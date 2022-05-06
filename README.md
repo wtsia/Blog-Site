@@ -9,6 +9,8 @@ https://github.com/wtsia/Blog-Site
 
 ## Basics
 ##### Generating Static Files
+in the roverblog directory, in a terminal run:
+
 `hugo -t hugo-vitae`
 
 cd into the public directory, and push changes to the github repo that holds the static assets, in this submodule run:
@@ -19,13 +21,17 @@ git add .
 git commit 'example message'
 git push origin main
 ```
+##### Local environment vs pushing to production
+In local set `baseurl` to `www.example.com`
+
+In production set `baseurl` to active site at `https://wtsia.github.io/rover/`
 
 ##### Previewing the site 
 In a terminal within the directory of roverblog, run:
 
 `hugo server`
 
-##### Adding new post
+##### Adding New Posts
 `hugo new posts/[postname].md`
 
 Notes: This new post draws from the content of default.md as a template.
