@@ -11,6 +11,6 @@ nodate = true
 hidemeta = false
 +++
 
-Home Text
+Welcome! This is a site I've made to keep notes that I'd like LaTeX syntax available for (in the form of KaTeX!). Furthermore, it serves to sort my notes into categories that I can navigate more easily!
 
-Home Text 2
+Bon Voyage!

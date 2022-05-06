@@ -37,7 +37,7 @@ googleAnalytics = ""
 	pagetitle = "Rover - Explore information by Winston Tsia"
 
 	# Add a subtitle to your website
-	subtitle = "[Rover](https://wtsia.github.io/rover/) is a blog for teaching or relearning concepts."
+	subtitle = "[Rover](https://wtsia.github.io/rover/) is a blog for teaching or storing concepts."
 
 	# Add math typesetting with KaTeX (Global with this Param)
 	math = true
