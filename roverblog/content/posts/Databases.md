@@ -9,7 +9,6 @@ tags = [
 categories = [
     "Computer Science"
 ]
-math = true
 notaxonomy = false
 hidden = true
 norobots = true

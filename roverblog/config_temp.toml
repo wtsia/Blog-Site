@@ -1,4 +1,0 @@
-baseURL = 'https://wtsia.github.io/rover/'
-languageCode = 'en-us'
-title = 'Rover'
-theme = 'hugo-vitae'
