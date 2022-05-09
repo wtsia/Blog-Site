@@ -1,7 +1,7 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "Medical Research"
+title = "Medical Research: Methods"
 date = 2022-05-07T12:59:32-07:00
 description = "A Post detailing research methods accessible for the general population in medical research"
 tags = [
