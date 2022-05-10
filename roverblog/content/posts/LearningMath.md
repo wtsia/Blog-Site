@@ -48,4 +48,33 @@ Source: Dr. Trefor Bazett
     - Write out main ideas of a particular subject in a big map
     - Connecting ideas helps to strengthen understanding
 
+#### Learning Effectively
+1. Growth Mindset
+    - A national experiment reveals where growth mindset improves achievement (Yeager, David S. et al)
+    - Positive and Negative mindsets inhibit developing improvments in metrics
+    - Fixed mindsets are bad!
+2. Metacognition (Dr. Sandra McGuire)
+    - When thinking about thinking/learning
+    - Pausing and reflecting on whether you're learning effectively
+    - self-assessment 
+3. Simplify & Explain
+    - Expressing this concept in a way you are able to handle, letting you take ownership of the information being passed through
+    - shows a deeper understanding of material
+    - Feinmann technique
+4. Questions
+    - Ask a lot of questions!
+        - Come up with a list of good questions about that video
+        - Questions that allow more deeper understanding
+5. Intrinsic Motivation
+    - Internal motivation
+        - Applied concepts, while nice, should also have intrinsic joy in concepts within mathematics
 
+Example: Chess
+- Growth Mindset: Improving is only upward!
+- Metacognition: What parts of learning chess was effective/not?
+- Simplify/Explain: Distill general principles of moves
+- Questions: Why did they move this way? Why is this heuristic true?
+- Intrinsic Motivation: want to do it for the game
+
+#### Succeeding in Online Courses
+- 
