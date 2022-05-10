@@ -15,8 +15,6 @@ notaxonomy = false
 hidden = false
 norobots = true
 nodate = true
-images = ["/img/example.jpg"]
-imagetext = "An example text for an image you could add!"
 hidemeta = false
 +++
 
@@ -84,4 +82,52 @@ Example: Chess
 - Work Hard, think of being a student like a profession
 
 #### Tips to Make Practice Effective!
-1. 
+1. Be Concept Focused!
+    - Sense-making: think about why the concept works and what's going on
+2. Big Picture
+    - Try to see how that problem makes sense with your intuitive idea of how the concept works
+3. Make Predictions
+    - tweak problems to see trajectories on how these problems work
+4. Spaced Practice
+    - Do problems that recall information from before and improve long-term retention
+    - Do a bunch of little studying over a long period of time
+5. Interleaving
+    - Mix problems from other sections and multiple sections. Diversity in problem set allows for better long-term retention!
+
+#### 9 Tips to Prove Math Theorems
+1. Identify Logical Structure
+    - Conditional Statement, Biconditional Statement
+2. Proof Methods
+    - Direct Proof: assume p, conclude q
+    - Contrapositive: assume ~q, conclude ~p
+    - Contradiction: assume p, and ~q, and get a contradiction
+    - Counterexample: Find p that implies ~q
+3. Write Down Definitions!
+4. Aim for the Conclusion!
+    - Wherever you start, aim to get to the conclusion!
+5. Understand what the proof is saying
+    - What does this connection look like or mean? Get a large scale understanding
+6. Geometric Picture?
+    - Can you draw a picture that interprets the assumptions or conclusion?
+7. Concrete Example
+    - Valuable in understanding why the conclusion might be connected to the assumption
+8. Relevant Theorems?
+    - What are major theorems in a course? 
+    - Read proofs of relevant theorems
+9. Play Around!
+    - Encourage proving things as an iterative process--growth mindset!
+    - Going down a rabbit hole and trying many things may lead to the solution
+
+#### How to Watch Math Videos
+- Investigate purpose (foundational knowledge)
+- Pause/Rewind/Master
+- Taking notes: Reflecting on your own notes
+- Summarize
+- Test yourself
+- Be engaged
+- Spaced out learning
+
+#### How to use Spaced retrieval to Memorize Facts!
+- Spaced Retrieval Practice
+    - Forgetting Curve have an attenuation time
+![Forgetting Curve](/img/ForgettingCurve.png)
