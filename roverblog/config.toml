@@ -72,7 +72,7 @@ googleAnalytics = ""
 # Custom JavaScript
 [params.customjs]
 # enable Javascript by setting to true
-enabled = false
+enabled = true
 
 # add a filepath (could be "static/js/")
 #src = "js/main.js"

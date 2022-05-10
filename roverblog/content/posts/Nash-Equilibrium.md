@@ -2,7 +2,7 @@
 author = "Winston Tsia"
 authorlink = ""
 title = "Nash Equilibrium"
-description = "Unfinished"
+description = "Needs Editing"
 tags = [
 ]
 categories = [
@@ -16,15 +16,10 @@ nodate = true
 hidemeta = true
 +++
 
-# Nash Equilibrium
+Formally, let $S_{i}$ be the set of all possible strategies for player $i$, where $i = 1, ... , N.$ Let $s^*=(s_{i}^{*},s_{-i}^{*})$ be a strategy profile, a set consisting of one strategy for each player, where $s_{-i}^{*}$ denotes the $N-1$ strategies of all the players except $i$. Let $u_{i}(s_{i},s_{-i}^{*})$ be player $i$'s payoff as a function of the strategies. The strategy profile $s^{*}$is a Nash equilibrium if,
 
-$$ \sqrt{3x-1}+(1+x)^2 $$
+$u_{i}(s_{i}^{*},s_{-i}^{*}) \geq u_{i}(s_{i},s_{-i}^{*})\;\;{\rm {for\;all}}\;\;s_{i}\in S_{i}$
 
-$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
-
-Formally, let \displaystyle S_{i}}S_{i} be the set of all possible strategies for player {\displaystyle i}i, where {\displaystyle i=1,\ldots ,N}{\displaystyle i=1,\ldots ,N}. Let {\displaystyle s^{*}=(s_{i}^{*},s_{-i}^{*})}{\displaystyle s^{*}=(s_{i}^{*},s_{-i}^{*})} be a strategy profile, a set consisting of one strategy for each player, where {\displaystyle s_{-i}^{*}}{\displaystyle s_{-i}^{*}} denotes the {\displaystyle N-1}N-1 strategies of all the players except {\displaystyle i}i. Let {\displaystyle u_{i}(s_{i},s_{-i}^{*})}{\displaystyle u_{i}(s_{i},s_{-i}^{*})} be player i's payoff as a function of the strategies. The strategy profile {\displaystyle s^{*}}s^{*} is a Nash equilibrium if
-
-{\displaystyle u_{i}(s_{i}^{*},s_{-i}^{*})\geq u_{i}(s_{i},s_{-i}^{*})\;\;{\rm {for\;all}}\;\;s_{i}\in S_{i}}{\displaystyle u_{i}(s_{i}^{*},s_{-i}^{*})\geq u_{i}(s_{i},s_{-i}^{*})\;\;{\rm {for\;all}}\;\;s_{i}\in S_{i}}
 A game can have more than one Nash equilibrium. Even if the equilibrium is unique, it might be weak: a player might be indifferent among several strategies given the other players' choices. It is unique and called a strict Nash equilibrium if the inequality is strict so one strategy is the unique best response:
 
 {\displaystyle u_{i}(s_{i}^{*},s_{-i}^{*})>u_{i}(s_{i},s_{-i}^{*})\;\;{\rm {for\;all}}\;\;s_{i}\in S_{i},s_{i}\neq s_{i}^{*}}{\displaystyle u_{i}(s_{i}^{*},s_{-i}^{*})>u_{i}(s_{i},s_{-i}^{*})\;\;{\rm {for\;all}}\;\;s_{i}\in S_{i},s_{i}\neq s_{i}^{*}}
