@@ -77,4 +77,11 @@ Example: Chess
 - Intrinsic Motivation: want to do it for the game
 
 #### Succeeding in Online Courses
-- 
+- Practice math!
+- Be as socially interactive as possible
+- Do active assessment of your own learning capabilites, take record of what you understand and don't
+- Growth Mindset
+- Work Hard, think of being a student like a profession
+
+#### Tips to Make Practice Effective!
+1. 
