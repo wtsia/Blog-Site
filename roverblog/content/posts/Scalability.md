@@ -44,7 +44,7 @@ Running on many, slower machines instead of one fast machine
 
 #### Load Balancing:
 - distributes traffic from clients among servers
-- What IP address should we return when a clien enters a website address
+- What IP address should we return when a client enters a website address
     - can return via the load balancer instead of DNS returning server #
 - Private IPs are localized and not seen by the public 
 
@@ -59,7 +59,7 @@ Running on many, slower machines instead of one fast machine
 - Caching issues: powerusers can still put heavy load on a single server
 
 - How to solve the problem: Sessions typically implemented per server, you can't use RR, cant use true load balancing
-    - i.e. user Alice being able to keep sessions in server 1 over and over to be usefu;
+    - i.e. user Alice being able to keep sessions in server 1 over and over to be useful
 - What if you turn the load balancer into a server that stores sessions? Well what if it dies? What are the redundancies?
     - Instead, we can use RAID, Redundant Array of Independent Disks
         - RAID0,1,...10..

@@ -13,7 +13,7 @@ categories = [
 ]
 math = true
 notaxonomy = false
-hidden = false
+hidden = true
 norobots = true
 nodate = true
 images = ["/img/example.jpg"]

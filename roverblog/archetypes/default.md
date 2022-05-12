@@ -14,10 +14,8 @@ categories = [
 ]
 math = true
 notaxonomy = false
-hidden = false
+hidden = true
 norobots = true
 nodate = true
-images = ["/img/example.jpg"]
-imagetext = "An example text for an image you could add!"
 hidemeta = false
 +++

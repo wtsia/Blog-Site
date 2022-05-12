@@ -1,9 +1,9 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "LearningMath"
+title = "Learning Math"
 date = 2022-05-10T01:26:45-07:00
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+description = "Post detailing how to learn math!"
 tags = [
     "Studying",
 ]
@@ -12,10 +12,12 @@ categories = [
 ]
 math = true
 notaxonomy = false
-hidden = false
+hidden = true
 norobots = true
 nodate = true
 hidemeta = false
+images = ["/img/ForgettingCurve.png"]
+imagetext = "An example text for an image you could add!"
 +++
 
 Source: Dr. Trefor Bazett
@@ -130,4 +132,3 @@ Example: Chess
 #### How to use Spaced retrieval to Memorize Facts!
 - Spaced Retrieval Practice
     - Forgetting Curve have an attenuation time
-![Forgetting Curve](/img/ForgettingCurve.png)

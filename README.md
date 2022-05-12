@@ -41,7 +41,7 @@ Obtain hugo themes on the hugo site [here](https://themes.gohugo.io/)
 
 Vitae [here](https://themes.gohugo.io/themes/hugo-vitae/)
 
-## Tech Stack
+## Technologies
 ##### Hugo static site generator
 
 [Installation](https://gohugo.io/getting-started/installing/) for hugo:
@@ -51,3 +51,6 @@ Windows:
 
 ##### Hugo-vitae
 https://github.com/dataCobra/hugo-vitae
+
+##### KaTeX
+Supported Functions: https://katex.org/docs/supported.html
