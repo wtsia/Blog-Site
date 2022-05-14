@@ -46,7 +46,7 @@ Running on many, slower machines instead of one fast machine
 - distributes traffic from clients among servers
 - What IP address should we return when a client enters a website address
     - can return via the load balancer instead of DNS returning server #
-- Private IPs are localized and not seen by the public 
+- Private IPs are localized and not seen by the public
 
 - How does a load balancer decide what data to get from the backend servers?
     - can make dedicated headed servers or scale to identical codebases across servers
@@ -154,7 +154,7 @@ As soon as you have too many users, new problems arise
 - When codebases are uniform, you can create an image (Amazon Machine Image for AWS) as a 'super clone' from which to draw from
 
 #### Summary: 
-updating the codebase uniformly requires access to a central db or persistent cache, using a tool liek Capistrano, then forming a 'super clone' to propogate further.
+updating the codebase uniformly requires access to a central db or persistent cache, using a tool like Capistrano, then forming a 'super clone' to propogate further.
 
 ## Database
 - Even with horizontal scaling, MySQL leads to slower performance and eventual breakdown.
