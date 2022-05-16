@@ -20,6 +20,20 @@ hidemeta = false
 +++
 
 # Python
+## Basics
+`#` is used for comments to the right
+
+Numbers: categorized as integers or floats
+
+Strings: a sequence of characters, can specify using single quotes
+- `'this is a quote'`
+- Multi-line: `"""` or `'''`
+- are immutable
+- C++ users: there is not separate `char` data type in Python.
+
+Format Method: `format()`
+- construct strings from information
+
 ## Data Structures
 - List: holds an ordered collection of items
     - can store sequential items in a list
@@ -31,3 +45,7 @@ hidemeta = false
 - ` i = 5 `
     - an object is created, `i` of class `int`. Use `help(int)` for a detailed explanation.
 - class: can have methods
+- functionality is usable when applied to an object of 'subject' class
+    - i.e. `append` method for `list` class
+        - `mylist.append('an item')`
+- fields: variables defined for use with respect to that class
