@@ -73,7 +73,42 @@ What if you want to use a character that python interprets, like single quotes? 
 - Logical Line: What Python sees
 - Recommendation: stick to writing a maximum of a single logical line on each single physical line.
     - there should never be a need to use a semicolon!
-- 
+- explicit line joining: if you have a long line of code, break it into multiple physical lines using the backslash.
+- implicit line joining: starting a logical line with a parentheses, square brackets, or curly braces, but not ending in one. 
+
+### Indentation
+- Indentation: Whitespace at the beginning of the line
+
+## Operators and Expressions
+- Only non-intuitive uses will be listed
+    - `**`: exponent
+    - `//`: divide and floor
+    - `%`: modulo 
+    - `<<, >>`: left, right shift, shifts the bits of the numbers to the left/right of specified object. 
+        - `2 << 2` gives `8`. 2 is represented by 10 in bits. left shifting by 2 bits gives 1000 which represents the decimal `8`.
+        - `11 >> 1` gives `5`. 11 is represented by 1011 and one right shift gives 101, which is the decimal 5.
+    - `&`: bit-wise AND
+        - if both bits are 1, the result is 1, otherwise 0
+        - `4 & 3 == 0101 & 0011 == 0001 == 1`
+    - `|`: bit-wise OR
+        - if both bits are 0, the result is 0, otherwise 1.
+            - `5 | 3 == 0101 | 0011 == 0111 == 7`
+    - `^`: bit-wise XOR
+        - if bits are the same, result is 0. Otherwise 1.
+            - `5 ^ 3 == 0101 ^ 0011 == 0110 == 6`
+    - `~`: bit-wise invert
+        - bit-wise inversion of x is -(x+1)
+    - inequalities (<, >, <=, !=, etc)
+        - returns True or False
+    - `not`: boolean NOT
+
+### Shortcut for math operation and assignment
+`a = a*3 == a *= 3`
+
+### Evaluation Order
+- PEMDAS, Left-Right
+
+## Functions
 
 
 ## Data Structures
