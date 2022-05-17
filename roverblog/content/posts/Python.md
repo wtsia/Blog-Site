@@ -71,6 +71,10 @@ What if you want to use a character that python interprets, like single quotes? 
 ### Logical and Physical Line
 - Physical Line: What you see
 - Logical Line: What Python sees
+- Recommendation: stick to writing a maximum of a single logical line on each single physical line.
+    - there should never be a need to use a semicolon!
+- 
+
 
 ## Data Structures
 ### Data Types
