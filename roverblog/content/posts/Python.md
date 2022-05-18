@@ -114,8 +114,26 @@ What if you want to use a character that python interprets, like single quotes? 
 ### Local Variables
 - When declaring variables inside a function definition, they only relate to its respective scope. All variables have the scope of the block starting from the point of definition of the name.
 - `global`: tells Python that the variable is not local, but global.
-- `def say(variable=#)`: you can assign a default value for a variable.
--  
+- `def say(variable=#)`: you can assign a default value for a variable. (should be constant)
+
+### Keyword Arguments
+Applying keyword arguments, where the use of the name instead of the position specifies the argument to the function.
+- `*varArgs` parameters: *=tuples, **=dictionary used if you want to define a function that can take any number of arguments.
+- `return`: used to break out
+
+### DocStrings
+documentation strings helps document the program better and more understandable.
+
+```
+'''Description of program.
+
+Conditional information for user.'''
+```
+
+- Note: DocStrings apply to modules and classes.
+- *Convention*: multi-line string where first line starts with a capital letter and ends with a dot. Then a second line is blank followed by any detailed explanation starting from the third line. (important for non-trivial functions!)
+
+### Modules
 
 ## Data Structures
 ### Data Types
