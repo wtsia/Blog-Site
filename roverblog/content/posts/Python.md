@@ -109,7 +109,13 @@ What if you want to use a character that python interprets, like single quotes? 
 - PEMDAS, Left-Right
 
 ## Functions
+- names given to functions are parameters, while values supplied to a function are called arguments
 
+### Local Variables
+- When declaring variables inside a function definition, they only relate to its respective scope. All variables have the scope of the block starting from the point of definition of the name.
+- `global`: tells Python that the variable is not local, but global.
+- `def say(variable=#)`: you can assign a default value for a variable.
+-  
 
 ## Data Structures
 ### Data Types
