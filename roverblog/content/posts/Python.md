@@ -168,6 +168,7 @@ The PYTHONPATH is ['/tmp/py',
 2. white modules in a native lang - can store sequential items in a list
     ` ['put stuff in this'] `
     - mutability: able to be manipulated
+-test
 
 ### Quick and Dirty: Objects and Classes
 - list is an example of using objects and classes
