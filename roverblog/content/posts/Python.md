@@ -134,12 +134,38 @@ Conditional information for user.'''
 - *Convention*: multi-line string where first line starts with a capital letter and ends with a dot. Then a second line is blank followed by any detailed explanation starting from the third line. (important for non-trivial functions!)
 
 ### Modules
+- Methods of using modules 
+1. create a file with a `.py` extension containing functions and variables
+2. white modules in a native language the Python interpreter is written, like the C programming language, and when compiled, can be used from your Python code. 
+- `import sys` imports module `sys`.
 
-## Data Structures
-### Data Types
-- Python is heavily Object-oriented, in that everything is an object including numbers, strings, and functions
-- List: holds an ordered collection of items
-    - can store sequential items in a list
+```
+import sys
+
+print('The command line arguments are:')
+for i in sys.argv:
+    print(i)
+
+print('\n\nThe PYTHONPATH is', sys.path, '\n')
+```
+Output:
+```
+$ python module_using_sys.py we are arguments    # each arg is separated by white space
+The command line arguments are:
+module_using_sys.py
+we
+are
+arguments
+
+
+The PYTHONPATH is ['/tmp/py',
+# many entries here, not shown here
+'/Library/Python/2.7/site-packages',
+'/usr/local/lib/python2.7/site-packages']
+```
+- Methods of using modules 
+1. create a file with a `.py` extension containing functions and variables
+2. white modules in a native lang - can store sequential items in a list
     ` ['put stuff in this'] `
     - mutability: able to be manipulated
 
