@@ -19,7 +19,6 @@ nodate = true
 hidemeta = false
 +++
 
-# Python
 ## Basics
 `#` is used for comments to the right
 
@@ -163,12 +162,25 @@ The PYTHONPATH is ['/tmp/py',
 '/Library/Python/2.7/site-packages',
 '/usr/local/lib/python2.7/site-packages']
 ```
+
+- searches for the imported module within Python then in `sys.path` directories
+- program iterates through statements then makes them available for use
+- name of running script is always the first elemnt in `sys.argv` list
+- `sys.path` has the first string empty, meaning the current directory is part of the `sys.path == PYTHONPATH` environment variable.
+- when using an IDE, look for a way to specify command line arguments to the program in the menus
+
+#### Module anatomy
+- modules have names, and statements can find out the name of their module
+- 
+
 - Methods of using modules 
 1. create a file with a `.py` extension containing functions and variables
+    - importing modules can use byte-compiled files `.pyc`
 2. white modules in a native lang - can store sequential items in a list
     ` ['put stuff in this'] `
     - mutability: able to be manipulated
--test
+
+
 
 ### Quick and Dirty: Objects and Classes
 - list is an example of using objects and classes
