@@ -171,19 +171,24 @@ The PYTHONPATH is ['/tmp/py',
 
 #### Module anatomy
 - modules have names, and statements can find out the name of their module
-- 
-
+    - good for figuring out whether the module is standalone or imported
+- importing a module, code gets executed
 - Methods of using modules 
 1. create a file with a `.py` extension containing functions and variables
     - importing modules can use byte-compiled files `.pyc`
 2. white modules in a native lang - can store sequential items in a list
     ` ['put stuff in this'] `
     - mutability: able to be manipulated
+##### WARNING: Remember that you should avoid using import-star, i.e. from mymodule import *.
 
+##### Functions:
+- `dir()`: returns the list of names defined by an object, and for modules, lists functions, classes, and variables
 
+##### Summary:
+Just like functions are reusable parts of programs, modules are reusable programs. Packages are another hierarchy to organize modules. The standard library that comes with Python is an example of such a set of packages and modules.
 
 ### Quick and Dirty: Objects and Classes
-- list is an example of using objects and classes
+- `list` is an example of using objects and classes
 - ` i = 5 `
     - an object is created, `i` of class `int`. Use `help(int)` for a detailed explanation.
 - class: can have methods
