@@ -109,6 +109,7 @@ What if you want to use a character that python interprets, like single quotes? 
 
 ## Functions
 - names given to functions are parameters, while values supplied to a function are called arguments
+- `len()`: gives length of list
 
 ### Local Variables
 - When declaring variables inside a function definition, they only relate to its respective scope. All variables have the scope of the block starting from the point of definition of the name.
@@ -191,8 +192,28 @@ Just like functions are reusable parts of programs, modules are reusable program
 - `list` is an example of using objects and classes
 - ` i = 5 `
     - an object is created, `i` of class `int`. Use `help(int)` for a detailed explanation.
-- class: can have methods
+- **Class**: can have methods
 - functionality is usable when applied to an object of 'subject' class
     - i.e. `append` method for `list` class
         - `mylist.append('an item')`
-- fields: variables defined for use with respect to that class
+- **Fields**: variables defined for use with respect to that class
+- `sort()`: sorts said list. Immutable vs mutable: returns unmodified list vs returning modified
+- `del list[0]`: deletes some object, in this case `list[0]`
+- **Tuple**: holds together multiple objects. Lists without extensive functionality. Like strings they are immutable.
+    - use-case: when the objects the Tuple is dealing with will not change
+    - defined by specifying items by commas within an optional pair of parenthesis i.e.:
+        - `zoo = ('python', 'elephant', 'penguin')`
+- **Dictionary**: An address book that has associated keys (names) and values (details).
+    - keys must be unique and immutable (like strings)
+    - values may be immutable or mutable
+    - key-value pairs are stored with colons separating keys to values, and commas to each pair, all in curly brackets:
+        - `d = {key1 : value1, key2 : value2 }`
+        - key-value pairs in dictionaries are not ordered, therefore sorting is required when necessary before using
+- **Sequence**: List, Strings, and Tuples are sequences--what is this? They are characterized by two things: 
+    1. membership tests and 
+    2. indexing operations
+    - Also have *slicing* operations, or in my own words a range/partition of values in the sequence. (`[a:b]` or for a full slice, `[:]`)
+- **Set**: unordered collection of objects. Useful for verifying existence of an object in a collection over occurrences. 
+    - Can test for membership
+- **References**: when an object is created and assigned to a variable, or *binding* the name to the object, the var only points to the object, or references it.
+- **Strings** (More): Strings are also objects with methods to strip space as well as checking parts
