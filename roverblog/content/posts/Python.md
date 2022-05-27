@@ -110,6 +110,8 @@ What if you want to use a character that python interprets, like single quotes? 
 ## Functions
 - names given to functions are parameters, while values supplied to a function are called arguments
 - `len()`: gives length of list
+- `.path.exists()`: checks if a path exists
+- `input()`: inquires for input
 
 ### Local Variables
 - When declaring variables inside a function definition, they only relate to its respective scope. All variables have the scope of the block starting from the point of definition of the name.
