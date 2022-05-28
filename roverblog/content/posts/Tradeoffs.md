@@ -42,8 +42,7 @@ Determining how to trade performance or scalability comes down to good planning
 - aim: max throughput, acceptable latency
     - memory bandwidth sometimes used to specify throughput of memory systems
 
-#### Summary:
-increase actions/results per time at acceptable performance
+>Summary: increase actions/results per time at acceptable performance
 
 ### Availability vs consistency
 - CAP Theorem: Consistency, Availability, Partition Tolerance. Theorem states in a distributed computer system, you can only support two of the guarantees from CAP.
@@ -57,8 +56,7 @@ increase actions/results per time at acceptable performance
             - responds with most readily available version of data available on any node (may not be latest)
             - good for business needs eventual consistency or continued function despite external errors
 
-#### Summary:
-CAP Theorem, Consistence, Availability, and Partition Tolerance, where common patterns are CP, consistency part for atomic reads and writes, or AP availability part which responds with most readily available ver of data on any node, which is good for eventual consistency or function during external errors.
+>Summary: CAP Theorem, Consistence, Availability, and Partition Tolerance, where common patterns are CP, consistency part for atomic reads and writes, or AP availability part which responds with most readily available ver of data on any node, which is good for eventual consistency or function during external errors.
 
 ### Consistency Patterns
 Now we are faced with options on how to synchronize them so clients have a consistent view of data.
@@ -70,8 +68,7 @@ Now we are faced with options on how to synchronize them so clients have a consi
 - Strong consistency: after write, read will see it, data is replicated synchronously
     - used in file systems like RDBMSes, or systems that need transactions
 
-#### Summary: 
-Weak, Eventual, and Strong differ by how accurately a write will be able to be be seen by a read, where Strong will have reads able to read writes right after execution, and goes in example ranking weakest to strongest from Video Chat, to email, to file systems.
+>Summary: Weak, Eventual, and Strong differ by how accurately a write will be able to be be seen by a read, where Strong will have reads able to read writes right after execution, and goes in example ranking weakest to strongest from Video Chat, to email, to file systems.
 
 ### Availability Patterns
 2 complementary patterns: fail-over and replication

@@ -44,20 +44,20 @@ hidemeta = true
         - Latency between hosts can change bc of connectivity and routing, and routing is based on latency measuerements performed over a period of time. 
         - AWS Latency Routing: ![link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency)
 
-        - Summary: Record of connection from X (user) to multiple Y databases are stored, and queries from X will have the load balancer will iterate through this record and respond with lowest latency Y database is relative to X.
+>Summary: Record of connection from X (user) to multiple Y databases are stored, and queries from X will have the load balancer will iterate through this record and respond with lowest latency Y database is relative to X.
 
-    - Geolocation-based:
-        - responds with location that DNS queries originate from.
-        - allows localizing content and present some/all language of users.
-        - also allows for content restriction
-        - can route users consistently to same end-point
-        - priority goes to the smallest geographic regions
-        - usage:
-            - maps IP to locations
-            - some not mapped, so Amazon R53 will recieve DNS queries from unidentified, and thus can create default record from IP not mapped to any location and queries from locations no geolocation records exist for. No default means R53 returns "no answer".
-        - ![link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo)
+- Geolocation-based:
+    - responds with location that DNS queries originate from.
+    - allows localizing content and present some/all language of users.
+    - also allows for content restriction
+    - can route users consistently to same end-point
+    - priority goes to the smallest geographic regions
+    - usage:
+        - maps IP to locations
+        - some not mapped, so Amazon R53 will recieve DNS queries from unidentified, and thus can create default record from IP not mapped to any location and queries from locations no geolocation records exist for. No default means R53 returns "no answer".
+    - ![link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo)
 
-        - Summary: A record of locations (and default) are made to which DNS queries will be sent to nearest mapped geographies
+>Summary: A record of locations (and default) are made to which DNS queries will be sent to nearest mapped geographies
 
 - Disadvantages of DNS
     - Accessing introduces slight delay but mitigated by caching

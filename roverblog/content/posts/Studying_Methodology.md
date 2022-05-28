@@ -48,4 +48,46 @@ Source: ![Youtube](https://www.youtube.com/watch?v=--Hu2w0s72Y&t=11s)
 - Retrieval Techniques are easier to learn
 ### Why does Active Recall Work?
 - it mitigates the functional forgetting that occurs with normal learning, such that the forgetting curve gets more steep
-- 
+- at the end of the week, revision solidifies it further
+- but: this method has diminishing returns!!
+    - Success bias
+    - Survivor bias
+
+# 2 Basic Steps
+Source ![Youtube](https://www.youtube.com/watch?v=VcT8puLpNKA)
+
+## 1. Principle of Encoding
+- Orders of Learning
+    - Higher-order
+        - signed by explaining complicated concepts simply
+    - Lower-order
+    - Bloom's Taxonomy (descending)
+        1. create
+        2. evaluate 
+        3. analyze 
+        4. apply
+        5. understand
+        6. remember
+- Sensory information should be encoded straight into long-term memory! (want to jump straight to applying)
+
+>**Solo Taxonomy**: implementing the bigger picture activates higher-order learning--relate information to each other and the bigger picture!
+
+- Aim for higher-order learning early, and early, i.e.: 
+    - Organize ideas in the bigger picture
+    - Where does it connect
+    - How does it fit
+    - Optimizing organization
+
+## 2. Encoding Tolerance
+- Become more familiar with training with encoding
+- Linear notes are not effective: like here! Which means offloading work to low-load
+- **Practice holding off on taking notes and ask yourself how it relates to the bigger picture**
+
+#### Techniques: 
+- Interleaving
+- Microlearning
+- Revision
+- Mind Maps
+- Chunk Mapping
+
+>If you're not proficient, consider taking it down a notch with lower learning then moving it upward towards higher-learning
