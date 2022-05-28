@@ -219,3 +219,16 @@ Just like functions are reusable parts of programs, modules are reusable program
     - Can test for membership
 - **References**: when an object is created and assigned to a variable, or *binding* the name to the object, the var only points to the object, or references it.
 - **Strings** (More): Strings are also objects with methods to strip space as well as checking parts
+
+## Software Development Process
+1. What (Analysis)
+2. How (Design)
+3. Do it (Implementation)
+4. Testing (Testing and Debugging)
+5. Use (Operation or Deployment)
+6. Maintain (Refinement)
+
+## Object Oriented Programming
+- procedure-oriented programming: designing programs around blocks of statements which manipulate data
+- **class**: new type of object
+- **object**: instances of the class
