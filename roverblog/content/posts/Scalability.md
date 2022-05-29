@@ -88,13 +88,13 @@ Load Balancers:
     - PHP Accelerator: allows keeping PHP op-codes so compiled results dont get thrown away
         - similar to python, .py and .pyc
 
-Caching:
-    - .html, MySQL, Query Cache
-    - Craigslist, throws back an .html page
-        - advantage: if storing .html, dont have to regenerate it everytime. 
-        - disadvantage: changing aesthetics of the page is now non-trivial, requiring changes among 10s of thousands of files, so a massive find and replace/regeneration of those pages
-            - redundancies exist, every page has the same tag
-            - better performance over disk space
+##### Caching:
+- .html, MySQL, Query Cache
+- Craigslist, throws back an .html page
+    - advantage: if storing .html, dont have to regenerate it everytime. 
+    - disadvantage: changing aesthetics of the page is now non-trivial, requiring changes among 10s of thousands of files, so a massive find and replace/regeneration of those pages
+        - redundancies exist, every page has the same tag
+        - better performance over disk space
 
 - MySQL Query Cache
 - Memcached - memory cached
@@ -117,7 +117,7 @@ Caching:
 - want property of sticky sessions
 - to ensure saving the session, have the LB insert a cookie that allows it to remember the user is in server 1
 - stick db on web server itself
-- persistent actions arent saved in other servers unless LB sends the user to the same server
+- persistent actions aren't saved in other servers unless LB sends the user to the same server
 - in this example, LB needs to be done in code
 - would be done with switches, so have 2 switches
 - power goes out? 
@@ -137,9 +137,9 @@ Datacenter 2:
     - Offload SSL to LB or a special device and keep everything else encrypted
     - LB --> web server, TCP 80
     - LB --> DB, TCP 3306
-        - why separate encryptions? You should have **principle of least privledge**, so people cannot query db directly.
+        - why separate encryptions? You should have **principle of least privilege**, so people cannot query db directly.
 
-#### Summary: 
+> Summary: 
 As soon as you have too many users, new problems arise
 
 
@@ -153,7 +153,7 @@ As soon as you have too many users, new problems arise
 
 - When codebases are uniform, you can create an image (Amazon Machine Image for AWS) as a 'super clone' from which to draw from
 
-#### Summary: 
+> Summary: 
 updating the codebase uniformly requires access to a central db or persistent cache, using a tool like Capistrano, then forming a 'super clone' to propogate further.
 
 ## Database
@@ -169,7 +169,7 @@ DBA will use terms like 'sharding', 'denormalization', and 'SQL tuning'.
 #### Path 2:
 denormalize from the beginning and include no Joins in any db query. Use MySQL as NoSQL if staying, or switch to an easier NoSQL i.e. MongoDB, CouchDB. Joins in app code (sooner the better). Even so, db requests will again be slower and slower and need a cache.
 
-#### Summary of 2 paths: 
+> Summary of 2 paths: 
 (1) Use MySQL and apply master-slave replication and expanding RAM on the master server, and (2) remove joins in db query and convert the MySQL to a NoSQL in usage or migrate to MongoDB, CouchDB and place joins in app code.
 
 ## Cache
@@ -179,7 +179,7 @@ denormalize from the beginning and include no Joins in any db query. Use MySQL a
 
 - 1st app should retrieve from cache, only then from the data source, since CACHE is fast and holds every dataset in RAM. 
 
-#### Summary: 
+> Summary: 
 Cacheing is faster, but never do file-based. It is stored as a key-value between app and storage, and any query should first go down the chain from the cache, then and only then to the source.
 
 2 data caching patterns:
@@ -189,8 +189,8 @@ Cacheing is faster, but never do file-based. It is stored as a key-value between
 - Hashed ver. of query is cache key
 - issues: expiration, it is hard to delete cache if it is a complex query, and changing one table cell would require deleting all cached queries including that table cell
 
-#### Summary: 
-hashed version of query is stored as cache key for the dataset in the cache, but maye have issues with complex queries or changing a table cell.
+> Summary: 
+hashed version of query is stored as cache key for the dataset in the cache, but may have issues with complex queries or changing a table cell.
 
 #### Cached Objects
 - Preferable pattern
@@ -209,8 +209,8 @@ hashed version of query is stored as cache key for the dataset in the cache, but
 - Redis: has extra db features like persistence, built-in data structures i.e. sets and lists
 Memacached: if only caching, and scales easily
 
-#### Summary: 
-Cached Objects is the preferred pattern, where the class stores complete instance in cache after assembly. If change occurs, discard object, and allows asynch. Redis is more feature rich in caching. 
+> Summary: 
+Cached Objects is the preferred pattern, where the class stores complete instance in cache after assembly. If change occurs, discard object, and allows asynchronism. Redis is more feature rich in caching. 
 
 ## Asynchronism
 - Imagine buying bread and being told to wait for 2 hours before it's ready--asynch avoids this
@@ -224,7 +224,7 @@ Cached Objects is the preferred pattern, where the class stores complete instanc
 - Pre-computing makes websites and apps performant and scalable
 - Imagine the scalability of your website if the script would upload these pre-rendered HTML pages to AWS S3 or Cloudfront or another Content Delivery Network!
 
-##### Summary: 
+> Summary: 
 Preloading dynamic pages into static HTML allows serving at low request times, and computing tasks done regularly.
 
 #### Async #2
@@ -235,7 +235,7 @@ What if there is something that can't be pre-loaded, or a query that is custom?
 - Have a queue of tasks for worksers
 - Time consuming? do it asynchronously
 
-#### Summary: 
+> Summary: 
 Second method of asynch is to queue tasks, and using systems to implenet asynchronous processing like ActiveMQ or Redis list
 
 # Google I/O 2009 - Transactions Across Datacenters..
@@ -326,7 +326,7 @@ Cons:
     - Granularity matters
 - Datastore: current
 
-###### Master/Master Replication
+##### Master/Master Replication
 - Umbrella term for merging concurrent writes
 - Asynchronous, eventual consistency
 - Need Serialization protocol
@@ -336,10 +336,10 @@ Cons:
 - No global transactions
 - Datastore: no strong consistency
 
-###### Tree Replication
+##### Tree Replication
 - Creates slaves, and one slave/master. Said slave/master creates replicated slaves
 
-###### Buddy Replication
+##### Buddy Replication
 - Replicates to each corresponding node, where a backup is kept of another Node/Data, Node A Data A Backup E --> Node B Data B Backup A --> ... --> Node E Data E Backup D --> Backup E
 - upon failure of one, the backup responsibility and data is pushed to the node following the failed server, and the backup of the failed server is kept in the server following the followed server.
 
