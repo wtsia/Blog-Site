@@ -3,10 +3,10 @@ author = "Winston Tsia"
 authorlink = ""
 title = "Macroeconomics"
 date = 2022-05-29T02:18:43-07:00
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+description = "Macroeconomics Notes"
 tags = [
     "Macroeconomics",
-    "",
+    "Economic History",
 ]
 categories = [
     "Economics"

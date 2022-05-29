@@ -1,9 +1,9 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "Learning Math"
-date = 2022-05-10T01:26:45-07:00
-description = "Post detailing how to learn!"
+title = "Studying Methodology"
+date = 2022-05-28T01:26:45-07:00
+description = "Strategies on applying encode learning"
 tags = [
     "Studying",
 ]
