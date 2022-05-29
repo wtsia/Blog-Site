@@ -18,3 +18,6 @@ Computing is not only scalable, but the way forward as human society tackles mor
 Hobbies: Table Tennis (SH Attacker), Bodybuilding/Calisthenics (81+kg)
 
 Other Topics of Interest: Economics, Math, Cryptography, Philosophy, Veganism
+
+Links:
+[Portfolio Site](https://wtsia.github.io/Portfolio-Website/)
