@@ -42,7 +42,7 @@ hidemeta = true
                 - Router 53 refers to its data on latency between London and Singapore and between London and Oregon region
                 - If Latency is lover btwn London & Oregon regions, Route 53 gives query an IP for Oregon LB. If latency is lower between London and the Singapore region, R53 responds with IP for the singapore LB.
         - Latency between hosts can change bc of connectivity and routing, and routing is based on latency measuerements performed over a period of time. 
-        - AWS Latency Routing: ![link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency)
+        - AWS Latency Routing: [link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency)
 
 >Summary: Record of connection from X (user) to multiple Y databases are stored, and queries from X will have the load balancer will iterate through this record and respond with lowest latency Y database is relative to X.
 
@@ -55,7 +55,7 @@ hidemeta = true
     - usage:
         - maps IP to locations
         - some not mapped, so Amazon R53 will recieve DNS queries from unidentified, and thus can create default record from IP not mapped to any location and queries from locations no geolocation records exist for. No default means R53 returns "no answer".
-    - ![link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo)
+    - [link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo)
 
 >Summary: A record of locations (and default) are made to which DNS queries will be sent to nearest mapped geographies
 

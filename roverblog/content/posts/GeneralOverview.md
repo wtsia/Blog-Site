@@ -97,7 +97,7 @@ O(1), O(log n), O(n), O(n log n), O(n^2), O(2^n), O(n!)
     - vertices of 3 places, where distance between a home node to a destination is 8 (home to secondary) + 8 (secondary to destination) on one end and a direct edge of 20 (home to destination) on the other
         - BFS gives shortest path by vertices, not by weight (length), so use Dijkstra's Algorithm
 ##### Dijkstra's Algorithm
-- ![Computerphile - Dijikstra's Algorithm](https://www.youtube.com/watch?v=GazC3A4OQTE)
+- [Computerphile - Dijikstra's Algorithm](https://www.youtube.com/watch?v=GazC3A4OQTE)
 - A path-finding algorithm, useful for routing
 - Analogy: Roads
     - Smaller = better
