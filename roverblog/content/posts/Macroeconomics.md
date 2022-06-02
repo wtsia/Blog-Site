@@ -40,3 +40,10 @@ where $M$ is the stock of money, $V$ is velocity of circulation, $P$ is the pric
 $M = kPy$ 
 
 where $M$ is the stock of money in circulation, $k$ is the desired cash balance ratio, i.e., the ratio of the nominal money supply to nominal income, $P$ is the price level of the national product, and $y$ is real national income or the national product valued at constant prices. 
+
+#### Economic Lessons from Japan
+- 1985, Japan has finally recovered from impacts of WW2
+
+##### **The Plaza Accord**
+- Preface: Japan was sustaining XX% growth, but this was weaning off and the US was concerned by competition from West Germany and Japan, however mutual trade war was not beneficial
+- Solution: Artificially lower the value of the US Dollar relative to the currencies of West Germany and Japan
