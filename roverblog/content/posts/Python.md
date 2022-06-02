@@ -230,5 +230,54 @@ Just like functions are reusable parts of programs, modules are reusable program
 
 ## Object Oriented Programming
 - procedure-oriented programming: designing programs around blocks of statements which manipulate data
-- **class**: new type of object
+- OOP: combining data and functionality  inside an object
+    - subtypes in OOP: class and object.
+- **class**: new type
 - **object**: instances of the class
+    - example: `int`, variables that store integers are instances of the `int` class
+- Note for Static Language Programmers: Integers are treated as objects (of the `int` class). This is unlike C++ and Java, where integers are primitive native types
+- Objects store data using ordinary vars that belong to the object called *fields*
+    - two types of fields: 
+        - **instance variable**: belong to each instance/object of the class
+        - **class variables**: belong to the class itself 
+- **methods**: functions that belong to a class
+- fields and methods can be referred to as attributes of that class
+- **class** is created using the `class` keyword. Fields/methods of the class are listed in an indented block
+
+### Introduction to `self`
+- class methods must have an extra first name that has to be added to the beginning of the parameter list
+- do not give a value for the parameter when calling the method, Python will provide a variable that refers to the object itself `self`
+> Note: any name may be given to this parameter, but it is strongly recc'd to use `self`
+
+> Note for C++/Java/C# Programmers: The self in Python is equivalent to the this pointer in C++ and the this reference in Java and C#.
+
+Example:
+```
+class Person:
+    pass  # An empty block
+
+p = Person()
+print(p)
+
+# Output:
+# $ python this_simplestclass.py
+# <__main__.Person instance at 0x10171f518>
+```
+### Methods
+```
+class Person:
+    def say_hi(self):
+        print('Hello, how are you?')
+
+p = Person()
+p.say_hi()
+# The previous 2 lines can also be written as
+# Person().say_hi()
+# Output:
+# $ python this_method.py
+# Hello, how are you?
+```
+
+### The __init__ method
+- method is used to do any initialization, or passing initial values to your object
+- 
