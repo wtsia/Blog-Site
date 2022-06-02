@@ -47,3 +47,6 @@ where $M$ is the stock of money in circulation, $k$ is the desired cash balance 
 ##### **The Plaza Accord**
 - Preface: Japan was sustaining XX% growth, but this was weaning off and the US was concerned by competition from West Germany and Japan, however mutual trade war was not beneficial
 - Solution: Artificially lower the value of the US Dollar relative to the currencies of West Germany and Japan
+
+#### Types of Goods
+- Veblen Goods: Consumption increases demand
