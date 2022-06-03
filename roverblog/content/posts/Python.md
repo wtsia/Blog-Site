@@ -280,4 +280,77 @@ p.say_hi()
 
 ### The __init__ method
 - method is used to do any initialization, or passing initial values to your object
-- 
+- the `__init__` method does not need to be explicitly called
+
+### Class and Object Variables
+- data part, or fields, are ordinary variables bound to the namespaces of the classes and objects
+- names are valid within context of these classes and objects only
+- class variables and object variables
+    - **class variables**: are shared, and can be accessed by instances of the class. Each class variable is unique and changes follow to all instances
+    - **object variables**: subset that is owned by individual object/instances. Are not shared and not related to the field of the same name in a different instance.
+
+### Inheritance
+- a type and subtype relationship between classes, where a major benefit of OOP is being able to reuse code
+
+```
+class SchoolMember:
+    '''Represents any school member.'''
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print('(Initialized SchoolMember: {})'.format(self.name))
+
+    def tell(self):
+        '''Tell my details.'''
+        print('Name:"{}" Age:"{}"'.format(self.name, self.age), end=" ")
+
+
+class Teacher(SchoolMember):
+    '''Represents a teacher.'''
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+        print('(Initialized Teacher: {})'.format(self.name))
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print('Salary: "{:d}"'.format(self.salary))
+
+
+class Student(SchoolMember):
+    '''Represents a student.'''
+    def __init__(self, name, age, marks):
+        SchoolMember.__init__(self, name, age)
+        self.marks = marks
+        print('(Initialized Student: {})'.format(self.name))
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print('Marks: "{:d}"'.format(self.marks))
+
+t = Teacher('Mrs. Shrividya', 40, 30000)
+s = Student('Swaroop', 25, 75)
+
+# prints a blank line
+print()
+
+members = [t, s]
+for member in members:
+    # Works for both Teachers and Students
+    member.tell()
+
+# Output:
+
+# $ python oop_subclass.py
+# (Initialized SchoolMember: Mrs. Shrividya)
+# (Initialized Teacher: Mrs. Shrividya)
+# (Initialized SchoolMember: Swaroop)
+# (Initialized Student: Swaroop)
+
+# Name:"Mrs. Shrividya" Age:"40" Salary: "30000"
+# Name:"Swaroop" Age:"25" Marks: "75"
+```
+
+> Summary: We have now explored the various aspects of classes and objects as well as the various terminologies associated with it. We have also seen the benefits and pitfalls of object-oriented programming. Python is highly object-oriented and understanding these concepts carefully will help you a lot in the long run.
+
+## Input and Output
