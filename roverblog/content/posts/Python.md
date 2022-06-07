@@ -354,3 +354,117 @@ for member in members:
 > Summary: We have now explored the various aspects of classes and objects as well as the various terminologies associated with it. We have also seen the benefits and pitfalls of object-oriented programming. Python is highly object-oriented and understanding these concepts carefully will help you a lot in the long run.
 
 ## Input and Output
+- take input from a user: `input()` and to print results back `print`
+- for output, `str` methods may be utilized. i.e. `rjust`, while `help(str)` can give more details.
+
+Improved Palindrome:
+```
+def reverse(text):
+    return text[::-1]
+
+
+def is_palindrome(text):
+    return text == reverse(text)
+
+forbidden = (!, ?, ., ',', )
+
+something = input("Enter text: ")
+if is_palindrome(something):
+    print("Yes, it is a palindrome")
+else:
+    print("No, it is not a palindrome")
+```
+### Files
+- `open()` by default considers files to be a 't'ext file and opens it in 'r'ead mode
+- `open('file.txt', w)` means open a file.txt with write permissions
+
+### Pickle 
+- can be used to store any plain Python object in a file and get it back later, or *persistently*
+`import pickle`
+`pickle.dump(thing, f)` dump object thing to file
+`f. close` close file
+
+### Unicode
+- Internet data is sent over using bytes. Translating unicode to bytes is encoding, and a popular one is UTF-8
+
+## Exceptions
+### Errors
+- Python raises errors at wherever something is located as well as specific issue
+
+### Handling Exceptions
+- `try..except` can be used to handle exceptions
+```
+try:
+    text = input('Enter something --> ')
+except EOFError:
+    print('Why did you do an EOF on me?')
+except KeyboardInterrupt:
+    print('You cancelled the operation.')
+else:
+    print('You entered {}'.format(text))
+```
+
+### Try...Finally
+- Whether or not an exception was raised, using `finally` will ensure the file object is closed properly
+
+### With Statement
+- try and finally block is useful for acquiring and releasing a resource respectively. This can be cleaning done using `with`
+```
+with open("poem.txt") as f:
+    for line in f:
+        print(line, end='')
+```
+
+- with statement. It fetches the object returned by the open statement
+- for some 'thefile' object, it always calls the `thefile.__enter__` and `thefile.__exit__` before and after respectively
+
+> Summary: We have discussed the usage of the try..except and try..finally statements. We have seen how to create our own exception types and how to raise exceptions as well.
+
+## More
+### Passing Tuples Around
+- Using tuples can allow one to return two different values from a function
+
+### Special Methods
+- __init__, __del__ methods have special significance in classes
+__init__(self, ...)
+    - This method is called just before the newly created object is returned for usage.
+- __del__(self)
+    - Called just before the object is destroyed (which has unpredictable timing, so avoid using this)
+- __str__(self)
+    - Called when we use the print function or when str() is used.
+- __lt__(self, other)
+    - Called when the less than operator (<) is used. Similarly, there are special methods for all the operators (+, >, etc.)
+- __getitem__(self, key)
+    - Called when x[key] indexing operation is used.
+- __len__(self)
+    - Called when the built-in len() function is used for the sequence object.
+
+### Single Statement Blocks
+```
+>>> flag = True
+>>> if flag: print('Yes')
+...
+Yes
+```
+- Reccomendation: avoid this short-cut method except for erro checking
+
+### Lambda Forms
+- A lambda statement is used to create new function objects. Essentially, the lambda takes a parameter followed by a single expression
+```
+points = [{'x': 2, 'y': 3},
+          {'x': 4, 'y': 1}]
+points.sort(key=lambda i: i['y'])
+print(points)
+
+# Output:
+# $ python more_lambda.py
+# [{'y': 1, 'x': 4}, {'y': 3, 'x': 2}]
+```
+
+# Standard Library
+## `sys` module
+- contains system-specific functionality
+
+## `logging` module
+- useful for storing debugging or important messages
+- The cat command is used in the command line to read the 'test.log' file. If the cat command is not available, you can open the test.log file in a text editor instead.
