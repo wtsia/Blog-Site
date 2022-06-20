@@ -40,11 +40,11 @@ hidemeta = true
             - Suppose ELB load balancers in US West (Oregon) Region and in the Asia Pacific Region (Singapore). Example of when London enters name of your domain in the browser:
                 - DNS routes query to Route 53 name server
                 - Router 53 refers to its data on latency between London and Singapore and between London and Oregon region
-                - If Latency is lover btwn London & Oregon regions, Route 53 gives query an IP for Oregon LB. If latency is lower between London and the Singapore region, R53 responds with IP for the singapore LB.
+                - If Latency is lower between London & Oregon regions, Route 53 gives query an IP for Oregon LB. If latency is lower between London and the Singapore region, R53 responds with IP for the singapore LB.
         - Latency between hosts can change bc of connectivity and routing, and routing is based on latency measuerements performed over a period of time. 
         - AWS Latency Routing: [link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency)
 
->Summary: Record of connection from X (user) to multiple Y databases are stored, and queries from X will have the load balancer will iterate through this record and respond with lowest latency Y database is relative to X.
+>Summary: Domain names are stored in a server with an associated IP address. Record of a connection from X (user) to multiple Y databases are stored, and queries from X will have the load balancer will iterate through this record and respond with lowest latency Y database is relative to X.
 
 - Geolocation-based:
     - responds with location that DNS queries originate from.
