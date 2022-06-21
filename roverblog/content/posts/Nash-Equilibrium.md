@@ -18,12 +18,33 @@ hidemeta = true
 
 Formally, let $S_{i}$ be the set of all possible strategies for player $i$, where $i = 1, ... , N.$ Let $s^*=(s_{i}^{*},s_{-i}^{*})$ be a strategy profile, a set consisting of one strategy for each player, where $s_{-i}^{*}$ denotes the $N-1$ strategies of all the players except $i$. Let $u_{i}(s_{i},s_{-i}^{*})$ be player $i$'s payoff as a function of the strategies. The strategy profile $s^{*}$is a Nash equilibrium if,
 
-$u_{i}(s_{i}^{*},s_{-i}^{*}) \geq u_{i}(s_{i},s_{-i}^{*})\;\;{\rm {for\;all}}\;\;s_{i}\in S_{i}$
+$$
+u_{i}(s_{i}^{*},s_{-i}^{*}) \geq u_{i}(s_{i},s_{-i}^{*})\;\;{\rm {for\;all}}\;\;s_{i}\in S_{i}
+$$
 
 A game can have more than one Nash equilibrium. Even if the equilibrium is unique, it might be weak: a player might be indifferent among several strategies given the other players' choices. It is unique and called a strict Nash equilibrium if the inequality is strict so one strategy is the unique best response:
 
-{\displaystyle u_{i}(s_{i}^{*},s_{-i}^{*})>u_{i}(s_{i},s_{-i}^{*})\;\;{\rm {for\;all}}\;\;s_{i}\in S_{i},s_{i}\neq s_{i}^{*}}{\displaystyle u_{i}(s_{i}^{*},s_{-i}^{*})>u_{i}(s_{i},s_{-i}^{*})\;\;{\rm {for\;all}}\;\;s_{i}\in S_{i},s_{i}\neq s_{i}^{*}}
-Note that the strategy set {\displaystyle S_{i}}S_{i} can be different for different players, and its elements can be a variety of mathematical objects. Most simply, a player might choose between two strategies, e.g. {\displaystyle S_{i}=\{{\text{Yes}},{\text{No}}\}.}{\displaystyle S_{i}=\{{\text{Yes}},{\text{No}}\}.} Or, the strategy set might be a finite set of conditional strategies responding to other players, e.g. {\displaystyle S_{i}=\{{\text{Yes}}|p={\text{Low}},{\text{No}}|p={\text{High}}\}.}{\displaystyle S_{i}=\{{\text{Yes}}|p={\text{Low}},{\text{No}}|p={\text{High}}\}.} Or, it might be an infinite set, a continuum or unbounded, e.g. {\displaystyle S_{i}=\{{\text{Price}}\}}{\displaystyle S_{i}=\{{\text{Price}}\}} such that {\displaystyle {\text{Price}}}{\displaystyle {\text{Price}}} is a non-negative real number. Nash's existence proofs assume a finite strategy set, but the concept of Nash equilibrium does not require it.
+$$
+{\displaystyle u_{i}(s_{i}^{*},s_{-i}^{*})>u_{i}(s_{i},s_{-i}^{*})\;\;{\rm {for\;all}}\;\;s_{i}\in S_{i},s_{i}\neq s_{i}^{*}}
+$$
+
+Note that the strategy set 
+
+$${\displaystyle S_{i}}S_{i}$$ 
+
+can be different for different players, and its elements can be a variety of mathematical objects. Most simply, a player might choose between two strategies, e.g.
+
+$${\displaystyle S_{i}=\{{\text{Yes}},{\text{No}}\}.}$$
+
+Or, the strategy set might be a finite set of conditional strategies responding to other players, e.g. 
+
+$${\displaystyle S_{i}=\{{\text{Yes}}|p={\text{Low}},{\text{No}}|p={\text{High}}\}.}$$
+
+Or, it might be an infinite set, a continuum or unbounded, e.g. 
+
+$${\displaystyle S_{i}=\{{\text{Price}}\}}$$
+
+such that ${\displaystyle {\text{Price}}}$ is a non-negative real number. Nash's existence proofs assume a finite strategy set, but the concept of Nash equilibrium does not require it.
 
 The Nash equilibrium may sometimes appear non-rational in a third-person perspective. This is because a Nash equilibrium is not necessarily Pareto optimal.
 

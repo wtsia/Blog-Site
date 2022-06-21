@@ -20,3 +20,6 @@ norobots = true
 nodate = true
 hidemeta = false
 +++
+
+## Algorithms
+- Hash Map: a table of terms organized into key-value pairs. 
