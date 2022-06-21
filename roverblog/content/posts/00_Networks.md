@@ -88,6 +88,8 @@ hidemeta = true
 - Content may be stale if updated before TTL expires it
 - CDNs require changing URLs for static content to point to the CDN
 
+>Summary: Push CDNs are good for sites that doesn't update content frequently, Pull CDNs for cites that need to update frequently. CDNs involve changing URLs for content to point to the CDN.
+
 
 
     

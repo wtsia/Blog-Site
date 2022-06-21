@@ -42,6 +42,10 @@ Running low on ram, increase processing and throw resources at the problem
 Running on many, slower machines instead of one fast machine
     - 
 
+### Load Balancer: Introduction
+- Distribute client requests to computing resources, i.e. app servers and db. Each case, LB returns response from computing resource to appropriate client.
+- effective usage: prevent directing to unhealthy servers, preventing overloading, eliminating single points of failure.
+
 #### Load Balancing:
 - distributes traffic from clients among servers
 - What IP address should we return when a client enters a website address
@@ -381,6 +385,4 @@ Cons:
     - Concurrency
 
 
-### Load balancer
-- Distribute client requests to computing resources, i.e. app servers and db. Each case, LB returns response from computing resource to appropriate client.
-- effective usage: prevent directing to unhealthy servers, preventing overloading, eliminating single points of failure.
+
