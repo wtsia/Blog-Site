@@ -19,6 +19,28 @@ nodate = true
 hidemeta = false
 +++
 
+# Python Dictionary
+## Programming Fundamentals 
+- For loop:
+```
+for x in mylist:
+    print(x)
+```
+Explanation: iterates through `mylist` and prints each element `x` in it.
+
+## Methods
+`.append()`: appends an element to a list
+
+## Minor Concepts
+- Can apply numerical operations on strings as well as lists
+- `%` is used to format a set of variables enclosed ina tuple
+    - i.e. `%s` for a string or `%d` for a number
+    ```
+    name = "John"
+    print("Hello, %s!" % name)
+    ```
+
+# Concepts
 ## Basics
 `#` is used for comments to the right
 
