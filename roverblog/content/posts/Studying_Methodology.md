@@ -18,7 +18,18 @@ nodate = true
 hidemeta = false
 +++
 
-Source: Justin Sung, MD ![Youtube](https://www.youtube.com/watch?v=--Hu2w0s72Y&t=11s)
+## Standard Practice
+1) Context broadening: Relating a theoretical concept with a real life story or incident. Having an example or event visual in your mind.
+2) Emotional implication: Getting emotionally invested with the topic, knowing what would be the future use.
+3) Making logical jumps in Between topics.
+4) Playing around with the topic.
+5) Approach questions 
+6) Spaced repetition 
+7) Creating false deadlines to keep things neat.
+
+Is there a better way?
+
+Source: Justin Sung, MD [YouTube](https://www.youtube.com/watch?v=--Hu2w0s72Y&t=11s)
 
 # Best Methodology
 1. Divide the object into three categories:
@@ -35,7 +46,7 @@ Source: Justin Sung, MD ![Youtube](https://www.youtube.com/watch?v=--Hu2w0s72Y&t
 5. If you still cannot understand the material, then add them to flash cards.
 
 # Problem of Active Recall and Spaced Repetition
-Source: ![Youtube](https://www.youtube.com/watch?v=--Hu2w0s72Y&t=11s)
+Source: [Youtube](https://www.youtube.com/watch?v=--Hu2w0s72Y&t=11s)
 
 - Studying ~= learning!
 - Cognitive Load means you are engaging high-efficiency pathways
@@ -54,7 +65,7 @@ Source: ![Youtube](https://www.youtube.com/watch?v=--Hu2w0s72Y&t=11s)
     - Survivor bias
 
 # 2 Basic Steps
-Source ![Youtube](https://www.youtube.com/watch?v=VcT8puLpNKA)
+Source [Youtube](https://www.youtube.com/watch?v=VcT8puLpNKA)
 
 ## 1. Principle of Encoding
 - Orders of Learning

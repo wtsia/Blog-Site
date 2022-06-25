@@ -1,16 +1,17 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "Cryptography1"
+title = "Cryptography"
 date = 2022-06-02T14:22:54-07:00
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+description = "Notes on topics in cryptography"
 tags = [
-    "tag1",
-    "tag2",
+    "Education"
 ]
 categories = [
-    "cat1",
-    "cat2",
+    "Computer Science",
+    "Computational Mathematics",
+    "Mathematics",
+    "Cryptography",
 ]
 math = true
 notaxonomy = false
