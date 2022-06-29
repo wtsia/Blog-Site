@@ -99,9 +99,28 @@ Lychee fruits contain a single seed that you can plant to grow more lychee fruit
 5. Watch your plant’s growth. Lychee trees can grow quite tall—up to ten feet—so you’ll want to prune by cutting branches and leaves from the top to keep it in check. After your first year, repot your plant, giving it a larger home. As it gets bigger, your plant will need more sunlight; because of this, lychee plants tend to grow best outdoors in direct sunlight. As evergreen trees accustomed to tropical climates, lychees grow best in hardiness zones ten and eleven.
 
 # Orange
-[Source](https://www.almanac.com/plant/citrus-lemons-oranges-and-limes#:~:text=To%20start%20citrus%20trees%20inside,the%20seeds%20start%20to%20grow.)
+[Source](https://www.gardeningknowhow.com/edible/fruits/oranges/plants-from-produce-orange.htm)
+
+## Can You Grow Store Bought Oranges 
+By: Teo Spengler 
+
+Anyone looking for a cool, indoor gardening project may want to try growing an orange tree from seeds. Can you plant orange seeds? You surely can, using grocery store orange seeds or seeds from oranges that you get in the farmer’s market. It may take up to a decade to see fruit from your plant, however. It’s fun and easy, and even if you don’t get fruit, you can bring a vibrant green plant into the world with sweet-smelling leaves.
+
+### Growing Seeds from Oranges 
+It’s no surprise that you can grow orange trees from seeds inside the fruit. Every other fruit grows that way, so why not oranges? Anyone who has ever peeled and eaten an orange knows that the fruit can have a dozen seeds in it, or even more. The bigger news is that most seeds from oranges can grow into plants, you can even grow store bought orange seeds. That doesn’t mean you’ll necessarily succeed the first time, but you probably will over time. 
+### Can You Plant Orange Seeds? 
+It may be hard to believe that the seeds you pile up as you are consuming an orange are potential orange trees. It’s true though, even grocery store orange seeds, planted correctly, have a good chance of growing if you plant them right. The seeds from sweet oranges usually come true from seed, producing plants like the parent tree, but “Temple” and “Pomelo” are two varieties that won’t. The first step is preparing the seeds for planting. You’ll want to select plump, whole, healthy seeds, then clean off any pieces of orange on them. Soak the seeds in a bowl of tepid water for 24 hours to assist in germination. 
+
+### Orange Tree from Seeds 
+Once the seeds are cleaned and have been soaked, it is time to plant them. If you live in a warm climate like USDA plant hardiness zones 10 or 11, you can plant the seeds outside. Those in cooler regions can plant in pots indoors. 
+
+In either case, grow your store bought orange seeds in well drained soil. If you are growing them in pots, use small containers with at least two drain holes per pot. Fill the pots with soil or sterile potting mix made up of equal parts milled peat and small-grain perlite. Press two seeds into the surface of the soil in each pot, then cover them lightly with the soil or potting mix.  
+
+Keep the soil moist and the pots in a warm spot until the seeds sprout. Germination can occur within a week, but it may take several weeks. Each seed may produce up to three sprouts, and you should prune out the weakest. Transplant the healthiest sprouts into larger pots filled with citrus formula potting soil and place them where they get direct sun. Water and fertilize with citrus fertilizer and watch your new plants grow.
 
 ## Citrus: Lemons, Oranges, and Limes
+[Source](https://www.almanac.com/plant/citrus-lemons-oranges-and-limes#:~:text=To%20start%20citrus%20trees%20inside,the%20seeds%20start%20to%20grow.)
+
 By Catherine Boeckmann
 
 Although Citrus is a subtropical genus, fragrant and flavorful citrus fruit can be grown almost anywhere. From lemons and limes to oranges and grapefruit, citrus trees are fun and rewarding plants to grow—but not without some work! Here’s how to grow citrus trees at home.
