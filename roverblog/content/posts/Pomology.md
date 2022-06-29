@@ -3,7 +3,7 @@ author = "Winston Tsia"
 authorlink = ""
 title = "Pomology"
 date = 2022-06-28T22:41:20-07:00
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+description = "Notes on Pomology and Gardening"
 tags = [
     "Germinating",
     "Guide",

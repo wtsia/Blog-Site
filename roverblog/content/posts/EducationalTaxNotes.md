@@ -3,7 +3,7 @@ author = "Winston Tsia"
 authorlink = ""
 title = "Educational Savings/Tax Notes"
 date = 2022-06-02T04:04:36-07:00
-description = "Notes on savings and 529 taxes for dducation"
+description = "Notes on savings and 529 taxes for education"
 tags = [
     "Taxes",
     "Education",
