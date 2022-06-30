@@ -76,6 +76,11 @@ while count < 5:
         print("Your name is either John or Rick.")
     ```
 - using 'is' operator: instead of equating value, it equates the instance
+- `block_keyword block_name(argument1,argument2, ...)` Block keywords you already know are "if", "for", and "while".
+    ```
+    def my_function():
+    print("Hello From My Function!")
+    ```
 
 # Concepts
 ## Basics
