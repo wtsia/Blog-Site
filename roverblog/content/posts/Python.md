@@ -81,6 +81,16 @@ while count < 5:
     def my_function():
     print("Hello From My Function!")
     ```
+- creating a class and modifying a variable in the new iteration: 
+    ```
+    class MyClass:
+        variable = "blah"
+        def function(self):
+            print("This is a message inside the class.")
+
+    objectx = MyClass()
+    objectx.variable = "blah2.0" 
+    ```
 
 # Concepts
 ## Basics
