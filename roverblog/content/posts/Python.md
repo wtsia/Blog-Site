@@ -264,7 +264,7 @@ The PYTHONPATH is ['/tmp/py',
 ##### Summary:
 Just like functions are reusable parts of programs, modules are reusable programs. Packages are another hierarchy to organize modules. The standard library that comes with Python is an example of such a set of packages and modules.
 
-### Quick and Dirty: Objects and Classes
+## Quick and Dirty: Objects and Classes
 - `list` is an example of using objects and classes
 - ` i = 5 `
     - an object is created, `i` of class `int`. Use `help(int)` for a detailed explanation.
