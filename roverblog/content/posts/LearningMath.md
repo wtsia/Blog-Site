@@ -43,7 +43,7 @@ Source: Dr. Trefor Bazett
 
 ##### Most Important
 - PRACTICE!
-    - Spent as much time as you can on this portion
+    - Spend as much time as you can on this portion
 - Concept Mapping!
     - Write out main ideas of a particular subject in a big map
     - Connecting ideas helps to strengthen understanding
