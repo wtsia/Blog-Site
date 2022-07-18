@@ -3,7 +3,7 @@ author = "Winston Tsia"
 authorlink = ""
 title = "{{ replace .Name "-" " " | title }}"
 date = {{ .Date }}
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+description = "Description"
 tags = [
     "tag1",
     "tag2",

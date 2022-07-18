@@ -18,8 +18,6 @@ norobots = true
 nodate = true
 hidemeta = false
 +++
-
-# Python Dictionary
 ## Programming Fundamentals 
 - For loop:
 ```
@@ -182,6 +180,8 @@ What if you want to use a character that python interprets, like single quotes? 
 - PEMDAS, Left-Right
 
 ## Functions
+
+
 - names given to functions are parameters, while values supplied to a function are called arguments
 - `len()`: gives length of list
 - `.path.exists()`: checks if a path exists
