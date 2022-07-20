@@ -48,7 +48,7 @@ Source: Justin Sung, MD [YouTube](https://www.youtube.com/watch?v=--Hu2w0s72Y&t=
 # Problem of Active Recall and Spaced Repetition
 Source: [Youtube](https://www.youtube.com/watch?v=--Hu2w0s72Y&t=11s)
 
-- Studying ~= learning!
+- Studying $\neq$ learning!
 - Cognitive Load means you are engaging high-efficiency pathways
     - i.e. feeling confused
 - Correct encoding is difficult!
@@ -57,6 +57,7 @@ Source: [Youtube](https://www.youtube.com/watch?v=--Hu2w0s72Y&t=11s)
 - Personal note: perhaps when it feels like your brain is actually contracting like a muscle (blood pressure changes?)
 - Desirable Difficulty: brain is only being used effectively when using a suitable amount of discomfort 
 - Retrieval Techniques are easier to learn
+
 ### Why does Active Recall Work?
 - it mitigates the functional forgetting that occurs with normal learning, such that the forgetting curve gets more steep
 - at the end of the week, revision solidifies it further
@@ -102,3 +103,32 @@ Source [Youtube](https://www.youtube.com/watch?v=VcT8puLpNKA)
 - Chunk Mapping
 
 >If you're not proficient, consider taking it down a notch with lower learning then moving it upward towards higher-learning
+
+# Mind-Map
+Summary of Benefits:
+- Effective, enhances creativity, improves critical thinking, and increases metacognition (but demotivating)
+
+## GRIND Map
+- Grouped, Reflective, Interconnected, Non-verbal, Directional
+
+### Grouped
+- organization of data into groups
+
+### Reflective
+- paper notes should be reflective of mind (mirroring!)
+
+### Interconnected
+- isolated knowledge is weak. Connect the ideas!
+
+### Non-verbal
+- being creative with representing ideas contributes to retention of ideas and promotion of creativity
+
+### Directional $\bigstar$
+- Create a flow of ideas and compositions which can strengthen the cause and effect relationship or logic between ideas
+    - Higher level of learning!
+    - A clean organized mind produces a clean mind-map
+
+### Explained
+- Low cognitive load used on technique used on high cognitive learning
+- using word art can enhance points
+- notes should reflect the learning process in the head!
