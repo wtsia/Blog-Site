@@ -20,10 +20,20 @@ images = ["/img/example.jpg"]
 imagetext = "An example text for an image you could add!"
 hidemeta = false
 +++
+## Angles
+- Right angle is $90\degree$
+- Complementary angles are two positive angles that add up to $90\degree$
+- Supplementary angles are two positive angles that add up to $180\degree$
 ### Arc
 - 1 degree = 60 minutes of arc : 1$\degree$ = 60'
 - 1 minute = 60 seconds of arc : 1' = 60''
-
+### Radian
+- Radian ($\theta$): central angle $\theta$ that subtends (limits by both sides) an arc length $s$ (curved length) of one radius $r$
+  - one 'radius' worth of angle
+  - $s = \theta * r$
+  - $360\degree = 2\pi$ $rad$
+    - conversion implies: $1=\frac{360\degree}{2\pi rad}=\frac{180\degree}{\pi rad}=\frac{\pi rad}{180\degree}$
+  - Recall: a circle's circumference is $\pi*d$ or $2\pi$ $rad$
 ## Triangles 
 - Obtuse: Largest angle is >90$\degree$
 - Acute: Largest angles are acute
@@ -82,5 +92,16 @@ c^2 = 4*(1/2)ab + (a - b)^2 = 2ab + a^2 - 2ab + b^2
 $$
 $\blacksquare Q.E.D.$
 
+### Application: Distance Between Two Points
+For the distance between two points $c$ in 2 and 3-dimensional space: 
+- 2D: $(x_1, x_1), (y_2,y_2)$
+  $$c=\sqrt{(\Delta x)^2 + (\Delta y)^2}$$
+- 3D: $(x_1,y_1,z_1), (x_2,y_2,z_2)$
+  $$c=\sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}$$
 
+### Trigonometric Ratios
+- Sine ($sin$), Cosine ($cos$), Tangent ($tan$)
+  - S O/H - C A/H - T O/A
+- Cosecant ($csc$), Secant ($sec$), Cotangent ($cot$), are almost an anagram (recipricols, or $1/f(\theta)$): 
+  - A/O T ($coT$) - H/A C ($seC$) - H/O S ($cSc$)
 
