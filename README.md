@@ -1,10 +1,10 @@
 # Blog-Site
 Blog site to serve articles where I explain topics to others (or myself)
 
-Repo for Rover:
+Repo for Production (static assets):
 https://github.com/wtsia/rover
 
-Repo for this:
+Repo for Blog (this):
 https://github.com/wtsia/Blog-Site
 
 ## Basics
@@ -40,6 +40,13 @@ Notes: This new post draws from the content of default.md as a template.
 Obtain hugo themes on the hugo site [here](https://themes.gohugo.io/)
 
 Vitae [here](https://themes.gohugo.io/themes/hugo-vitae/)
+
+## Initializing a Git Submodule
+This is not required for this repo, but useful to know for new blog sites:
+
+``
+git submodule add -b main <repository url> <folder>
+``
 
 ## Technologies
 ##### Hugo static site generator
