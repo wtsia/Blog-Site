@@ -120,3 +120,7 @@ $sin^2(\theta) + cos^2(\theta) = 1$
 
 #### Values
 - To obtain values of trig functions along the unit circle (or any circle) along the well known thirds, sixths, halves, and quarters of $\pi$, utilize the Large ($\frac{\sqrt{3}}{2}$), Medium ($\frac{\sqrt{2}}{2}$), and Small ($\frac{\sqrt{1}}{2}$) pneumonic.
+
+#### Period
+- Length of a functions cycle, typically peak to peak.
+
