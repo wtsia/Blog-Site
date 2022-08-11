@@ -115,6 +115,12 @@ cos(\theta) = \frac{Adjacent}{Hypotenuse} = \frac{Opposite}{1} = Adjacent
 $$
 
 #### Identities:
+$tan^{-1}(x) = arctan(x)$
+
+$cos^{-1}(x) = arc(x)$
+
+$sin^{-1}(x) = arcsin(x)$
+
 $sin^2(\theta) + cos^2(\theta) = 1$
 - Apply the pythagorean theorem to a triangle in the unit circle. Notice that when we square non-hypotenuse sides, it equals to $c^2 = 1^2$ or $1$.
 
@@ -123,4 +129,6 @@ $sin^2(\theta) + cos^2(\theta) = 1$
 
 #### Period
 - Length of a functions cycle, typically peak to peak.
+
+#### Length
 
