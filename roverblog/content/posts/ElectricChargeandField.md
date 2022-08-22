@@ -5,12 +5,12 @@ title = "Electric Charge and Electric Field"
 date = 2022-08-22T01:39:09-07:00
 description = "Description"
 tags = [
-    "tag1",
-    "tag2",
+    "Physics",
+    "Electricity",
+    "Education"
 ]
 categories = [
-    "cat1",
-    "cat2",
+    "Physics",
 ]
 math = true
 notaxonomy = false
