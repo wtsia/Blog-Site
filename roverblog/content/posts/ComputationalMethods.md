@@ -25,7 +25,7 @@ hidemeta = false
 +++
 
 SLO:
-1. Use MATLAB as a computational tool to solve problems in engineering, mathematics, and the sciences.
+1. Use MATLAB as a *computational tool* to solve problems in engineering, mathematics, and the sciences.
 2. Use MATLAB as a *plotting and visualization tool*.
 3. Design, implement, and test computer programs to achieve stated objectives.
 4. Begin to use standard data structures.
