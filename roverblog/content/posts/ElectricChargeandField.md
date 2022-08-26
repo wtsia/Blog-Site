@@ -21,3 +21,5 @@ hidemeta = false
 +++
 
 ## Review
+
+### Vectors & Vector Addition
