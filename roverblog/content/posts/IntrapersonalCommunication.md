@@ -34,6 +34,8 @@ hidemeta = false
 - The transactional model and the various parts.
 - Cognitive complex communicators
 - Self-Monitoring
+
+> 
   
 
 ## Chapter 2

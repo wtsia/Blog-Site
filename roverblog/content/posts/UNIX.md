@@ -14,7 +14,7 @@ categories = [
 ]
 math = true
 notaxonomy = false
-images = ["/img/chapter01_The_Linux_Kernel_Distribution_Families_and_Individual_Distributions.png"]
+images = ["/img/UNIX/UnixFamilies.png"]
 imagetext = "The 3 major families of the Linux Kernel"
 hidden = true
 norobots = true

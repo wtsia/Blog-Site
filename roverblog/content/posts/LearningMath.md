@@ -16,7 +16,7 @@ hidden = true
 norobots = true
 nodate = true
 hidemeta = false
-images = ["/img/ForgettingCurve.png"]
+images = ["/img/LearningMath/ForgettingCurve.png"]
 imagetext = "An example text for an image you could add!"
 +++
 

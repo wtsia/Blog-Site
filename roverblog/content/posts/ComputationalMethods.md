@@ -32,3 +32,8 @@ SLO:
 5. Working from a verbal or equation-based description, set up systems of simultaneous equations and use MATLAB to determine existence and uniqueness of solution and solve.
 6. Working from a verbal or equation-based description, use appropriate numerical techniques for differentiation, integration, and solution of differential equations.
 7. Apply numeric techniques and computer simulations to analyze and solve problems in engineering, mathematics, and the sciences.
+
+Chapter 1: Background
+- compiled languages vs interpreted
+  - compiled require a programs code to be compiled before execution (specific to the processor)
+  - interpreted means an interpreter (more applicable across systems) will read high-level statements and execute the operation so on and so forth
