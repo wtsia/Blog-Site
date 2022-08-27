@@ -133,3 +133,7 @@ $sin^2(\theta) + cos^2(\theta) = 1$
 #### Length
 - Test commit
 
+### Identities
+- $cos(A-B) = cos(A)cos(B) + sin(A)sin(B)$
+
+  Proof: 

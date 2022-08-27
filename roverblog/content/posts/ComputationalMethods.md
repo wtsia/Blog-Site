@@ -37,3 +37,30 @@ Chapter 1: Background
 - compiled languages vs interpreted
   - compiled require a programs code to be compiled before execution (specific to the processor)
   - interpreted means an interpreter (more applicable across systems) will read high-level statements and execute the operation so on and so forth
+    - MATLAB is an interpreter!
+  - *whitespace* is not interpreted in Matlab
+  #### Common Commands:
+  ```
+  clc: clears command window
+  clear: clears all vars
+  diary: records command terminal content 
+  exit: exits session
+  who: prints all vars in workspace
+  whos: ^^ but also prints size, bytes, class, etc
+  ctrl-c: interrupts program
+  ```
+- `format long/short`: 15 digits and 4 digits respectively
+- `format compact/loose`: single and double spacing
+
+### Binary
+- 0000, 0001, 0010...
+- signed vs unsigned: 
+  - unsigned represent non-negative values (1111 = 15)
+  - signed uses leftmost bit to represent positive of negative
+- Binary has an additive property:
+```
+    0 1 1 1
+  + 0 1 1 0
+  = 1 1 0 1
+```
+- overflow: when a binary operator is too large to fit in bits. i.e. 10000 > 1111 + 0001
