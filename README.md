@@ -47,6 +47,13 @@ This is not required for this repo, but useful to know for new blog sites:
 ``
 git submodule add -b main <repository url> <folder>
 ``
+## Design
+The site per hugo-vitae holds multiple pages of which a tags and category page will organize each document's respective classification.
+
+Note that images will be stored in the directory `/static/img/<topic>/<imageName.png>`
+
+To reference them in notes, direct them to:
+`/rover/img/<topic>/<imageName>.jpg`
 
 ## Technologies
 ##### Hugo static site generator
