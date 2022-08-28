@@ -50,9 +50,9 @@ Determining how to trade performance or scalability comes down to good planning
     - Availability: every req receives a response, without guarantee that it contains the most recent version of information
     - Partition Tolerance: The system continues to operate despite arbitrary partitioning due to network failures
     - Networks arent reliable, so support partition tolerance, and tradeoff between consistency and availability 
-        - CP - consistency partition tolerance
+        - $CP$ - consistency partition tolerance
             - good for business requiring atomic reads and writes
-        - AP - availability and partition tolerance
+        - $AP$ - availability and partition tolerance
             - responds with most readily available version of data available on any node (may not be latest)
             - good for business needs eventual consistency or continued function despite external errors
 
@@ -84,10 +84,9 @@ Now we are faced with options on how to synchronize them so clients have a consi
 - Replication
     - master-slave, master-master
 - Availability in numbers - quantified by uptime/downtime as a % of time service is available
-    - measured in units of 9s, 99.99% availabilty is 4 9s
-        - { 9, 99, 999, ...}
-            = { 9*(10^0), 9(10^1 + 10^0), 9(10^2 + 10^1 + 10^0), ...}
-        - for n > 0, n 9s is represented by 9(10^n + 10^n-1 + ... + 10^0)
+    - measured in units of $9s$, 99.99% availability is 4 9s
+        - ${ 9, 99, 999, ...} = { 9*(10^0), 9(10^1 + 10^0), 9(10^2 + 10^1 + 10^0), ...}$
+        - for $n > 0$, $n$ 9s is represented by $9(10^n + 10^n-1 + ... + 10^0)$
 - Availability in parallel vs in sequence
     - a service depending on multiple components prone to failure has availability dependent on in sequence or in parallel
     - In Sequence

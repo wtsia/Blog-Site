@@ -13,4 +13,11 @@ hidemeta = false
 
 Welcome! This is a site I've made to keep notes that I'd like LaTeX syntax available for (in the form of KaTeX!). Furthermore, it serves to sort my notes into categories that I can navigate more easily!
 
-Bon Voyage!
+## Notes Quicklinks
+## Topics:
+#### [P vs NP](./posts/pvsnp)
+### System Design:
+#### [Scalability](./posts/scalability.md)
+#### [Networks](./posts/networks.md)
+#### [Databases](./posts/databases.md)
+#### [Tradeoffs](./posts/tradeoffs.md)
