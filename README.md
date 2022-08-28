@@ -55,6 +55,26 @@ Note that images will be stored in the directory `/static/img/<topic>/<imageName
 To reference them in notes, direct them to:
 `/rover/img/<topic>/<imageName>.jpg`
 
+### Backups
+Using the package `rclone`, type in a terminal
+```
+sudo apt-get install rclone
+```
+Once installed, initiate configuration settings and choose as desired:
+```
+> rclone config
+```
+Rclone setup is self-explanatory. To create a directory that can be synced directly into your drive via mounting:
+```
+rclone mount --daemon <remote-drive-name>: <directory-of-target-folder>
+```
+Script to automatically upload files to drive from a Linux system:
+```
+#!/bin/bash
+
+/usr/bin/rclone copy --update --verbose --transfers 30 --checkers 8 --contimeout 60s --timeout 300s --retries 3 --low-level-retries 10 --stats 1s "/home/<user>/<directory>" "<remote-name>:<folder-name-in-drive>"
+```
+
 ## Technologies
 ##### Hugo static site generator
 
@@ -68,3 +88,6 @@ https://github.com/dataCobra/hugo-vitae
 
 ##### KaTeX
 Supported Functions: https://katex.org/docs/supported.html
+
+##### Rclone
+https://rclone.org/
