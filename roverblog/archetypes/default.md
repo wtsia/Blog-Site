@@ -21,3 +21,5 @@ norobots = true
 nodate = true
 hidemeta = false
 +++
+
+![Replacement Text](/rover/img/topic/image.png)

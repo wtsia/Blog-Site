@@ -23,3 +23,5 @@ hidemeta = false
 ## Review
 
 ### Vectors & Vector Addition
+![Vector Review](/rover/img/Physics/ReviewVector.jpg)
+
