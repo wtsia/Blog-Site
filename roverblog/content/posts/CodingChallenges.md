@@ -1,16 +1,18 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "LeetCode"
+title = "Coding Challenges"
 date = 2022-08-28T14:32:17-07:00
-description = "Description"
+description = "A documentation of my attempts at coding problems"
 tags = [
-    "tag1",
-    "tag2",
+    "Time Complexity",
+    "Programming",
+    "Math"
 ]
 categories = [
-    "cat1",
-    "cat2",
+    "Computer Science",
+    "Programming",
+    "Python"
 ]
 math = true
 notaxonomy = false
