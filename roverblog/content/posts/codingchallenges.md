@@ -39,8 +39,73 @@ Constraints:
 -10^9 <= nums[i] <= 10^9
 ```
 Design: 
-- Sol 1) Brute force: store each number in a variable and iterate through the array recursively and return `false` if the operation completes without returning `true`.
-  - Time Complexity (TC): each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on $n \in array$ produces operations of array size $N = array.length$. Therefore we can see that the operations will result in $n*array.length, \forall n\in array$ .
+
+**Solution 1)** Brute force: store each number in a variable and iterate through the array recursively and return `false` if the operation completes without returning `true`.
+
+**Time Complexity (TC)**: each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on each $a_n \in array$ produces operations of array size $N*(N-1)$ since we cannot compare every $a_n \in array$ to itself. Therefore we can iterate through as such:
+
+$$
+n = 1  \to [a_0]
+$$
+array of $1$ cannot be a duplicate of itself, so no duplicates.
+
+$$
+n = 2  \to [a_0, a_1] \to
+a_0
+\begin{pmatrix}
+   a_1
+\end{pmatrix}
++ a_1
+\begin{pmatrix}
+   a_0
+\end{pmatrix}\\
+
+n = 3  \to [a_0, a_1, a_2] \to
+a_0
+\begin{pmatrix}
+   a_1 \\
+   a_2
+\end{pmatrix}
++ a_1
+\begin{pmatrix}
+   a_0 \\
+   a_2
+\end{pmatrix}
++ a_2
+\begin{pmatrix}
+   a_0 \\
+   a_1
+\end{pmatrix}
+$$
+Continuing to an array of length `4`:
+$$
+n = 4  \to [a_0, a_1, a_2, a_3] \to
+a_0
+\begin{pmatrix}
+   a_1 \\
+   a_2 \\
+   a_3
+\end{pmatrix}
++ a_1
+\begin{pmatrix}
+   a_0 \\
+   a_2 \\
+   a_3
+\end{pmatrix}
++ a_2
+\begin{pmatrix}
+   a_0 \\
+   a_1 \\
+   a_3
+\end{pmatrix}
++a_3
+\begin{pmatrix}
+   a_0 \\
+   a_1 \\
+   a_2
+\end{pmatrix}
+$$
+As we can see, the relationship between array length and operations applied can be seen as first storing the variable
 $$
 \sum_{i = 1}^{N}n^2 = 1 + 4 + 9 + 16 + ...
 $$
