@@ -74,6 +74,20 @@ Script to automatically upload files to drive from a Linux system:
 
 /usr/bin/rclone copy --update --verbose --transfers 30 --checkers 8 --contimeout 60s --timeout 300s --retries 3 --low-level-retries 10 --stats 1s "/home/<user>/<directory>" "<remote-name>:<folder-name-in-drive>"
 ```
+### Note on KaTeX Matrices:
+Synopsis: KaTeX on Hugo is slightly bugged. To render matrices correctly, new line markers `\\` must be escaped. This looks like `\\\\`. Additionally, the $KaTeX$ input must be on one line.
+
+[Source](https://github.com/KaTeX/KaTeX/issues/1831#issuecomment-453703898)
+
+"Major breakthrough \o/
+
+Escaping the \\ solves the problem:
+```
+$$ \left[\begin{array} {rrr} 3.381563 & 3.389113 \\\\ 4.527875 & 5.854178 \\\\ 2.655682 & 4.411995 \\\\ \vdots & \vdots \end{array}\right] $$
+```
+I suspect now we've gone full circle to what @edemaine was suggesting to have a look at: https://gohugo.io/content-management/formats/#issues-with-markdown
+
+I suspect if I modify the code which uses katex and add the displayMath math "hack" mentioned in hugo documentation I should be fine."
 
 ## Technologies
 ##### Hugo static site generator

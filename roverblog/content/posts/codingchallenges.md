@@ -25,7 +25,7 @@ hidemeta = false
 Relevant References: [Neetcode](https://neetcode.io/)
 
 ## Definitions
-Time Complexity (TC): Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of time data length $l$, where output is time $t$ or:
+Time Complexity (TC): Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
 $$
 f(l) = t
 $$
@@ -64,7 +64,8 @@ Design:
 
 **Solution 1)** *Brute force*: store each number in a variable and iterate through the array recursively and return `false` if the operation completes without returning `true`.
 
-**Time Complexity (TC)**: each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on each $a_n \in array$ produces operations of array size $N*(N-1)$ since we cannot compare every $a_n \in array$ to itself. Therefore we can iterate through as such:
+**Time Complexity (TC)**: each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on each $a_n \in array$ produces operations of array size $N*(N-1) = N^2 - N$ since we cannot compare every $a_n \in array$ to itself. Noticably, the supremum $sup(N^2 - N) = N2$, but continuing onward.
+We can iterate through as such:
 
 $$
 n = 1  \to [a_0]
@@ -86,7 +87,7 @@ $$
 n = 4 \to [a_0, a_1, a_2, a_3] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \\\\ a_2 \\\\ a_3 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_3 \end{pmatrix} + a_3 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_2 \end{pmatrix}
 $$
 
-As we can see, the relationship between array length and operations applied can be seen as first storing the variable which costs 1 unit of time, then comparing the variable to other members of the array. We can represent this in a finite series:
+As we can see, the relationship between array length and operations applied can be seen as first storing the variable which costs 1 unit of time, then comparing the variable to other members of the array. We can represent this in a finite series for array length $N$:
 
 $$
 \sum_{i = 1}^{N}n^2 = 1 + 4 + 9 + 16 + ...
