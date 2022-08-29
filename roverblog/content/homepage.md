@@ -15,9 +15,12 @@ Welcome! This is a site I've made to keep notes that I'd like LaTeX syntax avail
 
 ## Notes Quicklinks
 ## Topics:
+#### [Coding Challenges](./posts/codingchallenges)
 #### [P vs NP](./posts/pvsnp)
+
 ### System Design:
 #### [Scalability](./posts/scalability)
 #### [Networks](./posts/networks)
 #### [Databases](./posts/databases)
 #### [Tradeoffs](./posts/tradeoffs)
+
