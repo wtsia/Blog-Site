@@ -16,8 +16,6 @@ categories = [
 ]
 math = true
 notaxonomy = false
-images = ["/img/example.jpg"]
-imagetext = "An example text for an image you could add!"
 hidden = true
 norobots = true
 nodate = true
@@ -71,70 +69,30 @@ Design:
 $$
 n = 1  \to [a_0]
 $$
-array of $1$ cannot be a duplicate of itself, so no duplicates.
+
+array of 1 cannot be a duplicate of itself, so no duplicates.
 
 $$
-n = 2  \to [a_0, a_1] \to
-a_0
-\begin{pmatrix}
-   a_1
-\end{pmatrix}
-+ a_1
-\begin{pmatrix}
-   a_0
-\end{pmatrix}\\
-
-n = 3  \to [a_0, a_1, a_2] \to
-a_0
-\begin{pmatrix}
-   a_1 \\
-   a_2
-\end{pmatrix}
-+ a_1
-\begin{pmatrix}
-   a_0 \\
-   a_2
-\end{pmatrix}
-+ a_2
-\begin{pmatrix}
-   a_0 \\
-   a_1
-\end{pmatrix}
+n = 2  \to [a_0, a_1] \to a_0 \begin{pmatrix} a_1 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \end{pmatrix} 
 $$
+
+$$
+n = 3  \to [a_0, a_1, a_2] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \\\\ a_2 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\\\ a_1 \end{pmatrix}
+$$
+
 Continuing to an array of length `4`:
+
 $$
-n = 4  \to [a_0, a_1, a_2, a_3] \to
-a_0
-\begin{pmatrix}
-   a_1 \\
-   a_2 \\
-   a_3
-\end{pmatrix}
-+ a_1
-\begin{pmatrix}
-   a_0 \\
-   a_2 \\
-   a_3
-\end{pmatrix}
-+ a_2
-\begin{pmatrix}
-   a_0 \\
-   a_1 \\
-   a_3
-\end{pmatrix}
-+a_3
-\begin{pmatrix}
-   a_0 \\
-   a_1 \\
-   a_2
-\end{pmatrix}
+n = 4 \to [a_0, a_1, a_2, a_3] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \\\\ a_2 \\\\ a_3 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_3 \end{pmatrix} + a_3 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_2 \end{pmatrix}
 $$
+
 As we can see, the relationship between array length and operations applied can be seen as first storing the variable which costs 1 unit of time, then comparing the variable to other members of the array. We can represent this in a finite series:
+
 $$
 \sum_{i = 1}^{N}n^2 = 1 + 4 + 9 + 16 + ...
 $$
-$$
 
+$$
 |array| * array[n] = n*n \rArr O(n^2)
 $$
 

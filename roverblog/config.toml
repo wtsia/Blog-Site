@@ -34,7 +34,7 @@ googleAnalytics = ""
 	description = "Vitae is a blog theme for Hugo that focuses on your content."
 
 	# Add pagetitle to homepage <title> tag
-	pagetitle = "Rover - Explore information by Winston Tsia"
+	pagetitle = "Explore information by Winston Tsia"
 
 	# Add a subtitle to your website
 	subtitle = "[Rover](https://wtsia.github.io/rover/) is a blog for teaching or storing concepts."
