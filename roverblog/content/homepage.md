@@ -17,7 +17,7 @@ Welcome! This is a site I've made to keep notes that I'd like LaTeX syntax avail
 ## Topics:
 #### [P vs NP](./posts/pvsnp)
 ### System Design:
-#### [Scalability](./posts/scalability.md)
-#### [Networks](./posts/networks.md)
-#### [Databases](./posts/databases.md)
-#### [Tradeoffs](./posts/tradeoffs.md)
+#### [Scalability](./posts/scalability)
+#### [Networks](./posts/networks)
+#### [Databases](./posts/databases)
+#### [Tradeoffs](./posts/tradeoffs)
