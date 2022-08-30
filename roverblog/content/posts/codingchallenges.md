@@ -78,15 +78,13 @@ n = 2  \to [a_0, a_1] \to a_0 \begin{pmatrix} a_1 \end{pmatrix} + a_1 \begin{pma
 $$
 
 $$
-n = 3  \to [a_0, a_1, a_2] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \\\\ a_2 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\\\ a_1 \end{pmatrix}
+n = 3  \to [a_0, a_1, a_2] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \end{pmatrix} \\\\ + a_1 \begin{pmatrix} a_0 \\\\ a_2 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\\\ a_1 \end{pmatrix}
 $$
 
 Continuing to an array of length `4`:
 
 $$
-n = 4 \to [a_0, a_1, a_2, a_3] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \\\\ a_2 \\\\ a_3 \end{pmatrix}
-$$ 
-$$+ a_2 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_3 \end{pmatrix} + a_3 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_2 \end{pmatrix}
+n = 4 \to [a_0, a_1, a_2, a_3] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \end{pmatrix} \\\\ + a_1 \begin{pmatrix} a_0 \\\\ a_2 \\\\ a_3 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_3 \end{pmatrix} + a_3 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_2 \end{pmatrix}
 $$
 
 As we can see, the relationship between array length and operations applied can be seen as first storing the variable which costs 1 unit of time, then comparing the variable to other members of the array. We can represent this in a finite series for array length $N$:
