@@ -64,7 +64,7 @@ Design:
 
 **Solution 1)** *Brute force*: store each number in a variable and iterate through the array recursively and return `false` if the operation completes without returning `true`.
 
-**Time Complexity (TC)**: each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on each $a_n \in array$ produces operations of array size $N*(N-1) = N^2 - N$ since we cannot compare every $a_n \in array$ to itself. Noticably, the supremum $sup(N^2 - N) = N2$, but continuing onward.
+**Time Complexity (TC)**: each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on each $a_n \in array$ produces operations of array size $N*(N-1) = N^2 - N$ since we cannot compare every $a_n \in array$ to itself. We can note the supremum $sup(N^2 - N) = N2$, but more importantly, storing a value inside a variable takes computation time. Thus, we can say its $N^2 -N +N$ or simply $N^2$.
 We can iterate through as such:
 
 $$
@@ -84,7 +84,9 @@ $$
 Continuing to an array of length `4`:
 
 $$
-n = 4 \to [a_0, a_1, a_2, a_3] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \\\\ a_2 \\\\ a_3 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_3 \end{pmatrix} + a_3 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_2 \end{pmatrix}
+n = 4 \to [a_0, a_1, a_2, a_3] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \\\\ a_2 \\\\ a_3 \end{pmatrix}
+$$ 
+$$+ a_2 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_3 \end{pmatrix} + a_3 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_2 \end{pmatrix}
 $$
 
 As we can see, the relationship between array length and operations applied can be seen as first storing the variable which costs 1 unit of time, then comparing the variable to other members of the array. We can represent this in a finite series for array length $N$:
