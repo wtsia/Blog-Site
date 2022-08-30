@@ -22,4 +22,4 @@ nodate = true
 hidemeta = false
 +++
 
-![Replacement Text](/rover/img/topic/image.png)
+![Replacement Text](/rover/img/<topic>/<image>.png)

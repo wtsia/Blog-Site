@@ -140,6 +140,11 @@ name = "Categories"
 url = "/categories"
 weight = 5
 
+[[menu.main]]
+name = "Files"
+url = "/files"
+weight = 6
+
 # Social Menu
 [[params.social]]
 name = "Github"

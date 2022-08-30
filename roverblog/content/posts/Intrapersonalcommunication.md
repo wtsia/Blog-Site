@@ -1,21 +1,19 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "IntrapersonalCommunication"
+title = "Intrapersonal Communication"
 date = 2022-08-22T00:17:25-07:00
-description = "Description"
+description = "Notes on Looking Out Looking In, 15th Edition"
 tags = [
-    "tag1",
-    "tag2",
+    "Education",
+    "Communication"
 ]
 categories = [
-    "cat1",
-    "cat2",
+    "Communication",
+    "Education"
 ]
 math = true
 notaxonomy = false
-images = ["/img/example.jpg"]
-imagetext = "An example text for an image you could add!"
 hidden = true
 norobots = true
 nodate = true
