@@ -33,9 +33,6 @@ hidemeta = false
 - Cognitive complex communicators
 - Self-Monitoring
 
-> 
-  
-
 ## Chapter 2
 - Richness
 - Leaner messages
@@ -84,6 +81,7 @@ hidemeta = false
 - Emotional contagion 
 - Rumination 
 - Emotional intelligence 
+- self-talk: the intermediary thoughts that are between the communicated words and the feelings you feel, or the logical process that determines how you resultingly feel
   
 ## Chapter 6
 - Equivocal words 

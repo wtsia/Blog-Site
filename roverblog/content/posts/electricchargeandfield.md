@@ -25,3 +25,12 @@ hidemeta = false
 ### Vectors & Vector Addition
 ![Vector Review](/rover/img/Physics/ReviewVector.jpg)
 
+
+### Charge Density
+$\rho = m/V = kg/m^3$
+
+$\sigma = m/A = kg/m^2$
+
+$\lambda = m/L = kg/m$
+
+we can modify the equations so that mass ($m$) is Coulombs ($C$)

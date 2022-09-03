@@ -167,3 +167,14 @@ $$
 
 ### Functions
 - Matlab has reusable functions
+- `ismembertol(<calculation>,<goal>,<range>)`
+
+### Modular Arithmetic
+```
+num0 % num1
+```
+> This is equivalent to the remainder of $num0/num1$ 
+
+### Numeric Data-types
+- `double float` is the most common floating-point type
+- A `double`'s *mantissa* is limited to 16 digits (due to the number of bits that represent the mantissa), but an int's range is about +/- 2 billion which means 10 digits.
