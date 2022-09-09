@@ -68,6 +68,7 @@ Notes:
   - communication done through a medium such as social media vs face-to-face
 - Digital Natives: 
   - born after early 1990s with communicative technology
+  - differences in channel preferences and topics of discussion
 - Warranting: 
 - 
   - degree to which info is controllable by the person being described (secondhand newspaper article on accomplishments vs yourself blogging)
