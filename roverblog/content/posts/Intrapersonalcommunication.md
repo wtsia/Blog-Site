@@ -23,28 +23,54 @@ hidemeta = false
 ### Looking Out Looking In, 15th Edition
 
 ## Chapter 1
-### Guide:
 - Per the transactional model which factors contribute to different environments.
+  - transactional model: communication is an exchange, and simultaneous unlike the linear model. 
+  - environments bring context to the formulation of communicated messages such as ethnic group, classism, intent, experience, or concern.
 - Compare/Contrast interpersonal vs impersonal relationships.
+  - interpersonal
+    - *quantitatively* face to face, and two interacting are a dyad i.e. asking for directions
+    - *qualitatively*, interpersonal communication occurs when members treat each other as unique individuals (Kant?)
+      - complement to this qualitative approach is *impersonal communication*
+    - **Contrast**: uniqueness, rules/roles, relational culture, irreplace-ability, interdependence, disclosure, and intrinsic rewards.
 - Definition and characteristics of competent communicators
+  - competent communicators achieve one's goals in a way that enhances relationships it's involved with, or effective and appropriate
+  - characteristics include being able to apply a wide range of behaviors, choosing the most appropriate, skillful performance, cognitive complexity, empathy, self-monitoring, and commitment
 - Content and Relational messages
+  - content: information being discussed
+  - relational: how you feel about the other person
 - The three different noises in the transactional model
+  - physiological, psychological, external
 - The transactional model and the various parts.
 - Cognitive complex communicators
-- Self-Monitoring
+  - ability to construct frameworks for viewing an issue
+- Self-Monitoring: paying close attention to one;s own behavior and using observations to shape yourself.
+
+Notes:
+- **Interpersonal communication** is a transactional process involving participants who occupy different but overlapping environments and create meaning and relationships through the exchange of messages, many of which are affected by external, physiological, and psychological noise
 
 ## Chapter 2
-- Richness
-- Leaner messages
-- Asynchronous
-- Synchronicity
-- Disinhibition
-- Hyperpersonal
-- Netiquette
-- The influence of gender in mediated communication
-- Mediated communication vs. Face-to-Face
-- Digital Natives
-- Warranting 
+- Richness: 
+  - non-verbal cues that add clarity to a verbal message
+- Leaner messages: 
+  - stark from a lack of nonverbal information
+- Asynchronous: 
+  - delay between time of sending and recieving
+- Synchronicity: 
+  - connected in real time
+- Disinhibition: 
+  - leanness like online tend to make communicators online be more honest, blunt, less cautious, and self-monitoring
+- Hyperpersonal: 
+  - accelerated discussion that can go beyond face-to-face itneraction
+- Netiquette: 
+  - be civil, respect others, don't intrude, abide by civil rules online.
+- The influence of gender in mediated communication: men tend to use large words, nouns, and swear more than females who use personal pronouns, verbs and hedge phrases (hedging risk)
+- Mediated communication vs. Face-to-Face: 
+  - communication done through a medium such as social media vs face-to-face
+- Digital Natives: 
+  - born after early 1990s with communicative technology
+- Warranting: 
+- 
+  - degree to which info is controllable by the person being described (secondhand newspaper article on accomplishments vs yourself blogging)
 
 
 ## Chapter 3
