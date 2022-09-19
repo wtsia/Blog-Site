@@ -183,3 +183,53 @@ num0 % num1
 linspace(<starting value>, <ending value>, <total partitions>)
 logspace(<starting 10^n>, <ending 10^n>, <total partitions>)
 ```
+```
+//-TRIG-//
+MATLAB function	Description
+sin	Sine.
+sind	Sine of argument in degrees.
+asin	Inverse sine.
+asind	Inverse sine, result in degrees.
+cos	Cosine.
+cosd	Cosine of argument in degrees.
+acos	Inverse cosine.
+acosd	Inverse cosine, result in degrees.
+tan	Tangent.
+tand	Tangent of argument in degrees.
+atan	Inverse tangent.
+atand	Inverse tangent, result in degrees.
+atan2	Four quadrant inverse tangent.
+sec	Secant.
+secd	Secant of argument in degrees.
+asec	Inverse secant.
+asecd	Inverse secant, result in degrees.
+csc	Cosecant.
+cscd	Cosecant of argument in degrees.
+acsc	Inverse cosecant.
+acscd	Inverse cosecant, result in degrees.
+cot	Cotangent.
+cotd	Cotangent of argument in degrees.
+acot	Inverse cotangent.
+acotd	Inverse cotangent, result in degrees.
+
+//-HYPERBOLIC-//
+sinh	Hyperbolic sine.
+asinh	Inverse hyperbolic sine.
+cosh	Hyperbolic cosine.
+acosh	Inverse hyperbolic cosine.
+tanh	Hyperbolic tangent.
+atanh	Inverse hyperbolic tangent.
+sech	Hyperbolic secant.
+asech	Inverse hyperbolic secant.
+csch	Hyperbolic cosecant.
+acsch	Inverse hyperbolic cosecant.
+coth	Hyperbolic cotangent.
+acoth	Inverse hyperbolic cotangent.
+
+//-EXPONENTIAL-//
+exp	Exponential.
+log	Natural logarithm.
+log10	Common (base 10) logarithm.
+sqrt	Square root.
+nthroot	Real n-th root of real numbers.
+```
