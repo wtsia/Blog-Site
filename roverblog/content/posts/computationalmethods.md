@@ -233,3 +233,95 @@ log10	Common (base 10) logarithm.
 sqrt	Square root.
 nthroot	Real n-th root of real numbers.
 ```
+
+```
+Commonly-used formatting operators.
+Operator	Prints	Description
+%f
+fixed-point	f is for fixed-point.
+%d
+integer	d is for decimal integer. The use of d is due to historical reasons, and is slightly misleading because a decimal number could have a fractional part. In MATLAB, %d means decimal integer which does not have a fraction.
+%i
+integer	i is for integer. This operator is identical to %d when formatting output.
+%c
+character	c is for character.
+%s
+string	s is for string.
+```
+
+```
+Commonly-used special characters.
+Special character	Description
+\n
+Prints a new line.
+''
+Two single quotation marks print a single quotation mark. Note that a single quotation mark alone would instead indicate the end of the format specification.
+%%
+Two percent characters print one percent character. Note that a single % character would instead indicate the start of a formatting operator like %f.
+\\
+Two backslash characters print one backslash character. Note that a single backslash character would instead indicate the start of a special character sequence like \n.
+\t
+Prints a tab.
+```
+
+```
+Floating-point number formatting operators.
+Operator	Description
+%f
+Fixed-point notation
+%e
+Scientific notation with lowercase e, as in 3.141593e+00
+%g
+Either %f or %e, whatever is shorter
+%E
+Scientific notation with capital E, as in 3.141593E+00
+%G
+Either %f or %E, whichever is shorter
+```
+
+```
+Conversion specification	Description
+-
+Specifies left-justified display. Without this item, the default is right-justified.
+
+fieldWidth
+Number that specifies the minimum number of digits that will be displayed. If the actual number of digits is less, spaces are automatically inserted to reach the minimum. If not set, the number of digits corresponds to the default number digits used in the base workspace for the class of numeric variable (for more information, enter 'help format' on the command line).
+
+precision
+Number that specifies the number of digits to the right of the decimal point.
+```
+
+```
+1D arithmetic array operators.
+Element-wise operator	Equivalent function	Description
++
+plus(a,b)
+Addition
+-
+minus(a,b)
+Subtraction
+.*
+times(a,b)
+Element-wise array multiplication
+.^
+power(a,b)
+Element-wise array exponentiation
+./
+rdivide(a,b)
+Element-wise array division
+```
+
+```
+ceil(n): rounds n upward
+```
+### Indexing rows and Columns: Single Colon
+MATLAB supports a single colon index to access all elements of a row or column. All of the third row can thus accessed as sampleMatrix(3, : ). Likewise, all of column 2 can be accessed as sampleMatrix( :, 2)
+
+
+### Concatenation
+- Good practice is to use concatenation to create 2D arrays from 1D arrays, rather than creating one large 2D array. As shown above, monthSpend is created by concatenating weekSpend 1d arrays, rather than as an initial large 2D array.
+
+### Branching
+- if-else
+- switch-case: tests equality
+- try-catch: handles errors
