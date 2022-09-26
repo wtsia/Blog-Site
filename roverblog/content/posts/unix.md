@@ -38,3 +38,10 @@ hidemeta = false
     - Fedora: Worked on by non-Red Hat developers. Also used as a testing platform for future RHEL releases.
 - SUSE Family Systems (including openSUSE)
 - Debian Family Systems (including Ubuntu and Linux Mint).
+
+
+### Debian / Ubuntu Linux: *Searching For Package by Name*
+
+Use dpkg command. It is a package manager for Debian/Ubuntu Linux. Suppose you want to find out package apache-perl or sudo is installed or not, type command:
+
+`$ dpkg -s <package-name>`
