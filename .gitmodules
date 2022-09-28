@@ -1,6 +1,6 @@
 [submodule "roverblog/public"]
 	path = roverblog/public
-	url = https://github.com/wtsia/rover.github.io.git
+	url = https://github.com/wtsia/rover.git
 	branch = main
 [submodule "roverblog/roverblog/themes/hugo-vitae"]
 	path = roverblog/roverblog/themes/hugo-vitae
