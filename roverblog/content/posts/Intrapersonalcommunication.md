@@ -74,29 +74,75 @@ Notes:
   - degree to which info is controllable by the person being described (secondhand newspaper article on accomplishments vs yourself blogging)
 
 
-## Chapter 3
+## Chapter 3: Communication and ID: Creating/Presenting the Self
 - Impression management
-- Self-Concept
+  - communication strategies that people use to influence how others view them
+- Self-Concept 
+  - who we think we are
 - Self-fulfilling prophecy
+  - persons expectations of an even make the event more likely to occur
+  - 1. Holding an expectation
+  - 2. Behaving in accordance
+  - 3. Coming to pass
+  - 4. Reinforcmenet
 - Presenting/Perceived Self
+  - percieved - reflection of self-concept, the person you are in honest moments of self examination
+  - presenting self - public image, or how we want others to see us (fact)
+  - (^ _ ^) <--> (T _ T)
 - Social Comparison
+  - evaluating ourselves in terms of how we compare with others (good/bad?)
 - Ego Booster/Busters
+  - a produce of significant others, 
 - Individualistic/Collectivist Cultures
+  - West vs Asia
+  - Individual: Identify first with name, surname, town, etc.
+  - Collectivist: Group identity comes first, i.e. village or caste or lineage
 - Reference Groups
+  - Groups whose traits we compare ourselves to--an oddball in an oddball group is no longer odd
 - Cognitive Conservatism
+  - tendency to claim to a self-concept that is contrary to evidence
 - Benevolent lies
+  - an unmalicious or helpful lie in the view of the person telling it
+  - The Goodbye with Aquafina
 - Self-Disclosure
+  - deliberately revealing information about oneself that is significant and not normally known by others
+  - social penetration: depth vs breadth
+  - johari window: dividing what is known of the self into parts of a windowpane
+  - Benefits or Risks
+    - benefits: Catharsis, Reciprocity, Self-Clarification, Self-Validation, building and maintaining relationships, social influence
+    - risks: rejection, negative impression, decrease in relational satisfaction, loss of influence, and hurting others
  
 
-## Chapter 4
+## Chapter 4: Perception what you see is what you get?
 - The phases of perception 
+  - selection
+    - selecting impression we attend to as well as what we ignore
+  - organization
+    - arranging information in a meaningful way (i.e. perceptual schema)
+    - punctuation: where one point begins and ends i.e. in a husband wife quarrel cycle
+  - interpretation
+    - attaching meaning to sense data
+      - involvement with people, experience, assumptions, attitudes, expectations (anticipation shapres interpretation), knowledge, self-concept, rational satisfaction
 - The perception checking process 
+  - description of behavior -> 2+ possible interpretations of it -> request for clarification about interpretation
 - How the senses influence perception 
+  - pillow method: combinations of right, wrong, and importance
 - Individualistic and Collectivist Cultures 
+  - latino vs japanese individuals are often at odds with their reference group
+  - stereotypes can spawn from good or bad intentions
 - Ethnocentrism 
+  - attitude that one's own culture is superior to others
 - Sympathy 
+  - empathy vs sympathy -- view other persons situation from their POV vs your POV
 - Stereotyping 
-- Classifications of perceptions for people 
+  - exaggerated generalizations with a categorizing system
+    - kernel of truth that go excessively beyond
+- Classifications of perceptions for people
+  -  Judge ourselves more charitably than others
+  -  Clinging to first impressions
+  -  Assume others are similar to us
+  -  Influenced by expectations
+  -  Influenced by obvious
 
 
 ## Chapter 5

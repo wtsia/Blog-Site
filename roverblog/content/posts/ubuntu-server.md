@@ -32,23 +32,60 @@ sudo ufw status numbered
 
 // delete 'n' rule
 sudo ufw delete 'n'
+
+// mounting drives
+sudo lsblk
+sudo fdisk -l           // list drives
+sudo blkid              // get uuid of drive
+sudo nano /etc/fstab    // edit fstab using nano
+# example of a disk mount
+/dev/disk/by-uuid/<id>  /<directory for mount>  <storage type like ext4>    defaults    0   0    
+
+// show video card drivers
+lshw -c video
+
+// traceroute
+traceroute -m <max num hops> -p <port> <site>
+
+// unlocking Luks Drive
+sudo cryptsetup open /dev/sdd3 luksrecoverytarget  --type luks
+
+// view formatted systemctl logs
+journalctl -u <service> --no-pager | less
+
+```
+
+## useful text editor shortcuts
+```
+// NANO
+Ctrl + 6 to set a mark.
+Alt + T will delete all content in a file.
+Ctrl + K will delete the current line at your cursor.
 ```
 
 # Setting up Reverse Proxy with Caddy or Nginx
 To create a web server that is accessible from a domain, we will be using Caddy or Nginx proxy manager to set up our local reverse proxy and manage Nginx from a friendly UI.
 
 ## Caddy
+[Caddy Installation Documentation](https://caddyserver.com/docs/install)
 ```
-echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" | sudo tee -a /etc/apt/sources.list.d/caddy-fury.list
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
+
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
 
 sudo apt update
-
 sudo apt install caddy
 
 sudo systemctl start caddy
 
 // edit caddy file
 sudo nano /etc/caddy/Caddyfile
+
+site:port {
+    reverse_proxy address:internal_port
+}
 
 sudo systemctl reload caddy
 
@@ -87,6 +124,40 @@ sudo usermod -aG docker ${USER}
 //log out and log back in or:
 su - ${USER}
 ```
+
+### Docker Operations
+```
+docker-compose up -d // run docker container from docker-compose.yml in (-d) background
+```
+
+## Nginx Proxy Manager
+Quick-Start (9.28.2022)
+```
+# use this as a docker-compose.yml file
+version: '3'
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+```
+Then initiate your stack: `docker-compose up -d'
+
+## Nginx
+```
+// enable autostart
+sudo update-rc.d nginx defaults
+
+// disable nginx from autostarting
+sudo update-rc.d -f nginx disable
+```
+
 ## Port Forwarding
 - TCP/UDP: Connecting and holding to an endpoint/Sending a signal and hoping it arrives 
 - dealing with busy port:
@@ -97,10 +168,81 @@ sudo systemctl stop apache
 ```
 
 ## Server Security
-`sudo ufw enable`
-- make sure to enable the server firewall. As of ubuntu 
+```
+sudo ufw enable // make sure to enable the server firewall. 
+
+sudo ufw reload // reload server firewall rules
+
+sudo apt install unattended-upgrades // automatically install security updates
+
+// using ssh keys to access your server (mostly for convenience)
+// at local:
+ssh-keygen -t ed25519
+
+ssh-copy-id -i /<key directory> <user>@<ip>
+
+// edit ssh settings on server
+sudo nano /etc/ssh/sshd_config
+systemctl restart sshd          // restart daemon
+
+// create easier login @ .bashrc
+nano .bashrc
+source ~/.bashrc
+
+// fail2ban SSH logins
+sudo apt install fail2ban
+
+// create sshd ban entry-- cp fail2ban.conf and enter at the bottom of /etc/fail2ban/fail2ban.local
+[sshd]
+enabled = true
+port = <port>
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
+bantime = -1
+
+sudo service fail2ban restart // restart fail2ban
+
+sudo fail2ban-client status
+
+// to unban:
+sudo fail2ban-client set sshd unbanip <ip>
+
+// 2FA SSH w/ Google Authenticator
+sudo apt install libpam-google-authenticator
+
+sudo nano /etc/pam.d/sshd
+
+sudo nano /etc/ssh/sshd_config
+
+// edit sshd config, then restart
+sudo service sshd restart
+
+// to reverse, remove entries from files
+
+// chkrootkit
+git clone https://github.com/Magentron/chkrootkit.git   // clone from repo
+cd chkrootkit                                           // cd into directory
+./chkrootkit                                            // run chkrootkit
+
+// rkhunter
+wget http://downloads.sourceforge.net/project/rkhunter/rkhunter/1.4.6/rkhunter-1.4.6.tar.gz             // download package
+tar -xvf rkhunter-1.4.6.tar.gz  // extract
+rkhunter --check                // run tool
+```
 
 ## Maldet: Linux Malware Detection
+### Installation
+```
+// cd into a directory to unpack maldet files
+wget https://www.rfxn.com/downloads/maldetect-current.tar.gz
+tar -xvf maldetect-current.tar.gz
+cd maldet-<version>
+
+// update maldet
+maldet -u
+
+```
 Make sure to have `clamscan` installed so that maldet can utilize the clamav binary for the scanner engine.
 
 `maldet --scan-all <directory>`: scan the entirety of a directory and subdirectories
@@ -108,11 +250,24 @@ Make sure to have `clamscan` installed so that maldet can utilize the clamav bin
 `maldet -u`: update maldet
  
 
-## Transcoding
+## Media
+### Installing Jellyfin (Docker) 
+https://jellyfin.org/docs/general/administration/installing.html
+### Transcoding
 
 To properly change track order of an `.mkv`:
 ```
 mkvmerge --output "your_file (1).mkv" "(" "your_file.mkv" ")" --track-order 0:0,0:2,0:1
+
+# first, get audio track info so we know which one to keep
+mkvmerge -i input.mkv
+File 'input.mkv': container: Matroska
+Track ID 1: video (V_MPEG4/ISO/AVC)
+Track ID 2: audio (A_AAC)
+Track ID 3: audio (A_AAC)        <----------- for example, let's keep this one
+Track ID 4: audio (A_AAC)
+
+mkvmerge -o output.mkv --audio-tracks 3 input.mkv
 ```
 
 ### Converting mkv to h264 with FFmpeg
@@ -120,7 +275,75 @@ mkvmerge --output "your_file (1).mkv" "(" "your_file.mkv" ")" --track-order 0:0,
 EDIT: This question has become very popular and is one of the top results for searching "convert mkv to h264 ffmpeg" and thus I feel it is appropriate to add that for anyone stumbling upon this question to rather use
 ```
 ffmpeg -i input.mkv -c:v libx264 -c:a aac output.mp4
+
+// 10-bit/12-bit HEVC to 10-bit H.264
+
+ffmpeg -i input -map 0 -c:v libx264 -crf 18 -c:a copy output.mk
 ```
 [link](https://stackoverflow.com/questions/30898671/converting-mkv-to-h264-ffmpeg)
+
+
+10-bit/12-bit HEVC to 8-bit H.264
+
+`ffmpeg -i input -map 0 -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy output.mkv`
+
+    -map 0 will include all streams (default stream selection only selects 1 stream per type). See FFmpeg Wiki: Map.
+
+    Adjust the -crf value to provide the desired level of quality. Add the -preset option if you want to adjust encoding speed. See FFmpeg Wiki: H.264 for more info on -crf and -preset.
+
+    Uses the format filter to choose the yuv420p pixel format to create 8-bit output.
+
+10-bit/12-bit HEVC to 10-bit H.264
+
+`ffmpeg -i input -map 0 -c:v libx264 -crf 18 -c:a copy output.mkv`
+
+    -map 0 will include all streams (default stream selection only selects 1 stream per type). See FFmpeg Wiki: Map.
+
+    Adjust the -crf value to provide the desired level of quality. Add the -preset option if you want to adjust encoding speed. See FFmpeg Wiki: H.264 for more info on -crf and -preset.
+
+    No need for the format filter in this case.
+
+10-bit/12-bit HEVC to 8-bit HEVC
+
+`ffmpeg -i input -map 0 -c:v libx265 -crf 20 -vf format=yuv420p -c:a copy output.mkv`
+
+    -map 0 will include all streams (default stream selection only selects 1 stream per type). See FFmpeg Wiki: Map.
+
+    Adjust the -crf value to provide the desired level of quality. Add the -preset option if you want to adjust encoding speed. See FFmpeg Wiki: HEVC / H.265 for more info on -crf and -preset.
+
+    Uses the format filter to choose the yuv420p pixel format to create 8-bit output.
+
+12-bit HEVC to 10-bit HEVC
+
+`ffmpeg -i input -map 0 -c:v libx265 -crf 20 -vf format=yuv420p10le -c:a copy output.mkv`
+
+    -map 0 will include all streams (default stream selection only selects 1 stream per type). See FFmpeg Wiki: Map.
+
+    Adjust the -crf value to provide the desired level of quality. Add the -preset option if you want to adjust encoding speed. See FFmpeg Wiki: HEVC / H.265 for more info on -crf and -preset.
+
+    Uses the format filter to choose the yuv420p10le pixel format to create 10-bit output. Other 10-bit pixel formats supported by libx265 are yuv422p10le & yuv444p10le, but your player may not like these. See ffmpeg -h encoder=libx265 for additional supported pixel formats.
+
+```
+# assume input.mkv has 3 subtitle tracks
+# remove subtitle track 2 (copy 1&3) from input.mkv & save to output.mkv
+mkvmerge -o output.mkv --subtitle-tracks 1,3 input.mkv
+
+# remove all subtitles (copy none)
+mkvmerge -o output.mkv --no-subtitles input.mkv
+```
+
+### Ubuntu Server Troubleshooting
+- allocated space not totally filled (seen after `lsblk`)
+```
+// ubuntu stack overflow
+I also used the default Ubuntu 20.04 install from ISO w/ lvm option selected. I had the same problem with the OS disk not occupying what I had allocated. Eddie's suggestion and the provided link did it for me. To summarize:
+
+root@util:~# vgdisplay
+<snip>
+root@util:~# lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+<snip>
+root@util:~# resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+<snip>
+```
 
  
