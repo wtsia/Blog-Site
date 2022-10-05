@@ -325,3 +325,20 @@ MATLAB supports a single colon index to access all elements of a row or column. 
 - if-else
 - switch-case: tests equality
 - try-catch: handles errors
+
+### While and For Loops
+```
+
+
+i = 0;
+while (i <= 99)
+    % Loop body statements go here
+    i = i + 1;
+end
+///////
+for i=0:1:99
+    % Loop body statements go here
+end
+
+
+```

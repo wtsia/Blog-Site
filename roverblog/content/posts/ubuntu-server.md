@@ -127,7 +127,17 @@ su - ${USER}
 
 ### Docker Operations
 ```
-docker-compose up -d // run docker container from docker-compose.yml in (-d) background
+// run docker container from docker-compose.yml in (-d) background
+docker-compose up -d 
+
+// list docker images
+docker image ls 
+
+// restart all containers
+docker restart $(docker ps -q) 
+
+// remove all containers
+docker rm $(docker ps -aq) 
 ```
 
 ## Nginx Proxy Manager
