@@ -63,6 +63,11 @@ Alt + T will delete all content in a file.
 Ctrl + K will delete the current line at your cursor.
 ```
 
+## Portainer
+```
+docker run -d -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
+```
+
 # Setting up Reverse Proxy with Caddy or Nginx
 To create a web server that is accessible from a domain, we will be using Caddy or Nginx proxy manager to set up our local reverse proxy and manage Nginx from a friendly UI.
 
@@ -91,8 +96,8 @@ sudo systemctl reload caddy
 
 ```
 
-## Docker
-### Installation
+# Docker
+## Installation
 ```
 // update list. If your output seems abnormal, take a moment to think on your next step. This is a guide that worked for me on Ubuntu 22.04.1 LTS
 sudo apt update
@@ -159,7 +164,7 @@ services:
 ```
 Then initiate your stack: `docker-compose up -d'
 
-## Nginx
+# Nginx
 ```
 // enable autostart
 sudo update-rc.d nginx defaults
@@ -177,7 +182,7 @@ sudo systemctl stop nginx
 sudo systemctl stop apache
 ```
 
-## Server Security
+# Server Security
 ```
 sudo ufw enable // make sure to enable the server firewall. 
 
@@ -248,6 +253,7 @@ rkhunter --check                // run tool
 wget https://www.rfxn.com/downloads/maldetect-current.tar.gz
 tar -xvf maldetect-current.tar.gz
 cd maldet-<version>
+./install.sh
 
 // update maldet
 maldet -u
@@ -260,7 +266,7 @@ Make sure to have `clamscan` installed so that maldet can utilize the clamav bin
 `maldet -u`: update maldet
  
 
-## Media
+# Media
 ### Installing Jellyfin (Docker) 
 https://jellyfin.org/docs/general/administration/installing.html
 ### Transcoding
