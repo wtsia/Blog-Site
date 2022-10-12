@@ -65,7 +65,7 @@ Ctrl + K will delete the current line at your cursor.
 
 ## Portainer
 ```
-docker run -d -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
+docker run -d --restart always -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
 ```
 
 # Setting up Reverse Proxy with Caddy or Nginx
@@ -258,6 +258,8 @@ cd maldet-<version>
 // update maldet
 maldet -u
 
+// edit maldet configg
+nano /usr/local/maldetect/conf.maldet
 ```
 Make sure to have `clamscan` installed so that maldet can utilize the clamav binary for the scanner engine.
 
@@ -298,6 +300,8 @@ ffmpeg -i input -map 0 -c:v libx264 -crf 18 -c:a copy output.mk
 ```
 [link](https://stackoverflow.com/questions/30898671/converting-mkv-to-h264-ffmpeg)
 
+### HEVC x265 to MP4 x264
+`ffmpeg -i input.mp4 -c:v libx264 -crf 20 -c:a copy output.mp4`
 
 10-bit/12-bit HEVC to 8-bit H.264
 

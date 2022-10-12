@@ -342,3 +342,8 @@ end
 
 
 ```
+
+```
+cellArrayOut = cell(numRows,numCols)
+```
+- cell creates a numRows × numCols cell array of empty cells. Cell arrays of higher dimensions can be created by calling cell() with additional arguments.
