@@ -123,6 +123,8 @@ Notes:
   - interpretation
     - attaching meaning to sense data
       - involvement with people, experience, assumptions, attitudes, expectations (anticipation shapres interpretation), knowledge, self-concept, rational satisfaction
+  - negotiation
+    - people influencing each others perceptions to create a sense of shared perspective
 - The perception checking process 
   - description of behavior -> 2+ possible interpretations of it -> request for clarification about interpretation
 - How the senses influence perception 
@@ -147,28 +149,74 @@ Notes:
 
 ## Chapter 5
 - Facilitative and debilitative emotions 
+  - emotions that contribute vs detract form effective functioning
+    - intensity: anger vs rage, caution vs fear
+    - duration: rumination or dwelling persistently on negative thoughts intensify negative feelings
+  - sources
+    - debilitative: physiology (genetics), emotional memory(recurring reminders), self-talk (interpretation of event to feelings)
 - Individualistic and Collectivist cultures 
-- The Fallacies 
+  - collectivist praise harmony among members, while individualistic praise revealing their emotions to people who are close
+    - too reserved vs too demonstrative
+- The Fallacies of:
+  - perfection: nobody is perfect
+  - approval: dont need approval
+  - shoulds: things dont need to ought be some way
+  - overgeneralization: limited evidence overgeneralizing
+  - causation: emotions caused by others than self-talk
+  - helplessness: satisfaction in life is beyond your control when it is
+  - catastrophic expectations: Murphy's law
 - Reappraisal 
+  - rethinking the meaning of emotionally charged events
+  - superior to suppressing feelings
 - Emotion labor 
-- Emotional contagion 
+  - situations in which managing and even suppressing emotions is both appropriate and necessary
+- Emotional contagion
+  - process by which emotionas are transferred form one person to another
 - Rumination 
-- Emotional intelligence 
+  - dwelling on persistent thoughts that intensify often negative feelings
+- Emotional intelligence: 
+  - the ability to understand and manage ones own emotions and others' feelings
+  - positively linked with self-esteem, life satisfaction, self acceptance, conflict management, and relationships
 - self-talk: the intermediary thoughts that are between the communicated words and the feelings you feel, or the logical process that determines how you resultingly feel
+
+### Summary:
+> Emotions have several dimensions. They are signaled by internal physiologi- cal changes, manifested by nonverbal reactions, and defined in most cases by cognitive interpretations. We can use this information to make choices about whether or not to verbalize our feelings. There are several reasons why people do not verbalize many of the emotions they feel. Some people have personalities that are less prone toward emotional expression. Culture and gender also have an effect on the emotions we do and don’t share with others. Social rules and roles discourage the expression of some feelings, particularly negative ones. Social media may also increase the intensity of emotions for both message senders and receivers. Finally, contagion can lead us to experience emotions that we might not otherwise have had. Because total expression of emotions is not appropriate, several guidelines help define when and how to express emotions effectively. Expanding your emotional vocabulary, becoming more self-aware, and expressing mixed feelings are important. Recognizing the difference between feeling, thinking, and acting, as well as accepting responsibility for feelings instead of blaming them on others, lead to better reactions. Choosing the proper time and place to share feelings is also important, as is choosing the best channel for expressing emotions. Whereas some emotions are facilitative, others are debilitative and inhibit effective functioning. Many of these debilitative emotions are biological reactions rooted in the amygdala portion of the brain, but their negative impact can be altered through rational thinking. It is often possible to communicate more confidently and effectively by identifying troublesome emotions, identifying the activating event and self-talk that triggered them, and reappraising any irrational thoughts with a more logical analysis of the situation. It is also important to identify and enjoy facilitative emotions.
   
 ## Chapter 6
 - Equivocal words 
+  - using language that can be an alternative to blunt disclosure, ambiguous meaning
 - High/Low-level of abstraction 
+  - vague language to describe goals and problems
+  - high vs low: 
+    - high: using vague language as verbal shorthand
+    - low: concrete and behavioral 
 - Pragmatic rules 
-- Language and its symbolic nature 
+  - to decide how to interpret messages in a given context, and is usually unstated
+- Language and its symbolic nature
+  - language has an arbitrary connection between words and the ideas they refer--not literal
 - Linguistic Relativism 
-- Convergence/Divergence 
+  - the notion that language exerts strong influence on the worldview of the people who speak it
+- Convergence/Divergence
+  - convergence: adapting speech style to match others 
+  - divergence: speaking in a way that emphasizes differences from others
 - Static Evaluation 
+  - statements that contain or imply people are static and unchanging, people are often more changing than static language
 - Fact/Inference/Opinion 
+  - problems arise when confusing factual with inferential statements
 - Relative Words 
+  - words with meanings gained by comparison i.e. fast/slow, smart/stupid
 - I/We/You/But/It language 
+  - Language of responsibility
+  - 'it' replaces 'I'
+  - 'I' identifies the speaker/source
+  - 'but' cancels the thought that precedes it
+  - 'you' expresses judgement of another person
+  - 'we' issue is the concern and responsibility of both the speaker and receiver
 - High/Low Context language 
-
+  - low context value using language to express thoughts feelings and ideas as directly as possible
+  - high context uses language to maintain social harmony
+### Summary:
+> Language is both a marvelous communication tool and the source of many interpersonal problems. Every language is a collection of symbols governed by a variety of rules: semantic, syntactic, and pragmatic. Terms used to name people influence the way the people are regarded. The terms used to name speakers and the language they use reflect the level of affiliation of a speaker toward others. Language patterns also reflect and shape a speaker’s perceived power. Some language habits—such as confusing facts with opinions or inferences and using emotive terms—can lead to unnecessary disharmony in interpersonal relationships. Language also acknowledges or avoids the speaker’s acceptance of responsibility for his or her thoughts and feelings. There are some differences in the ways men and women speak. The content of their conversations varies, as do their reasons for communicating and their conversational styles. However, not all differences in language use can be accounted for by the speaker’s biological sex. Gender roles, occupation, social philosophy, and orientation toward problem solving also influence people’s use of language. Different languages often shape and reflect the views of a culture. Some cultures value directness, brevity, and the succinct use of language, whereas others value indirect or elaborate forms of speech. In some societies, formality is important, whereas others value informality. Beyond these differences, there is evidence to support linguistic relativism—the notion that language exerts a strong influence on the worldview of the people who speak it.
 
 ## Chapter 7
 - Ideas/Feelings and nonverbal communication 

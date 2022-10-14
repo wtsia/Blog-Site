@@ -53,6 +53,9 @@ sudo cryptsetup open /dev/sdd3 luksrecoverytarget  --type luks
 // view formatted systemctl logs
 journalctl -u <service> --no-pager | less
 
+// rsync
+rsync -rtvu source_folder/ destination_folder/
+
 ```
 
 ## useful text editor shortcuts
