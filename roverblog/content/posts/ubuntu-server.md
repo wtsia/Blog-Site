@@ -39,7 +39,8 @@ sudo fdisk -l           // list drives
 sudo blkid              // get uuid of drive
 sudo nano /etc/fstab    // edit fstab using nano
 # example of a disk mount
-/dev/disk/by-uuid/<id>  /<directory for mount>  <storage type like ext4>    defaults    0   0    
+/dev/disk/by-uuid/6cb2542a-022b-45f6-8bce-4f593a2f839b  /<directory for mount>  <storage type like ext4>    defaults    0   0    
+sudo mount -a
 
 // show video card drivers
 lshw -c video
@@ -56,8 +57,26 @@ journalctl -u <service> --no-pager | less
 // rsync
 rsync -rtvu source_folder/ destination_folder/
 
+//ubuntu drivers
+sudo ubuntu-drivers devices
+
 ```
 
+### Ubuntu Server Troubleshooting
+- allocated space not totally filled (seen after `lsblk`)
+```
+// ubuntu stack overflow
+I also used the default Ubuntu 20.04 install from ISO w/ lvm option selected. I had the same problem with the OS disk not occupying what I had allocated. Eddie's suggestion and the provided link did it for me. To summarize:
+
+root@util:~# vgdisplay
+<snip>
+root@util:~# lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+<snip>
+root@util:~# resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+<snip>
+```
+
+ 
 ## useful text editor shortcuts
 ```
 // NANO
@@ -66,10 +85,6 @@ Alt + T will delete all content in a file.
 Ctrl + K will delete the current line at your cursor.
 ```
 
-## Portainer
-```
-docker run -d --restart always -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
-```
 
 # Setting up Reverse Proxy with Caddy or Nginx
 To create a web server that is accessible from a domain, we will be using Caddy or Nginx proxy manager to set up our local reverse proxy and manage Nginx from a friendly UI.
@@ -131,6 +146,11 @@ sudo usermod -aG docker ${USER}
 
 //log out and log back in or:
 su - ${USER}
+```
+
+## Portainer
+```
+docker run -d --restart always -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
 ```
 
 ### Docker Operations
@@ -198,13 +218,14 @@ sudo apt install unattended-upgrades // automatically install security updates
 ssh-keygen -t ed25519
 
 ssh-copy-id -i /<key directory> <user>@<ip>
-
+(default: /home/<user>/.ssh/id_ed25519.pub)
 // edit ssh settings on server
 sudo nano /etc/ssh/sshd_config
 systemctl restart sshd          // restart daemon
 
 // create easier login @ .bashrc
-nano .bashrc
+sudo nano ~/.bashrc
+// add "alias <name>="ssh -p <port> <user>@<ip address>"
 source ~/.bashrc
 
 // fail2ban SSH logins
@@ -354,19 +375,3 @@ mkvmerge -o output.mkv --subtitle-tracks 1,3 input.mkv
 # remove all subtitles (copy none)
 mkvmerge -o output.mkv --no-subtitles input.mkv
 ```
-
-### Ubuntu Server Troubleshooting
-- allocated space not totally filled (seen after `lsblk`)
-```
-// ubuntu stack overflow
-I also used the default Ubuntu 20.04 install from ISO w/ lvm option selected. I had the same problem with the OS disk not occupying what I had allocated. Eddie's suggestion and the provided link did it for me. To summarize:
-
-root@util:~# vgdisplay
-<snip>
-root@util:~# lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
-<snip>
-root@util:~# resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
-<snip>
-```
-
- 
