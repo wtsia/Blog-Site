@@ -148,7 +148,7 @@ sudo usermod -aG docker ${USER}
 su - ${USER}
 ```
 
-## Portainer
+## Docker: Portainer
 ```
 docker run -d --restart always -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
 ```
@@ -168,7 +168,7 @@ docker restart $(docker ps -q)
 docker rm $(docker ps -aq) 
 ```
 
-## Nginx Proxy Manager
+## Docker: Nginx Proxy Manager
 Quick-Start (9.28.2022)
 ```
 # use this as a docker-compose.yml file
@@ -285,7 +285,7 @@ maldet -u
 // edit maldet configg
 nano /usr/local/maldetect/conf.maldet
 ```
-Make sure to have `clamscan` installed so that maldet can utilize the clamav binary for the scanner engine.
+Make sure to have `clamav` installed so that maldet can utilize the clamav binary for the scanner engine.
 
 `maldet --scan-all <directory>`: scan the entirety of a directory and subdirectories
 
