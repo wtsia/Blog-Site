@@ -166,6 +166,10 @@ docker restart $(docker ps -q)
 
 // remove all containers
 docker rm $(docker ps -aq) 
+
+// run shell in docker
+$ docker exec -it <container id> bash 
+root@<container id>:/#
 ```
 
 ## Docker: Nginx Proxy Manager

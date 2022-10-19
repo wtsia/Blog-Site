@@ -16,8 +16,6 @@ categories = [
 ]
 math = true
 notaxonomy = false
-images = ["/img/example.jpg"]
-imagetext = "An example text for an image you could add!"
 hidden = true
 norobots = true
 nodate = true
@@ -347,3 +345,11 @@ end
 cellArrayOut = cell(numRows,numCols)
 ```
 - cell creates a numRows × numCols cell array of empty cells. Cell arrays of higher dimensions can be created by calling cell() with additional arguments.
+
+## Review
+![Midterm Review](/rover/img/ComputationalMethods/MATLABNotes.png)
+
+- return causes an immediate end of a function
+- continue skips remaining statements in one iteration but doesnt end the loop
+- break terminates a loop and executes code after the ending statement corresponding to the interrupted loop
+- logical array is output when comparing two matrices with `==`
