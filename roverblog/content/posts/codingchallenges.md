@@ -87,14 +87,14 @@ $$
 n = 4 \to [a_0, a_1, a_2, a_3] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \end{pmatrix} \\\\ + a_1 \begin{pmatrix} a_0 \\\\ a_2 \\\\ a_3 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_3 \end{pmatrix} + a_3 \begin{pmatrix} a_0 \\\\ a_1 \\\\ a_2 \end{pmatrix}
 $$
 
-As we can see, the relationship between array length and operations applied can be seen as first storing the variable which costs 1 unit of time, then comparing the variable to other members of the array. We can represent this in a finite series for array length $N$:
+As we can see, the relationship between array length and operations applied can be seen as first storing the variable which costs 1 unit of time, then comparing the variable to other members of the array. We can represent the sum of all array operations up to array length $N$ in a finite series:
 
 $$
-\sum_{i = 1}^{N}n^2 = 1 + 4 + 9 + 16 + ...
+\sum_{n = 1}^{N}n^2 = 1 + 4 + 9 + 16 + ...
 $$
-
+However, more appropriately, we can represent the incremental operations as a sequence for big $N$:
 $$
-|array| * array[n] = n*n \rArr O(n^2)
+[a_n]_{n = 1}^N ~,~~~ a_n = n^2 \equiv (1, 4, 9, 16, ..., N^2)
 $$
 
 Sol 2) Divide: split the array into two and compare each number to each element of the other array. This reduces the size of the array approximately in half..

@@ -187,19 +187,55 @@ The online midterm test covers chapters 1-8 in the zyBook.
 You are expected to know everything that you were asked to do on your assignments, which means you should be able to write Java programs that include:
 
 - Definition of methods besides the main method
-- These methods may receive arguments/parameters and may or may not return values.
-- Values passed as arguments to methods may be of any type, such as, but not limited to: int, double, String.
-- Values returned by methods may be of any type, such as, but not limited to: boolean, int, double, String.
-- Call methods in main to perform a calculation or an action.
+  - A method  is a list of statements executed by invoking the method's name (this is known as a method call). There are user defined methods and built in methods.
+    - i.e. sqrt(x), pow(x,y), abs(x)
+  - These methods may receive arguments/parameters and may or may not return values.
+  - Values passed as arguments to methods may be of any type, such as, but not limited to: -
+    - int, double, String.
+  - Values returned by methods may be of any type, such as, but not limited to: 
+    - boolean, int, double, String.
+```
+<access_modifier> <return_type> <method_name>( list_of_parameters) {
+    //body
+}
+
+
+public int subtractNumbers(int m, int n) {
+    int p = 0;
+    p = m - n;
+    System.out.println(p);
+    return p;
+}
+```
+> we can see that `public` corresponse to the access modifier, `int` to return type, and `subtractNumbers` to method name. You can infer what the other parts are.
+`public static`: `public` means the method may be called from any class in the program, and `static` means the method only uses values that are passed to the method
+```
+      numElements = scnr.nextInt();
+      
+      int[] list = new int[numElements];
+       for (i = 0; i < list.length; i++) {
+         list[i] = scnr.nextInt();
+      }
+      for (i = list.length - 1; i >= 0; i--){
+         System.out.print(list[i] + ",");
+      }
+```
+Code block above is an example of:
+- One-dimensional arrays `
 - Input values from the standard input using the Scanner object.
+- Call methods in main to perform a calculation or an action.
 - Output values on the screen.
+  - loops
+  - for and for-each
+
+```
+
+```
 - Strings and string methods, such as: charAt(), indexOf, length(), equals(), equalsIgnoreCase(), compareTo()
-- One-dimensional arrays
 - if-else statements
 - switch statements
-- loops
-- for and for-each
-- while and do-while
+
+  - while and do-while
 - It is helpful to review Discussion posts, homework assignments 1-9 and quizzes 1-3.
 
 The Midterm exam is in 2 parts:
