@@ -218,33 +218,93 @@ Notes:
 ### Summary:
 > Language is both a marvelous communication tool and the source of many interpersonal problems. Every language is a collection of symbols governed by a variety of rules: semantic, syntactic, and pragmatic. Terms used to name people influence the way the people are regarded. The terms used to name speakers and the language they use reflect the level of affiliation of a speaker toward others. Language patterns also reflect and shape a speaker’s perceived power. Some language habits—such as confusing facts with opinions or inferences and using emotive terms—can lead to unnecessary disharmony in interpersonal relationships. Language also acknowledges or avoids the speaker’s acceptance of responsibility for his or her thoughts and feelings. There are some differences in the ways men and women speak. The content of their conversations varies, as do their reasons for communicating and their conversational styles. However, not all differences in language use can be accounted for by the speaker’s biological sex. Gender roles, occupation, social philosophy, and orientation toward problem solving also influence people’s use of language. Different languages often shape and reflect the views of a culture. Some cultures value directness, brevity, and the succinct use of language, whereas others value indirect or elaborate forms of speech. In some societies, formality is important, whereas others value informality. Beyond these differences, there is evidence to support linguistic relativism—the notion that language exerts a strong influence on the worldview of the people who speak it.
 
-## Chapter 7
+## Chapter 7 Nonverbal Communication: Messages Beyond Words
 - Ideas/Feelings and nonverbal communication 
-- Territory 
+  - characteristics:
+    - all behavior  has communicative value--they provide unconscious and unintentional information
+    - primarily relational
+      - impression management, reflects relationships (hand holding), conveys emotion (stomping for anger)
+    - occurs in mediated messages
+      - "You are driving me crazy" ;-)
+    - serves many functions
+      - repeating (pointing), complementing (facial expression, thank you), substituting (shrugging), accenting (it was YOUR idea), regulating (nodding), contradicting (Angry? No Im not ANGRY!)
+    - offers deception clues
+      - leakage of deception
+    - is ambiguous
 - Eye Patterns across cultures 
-- How status may be communicated   
+  - japanese tend to look to the eyes for emotional cues, while west looks at mouth
+  - direct gaze is appropriate for power seekers in Latin America, Arab World, and southern Europe.
+  - Asians, Indians, Pakistanis , and northern Europeans gaze peripherally or not at all out of respect 
+- How status may be communicated 
+  - tenseness: The lower-status person is generally the more rigid and tense-appearing one, and the higher-status person appears more relaxed
+  - space: high status have more personal territory and privacy
+  - time: waiting
+  - same neighborhood
 - Kinesics  
+  - body position and motion (orientation, posture, gestures)
+    - facing toward or away
+    - posture
+    - gestures: movements of hands and arms
+      -  illustrators (movements that accompany speech)
+      -  emblems: a gesture where deliberate nonverbal behaviors that have precise meaning and known to everyone in a cultural group (head nod, thumbs up)
+      -  adaptors: shivering
+      -  manipulators
+         -  face/eye micro-expression (fiddling for discomfort)
+         -  microexpressions for lying
+   - touch (haptics): slaps
+   - Appearance
 - Proxemics 
-- The characteristics of nonverbal communication 
-- Definition of nonverbal communication 
-- Emblem 
-- Deception detection 
-- Paralanguage 
+  - study of the way people and animals use space
+  - distance and territoriality
+  - Territory 
+    - a geographical area where we assume "rights", or a feeling of ownership
+    - Intimate (skin to 18in) > Personal (4ft - 18in) > Social (4ft - 12ft) > Public (12ft+)
+- Definition of nonverbal communication: "messages expressed by non-linguistic means"
+- Deception detection
+  - accurate in detecting only slightly more than half the time
+  - tend to overestimate our abilities to detect lies
+  - strong tendency to judge messages as truthful
+- Voice aka Paralanguage 
+  - nonverbal, vocal messages like WORD emphasis, i.e. pitch, tone, rate, volume, pauses
 - Chronemics 
-- Manipulators 
+  - study of how humans use and structure **time**
+  - time spent correlate to positive relationships
+  - quick responses > tardy responses
+- Manipulators
+  - self-touching behaviors like fidgeting for discomfort during an interview (not always a sign though)
+### Summary:
+> Nonverbal communication consists of messages expressed by nonlinguistic means such as body movement, vocal characteristics, touch, appearance, physical space, physical environment, and time. 
+> 
+> Nonverbal skills are vital for competent communicators. Nonverbal communication is pervasive; in fact, it is impossible to not send nonverbal messages. Although many nonverbal behaviors are universal, their use is affected by both culture and gender. Most nonverbal communication reveals attitudes and feelings; in contrast, verbal communication is better suited to expressing ideas. Even mediated messages carry nonverbal cues. Nonverbal communication serves many functions. It can repeat, complement, substitute for, accent, regulate, and contradict verbal communication. When presented with conflicting verbal and nonverbal messages, communicators are more likely to rely on the nonverbal ones. For this reason, nonverbal cues are important in detecting deception. It’s necessary to exercise caution in interpreting such cues, however, because nonverbal communication is ambiguous.
 
-
-## Chapter 8
-- Pseudolistening  
-- Paraphrasing 
-- The various listening responses 
-- Stagehogging 
-- Selective Listening 
-- Advising 
-- Judging 
-- Analyzing 
-- Supporting 
-- Questioning 
+## Chapter 8: Listening: More Than Meets the Ear
+- Hearing vs listening
+  - listening is hearing with interpretation
+  - hearing -> attending -> understanding (listening fidelity, understanding relative to communicative intention) -> responding -> remembering (50% at 0hrs, 35% < 8hrs, 25% < 2 months)
+- Challenges of listening
+  - overload, distraction, rapid thought, effort, external noise, faulty assumptions, lack of advantages or training, hearing problems
+- The various listening responses
+  - **prompting**: using silences and brief statements of encouragement to draw others out--people can make their own answers
+  - **questioning**: asking for information that can help both the person doing the asking and the one providing answers
+    - *sincere vs counterfeit*: understanding others vs sending a message and not receiving one
+  - **paraphrasing**: statements that reword the listeners interpretation of a message
+    - key to restate so you can cross-check information
+  - **supporting**: revealing solidarity with the speakers situation
+    1. Recognize you can support someone without approving/disapproving
+    2. Monitor the other person reaction
+    3. Realize support may not always be welcome
+    4. Make sure you're ready for consequences
+  - **Advising**: help by offering a solution (50/50 chance helpful and not)
+  - **Judging**: evaluates the senders thoughts or behaviors in some way
+  - **Analyzing**: listener offers an interpretation of a speakers message
+- Ineffective listening:
+  - Pseudolistening: imitation of the real thing (ineffective listening) 
+  - Stage-hogging: conversational narcissists that turn the topic to themselves
+    - shift response: changing focus from the speaker to narcissist
+  - Selective Listening 
+    - responding to parts of a remark that interests them
+### Summary:
+> Listening is the most common—and perhaps the most overlooked—form of communication. There is a difference between hearing and listening, and there is also a difference between mindless and mindful listening. Listening, defined as the process of making sense of others’ messages, consists of five elements: hearing, attending, understanding, responding, and remembering. Several responding styles masquerade as listening but actually are only poor imitations of the real thing. We listen poorly for a variety of reasons. Some reasons have to do with the tremendous number of messages that bombard us daily and with the personal preoccupations, noise, and rapid thoughts that distract us from focusing on the information we are exposed to. Another set of reasons has to do with the considerable effort involved in listening carefully and the mistaken belief that there are more rewards in speaking than in listening. A few listeners fail to receive messages because of physical hearing defects; others listen poorly because of lack of training. Some keys to better listening are to talk less, reduce distractions, avoid making premature judgments, and seek the speaker’s key ideas. Listening responses are the primary way we evaluate whether and how others are paying attention to us. Some listening responses put a premium on gathering information and providing support; these include prompting, questioning, paraphrasing, and supporting. Other listening responses focus more on providing direction and evaluation; these include analyzing, advising, and judging. The most effective communicators use a variety of these styles, taking into consideration factors such as gender, the situation at hand, the person with the problem, and their own personal style.
   
 
 ## Chapter 9

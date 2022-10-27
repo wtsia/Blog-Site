@@ -60,6 +60,9 @@ rsync -rtvu source_folder/ destination_folder/
 //ubuntu drivers
 sudo ubuntu-drivers devices
 
+// make filename.sh executable
+chmod +x filename.sh
+
 ```
 
 ### Ubuntu Server Troubleshooting
@@ -168,8 +171,9 @@ docker restart $(docker ps -q)
 docker rm $(docker ps -aq) 
 
 // run shell in docker
-$ docker exec -it <container id> bash 
+$ docker exec -it <container id> <bash or sh> 
 root@<container id>:/#
+// or as root:
 ```
 
 ## Docker: Nginx Proxy Manager
