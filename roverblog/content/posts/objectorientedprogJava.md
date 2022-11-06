@@ -3,7 +3,7 @@ author = "Winston Tsia"
 authorlink = ""
 title = "Object Oriented Programming"
 date = 2022-08-17T01:19:31-07:00
-description = "Notes on Object Oriented Programming"
+description = "Notes on Object Oriented Programming: Java"
 tags = [
     "CIS",
     "Computer Science",
@@ -88,7 +88,23 @@ World
 
 ### Unit Tests
 
-### For loops
+### Formatted Strings
+```
+%a	floating point (except BigDecimal)	Hex output of floating point number
+%b	Any type	“true” if non-null, “false” if null
+%c	character	Unicode character
+%d	integer (incl. byte, short, int, long, bigint)	Decimal Integer
+%e	floating point	decimal number in scientific notation
+.n%f	floating point	decimal number with n trailing
+%g	floating point	decimal number, possibly in scientific notation depending on the precision and value.
+%h	any type	Hex String of value from hashCode() method.
+ %n	none	Platform-specific line separator.
+%o	integer (incl. byte, short, int, long, bigint)	Octal number
+%s	any type	String value
+%t	Date/Time (incl. long, Calendar, Date and TemporalAccessor)	%t is the prefix for Date/Time conversions. More formatting flags are needed after this. See Date/Time conversion below.
+%x	integer (incl. byte, short, int, long, bigint)	
+Hex string.
+```
 
 ### Character methods return values. Each method must prepend `Character.`, as in `Character.isLetter`
 ```
@@ -188,12 +204,12 @@ You are expected to know everything that you were asked to do on your assignment
 
 - Definition of methods besides the main method
   - A method  is a list of statements executed by invoking the method's name (this is known as a method call). There are user defined methods and built in methods.
-    - i.e. sqrt(x), pow(x,y), abs(x)
+    - i.e. `sqrt(x), pow(x,y), abs(x)`
   - These methods may receive arguments/parameters and may or may not return values.
   - Values passed as arguments to methods may be of any type, such as, but not limited to: -
-    - int, double, String.
+    - `int, double, String`.
   - Values returned by methods may be of any type, such as, but not limited to: 
-    - boolean, int, double, String.
+    - `boolean, int, double, String`.
 ```
 <access_modifier> <return_type> <method_name>( list_of_parameters) {
     //body
@@ -208,35 +224,27 @@ public int subtractNumbers(int m, int n) {
 }
 ```
 > we can see that `public` corresponse to the access modifier, `int` to return type, and `subtractNumbers` to method name. You can infer what the other parts are.
-`public static`: `public` means the method may be called from any class in the program, and `static` means the method only uses values that are passed to the method
+- `public static`: 
+  - `public` means the method may be called from any class in the program 
+  - `static` means the method only uses values that are passed to the method
 ```
-      numElements = scnr.nextInt();
-      
-      int[] list = new int[numElements];
-       for (i = 0; i < list.length; i++) {
-         list[i] = scnr.nextInt();
-      }
-      for (i = list.length - 1; i >= 0; i--){
-         System.out.print(list[i] + ",");
-      }
+import java.util.Scanner;
+
+  public static class {
+
+}
 ```
 Code block above is an example of:
-- One-dimensional arrays `
-- Input values from the standard input using the Scanner object.
 - Call methods in main to perform a calculation or an action.
+- Input values from the standard input using the Scanner object.
 - Output values on the screen.
-  - loops
-  - for and for-each
-
-```
-
-```
 - Strings and string methods, such as: charAt(), indexOf, length(), equals(), equalsIgnoreCase(), compareTo()
+- One-dimensional arrays
 - if-else statements
 - switch statements
-
+- loops
+  - for and for-each
   - while and do-while
-- It is helpful to review Discussion posts, homework assignments 1-9 and quizzes 1-3.
 
 The Midterm exam is in 2 parts:
 - a multiple-choice section (20 points)
@@ -301,3 +309,4 @@ Returns a Collection containing all values within the map.
 values = exMap.values();
 // values contains: 14, 86, 13
 ```
+

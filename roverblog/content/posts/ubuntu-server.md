@@ -156,7 +156,7 @@ su - ${USER}
 docker run -d --restart always -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
 ```
 
-### Docker Operations
+### Docker Commands/Operations
 ```
 // run docker container from docker-compose.yml in (-d) background
 docker-compose up -d 
@@ -174,6 +174,11 @@ docker rm $(docker ps -aq)
 $ docker exec -it <container id> <bash or sh> 
 root@<container id>:/#
 // or as root:
+
+// show logs output in docker container
+docker logs <container-id>
+
+// 
 ```
 
 ## Docker: Nginx Proxy Manager
