@@ -295,7 +295,7 @@ cd maldet-<version>
 // update maldet
 maldet -u
 
-// edit maldet configg
+// edit maldet config
 nano /usr/local/maldetect/conf.maldet
 ```
 Make sure to have `clamav` installed so that maldet can utilize the clamav binary for the scanner engine.
