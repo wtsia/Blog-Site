@@ -307,27 +307,72 @@ Notes:
 > Listening is the most common—and perhaps the most overlooked—form of communication. There is a difference between hearing and listening, and there is also a difference between mindless and mindful listening. Listening, defined as the process of making sense of others’ messages, consists of five elements: hearing, attending, understanding, responding, and remembering. Several responding styles masquerade as listening but actually are only poor imitations of the real thing. We listen poorly for a variety of reasons. Some reasons have to do with the tremendous number of messages that bombard us daily and with the personal preoccupations, noise, and rapid thoughts that distract us from focusing on the information we are exposed to. Another set of reasons has to do with the considerable effort involved in listening carefully and the mistaken belief that there are more rewards in speaking than in listening. A few listeners fail to receive messages because of physical hearing defects; others listen poorly because of lack of training. Some keys to better listening are to talk less, reduce distractions, avoid making premature judgments, and seek the speaker’s key ideas. Listening responses are the primary way we evaluate whether and how others are paying attention to us. Some listening responses put a premium on gathering information and providing support; these include prompting, questioning, paraphrasing, and supporting. Other listening responses focus more on providing direction and evaluation; these include analyzing, advising, and judging. The most effective communicators use a variety of these styles, taking into consideration factors such as gender, the situation at hand, the person with the problem, and their own personal style.
   
 
-## Chapter 9
+## Chapter 9: Relational Dynamics
 - Dialectical Tensions 
+  - conflicts that arise when two opposing or incompatible forces exist simultaneously
+    - 1. Connection vs Autonomy (CvA)
+      - we want independence and dependence--creates tension
+      - go through stages of "hold tight", "put me down", "leave me alone"  
+    - 2. Openness vs Privacy (OvP)
+      - the need for disclosure vs maintaining space
+      - dichotomy between honesty "do I look attractive?" and consideration "should I say yes or no?" (openness)
+    - 3. Predictability vs Novelty (PvN)
+      - boredom as a result of predictability
+      - but unpredictability is insecure
+  - managing tensions (30.8% CvA, 21.7% PvN, 12.7 OvP ): denial, disorientation (nonconfrontation?), alternation, segmentation (need-to-know), balance (compromise), integration (do both), recalibration (reframing), reaffirmation (embracing tensions)
 - The 10 stages of Knapp’s Relational Model (and characteristics of each stage) 
-- Why we form relationships 
-- Attraction 
-- Social Exchange Formula 
-- Affinity 
-- Content and Relational Messages 
-- Metacommunication 
-
-
-## Chapter 10
-- The four dimensions of intimacy 
-- High/low conversational orientation 
-- The different love languages 
-- Gender and self-disclosure 
-- Relational turning points 
-- Birth Orders and their characteristics 
-- The various conflict styles (avoidant, validating, volatile, protective, laissez-faire, etc.) 
-- Gottman’s ratio 
+- 10 Stages:
   
+  Coming Together (Up to Bonding):
+  $$
+  [Intiating < Experimenting < Intensifying < 
+  $$
+  - interest -> uncertainty reduction -> lovy-dovy, goosbumps, and daydreaming
+  Relational Matinenance:
+  $$
+  (Integrating < Bonding] == [Differentiating > Circumscribing)
+  $$
+  - merging lifestyles, developing shared identities -> public gestures like engagement -> understanding unshared identities -> shrinking communication (draw circles around)
+  Coming apart: (Differentiating and onward):
+  $$
+  > Stagnating > Avoiding > Terminating]
+  $$
+  - excitement from intensifying gone, boredom -> indirectness, non-discussion -> ending and disassociation
+- Why we form relationships
+  - appearance, similarity, complementarity, reciprocal attraction, competence, disclosure (trust), proximity, rewards
+- Attraction: rewards, companionship, appearance, similarity, etc.
+- Social Exchange Formula: seek people who give us rewards greater than or equal to costs in dealing with them (Rewards - Costs = Outcome)
+- Affinity: degree of liking or disliking someone
+- Content and Relational Messages 
+  - content: subject being discussed
+  - relational: affinity, immediacy, respect, control
+- Metacommunication: communication about communication, or the relationship i.e. "I hate it when you use that tone of voice"
+>People form interpersonal relationships for a variety of reasons. Attraction can come from physical appearance, perceived similarity, complementarity, recip-rocal attraction, perceived competence, disclosure of personal information, proximity, and rewards. Two models offer somewhat different perspectives on the dynamics of interpersonal relationships. A stage-related model characterizes communication as exhibiting different characteristics as people come together and draw apart. A dialectical model characterizes communicators in every stage as being driven by the need to manage a variety of mutually incompatible needs. Communication occurs on two levels: content and relational. Relational communication can be both verbal and nonverbal. Relational messages usually refer to one of four dimensions of a relationship: affinity, immediacy, respect, or control. Metacommunication consists of messages that refer to the relationship between the communicators. Healthy interpersonal relationships require maintenance. They also need emotional, informational, and instrumental support. When relationships become damaged by transgressions, repair strategies and forgiveness become important skills for both parties.
+
+## Chapter 10: Close Relationships
+- The four dimensions of intimacy
+  - 1. physical
+  - 2. intellectual
+  - 3. emotional 
+  - 4. shared activities
+- High/low conversational orientation: openness to discussing a range of topics--non taboo vs taboo topics 
+- The different love languages: notions of what counts as love
+  - words of affirmation
+  - quality time
+  - gifts
+  - acts of service
+  - physical touch
+- Gender and self-disclosure: females disclose more, males share activities 
+- Relational turning points: transformative events that alter the relationship in a fundamental way 
+- Birth Orders and their characteristics: 1st born is often extraverted and concerned with control. Middle is closer with friends, and "caboose" are committed and closer to family than their older siblings.
+- The various conflict styles (avoidant, validating, volatile, protective, laissez-faire, etc.)
+  - volatile: intense heated arguments
+  - avoidant: ignores issues
+  - validating: open cooperation and management
+  - protective: low orientation high conformity little discussion about taboo
+  - laissez-faire: low in both orientation and conformity, where decision making is individual.
+- Gottman’s ratio: 5:1--5 times more positive interactions (touching, smiling, complimenting, laughing, kindness) than negative, likely to be a happy and successful relationship
+>Intimacy in interpersonal relationships has four dimensions: physical, intel-lectual, emotional, and shared activities. Both gender and culture affect the way intimacy is expressed. Intimacy can occur through mediated communication as well as in face-to-face interaction. Not all relationships are intimate; communicators must make choices about when, where, and with whom they will be intimate. Family relationships are formative, role driven, and generally involuntary. Families operate as systems and develop communication patterns that involve the merging of particular conversation and conformity orientations. Generational differences in the use of social media can present challenges for family communication, so negotiating a shared understanding of such use is important. Communication in friendships often varies according to the age of the participants, relational history and frequency of contact, level of obligation, task or relational foundations, level of disclosure and obligation, and gender of the friends. Social media play an important role in contemporary relationships. Relational messages in romantic relationships have three dimensions: love, commitment, and affection. Romantic partnerships often begin, continue, and end based on relational turning points. Couples typically use one of three conflict styles: volatile, avoidant, or validating. Each partner in a romantic relationship favors one of five love languages, and it’s helpful for both to become fluent in the other’s language. Because social media play an important role in most romantic relationships, it’s important to use mediated channels mindfully to maximize their beneficial effects and minimize harmful ones.
 
 ## Chapter 11 
 - Confirming and Disconfirming (and they types) messages. 
