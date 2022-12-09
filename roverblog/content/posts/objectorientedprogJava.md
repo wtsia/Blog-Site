@@ -162,7 +162,7 @@ if (!in.**hasNextDouble()**) {
 !(A || B)  is the same as   !A && !B
 ```
 
-### Arrays
+## Arrays
 ```
 // Create Arrays
 String[] names;
@@ -197,10 +197,7 @@ for (int i = 0; i < array.length; i++) {
 ```
 - Search (returning index of occurence), Reducing (i.e. Sum), 
 
-### Midterm
-The online midterm test covers chapters 1-8 in the zyBook.
-
-You are expected to know everything that you were asked to do on your assignments, which means you should be able to write Java programs that include:
+### Summary so far
 
 - Definition of methods besides the main method
   - A method  is a list of statements executed by invoking the method's name (this is known as a method call). There are user defined methods and built in methods.
@@ -246,12 +243,17 @@ Code block above is an example of:
   - for and for-each
   - while and do-while
 
-The Midterm exam is in 2 parts:
-- a multiple-choice section (20 points)
-- a programming assignment question that requires a file upload (10 points)
-- The test opens on Friday at 12 PM and must be submitted by 11:59 PM. You will have two hours from the time you start.
+## Enhanced Loops
+-  for-each: reduces programming burden but removes incrementing capabilities
+   -  cannot change your 'value' within the for each loop.
+```
+int[] values = { 1, 2, 3, 4, 5 };
 
-It is best to upload the programming assignment early, even if your answer is not complete so you don't risk missing the cut-off. After uploading a preliminary version, you can continue to work on the assignment, then re-upload an improved version. You may also earn partial credit if your answer is not complete.
+for (int value: values) {
+  System.out.println(value);
+}
+```
+
 
 ## Hashmaps
 ### `import java.util.HashMap;`
@@ -309,4 +311,52 @@ Returns a Collection containing all values within the map.
 values = exMap.values();
 // values contains: 14, 86, 13
 ```
+## Objects
+- objects have features, qualities, functions
+- **abstraction**: interaction at a high level with no lower level understanding (encapsulation) i.e. tech priest
+- objects highly support abstraction
 
+### Classes
+- defines new type that can group data and methods to create objects
+  - public member methods: operations a class user can perform on an object
+- A **field** is a variable of any type that is declared directly in a class or struct
+  - **private** field: accessible to class method but not class users
+- **constructor**: class member method that initializes fields
+
+### Static Fields and Methods
+- **static** indicates the variable is allocated once in memory. However due to being stored in static memory, it has global scope.
+- **static field** is the field of a class instead of distributively to each class object
+
+```
+add()	add(element) 
+Create space for and add the element at the end of the list.	
+// List originally empty
+valsList.add(31); // List now: 31 
+valsList.add(41); // List now: 31 41
+get()	get(index) 
+Returns the element at the specified list location known as the index. Indices start at 0.	
+// List originally: 31 41 59. Assume x is an int. 
+x = valsList.get(0);  // Assigns 31 to x
+x = valsList.get(1);  // Assigns 41
+x = valsList.get(2);  // Assigns 59
+x = valsList.get(3);  // Error: No such element
+set()	set(index, element) 
+Replaces the element at the specified position in this list with the specified element.	
+// List originally: 31 41 59 
+valsList.set(1, 119);  // List now 31 119 59
+size()	size()
+Returns the number of list elements.	
+// List originally: 31 41 59. Assume x is an int. 
+x = valsList.size();  // Assigns x with 3
+```
+
+### Mutable vs Immutable Objects
+- **mutable**: may be changed after creation
+- **immutable**: cannot be changed after creation
+
+#### Aliasing
+- more than one reference to the same object. Below is an example where a new object is not created, but the object box1 is referenced by box2.
+```
+Rectangle box1 = new Rectangle(0, 0, 100, 200);
+Rectangle box2 = box1;
+```

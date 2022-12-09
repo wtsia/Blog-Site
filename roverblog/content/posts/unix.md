@@ -62,3 +62,7 @@ Use dpkg command. It is a package manager for Debian/Ubuntu Linux. Suppose you w
 - The Linux community is a far reaching ecosystem of developers, vendors, and users that supports and advances the Linux operating system.
 - Some of the common terms used in Linux are: kernel, distribution, boot loader, service, filesystem, X Window system, desktop  environment, and command line.
 - A full Linux distribution consists of the kernel plus a number of other software tools for file-related operations, user management, and software package management.
+
+# Module 3
+## Boot
+- ON -> BIOS -> Master Boot Record (1st Sector on HD) -> Kernel (Linux OS) -> Initial RAM -> /sbin/init (parent process) -> Command Shell using getty -> X Windows System

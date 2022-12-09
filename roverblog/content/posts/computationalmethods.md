@@ -353,3 +353,43 @@ cellArrayOut = cell(numRows,numCols)
 - continue skips remaining statements in one iteration but doesnt end the loop
 - break terminates a loop and executes code after the ending statement corresponding to the interrupted loop
 - logical array is output when comparing two matrices with `==`
+
+
+- Newton Rhapson Method
+- Secant Method
+- fzero
+- roots(p)
+
+# Plotting
+$ln(y) = m*x+ln(b)$
+find the linear regression of the cubic, quadratic, and exponential of this data:
+```
+x = 1:4;
+y = [45;5.3;0.76;0.09];
+r2 = @(y, yH) 1 - sum(y-yH).^2 / sum(y-mean(y)).^2
+
+% Finding the line
+X_lin = [x', ones(length(x),1)];
+B_lin = x_lin\y;
+Y_linFit = @(x) B_lin(1) * x + B_lin(2);
+
+B_linPoly = polyfit(x,y,1);
+Y_linPolFit = polyval(B_linPoly, x_fit);
+
+% Exponential
+X_exp = [x', ones(length(x),1)];
+B_Exp = X_exp\log(y);
+Y_expFit = @(x) exp(B_Exp(2))*exp(B_Exp)*x);
+
+B_ExpPoly = polyfit(x, log(y), 1);
+Y_expFitPoly = polyval(B_ExpPoly, x)
+```
+
+Quadratic 
+
+Cubic
+
+Exponential
+
+## ODE
+2nd or 3rd ODE Reduce

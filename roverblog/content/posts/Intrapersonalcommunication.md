@@ -375,8 +375,33 @@ Notes:
 >Intimacy in interpersonal relationships has four dimensions: physical, intel-lectual, emotional, and shared activities. Both gender and culture affect the way intimacy is expressed. Intimacy can occur through mediated communication as well as in face-to-face interaction. Not all relationships are intimate; communicators must make choices about when, where, and with whom they will be intimate. Family relationships are formative, role driven, and generally involuntary. Families operate as systems and develop communication patterns that involve the merging of particular conversation and conformity orientations. Generational differences in the use of social media can present challenges for family communication, so negotiating a shared understanding of such use is important. Communication in friendships often varies according to the age of the participants, relational history and frequency of contact, level of obligation, task or relational foundations, level of disclosure and obligation, and gender of the friends. Social media play an important role in contemporary relationships. Relational messages in romantic relationships have three dimensions: love, commitment, and affection. Romantic partnerships often begin, continue, and end based on relational turning points. Couples typically use one of three conflict styles: volatile, avoidant, or validating. Each partner in a romantic relationship favors one of five love languages, and it’s helpful for both to become fluent in the other’s language. Because social media play an important role in most romantic relationships, it’s important to use mediated channels mindfully to maximize their beneficial effects and minimize harmful ones.
 
 ## Chapter 11 
-- Confirming and Disconfirming (and they types) messages. 
-- Gibb’s categories 
+- Confirming and Disconfirming (and they types) messages.  ("You exist, and I care" vs "I don't care about you") 
+  - *confirming*: messages that convey valuing
+  - *disconfirming*: messages that show a lack of regard
+- Gibb’s categories of Defensive and Supportive behavior
+### Defensive:
+1. Evaluation
+2. Control
+3. Strategy
+4. Neutrality
+5. Superiority
+6. Certainty
+
+### Supportive:
+1. Description
+2. Problem Orientation
+3. Spontaneity
+4. Empathy
+5. Equality
+6. Provisionalism
+
+- Eval vs Desc: judging a person vs describing how you feel
+- Control vs Prob: Dictating vs making an amicable deal
+- Strat vs Sponten: ulterior motive vs honest asks
+- Neut vs Emp: uncaring vs understanding
+- Super vs Equal: stating judgement vs 'our' views
+- Cert vs Provis: thinking you know for certain vs I might be wrong
+
 - Spirals 
 - Assertive Message Format 
 - Evaluative Language 

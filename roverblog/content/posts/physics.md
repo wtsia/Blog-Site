@@ -20,6 +20,8 @@ hidemeta = false
 +++
 
 ## Basic Definitions
+
+
 Density: $ρ = \frac{m}{V}$
 - where $m$ is mass, and $V$ is volume
 - often in units of $g/cm^3$ or $kg/m^3$
