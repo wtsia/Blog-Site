@@ -99,4 +99,58 @@ Use dpkg command. It is a package manager for Debian/Ubuntu Linux. Suppose you w
 - Each Linux distribution comes with its own set of desktop backgrounds.
 - GNOME comes with a set of different themes which can change the way your applications look.
 
-###
+### NTP, Software Management
+- It supports many VPN technologies, such as native IPSec, Cisco OpenConnect (via either the Cisco client or a native open source client), Microsoft PPTP, and OpenVPN.
+- apt (advanced package tool) -> dpkg-installer -> Debian family Linux
+- You can control basic configuration options and desktop settings through the System Settings panel.
+- Linux always uses Coordinated Universal Time (UTC) for its own internal time-keeping. You can set the date and time settings from the System Settingswindow.
+- The Network Time Protocol is the most popular and reliable protocol for setting the local time via Internet servers.
+- The Displays panel allows you to change the resolution of your display and configure multiple screens.
+- Network Manager can present available wireless networks, allow the choice of a wireless or mobile broadband network, handle passwords, and set up VPNs.
+- dpkg and RPM are the most popular package management systems used on Linux distributions.
+- Debian distributions use dpkg and apt-based utilities for package management.
+- RPM was developed by Red Hat, and adopted by a number of other distributions, including the openSUSE, Mandriva, CentOS, Oracle Linux, and others.
+
+### Common Apps
+- Development Apps
+  - `vi`, `emacs` (editors)
+  - `gcc`, `clang` (compilers)
+  - `gdb, Valgrind` (debuggers)
+  - `VSC, Eclipse` (IDEs)
+
+- Graphic Utilities
+  - `eog, Inkscape, convert, Scribus`
+
+- Linux offers a wide variety of Internet applications, such as web browsers, email clients, online media applications, and others.
+- Web browsers supported by Linux can be either graphical or text-based, such as Firefox, Google Chrome, Epiphany, w3m, lynx, and others.
+- Linux supports graphical email clients, such as Thunderbird, Evolution, and Claws Mail, and text mode email clients, such as Mutt and mail.
+- Linux systems provide many other applications for performing Internet-related tasks, such as Filezilla, XChat, Pidgin, and others.
+- Most Linux distributions offer LibreOffice to create and edit different kinds of documents.
+- Linux systems offer entire suites of development applications and tools, including compilers and debuggers.
+- Linux systems offer a number of sound players including Amarok, Audacity, and Rhythmbox.
+- Linux systems offer a number of movie players, including VLC, MPlayer, Xine, and Totem.
+- Linux systems offer a number of movie editors, including Kino, Cinepaint, Blender among others.
+- The GIMP (GNU Image Manipulation Program) utility is a feature-rich image retouching and editing tool available on all Linux distributions.
+- Other graphics utilities that help perform various image-related tasks are eog, Inkscape, convert, and Scribus.
+
+### CLI operations
+- terminal programs: xterm, konsole (default on KDE), terminator
+```
+cat: used to type out a file (or combine files).
+head: used to show the first few lines of a file.
+tail: used to show the last few lines of a file.
+man: used to view documentation.
+```
+- Virtual Terminals (VT): console sesh that uses display and keyboard outside of a graphical env
+- `which | whereis` search commands, local to global
+- `tree`: shows filesystem top down
+- `ln file1 file2`: hard link (shortcuts) inode
+- `ln -s file1 file3`: soft link ()
+- `pushd | popd`: pushes starting dir on list, `popd` sends you back to said dir
+- `cat | tac`: `tac` = ~cat
+- `less`: uses console and allows traversal
+- `stdin | stdout | stderr`: in out error, generally keyboard input
+  - `do_something < input-file` or `>` send output (its directional!)
+
+- Pipes: `$ command1 | command2 | command3` (remember docker commands!)
+- Search: `locate | find`
