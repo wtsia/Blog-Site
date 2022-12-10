@@ -402,21 +402,44 @@ Notes:
 - Super vs Equal: stating judgement vs 'our' views
 - Cert vs Provis: thinking you know for certain vs I might be wrong
 
-- Spirals 
-- Assertive Message Format 
-- Evaluative Language 
-- Definition of Communication Climates 
-- Defensiveness  
-- Impervious responses 
-- Feeling Statements
+- Spirals: a back and forth where a persons message reinforces the others
+- Assertive Message Format: builds on perception skills and "I" approach by speaking your mind in a direct, nonthreatening assertive way
+  - Behavior: the objective, raw material for reaction
+  - Interpretation: meaning attached to behaviors
+  - Feeling
+  - consequence
+- Evaluative Language: you don't know what youre talking about! Those jokes are gross!
+- Definition of Communication Climates: emotional tone of a relationship
+- Defensiveness: guarding oneself from attack
+- Impervious responses: A disconfirming response that ignores another person's attempt to communicate.
+- Feeling Statements: expression of emotion from results of interpretation of sense data.
 
 
 ## Chapter 12
-- Definition of Conflict 
+- Definition of Conflict: an expressed struggle between at least two independent parties who perceive incompatible goals.
 - Parallel/Symmetrical/Complementary Conflict Style 
-- Direct/Passive Aggression 
+  - Parallel: shift between complementary and symmetrical patterns
+  - Symmetrical: both partners have same behavior
+  - Complementary: different but mutually reinforcing
+- Direct/Passive Aggression: threatens the face to face person/expressing hostility in an obscure or manipulative way
 - Avoiding/collaborating/compromising/competing/accommodating Conflict Styles 
-- Relational Conflict Styles 
+  - Avoiding (LL): when people nonassertively ignore or stay away from conflict
+  - Accommodating (LW): allowing others to have their way 
+  - Competing (WL): opposite of acc, high concern for self and low for others
+  - Compromising (P-LL)
+  - Collaborating (WW)
 - Conflict Rituals 
-- John Gottman “The Four Horsemen of the Apocalypse” 
-- Distinguishing characteristic in win-lose problem solving
+  - unacknowledged but very real patterns of interlocking behavior
+### John Gottman “The Four Horsemen of the Apocalypse” 
+- *Criticism*: attacks on a persons character
+- *Defensiveness*: reaction that aims to protect ones presenting self by denying responsibility
+- *Contempt*: belittling and demeaning
+- *Stonewalling*: withdraws, shutting down dialogue
+
+Distinguishing characteristic in win-lose problem solving:
+  - Identify the problem and unmet needs
+  - Make a date
+  - describe your problem and needs
+  - consider partners POV
+  - negotiate solution
+  - follow up solution
