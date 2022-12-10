@@ -63,6 +63,40 @@ Use dpkg command. It is a package manager for Debian/Ubuntu Linux. Suppose you w
 - Some of the common terms used in Linux are: kernel, distribution, boot loader, service, filesystem, X Window system, desktop  environment, and command line.
 - A full Linux distribution consists of the kernel plus a number of other software tools for file-related operations, user management, and software package management.
 
-# Module 3
 ## Boot
 - ON -> BIOS -> Master Boot Record (1st Sector on HD) -> Kernel (Linux OS) -> Initial RAM -> /sbin/init (parent process) -> Command Shell using getty -> X Windows System
+- BIOS: Basic Input Output System
+- POST: Power On Self Test
+- Master Boot Record: 512 bytes--finds partition table + bootable partition, searches GRUB and loads into RAM
+  - UEFI 
+- initramfs
+- /sbin/init 
+- text-mode login
+- Filesystem Hierarchy Standard (Linux storage)
+- A partition is a logical part of the disk.
+- A filesystem is a method of storing/finding files on a hard disk.
+- By dividing the hard disk into partitions, data can be grouped and separated as needed. When a failure or mistake occurs, only the data in the affected partition will be damaged, while the data on the other partitions will likely survive.
+- The boot process has multiple steps, starting with BIOS, which triggers the boot loader to start up the Linux kernel. From there, the initramfs filesystem is invoked, which triggers the init program to complete the startup process.
+- Determining the appropriate distribution to deploy requires that you match your specific system needs to the capabilities of the different distributions.
+
+### GUI: X Windows, GNOME
+- `startx`: runs GUI
+- GNOME
+  - `gdm` default disp manager @ GNOME, `lightdm` (Ubuntu before 18.04LTS), `kdm` (KDE), `XFCE`, `LXDE`
+  - *gnome-tweaks*
+#### SUMMARY
+- GNOME is a popular desktop environment and graphical user interface that runs on top of the Linux operating system.
+- The default display manager for GNOME is called gdm.
+- The gdm display manager presents the user with the login screen, which prompts for the login username and password.
+- Logging out through the desktop environment kills all processes in your current X session and returns to the display manager login screen.
+- Linux enables users to switch between logged-in sessions.
+- Suspending puts the computer into sleep mode.
+- For each key task, there is generally a default application installed.
+- Every user created in the system will have a home directory.
+- The Places menu contains entries that allow you to access different parts of the computer and the network.
+- Nautilus gives three formats to view files.
+- Most text editors are located in the Accessories submenu.
+- Each Linux distribution comes with its own set of desktop backgrounds.
+- GNOME comes with a set of different themes which can change the way your applications look.
+
+###
