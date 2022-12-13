@@ -134,6 +134,7 @@ Use dpkg command. It is a package manager for Debian/Ubuntu Linux. Suppose you w
 - Other graphics utilities that help perform various image-related tasks are eog, Inkscape, convert, and Scribus.
 
 ### CLI operations
+- **inode**: The inode (index node) is a data structure in a Unix-style file system that describes a file-system object such as a file or a directory
 - terminal programs: xterm, konsole (default on KDE), terminator
 ```
 cat: used to type out a file (or combine files).
@@ -143,6 +144,7 @@ man: used to view documentation.
 ```
 - Virtual Terminals (VT): console sesh that uses display and keyboard outside of a graphical env
 - `which | whereis` search commands, local to global
+- `whichis | whichever` search programs
 - `tree`: shows filesystem top down
 - `ln file1 file2`: hard link (shortcuts) inode
 - `ln -s file1 file3`: soft link ()
@@ -154,4 +156,88 @@ man: used to view documentation.
 
 - Pipes: `$ command1 | command2 | command3` (remember docker commands!)
 - Search: `locate | find`
-- - TEST
+- `grep`: prints only linees containing one or more specified string i.e. `$ locate zip | grep bin`
+- wildcards: `?` single character, `*` string of characters, `[set]` matches s, e, t, `[!set]` matches char not in set
+- `find`: recurses down the filesystem tree from any particular directory (or set of directories) and locates files that match specified conditions
+- `$ find -name "*.swp" -exec rm {} ’;’`: To find and remove all files that end with .swp, `-ok` lets you check removal before unlike `exec`
+  ```
+  $ find / -ctime 3     # To find files based on time:
+  $ find / -size 0  # To find files based on sizes
+  $ find / -size +10M -exec command {} ’;’  # For example, to find files greater than 10 MB in size and running a command on those files
+  ```
+  - Package Management System: level 1, `dpkg | rpm`, level 2: `apt-get, dnf(Open Source RH), yum (RH), zypper (SUSE)`
+    - lvl 1: details of unpacking, installing correctly
+    - lvl 2: checks dependencies, works with groups of packages and downloads from vendor
+
+#### SUMMARY
+- Virtual terminals (VT) in Linux are consoles, or command line terminals that use the connected monitor and keyboard.
+- Different Linux distributions start and stop the graphical desktop in different ways.
+- A terminal emulator program on the graphical desktop works by emulating a terminal within a window on the desktop.
+- The Linux system allows you to either log in via text terminal or remotely via the console.
+- When typing your password, nothing is printed to the terminal, not even a generic symbol to indicate that you typed.
+- The preferred method to shut down or reboot the system is to use the shutdown command.
+- There are two types of pathnames: absolute and relative.
+- An absolute pathname begins with the root directory and follows the tree, branch by branch, until it reaches the desired directory or file.
+- A relative pathname starts from the present working directory.
+- Using hard and soft (symbolic) links is extremely useful in Linux.
+- cd remembers where you were last, and lets you get back there with cd -.
+- locate performs a database search to find all file names that match a given pattern.
+- find locates files recursively from a given directory or set of directories.
+- find is able to run commands on the files that it lists, when used with the -exec option.
+- touch is used to set the access, change, and edit times of files, as well as to create empty files.
+- The Advanced Packaging Tool (apt) package management system is used to manage installed software on Debian-based systems.
+- You can use the dnf command-line package management utility for the RPM-based Red Hat Family Linux distributions.
+- The zypper package management system is based on RPM and used for openSUSE.
+
+### Documentation
+- man pages, GNI Info, help (--help)
+- `man –f` generates the same result as typing `whatis`.
+- `man –k` generates the same result as typing `apropos`.
+- GNU Info" `info`
+- `{cmd} --help`
+- The main sources of Linux documentation are the man pages, GNU info, the help options and command, and a rich variety of online documentation sources. 
+- The man utility searches, formats, and displays man pages.
+- The man pages provide in-depth documentation about programs and other topics about the system, including configuration files, system calls, library routines, and the kernel.
+- The GNU Info System was created by the GNU project as its standard documentation. It is robust and is accessible via command line, web, and graphical tools using info.
+- Short descriptions for commands are usually displayed with the -h or --help argument.
+- You can type help at the command line to display a synopsis of built-in commands.
+- There are many other help resources both on your system and on the Internet.
+- The filesystem tree starts at what is often called the root directory (or trunk, or /).
+
+### Filesystem
+- The  Filesystem Hierarchy Standard (FHS) provides Linux developers and system administrators a standard directory structure for the filesystem.
+- Partitions help to segregate files according to usage, ownership, and type.
+- Filesystems can be mounted anywhere on the main filesystem tree at a mount point. Automatic filesystem mounting can be set up by editing /etc/fstab.
+- NFS (Network File System) is a useful method for sharing files and data through the network systems.
+- Filesystems like /proc are called pseudo filesystems because they exist only in memory.
+- /root (slash-root) is the home directory for the root user.
+- /var may be put in its own filesystem so that growth can be contained and not fatally affect the system.
+- /boot contains the basic files needed to boot the system.
+- patch is a very useful tool in Linux. Many modifications to source code and configuration files are distributed with patch files, as they contain the deltas or changes to go from an old version of a file to the new version of a file.
+- File extensions in Linux do not necessarily mean that a file is of a certain type.
+- cp is used to copy files on the local machine, while rsync can also be used to copy files from one machine to another, as well as synchronize contents.
+- gzip, bzip2, xz and zip are used to compress files.
+- tar allows you to create or extract files from an archive file, often called a tarball. You can optionally compress while creating the archive, and decompress while extracting its contents.
+- dd can be used to make large exact copies, even of entire disk partitions, efficiently.
+
+### Editing Text Files
+- `sed`: stream editor, filter text and perform substitutions in data streams
+```
+sed -e command <filename>   # Specify editing commands at the command line, operate on file and put the output on standard out (e.g. the terminal)
+sed -f scriptfile <filename>    # Specify a scriptfile containing sed commands, operate on file and put output on standard out
+echo "I hate you" | sed s/hate/love/    # Use sed to filter standard input, putting output on standard out
+```
+- `awk`
+
+### Networking
+- IPv4 IPv6: 32-bit vs 128-bit
+- octets: 8-bit sections (or 1 byte)
+- Class A vs B vs C vs D
+  - A: Octate 1 always 0, NetID.HostID.HostID.HostID
+  - B: Octate 1 first 1 bits always 10, NetID.NetID.HostID.HostID
+
+### Security
+- cgroups: Control Groups
+- containers: uses cgroups isolated Linux systems
+- Virtualization: isolated + insulated guests on one physical host
+- 
