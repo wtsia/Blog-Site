@@ -34,7 +34,7 @@ Student Learning Outcomes (SLO):
 
 > Keep these concepts in mind for testing. 
 
-## Introduction
+# Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
 - At its core level, computers are switches, and store information in bytes (8 bits).
   - memory stores information in binary (1 or 0, like a switch!)
@@ -42,7 +42,7 @@ Student Learning Outcomes (SLO):
     - Java takes the high level language, runs it through a compiler, which takes it through a virtual processor that turns it executable (bytecode), and finally executes in the Virtual Machine within a processor
       - Java this method allows it to execute on different processors, its design which is reflected in the intention of creating desktop applications.
 
-## Basics of Java
+# Basics of Java
 ```
 import java.util.Scanner; // import scanner
 
@@ -135,6 +135,18 @@ isWhitespace('x')  // false
 - for something to happen regardless of condition
 - `do/while` vs `while`:
   - `do/while` executes a code block once before condition checking
+```
+count = 0;
+num = 6;
+
+do {
+   num = num - 1;
+   count = count + 1;
+} while (num > 4); 
+// executes twice, but DO always executes!
+// for all num, DO will execute!
+```
+
 
 ### Character vs String
 - ASCII - merican Standard Code for Information Interchange
@@ -224,24 +236,6 @@ public int subtractNumbers(int m, int n) {
 - `public static`: 
   - `public` means the method may be called from any class in the program 
   - `static` means the method only uses values that are passed to the method
-```
-import java.util.Scanner;
-
-  public static class {
-
-}
-```
-Code block above is an example of:
-- Call methods in main to perform a calculation or an action.
-- Input values from the standard input using the Scanner object.
-- Output values on the screen.
-- Strings and string methods, such as: charAt(), indexOf, length(), equals(), equalsIgnoreCase(), compareTo()
-- One-dimensional arrays
-- if-else statements
-- switch statements
-- loops
-  - for and for-each
-  - while and do-while
 
 ## Enhanced Loops
 -  for-each: reduces programming burden but removes incrementing capabilities
@@ -249,7 +243,7 @@ Code block above is an example of:
 ```
 int[] values = { 1, 2, 3, 4, 5 };
 
-for (int value: values) {
+for (int value:values) {
   System.out.println(value);
 }
 ```
@@ -311,7 +305,7 @@ Returns a Collection containing all values within the map.
 values = exMap.values();
 // values contains: 14, 86, 13
 ```
-## Objects
+# Objects
 - objects have features, qualities, functions
 - **abstraction**: interaction at a high level with no lower level understanding (encapsulation) i.e. tech priest
 - objects highly support abstraction
@@ -360,3 +354,107 @@ x = valsList.size();  // Assigns x with 3
 Rectangle box1 = new Rectangle(0, 0, 100, 200);
 Rectangle box2 = box1;
 ```
+
+# Closing Ideas
+- Definition of methods besides the main method
+  - A method  is a list of statements executed by invoking the method's name (this is known as a method call). There are user defined methods and built in methods.
+    - i.e. `sqrt(x), pow(x,y), abs(x)`
+- These methods may receive arguments/parameters and may or may not return values.
+  - Values passed as arguments to methods may be of any type, such as, but not limited to: -
+    - `int, double, String`.
+  - Values returned by methods may be of any type, such as, but not limited to: 
+    - `boolean, int, double, String`.
+- Call methods in main to perform a calculation or an action.
+- To call a method:
+```
+public class VeganClass { 
+   public static double calcVegan() {
+      // some calculations and logic
+   }
+
+   public static void main(String[] args) {
+      // Calls method calcVegan and prints the result
+      System.out.println(calcVegan());
+   }
+}
+
+```
+- Input values from the standard input using the Scanner object.
+- Output values on the screen.
+```
+import java.util.Scanner;
+
+public class MyClass {
+  public static void main (String [] args) {
+    Scanner input = new Scanner(System.in);
+    // create new Scanner object called 'input' which takes 'System.in'
+  }
+}
+```
+- Strings and string methods, such as: charAt(), indexOf, length(), equals(), equalsIgnoreCase(), compareTo()
+  - `charAt()`: determines the character at index x of a string
+```
+String userWord = "myWord";
+```
+- One-dimensional arrays
+  - `myArray = [1, 2, 3, 4, 5];`
+  - Two-dim: `int [][] myArray = new int[3][3] // 3x3, 9 elements`
+- if-else statements
+```
+if (myThing == myNum) {
+  // do stuff
+}
+```
+- switch statements
+
+```
+switch (userVal) {
+   case 1: // case userVal == 1
+      numItems = 5; 
+      break;
+
+   case 3: // case userVal == 3
+      numItems = 12; 
+      break;
+
+   default:
+      numItems = 55;
+      break;
+}
+```
+### Loops
+- for and for-each (Find: **Enhanced Loops**)
+- while and do-while (Find: **Do/While Loop**)
+- Mutable and Immutable Objects
+  - Mutable: can be changed
+    - `StringBuilder`, `Point origin`, `Point blank`, `double dist`
+  - Immutable: cannot change the content of object once created
+    - `String`  
+      - creating `for` loop that creates new `String` objects and concatenates them can create a lot of garbage, because a new `String` is declared and stored for use. 
+      - i.e. `This String` + `This String and more` + `This String and more more`
+  - *Aliasing*: more than one reference to the same object
+- Designing your own classes (recall lab):
+```
+public class myObject {
+  // declare private variable (accessible only to method)
+	private double thing;
+
+	public myObject() {
+    // initialize value
+		this.thing = // some value;
+	}
+	
+	public double myMethod(double myInput) {
+    // example method
+		thing = thing + myInput;
+		return thing;
+	}
+  // get and set methods
+}
+```
+- Creating objects of classes and calling methods on those objects
+`myObject myInstanceObject = new myObject();`
+- The basics of GUI (Swing/SWT)
+  - use Eclipse to generate default Swing application (Final Lab):
+    - File>>New>>Create Java Project>>New>>Project Explorer>>New>>Other>>Swing Designer>>Application Window
+- It is helpful to review Discussion posts, homework assignments, group projects and quizzes.
