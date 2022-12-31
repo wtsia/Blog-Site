@@ -22,6 +22,13 @@ nodate = true
 hidemeta = false
 +++
 
+# Quick concepts
+- `dmidecode`:
+- `hostnamectl`: `hostnamectl hostname <name>`
+- `htop` vs `atop` vs `iftop`
+
+# UNIX Systems
+
 ## Introduction
 - Discuss the role of The Linux Foundation.
 - Appreciate the learning opportunities provided by The Linux Foundation's training program.

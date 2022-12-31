@@ -44,12 +44,15 @@ Student Learning Outcomes (SLO):
 - **pointer**: variables that store addresses of other variables. Typically occupies 4 bytes of memory. Think of this like a reference to an originally stored variable.
   - in Java, this may be like string1 = string2. This does not create a new string, but references string2.
 
+# Concepts
 ## Binary
 ### 8-bit
 - represented in 8 binary, or `10101010` where each number would symbolize:
 $$
 1*2^8 + 0*2^7 + 1*2^6 + 0*2^5 + 1*2^4 + 0*2^3 + 1*2^2 + 0*2^0
 $$
+## Integer Overflow
+- **overflow** occurs when
 
 # Basics of Java
 ```
