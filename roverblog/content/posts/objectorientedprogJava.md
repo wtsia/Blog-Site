@@ -41,11 +41,15 @@ Student Learning Outcomes (SLO):
   - instructions go to the processor, and turns executable (in binary `1101 1011 ...`), then an assembler creates the high level instruction.
     - Java takes the high level language, runs it through a compiler, which takes it through a virtual processor that turns it executable (bytecode), and finally executes in the Virtual Machine within a processor
       - Java this method allows it to execute on different processors, its design which is reflected in the intention of creating desktop applications.
-- pointer: variables that store addresses of other variables. Typically occupies 4 bytes of memory. Think of this like a reference to an originally stored variable. 
+- **pointer**: variables that store addresses of other variables. Typically occupies 4 bytes of memory. Think of this like a reference to an originally stored variable.
   - in Java, this may be like string1 = string2. This does not create a new string, but references string2.
 
 ## Binary
-
+### 8-bit
+- represented in 8 binary, or `10101010` where each number would symbolize:
+$$
+1*2^8 + 0*2^7 + 1*2^6 + 0*2^5 + 1*2^4 + 0*2^3 + 1*2^2 + 0*2^0
+$$
 
 # Basics of Java
 ```
