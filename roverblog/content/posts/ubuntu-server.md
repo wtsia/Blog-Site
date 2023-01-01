@@ -39,7 +39,7 @@ sudo fdisk -l           // list drives
 sudo blkid              // get uuid of drive
 sudo nano /etc/fstab    // edit fstab using nano
 # example of a disk mount
-/dev/disk/by-uuid/6cb2542a-022b-45f6-8bce-4f593a2f839b  /<directory for mount>  <storage type like ext4>    defaults    0   0    
+/dev/disk/by-uuid/6cb3542a-02ab-4df6-8bce-4c193a2f839b  /<directory for mount>  <storage type like ext4>    defaults    0   0    
 sudo mount -a
 
 // show video card drivers
@@ -56,6 +56,10 @@ journalctl -u <service> --no-pager | less
 
 // rsync
 rsync -rtvu source_folder/ destination_folder/
+// -v verbose
+// -t 
+// -u 
+// -r recursive
 
 //ubuntu drivers
 sudo ubuntu-drivers devices
@@ -240,7 +244,11 @@ systemctl restart sshd          // restart daemon
 sudo nano ~/.bashrc
 // add "alias <name>="ssh -p <port> <user>@<ip address>"
 source ~/.bashrc
+```
+## Fail2ban
+- 
 
+```
 // fail2ban SSH logins
 sudo apt install fail2ban
 
