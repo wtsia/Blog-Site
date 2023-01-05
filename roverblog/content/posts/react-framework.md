@@ -22,4 +22,8 @@ nodate = true
 hidemeta = false
 +++
 
-![Replacement Text](/rover/img/<topic>/<image>.png)
+# High Level Overview
+1. A User Interface (UI) Library
+2. Component Architecture
+3. Data Flow (becoming standard in .js apps)
+4. Component State
