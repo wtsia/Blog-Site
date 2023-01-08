@@ -27,3 +27,6 @@ hidemeta = false
 2. Component Architecture
 3. Data Flow (becoming standard in .js apps)
 4. Component State
+
+## DOM (Display-Object-Model)
+
