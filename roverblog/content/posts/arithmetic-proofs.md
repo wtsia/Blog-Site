@@ -19,7 +19,8 @@ nodate = true
 hidemeta = false
 +++
 
-## Prove $\forall n,a\in\natnums$, 
+## Squared Numbers Equality Proof
+Prove $\forall n,a\in\natnums$, 
 $$
 n^2 = (n+a)(n-a) + a^2 
 $$ 
