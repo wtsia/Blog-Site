@@ -5,21 +5,29 @@ title = "Arithmetic Proofs"
 date = 2023-01-10T11:52:33-08:00
 description = "Description"
 tags = [
-    "tag1",
-    "tag2",
+    "Mathematics"
 ]
 categories = [
-    "cat1",
-    "cat2",
+    "Arithmetic",
+    "Proofs"
 ]
 math = true
 notaxonomy = false
-images = ["/img/<folder>/example.jpg"]
-imagetext = "An example text for an image you could add!"
 hidden = true
 norobots = true
 nodate = true
 hidemeta = false
 +++
 
-![Replacement Text](/rover/img/<topic>/<image>.png)
+## Prove $\forall n,a\in\natnums$, 
+$$
+n^2 = (n+a)(n-a) + a^2 
+$$ 
+### Proof:
+We can simply show the equalty holds true given some manipulation:
+$$
+(n+a)(n-a) + a^2
+\\\\ = n^2 -an +an -a^2 + a^2
+\\\\ = n^2
+\\\\ \square
+$$
