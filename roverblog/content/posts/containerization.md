@@ -14,11 +14,14 @@ categories = [
 ]
 math = true
 notaxonomy = false
-images = ["/img/<folder>/example.jpg"]
-imagetext = "An example text for an image you could add!"
 hidden = true
 norobots = true
 nodate = true
 hidemeta = false
 +++
+# Containerization
 
+## Kubernetes vs Docker
+- Docker: a containerization platform and runtime
+- Kubernetes: platform for running and managing containers from many container runtimes (including Docker)
+- 
