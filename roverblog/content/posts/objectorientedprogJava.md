@@ -20,19 +20,13 @@ norobots = true
 nodate = true
 hidemeta = false
 +++
-
-Student Learning Outcomes (SLO): 
-1. Analyze and explain the behavior of programs involving the **fundamental program constructs**.
-2. Write short programs that use the fundamental program constructs including **standard conditional** and **iterative control structures**.
-3. Identify and correct syntax and logic errors in short programs.
-4. Write short programs using *arrays*.
-5. Design and implement a *class* based on *attributes* and *behaviors* of **objects**.
-6. Construct objects using a *class* and activate methods on them.
-7. Use **static** and **instance** members of a class properly.
-8. Identify and describe **value**, **scope** and **lifetime** of a variable.
-9. Describe the parameter passing **mechanisms** and **method overloading**.
-
-> Keep these concepts in mind for testing. 
+# Java Topics
+- [Introduction](#introduction)
+- [Concepts](#concepts)
+  - [Binary](#binary)
+    - [8-bit](#8-bit)
+- [Basics of Java](#basics-of-java) 
+    - [Errors/Troubleshooting](#errorstroubleshooting)
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
@@ -45,12 +39,15 @@ Student Learning Outcomes (SLO):
   - in Java, this may be like string1 = string2. This does not create a new string, but references string2.
 
 # Concepts
+
 ## Binary
+
 ### 8-bit
 - represented in 8 binary, or `10101010` where each number would symbolize:
 $$
 1*2^8 + 0*2^7 + 1*2^6 + 0*2^5 + 1*2^4 + 0*2^3 + 1*2^2 + 0*2^0
 $$
+
 ## Integer Overflow
 - **overflow** occurs when
 
