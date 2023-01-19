@@ -87,4 +87,24 @@ Now we will open a client to interface with the MySQL database. type:
 
 ![Connecting to MySQL](/rover/img/MySQL/dockerConnectingMySQL.png)
 
-## ER Model
+## Entity Relationship (ER) Model
+- Element Types:
+  - Entity and Entity Sets (Rectangle)
+    - similar entities == entity set
+  - Attributes (Ovals): qualitative descriptors
+  - Relationships (Diamonds)
+    - represented by keys for entity instance
+    - binary (2), tertiary(3) relationship
+    - symbols
+      - "$\circ$" indicates optional (0 instances of relationships between entities)
+      - "$|$" means mandatory
+      - "$||$" means cardinality (measure of the number of elements of a set)
+      - "$\triangleleft$"+"$+$" crows foot indicates many relationships (imagine $\in$ but with straight lines)
+$$
+Attributes \in Entity
+\\\ 
+$$
+  - $R:E\rArr F$ = Each $E$ to at most one member of $F$, is **"many to one"**
+  - **"one-one"** is equivalent to bijection of the above relation
+  - **"many-many"** is not "many to one" bijectively
+

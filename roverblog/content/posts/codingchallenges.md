@@ -24,8 +24,9 @@ hidemeta = false
 
 Relevant References: [Neetcode](https://neetcode.io/)
 
-## Definitions
-Time Complexity (TC): Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
+# Definitions
+## Time Complexity (TC)
+Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
 $$
 f(l) = t
 $$
@@ -36,8 +37,20 @@ O(x), x \in 1, n, n^2, \log n, n \log n, 2^n, n! ...
 $$
 
 A time-complexity analysis will require evaluating run time on each step of a program.
-### Contains Duplicate
 
+> Time complexity deals with finding out how the computational time of an algorithm changes with the change in size of the input.
+
+## Space Complexity (SC)
+While Space Complexity may also be described by O-notation, they are unrelated and not dependent on each other. For example, an $O(1)$ space complexity denotes the same amount of space usage per input data of any size.
+
+A program that uses a variable to swap values, while swapping multiple values for the variable, will still only use one variable.
+
+> Space complexity deals with finding out how much (extra) space would be required by the algorithm with change in the input size.
+
+#### References: [Differences between time complexity and space complexity?](https://stackoverflow.com/questions/18686121/differences-between-time-complexity-and-space-complexity#:~:text=Time%20complexity%20deals%20with%20finding,change%20in%20the%20input%20size.)
+
+# Problems
+## Contains Duplicate
 Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
 Example 1:
@@ -61,21 +74,23 @@ Constraints:
 -10^9 <= nums[i] <= 10^9
 ```
 Design: 
+### **Solution 1)** 
+*Brute force*: store each member of the array in a variable and iterate through the array recursively and return `false` if the operation completes without returning `true`.
 
-**Solution 1)** *Brute force*: store each number in a variable and iterate through the array recursively and return `false` if the operation completes without returning `true`.
-
-**Time Complexity (TC)**: each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on each $a_n \in array$ produces operations of array size $N*(N-1) = N^2 - N$ since we cannot compare every $a_n \in array$ to itself. We can note the supremum $sup(N^2 - N) = N2$, but more importantly, storing a value inside a variable takes computation time. Thus, we can say its $N^2 -N +N$ or simply $N^2$.
+**Time Complexity (TC)**: Let $a_n$ represent each element in an array, with $n$ beginning at $0$. For example, `[1,2,3]` would have $a_0 = 1$, and $a_2 = 3$. Each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on each $a_n \in array$ produces operations of array size $N*(N-1) = N^2 - N$ since we cannot compare every $a_N \in array$ to itself. We can note the supremum $sup(N^2 - N) = N^2$. Thus, we can say it is bounded in time complexity at $N^2 -N +N$ or simply $N^2$.
 We can iterate through as such:
 
 $$
 n = 1  \to [a_0]
 $$
 
-array of 1 cannot be a duplicate of itself, so no duplicates.
+array of 1 cannot contain a duplicate of itself, so no duplicates.
 
 $$
 n = 2  \to [a_0, a_1] \to a_0 \begin{pmatrix} a_1 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \end{pmatrix} 
 $$
+
+In this example, we store $a_0$ and then compare it to $a_1$, and vice versa. This takes 2 operations each, or 4 total.
 
 $$
 n = 3  \to [a_0, a_1, a_2] \to a_0 \begin{pmatrix} a_1 \\\\ a_2 \end{pmatrix} \\\\ + a_1 \begin{pmatrix} a_0 \\\\ a_2 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\\\ a_1 \end{pmatrix}
@@ -97,7 +112,13 @@ $$
 [a_n]_{n = 1}^N ~,~~~ a_n = n^2 \equiv (1, 4, 9, 16, ..., N^2)
 $$
 
-Sol 2) Divide: split the array into two and compare each number to each element of the other array. This reduces the size of the array approximately in half..
+```
+// java
+
+```
+
+### **Solution 2)** 
+Divide: split the array into two and compare each number to each element of the other array. This reduces the size of the array approximately in half..
 
 ```
 class Solution(object):
