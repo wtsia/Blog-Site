@@ -36,6 +36,8 @@ $$
 O(x), x \in 1, n, n^2, \log n, n \log n, 2^n, n! ...
 $$
 
+Where $O(x)$ denotes O-notation, or "Order" notation.
+
 A time-complexity analysis will require evaluating run time on each step of a program.
 
 > Time complexity deals with finding out how the computational time of an algorithm changes with the change in size of the input.

@@ -15,7 +15,7 @@ Welcome! This is a site I've made to keep notes that I'd like LaTeX syntax avail
 
 ## Notes Quicklinks
 ## Topics:
-#### [Coding Challenges](./posts/codingchallenges)
+#### [Coding Challenges](./posts/00_codingchallenges)
 #### [P vs NP](./posts/pvsnp)
 
 ### System Design:
