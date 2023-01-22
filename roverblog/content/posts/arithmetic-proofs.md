@@ -32,3 +32,9 @@ $$
 \\\\ = n^2
 \\\\ \square
 $$
+
+## Karatsuba's Algorithm (Multiplication)
+### Context
+Kolmogorov's Conjecture: Any algorithm for multiplying two $N$-digit numbers requires of the order of $N^2$ steps.
+
+### Karatsubas

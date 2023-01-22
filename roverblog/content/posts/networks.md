@@ -16,8 +16,29 @@ norobots = true
 nodate = true
 hidemeta = true
 +++
+# Introduction
+Introduction to networks and digital communications with a focus on Internet protocols: Application 
+layer architectures (client/server, peer-to-peer) and protocols (HTTP-web, SMTP-mail, etc.), Transport 
+layer operation: (reliable transport, congestion and flow control, UDP, TCP); Network layer operation - 
+(routing, addressing, IPv4 and IPv6), Data Link layer operation (error detection/correction, access 
+control, Ethernet, 802.11, PPP), Layer 2/3 protocols (ATM and MPLS); selected current topics such as: 
+security, multimedia protocols, Quality of Service, mobility, wireless networking, emerging protocols, 
+network management. 
+# Content
+- [Introduction](#introduction)
+- [Content](#content)
+- [Networks: An Introduction](#networks-an-introduction)
+- [DNS vs CDN](#dns-vs-cdn)
+  - [Domain Name System (DNS)](#domain-name-system-dns)
+  - [Content Delivery Network](#content-delivery-network)
+    - [Push CDNs](#push-cdns)
+    - [Pull CDNs](#pull-cdns)
+    - [Disadvantages of CDNs:](#disadvantages-of-cdns)
+# Networks: An Introduction
 
-### Domain Name System (DNS)
+# DNS vs CDN
+Domain Name System vs Content Delivery Network
+## Domain Name System (DNS)
 - work station sends request to ISP, ISP asks other servers for name system IP, then returns the IP address for the web address name so that the work station can connect to the site.
     - NS record (name server) - Specifies the DNS server for domain/subdomain
     - MX record (mail exchange) - specifies the mail servers for accepting messages
@@ -64,26 +85,26 @@ hidemeta = true
     - Can be complex and is generally managed by governments, ISPs, and large companies.
     - Go under DDoS attacks
 
-### Content Delivery Network
+## Content Delivery Network
 - CDN is a globally distributed network of proxy servers, serving content from locations closer to the user i.e. static files like HTML, CSS, JS, photos, or videos
 - Pros:
     - Users may receive content from data centers close to them
     - Servers do not have to serve requests CDN fulfills
 
-#### Push CDNs
+### Push CDNs
 - receive new content when changes occur on server
 - Provider managed, uploading and rewriting URLs to point to CDN, expiration, and update frequency. 
 - Content uploading when new or changed minimizing traffic but maximizing storage
 - Push is good for sites whose content isn't often updated 
 
-#### Pull CDNs
+### Pull CDNs
 - grabs new content from server when the first user requests content.
     - leave content on server and rewrite URLs to point to CDN
         - results in slow request until content is cached on CDN
     - time to live (TTL) determines caching duration.
 - minimizes storage space on CDN but can create redundant traffic if files expire and are pulled before changes.
 
-#### Disadvantages of CDNs:
+### Disadvantages of CDNs:
 - CDN costs may be significant dependent on traffic,but should be analyzed by opportunity cost. 
 - Content may be stale if updated before TTL expires it
 - CDNs require changing URLs for static content to point to the CDN
