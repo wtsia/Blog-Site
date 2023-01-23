@@ -20,6 +20,11 @@ nodate = true
 hidemeta = false
 +++
 
+# Contents
+- [Contents](#contents)
+  - [Speed Reading](#speed-reading)
+  - [Extras](#extras)
+  - [Procrastination](#procrastination)
 ## Speed Reading
 1. Pointer
     - follows the word

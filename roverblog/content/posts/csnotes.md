@@ -23,14 +23,27 @@ hidemeta = false
 ![Replacement Text](/rover/img/ComputerScience/rubik.jpg)
 
 # Contents
+- [Contents](#contents)
 - [Complexity](#complexity)
-  - [Time Complexity](#time-complexity-tc)
-  - [Space Complexity](#space-complexity-sc)
+  - [Time Complexity (TC)](#time-complexity-tc)
+  - [Space Complexity (SC)](#space-complexity-sc)
 - [Data Structures and Algorithms](#data-structures-and-algorithms)
-  - [Dynamic Programming](#dynamic-programming--memoization)
-  - [Algorithm Efficiency (Big O)](#algorithm-efficiency-big-o-notation)
+  - [Dynamic Programming \& Memoization](#dynamic-programming--memoization)
+  - [Algorithm Efficiency: Big $O/\\Omega$-Notation](#algorithm-efficiency-big-oomega-notation)
+    - [O-notation](#o-notation)
+    - [$\\Omega$-notation](#omega-notation)
   - [Algorithms](#algorithms)
     - [Binary Search](#binary-search)
+    - [Selection Sort](#selection-sort)
+    - [Merge sort:](#merge-sort)
+    - [Binary tree](#binary-tree)
+    - [Heap:](#heap)
+    - [Depth First Search:](#depth-first-search)
+    - [Breadth First Search:](#breadth-first-search)
+    - [Edges and Vertices](#edges-and-vertices)
+    - [Dijkstra's Algorithm](#dijkstras-algorithm)
+    - [Topological Sort](#topological-sort)
+    - [Hash Map](#hash-map)
 # Complexity
 ## Time Complexity (TC)
 Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
@@ -102,18 +115,21 @@ $\Omega (n)$
 - Binary Search Tree: Value of the key of the left sub-tree is less than the value of its parent node's key, while right is greater or equal to the value of parent's (root) node key
     - $O(H)$ where H is height of the tree, for operations of search, insert, and delete
     - Red/Black trees: maintain features to accomplish $O(log(n))$
-### Heap: A tree based data structure where parent nodes have >= priority as children nodes
+### Heap: 
+A tree based data structure where parent nodes have >= priority as children nodes
 - Priority Queue: abstract data type where elements have priority and higher priority elements are served first (common in heap)
 - Min heap, max heap
 - Heap Insertion/Deletion costs $O(log(n))$
 - Retrieving highest priority costs $O(1)$
 - building heap costs $O(n)$
-### Depth First Search: iterates vertically through first branch to the end, then the other leaf nodes
+### Depth First Search: 
+iterates vertically through first branch to the end, then the other leaf nodes
 - Stack: a collection that supports push (add to end) and pop (remove from end)
     - Last in First Out
     - Recursion
         - if Recursion exceeds amount of depth, you get stack overflow
-### Breadth First Search: iterates through horizontal branches and progresses downward
+### Breadth First Search: 
+iterates through horizontal branches and progresses downward
 - Queue: First in First Out
 ### Edges and Vertices
 - Edges are relationships between vertices

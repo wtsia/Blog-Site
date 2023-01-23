@@ -28,6 +28,13 @@ network management.
 - [Introduction](#introduction)
 - [Content](#content)
 - [Networks: An Introduction](#networks-an-introduction)
+  - [Introduction](#introduction-1)
+    - [**OSI**](#osi)
+    - [Number Bases and Conversion](#number-bases-and-conversion)
+      - [Binary to Hex](#binary-to-hex)
+      - [Binary to Decimal](#binary-to-decimal)
+      - [Hex to Decimal](#hex-to-decimal)
+      - [Decimal to Hex](#decimal-to-hex)
 - [DNS vs CDN](#dns-vs-cdn)
   - [Domain Name System (DNS)](#domain-name-system-dns)
   - [Content Delivery Network](#content-delivery-network)
@@ -35,6 +42,43 @@ network management.
     - [Pull CDNs](#pull-cdns)
     - [Disadvantages of CDNs:](#disadvantages-of-cdns)
 # Networks: An Introduction
+- Why layers are used in Computer Networks
+- 7 layers of OSI, describe each layer
+## Introduction
+- Layers: (1) physical, (2) data link, medium access control (MAC, sublayer), (3) network, (4) transport, (5) session, (6) presentation, (7) application
+- parity is used to verify if information is correctly received--i.e. a 1 is added to `0100 0001` to make 'A' an 'odd parity'
+- *communication protocol*: agreement/rule 
+### **OSI**
+Open System Interconnect (by International Standard Organization, or ISO)
+- Physical: sending bits via physical property i.e. voltage
+- Data Link: CRC (different error detection), Hamming, Flow Control, sliding window, shared ethernet channel
+  - MAC: bluetooth tech, RFID
+
+### Number Bases and Conversion
+- Base:
+  - 2 - binary `0b`
+  - 8 - octal `0o`
+  - 10 - decimal `0d`
+  - 16 - hex `0x`
+
+`0x101` equivalent hex to decimal is: 
+
+$$
+1*16^2 + 0*16^1 + 1*16^0 = 256 + 0 + 1 = 257
+$$
+
+#### Binary to Hex
+Binary: 1, 0 -> Hex: 1, 0, A-F
+- 0000 -> 0
+- 1111 -> F
+- Order of binary: 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, ...
+
+#### Binary to Decimal
+Convert to hex first
+
+#### Hex to Decimal
+
+#### Decimal to Hex
 
 # DNS vs CDN
 Domain Name System vs Content Delivery Network
