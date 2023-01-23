@@ -22,11 +22,26 @@ hidemeta = false
 
 # Content
 - [Content](#content)
-- [Looking Out, Looking In, 15th Edition](#looking-out-looking-in-15th-edition)
+- [Looking Out Looking In, 15th Edition](#looking-out-looking-in-15th-edition)
   - [Chapter 1](#chapter-1)
   - [Chapter 2](#chapter-2)
-  - [Chapter 3](#chapter-3-communication-and-id-creatingpresenting-the-self)
-  
+  - [Chapter 3: Communication and ID: Creating/Presenting the Self](#chapter-3-communication-and-id-creatingpresenting-the-self)
+  - [Chapter 4: Perception what you see is what you get?](#chapter-4-perception-what-you-see-is-what-you-get)
+  - [Chapter 5](#chapter-5)
+    - [Summary:](#summary)
+  - [Chapter 6](#chapter-6)
+    - [Summary:](#summary-1)
+  - [Chapter 7 Nonverbal Communication: Messages Beyond Words](#chapter-7-nonverbal-communication-messages-beyond-words)
+    - [Summary:](#summary-2)
+  - [Chapter 8: Listening: More Than Meets the Ear](#chapter-8-listening-more-than-meets-the-ear)
+    - [Summary:](#summary-3)
+  - [Chapter 9: Relational Dynamics](#chapter-9-relational-dynamics)
+  - [Chapter 10: Close Relationships](#chapter-10-close-relationships)
+  - [Chapter 11](#chapter-11)
+    - [Defensive:](#defensive)
+    - [Supportive:](#supportive)
+  - [Chapter 12](#chapter-12)
+    - [John Gottman “The Four Horsemen of the Apocalypse”](#john-gottman-the-four-horsemen-of-the-apocalypse)
 # Looking Out Looking In, 15th Edition
 
 ## Chapter 1

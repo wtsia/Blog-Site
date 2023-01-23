@@ -31,10 +31,10 @@ network management.
   - [Introduction](#introduction-1)
     - [**OSI**](#osi)
     - [Number Bases and Conversion](#number-bases-and-conversion)
-      - [Binary to Hex](#binary-to-hex)
-      - [Binary to Decimal](#binary-to-decimal)
-      - [Hex to Decimal](#hex-to-decimal)
-      - [Decimal to Hex](#decimal-to-hex)
+      - [**Binary to Hex**](#binary-to-hex)
+      - [**Binary to Decimal**](#binary-to-decimal)
+      - [**Hex to Decimal**](#hex-to-decimal)
+      - [**Decimal to Hex**](#decimal-to-hex)
 - [DNS vs CDN](#dns-vs-cdn)
   - [Domain Name System (DNS)](#domain-name-system-dns)
   - [Content Delivery Network](#content-delivery-network)
@@ -67,18 +67,18 @@ $$
 1*16^2 + 0*16^1 + 1*16^0 = 256 + 0 + 1 = 257
 $$
 
-#### Binary to Hex
+#### **Binary to Hex**
 Binary: 1, 0 -> Hex: 1, 0, A-F
 - 0000 -> 0
 - 1111 -> F
 - Order of binary: 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, ...
 
-#### Binary to Decimal
+#### **Binary to Decimal**
 Convert to hex first
 
-#### Hex to Decimal
+#### **Hex to Decimal**
 
-#### Decimal to Hex
+#### **Decimal to Hex**
 
 # DNS vs CDN
 Domain Name System vs Content Delivery Network
