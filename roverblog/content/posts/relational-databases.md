@@ -19,7 +19,13 @@ norobots = true
 nodate = true
 hidemeta = false
 +++
-
+# Contents
+- [Contents](#contents)
+- [Relational Databases: MySQL](#relational-databases-mysql)
+  - [Outcomes](#outcomes)
+- [Building MySQL](#building-mysql)
+- [Entity Relationship (ER) Model](#entity-relationship-er-model)
+  - [ER Diagram Example](#er-diagram-example)
 # Relational Databases: MySQL
 An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
 and XML Schema for validation, and an introduction to the query and transformation languages XPath, 
@@ -30,7 +36,7 @@ databases for cloud and desktop computing.
 
 Book: murach's MySQL (3rd Edition, 2019)
 
-## Outcomes:
+## Outcomes
 1. Create and assure the quality of a suitable data model for a given application.
 2. Use normalization to transform a relational schema into a set of normalized relations (3NF).
 3. Use SQL for database creation, manipulation and control.
@@ -38,9 +44,6 @@ Book: murach's MySQL (3rd Edition, 2019)
 5. Perform basic database administration tasks.
 6. Employ XML technologies to query, manipulate and transform data.
 7. Develop NoSQL desktop and cloud database solutions.
-
-# Contents
-[Building MySQL](#building-mysql)
 
 # Building MySQL
 Per instructions on [mysql's docker page](https://hub.docker.com/_/mysql), we will be making a docker compose file with the following recommended settings. This will be done on a Linux based OS:
@@ -87,7 +90,7 @@ Now we will open a client to interface with the MySQL database. type:
 
 ![Connecting to MySQL](/rover/img/MySQL/dockerConnectingMySQL.png)
 
-## Entity Relationship (ER) Model
+# Entity Relationship (ER) Model
 - Element Types:
   - Entity and Entity Sets (Rectangle)
     - similar entities == entity set
