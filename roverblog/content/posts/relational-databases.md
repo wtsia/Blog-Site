@@ -115,8 +115,8 @@ $$
 ![ER Diagram](/rover/img/MySQL/ERDiagram.png)
 - Entities: CEO, Engineer, Manager, Customer, Product
   - Attributes:
-    - CEO: salary, first_name, last_name, org_id, email
-    - Engineer: avg_salary, first_name, last_name, org_id, email
-    - Manager: avg_salary, first_name, last_name, org_id, department
-    - Customer: customer_id, payment_info, session_id, discount_id, transaction_id
-    - Product: product_id, quantity, category, display_name, availability
+    - CEO: `salary, first_name, last_name, org_id, email`
+    - Engineer: `avg_salary, first_name, last_name, org_id, email`
+    - Manager: `avg_salary, first_name, last_name, org_id, department`
+    - Customer: `customer_id, payment_info, session_id, discount_id, transaction_id`
+    - Product: `product_id, quantity, category, display_name, availability`
