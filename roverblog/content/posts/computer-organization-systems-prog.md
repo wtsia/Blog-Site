@@ -1,9 +1,9 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "Computer Organization Systems Prog"
+title = "Computer Organization Systems Programming"
 date = 2023-01-23T00:30:07-08:00
-description = "Description"
+description = "Notes on Computer Organization and Systems Programming"
 tags = [
     "tag1",
     "tag2",

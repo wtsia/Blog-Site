@@ -19,7 +19,30 @@ norobots = true
 nodate = true
 hidemeta = false
 +++
-## Useful server commands
+# Contents
+- [Contents](#contents)
+  - [Useful Commands](#useful-commands)
+    - [Ubuntu Server Troubleshooting](#ubuntu-server-troubleshooting)
+  - [useful text editor shortcuts](#useful-text-editor-shortcuts)
+- [Setting up Reverse Proxy with Caddy or Nginx](#setting-up-reverse-proxy-with-caddy-or-nginx)
+  - [Caddy](#caddy)
+- [Docker](#docker)
+  - [Installation](#installation)
+  - [Docker: Portainer](#docker-portainer)
+    - [Docker Commands/Operations](#docker-commandsoperations)
+  - [Docker: Nginx Proxy Manager](#docker-nginx-proxy-manager)
+- [Nginx](#nginx)
+  - [Port Forwarding](#port-forwarding)
+- [Server Security](#server-security)
+  - [Fail2ban](#fail2ban)
+  - [Maldet: Linux Malware Detection](#maldet-linux-malware-detection)
+    - [Installation](#installation-1)
+- [Media](#media)
+    - [Installing Jellyfin (Docker)](#installing-jellyfin-docker)
+    - [Transcoding](#transcoding)
+    - [Converting mkv to h264 with FFmpeg](#converting-mkv-to-h264-with-ffmpeg)
+    - [HEVC x265 to MP4 x264](#hevc-x265-to-mp4-x264)
+## Useful Commands
 ```
 //useful for monitoring changes to a `.log` file in real time.
 watch -n 1 tail /var/log/<webserver>/<something>.log

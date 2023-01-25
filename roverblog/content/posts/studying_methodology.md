@@ -17,7 +17,24 @@ norobots = true
 nodate = true
 hidemeta = false
 +++
-
+# Contents
+- [Contents](#contents)
+  - [Standard Practice](#standard-practice)
+- [Best Methodology](#best-methodology)
+- [Problem of Active Recall and Spaced Repetition](#problem-of-active-recall-and-spaced-repetition)
+    - [Why does Active Recall Work?](#why-does-active-recall-work)
+- [2 Basic Steps](#2-basic-steps)
+  - [1. Principle of Encoding](#1-principle-of-encoding)
+  - [2. Encoding Tolerance](#2-encoding-tolerance)
+      - [Techniques:](#techniques)
+- [Mind-Map](#mind-map)
+  - [GRIND Map](#grind-map)
+    - [Grouped](#grouped)
+    - [Reflective](#reflective)
+    - [Interconnected](#interconnected)
+    - [Non-verbal](#non-verbal)
+    - [Directional $\\bigstar$](#directional-bigstar)
+    - [Explained](#explained)
 ## Standard Practice
 1) Context broadening: Relating a theoretical concept with a real life story or incident. Having an example or event visual in your mind.
 2) Emotional implication: Getting emotionally invested with the topic, knowing what would be the future use.

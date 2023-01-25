@@ -3,14 +3,14 @@ author = "Winston Tsia"
 authorlink = ""
 title = "Relational Databases"
 date = 2023-01-17T19:29:32-08:00
-description = "Description"
+description = "Notes on Relational Databases"
 tags = [
-    "tag1",
-    "tag2",
+    "MySQL",
+    "Relational Databases",
 ]
 categories = [
-    "cat1",
-    "cat2",
+    "Computer Science",
+    "Databases",
 ]
 math = true
 notaxonomy = false
@@ -69,10 +69,6 @@ services:
       - 8080:8080
 ```
 Since `mysql_native_password` is not recommended as the field value for `--default-authentication-plugin`, so we will use one of the recommended values, `sha256_password`. Our root password will be stored in an environment variable called `${ROOT_PWD}`, located in your `.env` or environment section of your container manager and will be used to log into mysql.
-
-We will also need MySQL Client Package's `mysql-client`, so we can run:
-
-```sudo apt-get install mysql-client```
 
 Now we can run it using `docker compose up -d` from the CLI or start it up using your container manager.
 

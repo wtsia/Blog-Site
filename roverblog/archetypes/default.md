@@ -3,7 +3,7 @@ author = "Winston Tsia"
 authorlink = ""
 title = "{{ replace .Name "-" " " | title }}"
 date = {{ .Date }}
-description = "Description"
+description = "Notes on {{ replace .Name "-" " " | title }}"
 tags = [
     "tag1",
     "tag2",

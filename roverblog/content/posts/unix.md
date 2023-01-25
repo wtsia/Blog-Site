@@ -21,8 +21,29 @@ norobots = true
 nodate = true
 hidemeta = false
 +++
-
-# Quick concepts
+# Contents
+- [Contents](#contents)
+- [Quick Concepts](#quick-concepts)
+- [UNIX Systems](#unix-systems)
+  - [Introduction](#introduction)
+  - [1. Linux Foundation](#1-linux-foundation)
+    - [Families](#families)
+      - [Summary](#summary)
+    - [Debian / Ubuntu Linux: *Searching For Package by Name*](#debian--ubuntu-linux-searching-for-package-by-name)
+- [2. Linux Philosophy and Concepts](#2-linux-philosophy-and-concepts)
+  - [Boot](#boot)
+    - [GUI: X Windows, GNOME](#gui-x-windows-gnome)
+      - [SUMMARY](#summary-1)
+    - [NTP, Software Management](#ntp-software-management)
+    - [Common Apps](#common-apps)
+    - [CLI operations](#cli-operations)
+      - [SUMMARY](#summary-2)
+    - [Documentation](#documentation)
+    - [Filesystem](#filesystem)
+    - [Editing Text Files](#editing-text-files)
+    - [Networking](#networking)
+    - [Security](#security)
+# Quick Concepts
 - `dmidecode`:
 - `hostnamectl`: `hostnamectl hostname <name>`
 - `htop` vs `atop` vs `iftop`
