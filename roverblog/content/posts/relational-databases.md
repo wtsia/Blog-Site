@@ -23,7 +23,7 @@ hidemeta = false
 - [Contents](#contents)
 - [Relational Databases: MySQL](#relational-databases-mysql)
   - [Outcomes](#outcomes)
-- [Building MySQL](#building-mysql)
+- [Starting a MySQL Instance](#starting-a-mysql-instance)
 - [Entity Relationship (ER) Model](#entity-relationship-er-model)
   - [ER Diagram Example](#er-diagram-example)
 # Relational Databases: MySQL
@@ -45,7 +45,7 @@ Book: murach's MySQL (3rd Edition, 2019)
 6. Employ XML technologies to query, manipulate and transform data.
 7. Develop NoSQL desktop and cloud database solutions.
 
-# Building MySQL
+# Starting a MySQL Instance
 Per instructions on [mysql's docker page](https://hub.docker.com/_/mysql), we will be making a docker compose file with the following recommended settings. This will be done on a Linux based OS:
 
 ```
@@ -70,17 +70,17 @@ services:
 ```
 Since `mysql_native_password` is not recommended as the field value for `--default-authentication-plugin`, so we will use one of the recommended values, `sha256_password`. Our root password will be stored in an environment variable called `${ROOT_PWD}`, located in your `.env` or environment section of your container manager and will be used to log into mysql.
 
-Now we can run it using `docker compose up -d` from the CLI or start it up using your container manager.
+Now we can build it using `docker compose up -d` from the CLI or start it up using your container manager.
 
 To confirm startup, we can check via `docker logs my-container-name`, or using `docker ps`, check that the container is running. You will need to run it using `sudo` if you haven't added docker to your user group.
 
 ![Check Running](/rover/img/MySQL/checkMySQLInstall.png)
 
-Now lets log into the MySQL database. we can interact with a terminal in the container using: 
+Now lets log into the MySQL database. we can access the container shell using: 
 
 ```docker exec -it my-sql-db-1 bash```
 
-Now we will open a client to interface with the MySQL database. type:
+Now we will log into the MySQL database as root by typing:
 
 ```mysql -uroot -p```
 

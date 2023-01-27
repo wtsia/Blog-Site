@@ -24,15 +24,26 @@ hidemeta = false
 # Contents
 - [Contents](#contents)
 - [Basics of C++ Programming](#basics-of-c-programming)
+  - [Compiling](#compiling)
 
 # Basics of C++ Programming
 - Program begins with `main()`, executing statements in braces `{}`
+- statements on a line ends with a semicolon
 
 ```
 #include <iostream>
 
 main() {
-    
+    /*
+    Enter statements here
+    */
+    // or here
 }
+```
+
+## Compiling
+Programs can still compile with logic errors. Compile to show all logic errors via:
+```
+g++ -Wall yourfile.cpp
 ```
 
