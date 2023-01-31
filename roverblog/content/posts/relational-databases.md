@@ -26,7 +26,9 @@ hidemeta = false
 - [Starting a MySQL Instance](#starting-a-mysql-instance)
 - [Entity Relationship (ER) Model](#entity-relationship-er-model)
   - [ER Diagram Example](#er-diagram-example)
-- [Creating A Table](#creating-a-table)
+- [Populating Database](#populating-database)
+  - [Creating Tables](#creating-tables)
+  - [Creating Relationships](#creating-relationships)
     - [Additional commands:](#additional-commands)
 # Relational Databases: MySQL
 An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
@@ -119,12 +121,13 @@ $$
     - Customer: `customer_id, payment_info, session_id, discount_id, transaction_id`
     - Product: `product_id, quantity, category, display_name, availability`
 
-# Creating A Table
+# Populating Database
+## Creating Tables
 The following is an ER Diagram for the database we will be creating:
 
 ![ER Diagram](/rover/img/MySQL/ERDiagramStudentDB.png)
 
-These are the following commands we will use to create our table:
+These are the following commands we will use to create our table for `user`, `student`, `instructor`, and `courses`:
 ```
 create table user(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum('home','office','mobile'));
 ```
@@ -147,6 +150,23 @@ we can confirm with `describe table_name;`, like `describe user;`:
 ![example 'describe'](/rover/img/MySQL/describeUser.png)
 
 we can see, the `create table user --` command created the corresponding fields and data types.
+
+Now, let's check what tables we have so far using `show tables;`:
+![show table](/rover/img/MySQL/showTablesStudentDB.png)
+
+Let's make some more tables. One for `class`, `assignments`, and `posts`:
+```
+create table class(class_num int primary key, start_date date, end_date date, max_students int, term varchar(100), year int, grade double);
+```
+```
+create table assignments(assignment_id int primary key, name varchar(100), deadline datetime, grade double);
+```
+```
+create table posts(post_id int primary key, kind text, posting_time datetime, topics text, context text, popularity_rating double);
+```
+![create all tables](/rover/img/MySQL/createTableFullCreate.png)
+
+## Creating Relationships
 
 ### Additional commands:
 remove a column like `level` in `courses`:
