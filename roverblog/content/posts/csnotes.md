@@ -24,6 +24,8 @@ hidemeta = false
 
 # Contents
 - [Contents](#contents)
+- [Basics](#basics)
+  - [Bits/Bytes](#bitsbytes)
 - [Complexity](#complexity)
   - [Time Complexity (TC)](#time-complexity-tc)
   - [Space Complexity (SC)](#space-complexity-sc)
@@ -44,6 +46,10 @@ hidemeta = false
     - [Dijkstra's Algorithm](#dijkstras-algorithm)
     - [Topological Sort](#topological-sort)
     - [Hash Map](#hash-map)
+# Basics
+## Bits/Bytes
+- 0s and 1s are known as bits--binary digits
+
 # Complexity
 ## Time Complexity (TC)
 Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:

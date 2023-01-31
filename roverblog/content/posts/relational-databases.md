@@ -26,6 +26,8 @@ hidemeta = false
 - [Starting a MySQL Instance](#starting-a-mysql-instance)
 - [Entity Relationship (ER) Model](#entity-relationship-er-model)
   - [ER Diagram Example](#er-diagram-example)
+- [Creating A Table](#creating-a-table)
+    - [Additional commands:](#additional-commands)
 # Relational Databases: MySQL
 An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
 and XML Schema for validation, and an introduction to the query and transformation languages XPath, 
@@ -116,3 +118,39 @@ $$
     - Manager: `avg_salary, first_name, last_name, org_id, department`
     - Customer: `customer_id, payment_info, session_id, discount_id, transaction_id`
     - Product: `product_id, quantity, category, display_name, availability`
+
+# Creating A Table
+The following is an ER Diagram for the database we will be creating:
+
+![ER Diagram](/rover/img/MySQL/ERDiagramStudentDB.png)
+
+These are the following commands we will use to create our table:
+```
+create table user(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum('home','office','mobile'));
+```
+
+```
+create table student(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum('home','office','mobile'),major varchar(100));
+```
+
+```
+create table instructor(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum('home','office','mobile'), title enum('Full Professor','Reader','Instructor'));
+```
+
+```
+create table courses(course_num int, dept varchar(100), title varchar(1000), level 
+enum('undergraduate','graduate','research'), primary key(course_num,department));
+```
+
+we can confirm with `describe table_name;`, like `describe user;`:
+
+![example 'describe'](/rover/img/MySQL/describeUser.png)
+
+we can see, the `create table user --` command created the corresponding fields and data types.
+
+### Additional commands:
+remove a column like `level` in `courses`:
+
+```mysql> alter table courses drop column level;```
+
+- `alter table`: lets you `add` or `drop` columns

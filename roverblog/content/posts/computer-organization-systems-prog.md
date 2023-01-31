@@ -22,4 +22,9 @@ nodate = true
 hidemeta = false
 +++
 
-![Replacement Text](/rover/img/<topic>/<image>.png)
+# Contents
+- [Contents](#contents)
+- [Bits, Bytes, and Integers](#bits-bytes-and-integers)
+
+# Bits, Bytes, and Integers
+Bits are stored as `0` or `1`.

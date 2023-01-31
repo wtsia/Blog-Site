@@ -24,6 +24,7 @@ hidemeta = true
   - [Transport Layer Security (TLS)](#transport-layer-security-tls)
     - [RSA or Diffie-Hellman](#rsa-or-diffie-hellman)
       - [Diffie-Hellman](#diffie-hellman)
+- [X.509 Digital Certificates](#x509-digital-certificates)
 - [Ghidra](#ghidra)
 - [Golang](#golang)
 - [Reverse Engineering](#reverse-engineering)
@@ -41,6 +42,8 @@ hidemeta = true
 ### RSA or Diffie-Hellman
 #### Diffie-Hellman
 - exponential key exchange
+# X.509 Digital Certificates
+
 # Ghidra
 - an open source reverse engineering tool introduced in RSA Conference, first leaked in Wikileaks and released by the NSA in 2019.
  
