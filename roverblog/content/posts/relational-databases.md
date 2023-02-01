@@ -26,10 +26,12 @@ hidemeta = false
 - [Starting a MySQL Instance](#starting-a-mysql-instance)
 - [Entity Relationship (ER) Model](#entity-relationship-er-model)
   - [ER Diagram Example](#er-diagram-example)
-- [Populating Database](#populating-database)
+- [Populating a Database](#populating-a-database)
   - [Creating Tables](#creating-tables)
-  - [Creating Relationships](#creating-relationships)
+    - [**IMPORTANT**](#important)
     - [Additional commands:](#additional-commands)
+  - [Creating Relationships](#creating-relationships)
+- [Scripts](#scripts)
 # Relational Databases: MySQL
 An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
 and XML Schema for validation, and an introduction to the query and transformation languages XPath, 
@@ -121,7 +123,7 @@ $$
     - Customer: `customer_id, payment_info, session_id, discount_id, transaction_id`
     - Product: `product_id, quantity, category, display_name, availability`
 
-# Populating Database
+# Populating a Database
 ## Creating Tables
 The following is an ER Diagram for the database we will be creating:
 
@@ -166,11 +168,92 @@ create table posts(post_id int primary key, kind text, posting_time datetime, to
 ```
 ![create all tables](/rover/img/MySQL/createTableFullCreate.png)
 
-## Creating Relationships
-
+### **IMPORTANT**
+Now, how do we create relationships while creating tables? Well, we can input commands via:
+```
+CREATE TABLE accounts(
+    account_id INT NOT NULL AUTO_INCREMENT,
+    customer_id INT( 4 ) NOT NULL ,
+    account_type ENUM( 'savings', 'credit' ) NOT NULL,
+    balance FLOAT( 9 ) NOT NULL,
+    PRIMARY KEY ( account_id ), 
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) 
+) ENGINE=INNODB;
+```
 ### Additional commands:
 remove a column like `level` in `courses`:
 
 ```mysql> alter table courses drop column level;```
 
 - `alter table`: lets you `add` or `drop` columns
+
+## Creating Relationships
+We will now create relationships. We will have to use `ALTER TABLE` commands to set up relationships for our existing tables, like so:
+```
+ALTER TABLE `table1` ADD CONSTRAINT table1_id_refs FOREIGN KEY (`table2_id`) REFERENCES `table2` (`id`);
+```
+Referenced from the [documentation (MySQL 8.0 Reference Manual)](https://dev.mysql.com/doc/):
+>The `FOREIGN KEY` and `REFERENCES` clauses are supported by the InnoDB and NDB storage engines, which implement `ADD [CONSTRAINT [symbol]] FOREIGN KEY [index_name] (...) REFERENCES ... (...)`. See Section 13.1.20.5, “FOREIGN KEY Constraints”. For other storage engines, the clauses are parsed but ignored.
+>
+>For `ALTER TABLE`, unlike `CREATE TABLE`, `ADD FOREIGN KEY` ignores `index_name` if given and uses an automatically generated foreign key name. As a workaround, include the `CONSTRAINT` clause to specify the foreign key name:
+>
+>```ADD CONSTRAINT name FOREIGN KEY (....) ...```
+
+An example of usage from older docs:
+>```
+>ALTER TABLE tbl_name
+>    ADD [CONSTRAINT [symbol]] FOREIGN KEY
+>    [index_name] (index_col_name, ...)
+>    REFERENCES tbl_name (index_col_name,...)
+>    [ON DELETE reference_option]
+>    [ON UPDATE reference_option
+>```
+- `FOREIGN KEY`: one or more columns in a table that refer to a primary key in another table.
+
+> **Important**
+> 
+> MySQL silently ignores inline `REFERENCES` specifications, where the references are defined as part of the column specification. MySQL accepts only `REFERENCES` clauses defined as part of a separate `FOREIGN KEY` specification.
+>
+> **Note**
+> 
+> Partitioned InnoDB tables do not support foreign keys. This restriction does not apply to NDB tables, including those explicitly partitioned by [LINEAR] KEY. For more information, see Section 24.6.2, “Partitioning Limitations Relating to Storage Engines”.
+
+With that out of the way, let's begin:
+```
+ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES student (user_id);
+
+ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES instructor (user_id);
+
+ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (post_id) REFERENCES posts (post_id);
+
+ALTER TABLE student ADD CONSTRAINT user_id FOREIGN KEY (assignment_id) REFERENCES assignments (assignment_id);
+
+ALTER TABLE student ADD CONSTRAINT user_id FOREIGN KEY (class_num) REFERENCES class (class_num);
+
+ALTER TABLE instructor ADD CONSTRAINT user_id FOREIGN KEY (class_num) REFERENCES class (class_num);
+
+ALTER TABLE courses ADD CONSTRAINT department FOREIGN KEY (class_num) REFERENCES class (class_num);
+
+ALTER TABLE courses ADD CONSTRAINT course_num FOREIGN KEY (class_num) REFERENCES class (class_num);
+
+ALTER TABLE class ADD CONSTRAINT class_num FOREIGN KEY (assignment_id) REFERENCES assignments (assignment_id);
+
+```
+
+
+# Scripts
+We will be loading a script into our docker container. SSH into the server and create a file that will house our script. 
+
+```
+touch myscript.sql
+nano myscript.sql
+docker cp myscript.sql container_id:/<my directory>/myscript.sql
+```
+Now, it should copy the file straight into the root directory or inside `<my directory>` in your root directory. We can do this via:
+```
+docker cp myfile.ext <container name>:/<my directory>/myfileout.ext
+```
+To run the script, we use the path into the MySQL db.
+```
+
+```
