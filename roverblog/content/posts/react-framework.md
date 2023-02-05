@@ -3,7 +3,7 @@ author = "Winston Tsia"
 authorlink = ""
 title = "React Framework"
 date = 2022-12-30T02:07:08-08:00
-description = "Description"
+description = "Notes on React"
 tags = [
     "tag1",
     "tag2",

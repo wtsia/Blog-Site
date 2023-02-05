@@ -36,6 +36,9 @@ hidemeta = false
 main() {
     /*
     Enter statements here
+    cin >> "Input goes into this thing"
+    cout << "This thing prints out"
+
     */
     // or here
 }
@@ -46,4 +49,5 @@ Programs can still compile with logic errors. Compile to show all logic errors v
 ```
 g++ -Wall yourfile.cpp
 ```
+
 
