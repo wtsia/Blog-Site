@@ -32,6 +32,7 @@ hidemeta = false
     - [Additional commands:](#additional-commands)
   - [Creating Relationships](#creating-relationships)
 - [Scripts](#scripts)
+- [Creating a DB from Scratch](#creating-a-db-from-scratch)
 # Relational Databases: MySQL
 An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
 and XML Schema for validation, and an introduction to the query and transformation languages XPath, 
@@ -256,4 +257,20 @@ docker cp myfile.ext <container name>:/<my directory>/myfileout.ext
 To run the script, we use the path into the MySQL db.
 ```
 
+```
+
+# Creating a DB from Scratch
+create a database "mysqldev":
+```
+create database mysqldev;
+use mysqldev;
+```
+create table and specify InnoDB engine:
+```
+create table ADDRESS(ADDRESS_ID INT, ADDRESS_LINE1 VARCHAR(100), ADDRESS_LINE2 VARCHAR(100), CITY VARCHAR(100), STATE_CD VARCHAR(2)) ENGINE=INNODB;
+```
+confirm table is made to specification:
+```
+show table;
+show ADDRESS;
 ```
