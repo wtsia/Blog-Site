@@ -26,6 +26,7 @@ hidemeta = false
 - [Concepts](#concepts)
   - [Schneier's Law](#schneiers-law)
   - [Kerckhoff's principle](#kerckhoffs-principle)
+  - [Stream Cipher](#stream-cipher)
 
 # Introduction
 
@@ -40,4 +41,16 @@ Which is to say in Scheiner's own words,
 
 ## Kerckhoff's principle
 A cryptosystem should be secure, even if everything about the system, except the key, is public knowledge.
+>"The fewer and simpler the secrets that one must keep to ensure system security, the easier it is to maintain system security."
 
+Six design rules for military ciphers:
+1. The system must be practically, if not mathematically, indecipherable;
+2. **It should not require secrecy, and it should not be a problem if it falls into enemy hands;**
+3. It must be possible to communicate and remember the key without using written notes, and correspondents must be able to change or modify it at will;
+4. It must be applicable to telegraph communications;
+5. It must be portable, and not require several persons to handle/operate;
+6. Given the circumstance of use, it should be easy to use and not be stressful to use, nor require a long list of rules for usage.
+
+Note: some are not relevant due to computer's ability to perform encryption (likely $3$, $5$, or $6$). $2$. However is very important.
+
+## Stream Cipher

@@ -267,10 +267,40 @@ use mysqldev;
 ```
 create table and specify InnoDB engine:
 ```
-create table ADDRESS(ADDRESS_ID INT, ADDRESS_LINE1 VARCHAR(100), ADDRESS_LINE2 VARCHAR(100), CITY VARCHAR(100), STATE_CD VARCHAR(2)) ENGINE=INNODB;
+create table ADDRESS(ADDRESS_ID INT, ADDRESS_LINE1 VARCHAR(100), ADDRESS_LINE2 VARCHAR(100), CITY VARCHAR(100), STATE_CD VARCHAR(2), PRIMARY KEY (ADDRESS_ID)) ENGINE=INNODB;
 ```
 confirm table is made to specification:
 ```
-show table;
-show ADDRESS;
+show tables;
+describe ADDRESS;
+```
+
+create an "ORDER" table. Because order is a keyword, we must use backticks:
+```
+create table `ORDER`(ORDER_ID INT, PRODUCT_CODE VARCHAR(100), PRODUCT_DESCRIPTION VARCHAR(100), TRANSACTION_DATE DATE, PRIMARY KEY (ORDER_ID)) ENGINE=INNODB;
+```
+
+create a "CUSTOMER" table:
+```
+create table CUSTOMER(CUSTOMER_ID INT, FIRST_NAME VARCHAR(100), LAST_NAME VARCHAR(100), EMAIL VARCHAR(100), PHONE VARCHAR(100), DATE_PURCHASED DATE, ADDRESS_ID INT, ORDER_ID INT, PRIMARY KEY (CUSTOMER_ID)) ENGINE=INNODB;
+```
+
+create foreign key on `ADDRESS_ID` referring to `ADDRESS TABLE`, and a foreign key on `ORDER_ID` referring to `ORDER TABLE`, as well as a unique constraint on `EMAIL` column. 
+
+We've already added primary keys, but can do it again as a learning experience in addition to adding foreign keys and unique constraints:
+```
+ALTER TABLE CUSTOMER ADD CONSTRAINT FK_ADDRESS_ID FOREIGN KEY (ADDRESS_ID) REFERENCES ADDRESS(ADDRESS_ID);
+
+ALTER TABLE CUSTOMER ADD CONSTRAINT FK_ORDER_ID FOREIGN KEY (ORDER_ID) REFERENCES `ORDER`(ORDER_ID);
+
+// don't need to do this!
+ALTER TABLE ADDRESS ADD CONSTRAINT PK_ADDRESS_ID PRIMARY KEY(ADDRESS_ID);
+
+// don't need to do this!
+ALTER TABLE CUSTOMER ADD CONSTRAINT PK_CUSTOMER_ID PRIMARY KEY(CUSTOMER_ID);
+
+// don't need to do this!
+ALTER TABLE `ORDER` ADD CONSTRAINT PK_ORDER_ID PRIMARY KEY(ORDER_ID);
+
+ALTER TABLE CUSTOMER ADD CONSTRAINT EMAIL_UNIQUE UNIQUE (EMAIL);
 ```
