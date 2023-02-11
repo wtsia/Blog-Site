@@ -26,6 +26,7 @@ hidemeta = false
 - [Contents](#contents)
 - [Basics](#basics)
   - [Bits/Bytes](#bitsbytes)
+  - [Computer](#computer)
 - [Complexity](#complexity)
   - [Time Complexity (TC)](#time-complexity-tc)
   - [Space Complexity (SC)](#space-complexity-sc)
@@ -48,8 +49,15 @@ hidemeta = false
     - [Hash Map](#hash-map)
 # Basics
 ## Bits/Bytes
-- 0s and 1s are known as bits--binary digits
+- `0`s and `1`s are known as bits--*binary digits*
+- Bytes are `8` bits
 
+## Computer
+- `input/output device`: peripherals, keyboards, screens.
+- `storage`: non-volatile. Magnetic particles orientated in a `0`/`1` position. Disk vs memory. Disk applies a head that pulses electricity. Other method tunnel electrons into special circuits on memory's chip, and removes it with a 'flash' of electrcity. 
+- `memory`: RAM. volatile. Gives the ability to access memory in arbitrary order in a few ticks over hundreds from disks. 
+- `processor`: executes read/write instructions, accesses memory as well as memory from cache (a mini-RAM, accessible in 1 clock tick). Initiates BIOS, then OS. 
+- `clock`:
 # Complexity
 ## Time Complexity (TC)
 Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
