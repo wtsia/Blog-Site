@@ -33,6 +33,8 @@ hidemeta = false
   - [Creating Relationships](#creating-relationships)
 - [Scripts](#scripts)
 - [Creating a DB from Scratch](#creating-a-db-from-scratch)
+- [SQL Query Clauses](#sql-query-clauses)
+- [](#)
 # Relational Databases: MySQL
 An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
 and XML Schema for validation, and an introduction to the query and transformation languages XPath, 
@@ -304,3 +306,13 @@ ALTER TABLE `ORDER` ADD CONSTRAINT PK_ORDER_ID PRIMARY KEY(ORDER_ID);
 
 ALTER TABLE CUSTOMER ADD CONSTRAINT EMAIL_UNIQUE UNIQUE (EMAIL);
 ```
+
+# SQL Query Clauses
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+
+#
