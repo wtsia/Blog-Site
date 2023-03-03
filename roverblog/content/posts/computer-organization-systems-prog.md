@@ -47,6 +47,7 @@ int Y;
 int X = (Y + 4) * 3;
 ```
 #### Assembly
+Example program:
 ```
 mov  eax,Y   ; move Y to the EAX register
 add  eax,4   ; add 4 to the EAX register
@@ -54,3 +55,8 @@ mov  ebx,3   ; move 3 to the EBX register
 imul ebx     ; multiply EAX by EBX
 mov  X,eax   ; move EAX to X
 ```
+
+
+- linkers vs assemblers: assemblers compile the s.c. programs from assembly into machine instruction, linkers are a utility program that combine individual files made by assemblers into an executable program
+- *virtual machine*: a software program that emulates the functions of some physical or virtual computer
+- 
