@@ -34,7 +34,7 @@ hidemeta = false
 - [Scripts](#scripts)
 - [Creating a DB from Scratch](#creating-a-db-from-scratch)
 - [SQL Query Clauses](#sql-query-clauses)
-- [](#)
+- [Example of Working with a DB (1)](#example-of-working-with-a-db-1)
 # Relational Databases: MySQL
 An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
 and XML Schema for validation, and an introduction to the query and transformation languages XPath, 
@@ -308,11 +308,76 @@ ALTER TABLE CUSTOMER ADD CONSTRAINT EMAIL_UNIQUE UNIQUE (EMAIL);
 ```
 
 # SQL Query Clauses
+```
 SELECT
 FROM
 WHERE
 GROUP BY
 HAVING
 ORDER BY
+```
 
-#
+# Example of Working with a DB (1)
+Using a database. For example `studentdb` which has tables `STUDENT`, `grade_event`, and `score`.
+
+Perhaps we want to know how many rows exist in each table. We can obtain this via `COUNT()` which counts the number of rows:
+```
+mysql> SELECT COUNT(*) FROM STUDENT;
++----------+
+| COUNT(*) |
++----------+
+|       31 |
++----------+
+```
+we can display the `COUNT` of all rows similarly:
+```
+mysql> SELECT COUNT(*) FROM grade_event;
++----------+
+| COUNT(*) |
++----------+
+|        6 |
++----------+
+
+mysql> SELECT COUNT(*) FROM score;
++----------+
+| COUNT(*) |
++----------+
+|      173 |
++----------+
+```
+
+To insert a new row into a table, for example, `STUDENT`:
+```
+INSERT INTO STUDENT VALUES ('JOESCHMO', 'M', '12345666');
+```
+Here we insert a new row with the indicated values above. It's important that the datatype are correspondingly matched.
+
+Now we can check if the row updated correctly by recounting the rows present in table `STUDENT`:
+```
+mysql> SELECT COUNT(*) FROM STUDENT;
++----------+
+| COUNT(*) |
++----------+
+|       32 |
++----------+
+```
+
+Now, what if we wanted to update the `score` table with an event for our new "student" using the previous `INSERT` command?
+
+```
+mysql> INSERT INTO score VALUES (12345666, 10, 70);
+
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`studentdb`.`score`, CONSTRAINT `score_ibfk_1` FOREIGN KEY (`EVENT_ID`) REFERENCES `grade_event` (`EVENT_ID`))
+```
+Oh no! We can recall from: 
+```
+mysql> describe score;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| STUDENT_ID | int unsigned | NO   | PRI | NULL    |       |
+| EVENT_ID   | int unsigned | NO   | PRI | NULL    |       |
+| SCORE      | int          | NO   |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+```
+that we have two primary keys, being `STUDENT_ID` and `EVENT_ID`
