@@ -366,6 +366,9 @@ Now, what if we wanted to update the `score` table with an event for our new "st
 
 ```
 mysql> INSERT INTO score VALUES (12345666, 10, 70);
+```
+we get:
+```
 
 ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`studentdb`.`score`, CONSTRAINT `score_ibfk_1` FOREIGN KEY (`EVENT_ID`) REFERENCES `grade_event` (`EVENT_ID`))
 ```
@@ -380,4 +383,4 @@ mysql> describe score;
 | SCORE      | int          | NO   |     | NULL    |       |
 +------------+--------------+------+-----+---------+-------+
 ```
-that we have two primary keys, being `STUDENT_ID` and `EVENT_ID`
+`EVENT_ID` has a foreign key constraint such that `EVENT_ID` from score references the table `grade_event`'s `EVENT_ID`.
