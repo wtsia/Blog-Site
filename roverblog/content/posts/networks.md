@@ -218,66 +218,98 @@ $$
 >where Attenuation is measured in decibels (dB).
 
 Given the rate that the signal sends out bits, calculate the time it takes to send out a given amount of bits.
+>The time it takes to send out a given amount of bits can be calculated using the formula (number of bits divided by bitrate):
+>$$
+Time = |Bits| / Bitrate
+$$
 
 Difference between baseband and broadband
+>Baseband refers to a signal that has not been modulated to a higher frequency. Broadband refers to a signal that has been modulated to a higher frequency, allowing multiple signals to be transmitted over the same channel simultaneously.
 
 Calculate a sinewave phase in degrees or radians given  the cycle’s offset
+>The phase of a sine wave can be calculated using the formula:
+>$$
+Phase = (Cycle_{offset} / Cycle_{length}) * 2π
+$$
+>where the cycle offset is the time from the beginning of a cycle to a specific point on the wave, and the cycle length is the time it takes for the wave to complete one full cycle.
 
 Know the relationship between wavelength and frequency
+>The relationship between wavelength and frequency can be expressed as:
+>$$
+Wavelength = \frac{propogation_{speed}}{frequency}
+$$
+>or:
+>$$
+\lambda = \frac{c}{f}
+$$
+>where $c$ is the speed of light is approximately $3*10^8$ meters per second.
 
 What are the x and y axis of the time domain and units regularly used
-
-The x axis is time (unit second)
-
-The y axis is amplitude (unit volt)
+>The x-axis of the time domain is time, measured in seconds. The y-axis is the amplitude of the signal, measured in volts. The **x axis is time (unit second). The y axis is amplitude (unit volt)**
 
 What are the x and y axis of the frequency domain
+>The x-axis of the frequency domain is frequency, measured in hertz. The y-axis is the amplitude of the signal, measured in volts. **The x axis is frequency (unit hertz). The y axis is amplitude (unit volt)**
 
-The x axis is frequency (unit hertz)
-
-The y axis is amplitude (unit volt)
-
-If we add two periodic sine waves:
-
-Is the result periodic?
-
-Is this a composite signal?
+If we add two periodic sine waves, is the result periodic? Is this a composite signal?
+>The result of adding two periodic sine waves is periodic if the two waves have a fundamental frequency that is a multiple of each other. The resulting signal is a composite signal, which is composed of multiple frequencies.
 
 Knowing only the amplitude and frequency of these waves, draw the frequency domain graph
+>The frequency domain graph will show the amplitude of each frequency component of the signal as a function of frequency. The graph will have a peak at the frequency of the sine wave,
 
 Know the relation between highest, lowest frequency and the bandwidth of a signal
+>The bandwidth of a signal is defined as the difference between the highest and lowest frequencies in the signal. In other words, it is the range of frequencies that a signal occupies. Bandwidth is usually measured in Hertz (Hz).
 
 A periodic signal bandwidth is given to have a bandwidth of 20 Hz, select the frequency response among several given – what are the main things you look for to make your decision?
+>To select the frequency response among several given options, you would need to find the range of frequencies that the periodic signal occupies, which is equal to its bandwidth. You would then select the frequency response that includes this range of frequencies.
 
 Most digital signals are periodic or non-periodic?
+>Most digital signals are non-periodic. Unlike analog signals, which are continuous and can be periodic or non-periodic, digital signals are discrete and do not have a continuous waveform. Therefore, they are typically non-periodic.
 
 Appropriate characteristics for analog signals
+>The appropriate characteristics for analog signals include amplitude, frequency, phase, and wavelength. These characteristics describe the physical properties of the analog signal, such as its strength, the number of cycles per second, the position of a particular point on the wave, and the distance between corresponding points on the wave.
 
-Amplitude, Frequency, phase and wave length
+Amplitude, Frequency, phase and wavelength
+>Amplitude, or peak amplitude, is the absolute value of its highest intensity proportional to the energy it carries. **Period** is the amount of time a signal needs to complete one cycle, and **frequency** is the number of periods in 1s. **Wavelength** is propogation speed times *period*, or divided by *frequency*. 
 
 Appropriate characteristics for digital signals
+>The appropriate characteristics for digital signals include **bit rate**, which is the number of bits transmitted per unit time, and **bit length**, which is the distance a bit travels during one clock cycle. Unlike analog signals, which are continuous, digital signals are made up of discrete bits that are transmitted sequentially.
 
-Rather than frequency we use bit rate for digital signals
+Why rather than frequency we use bit rate for digital signals
+>Frequency and bit rate are both important parameters for digital signals, but they represent different aspects of the signal. Frequency represents the number of cycles per second of a periodic waveform, while bit rate represents the number of bits transmitted per second in a digital communication system.
+
+>In digital communication systems, bit rate is a more useful parameter to use than frequency because it directly determines the amount of data that can be transmitted in a given amount of time. Higher bit rates mean more data can be transmitted in a given amount of time, which is important for applications such as video streaming and file transfer. Additionally, bit rate can be more easily controlled and adjusted in digital communication systems than frequency, making it a more practical parameter to use.
 
 How do we express bit rates? Bps
+>We express bit rates in bits per second (bps). This is a measure of how many bits can be transmitted in one second.
 
 What is bit length (we used wave length for analog signals)
-
-Bit length = Propagation speed x bit duration
+>Bit length is the distance a bit travels during one clock cycle. It is calculated by multiplying the propagation speed of the signal by the bit duration.
+>$$
+Bit\space length = Propagation \space speed * bit \space duration
+$$
 
 A signal is passing through a wire, the wire gets warm, it means the signal ____________.
+>If a signal passing through a wire causes the wire to get warm, it means that the signal has lost energy and has been attenuated.
 
-(has lost energy and got attenuated)
-
-How can we bring the signal back to its original shape? Amplifiers
+How can we bring the signal back to its original shape? 
+>Amplifiers
 
 How does engineers show the signal has lost or gained strength?
+>Engineers show that a signal has lost or gained strength by using decibels (dB). The decibel is a logarithmic unit that expresses the ratio of the power of the output signal to the power of the input signal.
 
-Use dB = 10 log (p2 / p1)
+Using dB = 10 log (p2 / p1)
+>Decibels (dB) are a logarithmic unit of measurement commonly used in the field of signal processing and communications. The formula dB = 10 log (p2 / p1) is used to calculate the ratio of power between two signals, p1 and p2, in decibels.
+
+>In digital communication systems, this formula is often used to express the signal-to-noise ratio (SNR) of a signal. SNR is a measure of the strength of the signal compared to the background noise, and is an important factor in determining the quality of the received signal. By using the dB scale, small changes in SNR can be easily represented and compared.
 
 Given a generator polynomial and a pattern, find the redundant bits
+>To find the redundant bits in a pattern using a generator polynomial, you would perform polynomial division of the pattern by the generator polynomial. The remainder would then be the redundant bits.
 
 Find the hamming code for 4 bits
+>The Hamming code for 4 bits is a binary code that adds 3 redundant bits to the original 4 bits to create a code word of 7 bits. The code is designed to detect and correct errors in the transmission of the code word. The specific code for the 4 bits would depend on the particular algorithm used to generate the Hamming code.
 
 Cyclic Redundancy Coding -- Know how to add extra bits and do the dividing to find the remainder
+>Cyclic redundancy coding (CRC) is a type of error-detecting code commonly used in digital communication systems to detect errors in data transmission. The basic idea behind CRC is to add a few extra bits to the data being transmitted, which are then used to detect and correct errors in the data.
+
+>To add extra bits, a polynomial is generated using the data bits and a predetermined divisor. The polynomial is then divided by the divisor using a modulo-2 division algorithm, resulting in a remainder. This remainder is appended to the data as a CRC code, which can be transmitted along with the data. The receiver can then perform the same polynomial division using the received data and the same divisor to obtain a remainder. If the remainder obtained by the receiver is zero, it indicates that the data has not been corrupted during transmission. If the remainder is non-zero, it indicates that an error has occurred, and the data needs to be retransmitted
     
