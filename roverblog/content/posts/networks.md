@@ -41,6 +41,9 @@ network management.
     - [Push CDNs](#push-cdns)
     - [Pull CDNs](#pull-cdns)
     - [Disadvantages of CDNs:](#disadvantages-of-cdns)
+- [Study Guide](#study-guide)
+  - [Content Review:](#content-review)
+  - [Study Guide Questions](#study-guide-questions)
 # Networks: An Introduction
 - Why layers are used in Computer Networks
 - 7 layers of OSI, describe each layer
@@ -156,5 +159,125 @@ Domain Name System vs Content Delivery Network
 >Summary: Push CDNs are good for sites that doesn't update content frequently, Pull CDNs for cites that need to update frequently. CDNs involve changing URLs for content to point to the CDN.
 
 
+# Study Guide
+## Content Review:
+Seven layers of OSI and the function of each layer
 
+>(1) physical, (2) data link, medium access control (MAC, sublayer), (3) network, (4) transport, (5) session, (6) presentation, (7) application
+
+Sine waves (amplitude, phase, frequency and period), composite signals
+>
+
+Know how hamming code works and how we can add redundant bits for hamming
+
+Understand CSMA/CD and how it works.
+
+Know how CRC technique works and how we add redundant bits and the number of redundant bits that we add.
+
+The type of transmission impairments and cause of them
+
+Signal power and meaning of db values
+
+Frequency domain and how we know if a signal is periodic or nonperiodic.
+
+Know bit rate
+
+Broadband and baseband and know which signals are baseband and which are broadband.
+
+
+
+## Study Guide Questions
+Know the relation between frequency and period
+>$$
+Frequency = 1/Period
+$$
+
+Given the bandwidth of the channel and size of the frame, calculate the transmission time
+>$$
+Transmission_{time} = Frame_{size} / Bandwidth_{channel}
+$$
+
+Given the bandwidth and signal to noise ratio, calculate the maximum data rate supported by the line
+
+>Noiseless, use **Nyquist bit rate**, for $L =$ number of signal levels used to represent data:
+>$$
+BitRate = 2*bandwidth*log_2L
+$$
+
+>**Shannon-Hartley theorem (Shannon Capacity)**: maximum data rate (aka. Capacity, in bits per second) that can be transmitted over a channel is proportional to the bandwidth and the logarithm of the signal to noise ratio
+>$$
+Capacity = bandwidth*log_2(1 + SNR)
+$$
+
+Given the original power of the signal and the attenuation of the signal at the output, calculate the power at the output
+
+>The power of a signal at the output can be calculated using the formula:
+>$$
+Power_{output} = Power_{input}*(10^{-Attenuation/10})
+$$
+>where Attenuation is measured in decibels (dB).
+
+Given the rate that the signal sends out bits, calculate the time it takes to send out a given amount of bits.
+
+Difference between baseband and broadband
+
+Calculate a sinewave phase in degrees or radians given  the cycle’s offset
+
+Know the relationship between wavelength and frequency
+
+What are the x and y axis of the time domain and units regularly used
+
+The x axis is time (unit second)
+
+The y axis is amplitude (unit volt)
+
+What are the x and y axis of the frequency domain
+
+The x axis is frequency (unit hertz)
+
+The y axis is amplitude (unit volt)
+
+If we add two periodic sine waves:
+
+Is the result periodic?
+
+Is this a composite signal?
+
+Knowing only the amplitude and frequency of these waves, draw the frequency domain graph
+
+Know the relation between highest, lowest frequency and the bandwidth of a signal
+
+A periodic signal bandwidth is given to have a bandwidth of 20 Hz, select the frequency response among several given – what are the main things you look for to make your decision?
+
+Most digital signals are periodic or non-periodic?
+
+Appropriate characteristics for analog signals
+
+Amplitude, Frequency, phase and wave length
+
+Appropriate characteristics for digital signals
+
+Rather than frequency we use bit rate for digital signals
+
+How do we express bit rates? Bps
+
+What is bit length (we used wave length for analog signals)
+
+Bit length = Propagation speed x bit duration
+
+A signal is passing through a wire, the wire gets warm, it means the signal ____________.
+
+(has lost energy and got attenuated)
+
+How can we bring the signal back to its original shape? Amplifiers
+
+How does engineers show the signal has lost or gained strength?
+
+Use dB = 10 log (p2 / p1)
+
+Given a generator polynomial and a pattern, find the redundant bits
+
+Find the hamming code for 4 bits
+
+Cyclic Redundancy Coding -- Know how to add extra bits and do the dividing to find the remainder
     
