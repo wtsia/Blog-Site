@@ -23,6 +23,7 @@ hidemeta = false
 - [Contents](#contents)
 - [Relational Databases: MySQL](#relational-databases-mysql)
   - [Outcomes](#outcomes)
+- [Basic Commands](#basic-commands)
 - [Starting a MySQL Instance](#starting-a-mysql-instance)
 - [Entity Relationship (ER) Model](#entity-relationship-er-model)
   - [ER Diagram Example](#er-diagram-example)
@@ -35,6 +36,9 @@ hidemeta = false
 - [Creating a DB from Scratch](#creating-a-db-from-scratch)
 - [SQL Query Clauses](#sql-query-clauses)
 - [Example of Working with a DB (1)](#example-of-working-with-a-db-1)
+    - [Getting COUNT from table](#getting-count-from-table)
+    - [Inserting data into table](#inserting-data-into-table)
+    - [Finding COUNT of "groups" of an "attribute"](#finding-count-of-groups-of-an-attribute)
 # Relational Databases: MySQL
 An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
 and XML Schema for validation, and an introduction to the query and transformation languages XPath, 
@@ -53,6 +57,12 @@ Book: murach's MySQL (3rd Edition, 2019)
 5. Perform basic database administration tasks.
 6. Employ XML technologies to query, manipulate and transform data.
 7. Develop NoSQL desktop and cloud database solutions.
+
+# Basic Commands
+- to list data in a table:
+```
+SELECT * FROM table_name;
+```
 
 # Starting a MySQL Instance
 Per instructions on [mysql's docker page](https://hub.docker.com/_/mysql), we will be making a docker compose file with the following recommended settings. This will be done on a Linux based OS:
@@ -320,6 +330,7 @@ ORDER BY
 # Example of Working with a DB (1)
 Using a database. For example `studentdb` which has tables `STUDENT`, `grade_event`, and `score`.
 
+### Getting COUNT from table
 Perhaps we want to know how many rows exist in each table. We can obtain this via `COUNT()` which counts the number of rows:
 ```
 mysql> SELECT COUNT(*) FROM STUDENT;
@@ -364,6 +375,7 @@ mysql> SELECT COUNT(*) FROM STUDENT;
 
 Now, what if we wanted to update the `score` table with an event for our new "student" using the previous `INSERT` command?
 
+### Inserting data into table
 ```
 mysql> INSERT INTO score VALUES (12345666, 10, 70);
 ```
@@ -383,4 +395,55 @@ mysql> describe score;
 | SCORE      | int          | NO   |     | NULL    |       |
 +------------+--------------+------+-----+---------+-------+
 ```
-`EVENT_ID` has a foreign key constraint such that `EVENT_ID` from score references the table `grade_event`'s `EVENT_ID`.
+`EVENT_ID` has a foreign key constraint such that `EVENT_ID` from score references the parent table `grade_event`'s `EVENT_ID`.
+
+Thus, we can populate the parent table with dummy data and push our insert command to `score` 
+
+```
+mysql> INSERT INTO grade_event VALUES ('2012-10-02', 'Q', 10);
+Query OK, 1 row affected (0.01 sec)
+```
+and then successfully insert data:
+```
+mysql> INSERT INTO score VALUES (12345666, 10, 70);
+Query OK, 1 row affected (0.01 sec)
+```
+
+### Finding COUNT of "groups" of an "attribute" 
+
+The command below finds the count of each group in EVENT_ID. In this case, we are finding the count of each `EVENT_ID` in the `score` table:
+```
+mysql> SELECT EVENT_ID, COUNT(*) FROM score GROUP BY EVENT_ID;
++----------+----------+
+| EVENT_ID | COUNT(*) |
++----------+----------+
+|        1 |       29 |
+|        2 |       30 |
+|        3 |       31 |
+|        4 |       27 |
+|        5 |       27 |
+|        6 |       29 |
+|       10 |        1 |
++----------+----------+
+7 rows in set (0.00 sec)
+```
+
+and finding it by `STUDENT_ID`:
+```
+mysql> SELECT STUDENT_ID, COUNT(*) FROM score GROUP BY STUDENT_ID;
++------------+----------+
+| STUDENT_ID | COUNT(*) |
++------------+----------+
+|          1 |        5 |
+|          2 |        5 |
+|          3 |        6 |
+... // removed for readability
+|         30 |        5 |
+|         31 |        6 |
+|   12345666 |        1 |
++------------+----------+
+32 rows in set (0.00 sec)
+```
+
+
+
