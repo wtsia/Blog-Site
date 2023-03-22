@@ -26,9 +26,11 @@ hidemeta = false
 - [Contents](#contents)
 - [Bits, Bytes, and Integers](#bits-bytes-and-integers)
 - [Assembly x86](#assembly-x86)
+  - [Basics](#basics)
     - [C++ vs Assembly:](#c-vs-assembly)
       - [C++](#c)
       - [Assembly](#assembly)
+    - [Data Representation](#data-representation)
 
 # Bits, Bytes, and Integers
 Bits are stored as `0` or `1`.
@@ -38,7 +40,7 @@ Bytes are `8` bits.
 Integers
 
 # Assembly x86
-
+## Basics
 ### C++ vs Assembly:
 C++ has limitations if it uses certain libraries on a single operating system. *Assembly* is **not** portable. They are designed for specific processor families (Motorola 68x00, x86, SUN Sparc, Vax, and IBM-370). Language may be translated during execution in a processor by a *microcode interpreter*.
 #### C++
@@ -59,4 +61,12 @@ mov  X,eax   ; move EAX to X
 
 - linkers vs assemblers: assemblers compile the s.c. programs from assembly into machine instruction, linkers are a utility program that combine individual files made by assemblers into an executable program
 - *virtual machine*: a software program that emulates the functions of some physical or virtual computer
-- 
+
+
+### Data Representation
+| Decimal | Binary | Hex |
+|:-----|:-----:|-----:|
+|1 | | |
+|10 | | |
+|100 | | |
+|1000 | | |

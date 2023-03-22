@@ -35,11 +35,18 @@ hidemeta = false
 - [Scripts](#scripts)
 - [Creating a DB from Scratch](#creating-a-db-from-scratch)
 - [SQL Query Clauses](#sql-query-clauses)
-- [Example of Working with a DB (1)](#example-of-working-with-a-db-1)
-    - [Getting COUNT from table](#getting-count-from-table)
-    - [Inserting data into table](#inserting-data-into-table)
+- [Working with a DB (Assignment 6)](#working-with-a-db-assignment-6)
+    - [Displaying COUNT of rows](#displaying-count-of-rows)
+    - [Insert New 'Student'](#insert-new-student)
+    - [Inserting SCORE for STUDENT\_ID into table](#inserting-score-for-student_id-into-table)
     - [Finding COUNT of "groups" of an "attribute"](#finding-count-of-groups-of-an-attribute)
+    - [Displaying Query by Value](#displaying-query-by-value)
+- [Database Triggers](#database-triggers)
+  - [Stored Programs](#stored-programs)
+- [Midterm DB (3)](#midterm-db-3)
 # Relational Databases: MySQL
+Guide based on Joel Murach's MySQL (3rd Edition, 2019)
+
 An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
 and XML Schema for validation, and an introduction to the query and transformation languages XPath, 
 XQuery, and XSLT. The course includes relational design principles based on dependencies and normal 
@@ -47,7 +54,6 @@ forms. Additional database topics introduced are indexes, views, transactions, a
 constraints, triggers, on-line analytical processing (OLAP), and emerging NoSQL (Not only SQL) 
 databases for cloud and desktop computing.
 
-Book: murach's MySQL (3rd Edition, 2019)
 
 ## Outcomes
 1. Create and assure the quality of a suitable data model for a given application.
@@ -59,9 +65,14 @@ Book: murach's MySQL (3rd Edition, 2019)
 7. Develop NoSQL desktop and cloud database solutions.
 
 # Basic Commands
-- to list data in a table:
+to list data in a table:
 ```
 SELECT * FROM table_name;
+```
+
+updating a table entry:
+```
+UPDATE table_name SET field='value' WHERE attribute='value';
 ```
 
 # Starting a MySQL Instance
@@ -260,15 +271,15 @@ We will be loading a script into our docker container. SSH into the server and c
 ```
 touch myscript.sql
 nano myscript.sql
-docker cp myscript.sql container_id:/<my directory>/myscript.sql
+docker cp myscript.sql container_id:/{directory}/myscript.sql
 ```
-Now, it should copy the file straight into the root directory or inside `<my directory>` in your root directory. We can do this via:
+Now, it should copy the file straight into the root directory or inside `{directory}` in your root directory. The full workings of this command is:
 ```
-docker cp myfile.ext <container name>:/<my directory>/myfileout.ext
+docker cp {myfile.ext} {container name}:/{directory}/{myfileout.ext}
 ```
-To run the script, we use the path into the MySQL db.
+To run the script, we use `source` and set the path in mySQL.
 ```
-
+source /{directory/{script.sql}
 ```
 
 # Creating a DB from Scratch
@@ -327,10 +338,10 @@ HAVING
 ORDER BY
 ```
 
-# Example of Working with a DB (1)
+# Working with a DB (Assignment 6)
 Using a database. For example `studentdb` which has tables `STUDENT`, `grade_event`, and `score`.
 
-### Getting COUNT from table
+### Displaying COUNT of rows
 Perhaps we want to know how many rows exist in each table. We can obtain this via `COUNT()` which counts the number of rows:
 ```
 mysql> SELECT COUNT(*) FROM STUDENT;
@@ -339,6 +350,7 @@ mysql> SELECT COUNT(*) FROM STUDENT;
 +----------+
 |       31 |
 +----------+
+
 ```
 we can display the `COUNT` of all rows similarly:
 ```
@@ -356,7 +368,7 @@ mysql> SELECT COUNT(*) FROM score;
 |      173 |
 +----------+
 ```
-
+### Insert New 'Student'
 To insert a new row into a table, for example, `STUDENT`:
 ```
 INSERT INTO STUDENT VALUES ('JOESCHMO', 'M', '12345666');
@@ -375,7 +387,7 @@ mysql> SELECT COUNT(*) FROM STUDENT;
 
 Now, what if we wanted to update the `score` table with an event for our new "student" using the previous `INSERT` command?
 
-### Inserting data into table
+### Inserting SCORE for STUDENT_ID into table
 ```
 mysql> INSERT INTO score VALUES (12345666, 10, 70);
 ```
@@ -444,6 +456,155 @@ mysql> SELECT STUDENT_ID, COUNT(*) FROM score GROUP BY STUDENT_ID;
 +------------+----------+
 32 rows in set (0.00 sec)
 ```
+### Displaying Query by Value
+Let's find the student who has the maximum score, minimum score, and their respective student names.
+
+```
+SELECT 
+  STUDENT.name, score.SCORE 
+  FROM STUDENT INNER JOIN score 
+  ON STUDENT.STUDENT_ID = STUDENT.STUDENT_ID 
+    WHERE score.SCORE = (SELECT MIN(SCORE) FROM score);
+
+```
+
+# Database Triggers
+A history of edits made to tables in a database. 
+
+A database trigger is a special type of stored program that automatically executes in response to certain events or actions occurring within a database. These events can include things like the insertion, update or deletion of data in a particular table or database.
+
+Triggers in MySQL are written using SQL statements and are associated with a specific table or database. When the specified event occurs, the trigger's code is executed, allowing you to perform a variety of actions such as logging changes, enforcing data integrity rules, or updating related tables.
+
+example:
+```
+CREATE TRIGGER log_changes AFTER INSERT ON mytable
+FOR EACH ROW
+BEGIN
+  INSERT INTO log_table (user, action, timestamp) 
+  VALUES (USER(), 'INSERT', NOW());
+END;
+```
+Database triggers are a subset of **stored programs**.
+
+## Stored Programs
+| Type | Description |
+|:----------:|:----------:|
+| Stored procedure | Can be called from an appljcation that has access to the database| 
+| Stored function | Can be called from a SQL statement. A stored function works much like the functions provided by MySQL that are described in chapter 9. |
+| Trigger | Is executed in response to an INSERT, UPDATE, or DELETE statement on a specified table. |
+| Event | ls executed at a scbeduled time. |
+
+# Midterm DB (3)
+```
+CREATE DATABASE MIDTERM;
+
+USE MIDTERM;
+
+CREATE TABLE COUNTRIES(
+  COUNTRY_ID CHAR(2) NOT NULL, 
+  COUNTRY_NAME varchar (40), 
+  REGION_ID INT);
+
+ALTER TABLE COUNTRIES ADD PRIMARY KEY (COUNTRY_ID);
+
+CREATE TABLE DEPARTMENTS( 
+  DEPARTMENT_ID INT(4) NOT NULL, 
+  DEPARTMENT_NAME varchar(30) NOT NULL, 
+  MANAGER_ID INT(6), 
+  LOCATION_ID INT(4));
+
+CREATE INDEX DEPT_LOCATION_IX ON DEPARTMENTS (LOCATION_ID);
+
+ALTER TABLE DEPARTMENTS ADD PRIMARY KEY (DEPARTMENT_ID);
+
+CREATE TABLE EMPLOYEES(
+  EMPLOYEE_ID INT(6) NOT NULL, 
+  FIRST_NAME varchar(20), 
+  LAST_NAME varchar(25) NOT NULL, 
+  EMAIL varchar(25) NOT NULL, 
+  PHONE_NUMBER varchar (20), 
+  HIRE_DATE DATE NOT NULL, 
+  JOB_ID varchar(10) NOT NULL, 
+  SALARY DOUBLE(8,2), 
+  COMMISSION_PCT DOUBLE(2,2), 
+  MANAGER_ID INT(6), 
+  DEPARTMENT_ID INT(4));
+
+CREATE INDEX EMP_DEPARTMENT_IX ON EMPLOYEES (DEPARTMENT_ID);
+
+CREATE INDEX EMP_NAME_IX ON EMPLOYEES (LAST_NAME ASC, FIRST_NAME ASC);
+
+CREATE INDEX EMP_JOB_IX ON EMPLOYEES (JOB_ID ASC);
+
+CREATE TABLE JOBS(
+  JOB_ID varchar(10) NOT NULL, 
+  JOB_TITLE varchar (35) NOT NULL, 
+  MIN_SALARY INT(6), 
+  MAX_SALARY INT(6));
+
+ALTER TABLE JOBS ADD CONSTRAINT JOB_ID_PK PRIMARY KEY (JOB_ID);
+
+CREATE TABLE JOB_HISTORY( 
+  EMPLOYEE_ID INT(6) NOT NULL, 
+  START_DATE DATE NOT NULL, 
+  END_DATE DATE NOT NULL, 
+  JOB_ID varchar(10) NOT NULL, 
+  DEPARTMENT_ID INT(4));
+
+CREATE TABLE LOCATIONS(
+  LOCATION_ID INT(4) NOT NULL, 
+  STREET_ADDRESS varchar(40), 
+  POSTAL_CODE varchar(12), 
+  CITY varchar(30) NOT NULL, 
+  STATE_PROVINCE varchar(25), 
+  COUNTRY_ID CHAR(2)); 
+
+CREATE INDEX LOC_CITY_IX ON LOCATIONS (CITY);
+
+ALTER TABLE LOCATIONS ADD CONSTRAINT LOC_ID_PK PRIMARY KEY (LOCATION_ID);
+```
+2.
+
+```
+CREATE TABLE STUDENT_AUDIT (
+  name varchar(20),
+  GENDER enum('F','M'),
+  STUDENT_ID INT unsigned,
+  CREATE_DATE DATE,
+  ACTION_TYPE varchar(10),
+  USER varchar(20));
+
+DELIMITER //
+CREATE TRIGGER insert_trigger
+AFTER INSERT ON STUDENT
+FOR EACH ROW
+BEGIN
+  INSERT INTO STUDENT_AUDIT (name, GENDER, STUDENT_ID, CREATE_DATE, ACTION_TYPE, USER)
+  VALUES (NEW.name, new.GENDER, new.STUDENT_ID, NOW(), 'INSERTED', USER());
+END //
+
+DELIMITER //
+CREATE TRIGGER delete_trigger
+AFTER DELETE ON STUDENT
+FOR EACH ROW
+BEGIN
+  INSERT INTO STUDENT_AUDIT (name, GENDER, STUDENT_ID, CREATE_DATE, ACTION_TYPE, USER)
+  VALUES (OLD.name, OLD.GENDER, OLD.STUDENT_ID, NOW(), 'DELETED', USER());
+END //
+
+DELIMITER //
+CREATE TRIGGER update_trigger
+AFTER UPDATE ON STUDENT
+FOR EACH ROW
+BEGIN
+  INSERT INTO STUDENT_AUDIT (name, GENDER, STUDENT_ID, CREATE_DATE, ACTION_TYPE, USER)
+  VALUES (NEW.name, new.GENDER, new.STUDENT_ID, NOW(), 'UPDATED', USER());
+END //
 
 
+INSERT INTO STUDENT(name, GENDER, STUDENT_ID) VALUES('test1', 'M', '111');
 
+UPDATE STUDENT SET name='test22' WHERE name='test1';
+
+DELETE FROM STUDENT WHERE name='test22';
+```
