@@ -44,6 +44,7 @@ hidemeta = false
 - [Database Triggers](#database-triggers)
   - [Stored Programs](#stored-programs)
 - [Midterm DB (3)](#midterm-db-3)
+    - [ASSGN 7](#assgn-7)
 # Relational Databases: MySQL
 Guide based on Joel Murach's MySQL (3rd Edition, 2019)
 
@@ -608,3 +609,5 @@ UPDATE STUDENT SET name='test22' WHERE name='test1';
 
 DELETE FROM STUDENT WHERE name='test22';
 ```
+
+### ASSGN 7
