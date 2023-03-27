@@ -44,7 +44,7 @@ hidemeta = false
 - [Database Triggers](#database-triggers)
   - [Stored Programs](#stored-programs)
 - [Midterm DB (3)](#midterm-db-3)
-    - [ASSGN 7](#assgn-7)
+    - [Database Transactions](#database-transactions)
 # Relational Databases: MySQL
 Guide based on Joel Murach's MySQL (3rd Edition, 2019)
 
@@ -610,4 +610,12 @@ UPDATE STUDENT SET name='test22' WHERE name='test1';
 DELETE FROM STUDENT WHERE name='test22';
 ```
 
-### ASSGN 7
+### Database Transactions
+A transaction typically consists of four main operations, known as the ACID properties:
+
+| ACID Type | Property Description |
+|:----------:|:----------:|
+|Atomicity| This property ensures that either all the operations within the transaction are completed successfully, or none of them are completed at all.|
+|Consistency| This property ensures that the database remains in a valid state before and after the transaction. It guarantees that all constraints, such as referential integrity and data type constraints, are satisfied.|
+|Isolation| This property ensures that the effects of one transaction are not visible to another transaction until it is completed.|
+|Durability| This property ensures that the results of a completed transaction are permanent and can survive system failures, such as power outages or crashes.|
