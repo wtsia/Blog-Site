@@ -44,7 +44,8 @@ hidemeta = false
 - [Database Triggers](#database-triggers)
   - [Stored Programs](#stored-programs)
 - [Midterm DB (3)](#midterm-db-3)
-    - [Database Transactions](#database-transactions)
+- [Database Transactions](#database-transactions)
+    - [Lab](#lab)
 # Relational Databases: MySQL
 Guide based on Joel Murach's MySQL (3rd Edition, 2019)
 
@@ -610,7 +611,9 @@ UPDATE STUDENT SET name='test22' WHERE name='test1';
 DELETE FROM STUDENT WHERE name='test22';
 ```
 
-### Database Transactions
+# Database Transactions
+Transactions in MySQL are used to ensure data integrity and consistency. They provide a way to guarantee that multiple operations on the database are completed successfully or not at all, even if the database is accessed by multiple users concurrently.
+
 A transaction typically consists of four main operations, known as the ACID properties:
 
 | ACID Type | Property Description |
@@ -619,3 +622,24 @@ A transaction typically consists of four main operations, known as the ACID prop
 |Consistency| This property ensures that the database remains in a valid state before and after the transaction. It guarantees that all constraints, such as referential integrity and data type constraints, are satisfied.|
 |Isolation| This property ensures that the effects of one transaction are not visible to another transaction until it is completed.|
 |Durability| This property ensures that the results of a completed transaction are permanent and can survive system failures, such as power outages or crashes.|
+
+### Lab
+For this lab, we will do the following:
+
+1. Use STUDENTDB database to work on the tables.
+
+2. In this exercise, you will first open 2 sessions by connecting to mysql database. One session is used to either insert, update, delete data from the tables. The second session is used to check the data.
+
+3. You should first turn OFF autocommit option. Please see class video to turn off autocommit.
+
+4. From the first session, insert a new student into STUDENT table. Check from 2nd session if student was inserted or not. If it is not inserted, write a reason and if it is inserted take a screenshot.
+
+5. From the first session, update data into SCORE table by updating score for student_id=10 and event_id=5 to a new value. Check the score from 2nd session to see if it is inserted or not. Take a screenshot. Go back to 1st session and COMMIT the data and check the data in the 2nd session.
+
+6. From the 1st session, delete from SCORE table where student_id=20 and event_id=5. Check if the data is deleted or not from 2nd session. Take a screenshot. Go back now to 1st session and perform ROLLBACK. Now check the data from both 1st and 2nd session. Take a screenshot.
+
+```
+SET autocommit = 0; --set autocommit option OFF
+
+INSERT INTO student
+```
