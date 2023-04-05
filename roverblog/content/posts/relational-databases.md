@@ -638,8 +638,24 @@ For this lab, we will do the following:
 
 6. From the 1st session, delete from SCORE table where student_id=20 and event_id=5. Check if the data is deleted or not from 2nd session. Take a screenshot. Go back now to 1st session and perform ROLLBACK. Now check the data from both 1st and 2nd session. Take a screenshot.
 
+
 ```
+use studentdb;
+
 SET autocommit = 0; --set autocommit option OFF
 
-INSERT INTO student
+INSERT INTO STUDENT (name, GENDER, STUDENT_ID) VALUES ('Joey Schmoey', 'M', 1001);
+
+SELECT * FROM STUDENT; --check from second session
+```
+Noticable however, the 2nd session does not update the table. Recall that earlier, we turned off autocommit. From the mysql manual:
+
+>By default, MySQL runs with autocommit mode enabled. This means that, when not otherwise inside a transaction, each statement is atomic, as if it were surrounded by START TRANSACTION and COMMIT.
+
+Further down this entry in the manual:
+
+>After disabling autocommit mode by setting the autocommit variable to zero, changes to transaction-safe tables (such as those for InnoDB or NDB) **are not made permanent immediately**. You must use COMMIT to store your changes to disk or ROLLBACK to ignore the changes.
+
+```
+UPDATE score SET STUDENT_ID=20, EVENT_ID=15 WHERE STUDENT_ID=10 AND EVENT_ID=5;
 ```
