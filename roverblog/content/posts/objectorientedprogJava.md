@@ -287,11 +287,21 @@ for (int value:values) {
 - The HashMap type is an ADT implemented as a generic class (discussed elsewhere) that supports different types of keys and values. Generically, a HashMap can be declared and created as `HashMap<K, V> hashMap = new HashMap<K, V>();` where K represents the HashMap's key type and V represents the HashMap's value type.
 
 ### Table: Common HashMap methods.
+
+What is a **Hashmap**?
+
+| Method | Description | Example |
+|:----------:|:----------:|:----------:|
+| put() put(key, value)  | Associates key with specified value. If key already exists, replaces previous value with specified value. | Map originally empty|
+| exMap.put("Tom", 14);  | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+
 ```
-put() put(key, value) 
-Associates key with specified value. If key already exists, replaces previous value with specified value. 
-// Map originally empty
-exMap.put("Tom", 14); 
 // Map now: Tom->14,  
 exMap.put("John", 86); 
 // Map now: Tom->14, John->86
