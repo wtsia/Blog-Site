@@ -370,7 +370,14 @@ Flooding, distance vector routing
 > 
 > $min_v$ = selecting shortest distance
 
-What is the problem of distance vector routing, what is the count to infinity problem
+What is the problem of distance vector routing, what is the count to infinity problem?
+> If a node goes offline, and other nodes are not immediately aware. Then packets are still sent through the node believing it is reachable. The distance to that node keeps increasing in the routing tables (to infinity) until hitting a max.
 
 What do we mean by hierarchy routing?
+> network is divided into multiple levels or tiers of routers.
+> It goes from:
+> 
+> "core routers" $\rarr$ "edge routers"
+>
+> This design allows for specialized routing protocols at each level of the hierarchy and can be optimized for needs. 
 
