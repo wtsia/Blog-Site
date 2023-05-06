@@ -41,9 +41,14 @@ network management.
     - [Push CDNs](#push-cdns)
     - [Pull CDNs](#pull-cdns)
     - [Disadvantages of CDNs:](#disadvantages-of-cdns)
-- [Study Guide](#study-guide)
+- [Unit Review 1](#unit-review-1)
   - [Content Review:](#content-review)
   - [Study Guide Questions](#study-guide-questions)
+- [Devices](#devices)
+  - [Hub vs Switch vs Router](#hub-vs-switch-vs-router)
+  - [Default Gateway](#default-gateway)
+    - [Subnet Mask](#subnet-mask)
+- [Unit Review 2](#unit-review-2)
 # Networks: An Introduction
 - Why layers are used in Computer Networks
 - 7 layers of OSI, describe each layer
@@ -159,7 +164,7 @@ Domain Name System vs Content Delivery Network
 >Summary: Push CDNs are good for sites that doesn't update content frequently, Pull CDNs for cites that need to update frequently. CDNs involve changing URLs for content to point to the CDN.
 
 
-# Study Guide
+# Unit Review 1
 ## Content Review:
 Seven layers of OSI and the function of each layer
 
@@ -312,4 +317,67 @@ Cyclic Redundancy Coding -- Know how to add extra bits and do the dividing to fi
 >Cyclic redundancy coding (CRC) is a type of error-detecting code commonly used in digital communication systems to detect errors in data transmission. The basic idea behind CRC is to add a few extra bits to the data being transmitted, which are then used to detect and correct errors in the data.
 
 >To add extra bits, a polynomial is generated using the data bits and a predetermined divisor. The polynomial is then divided by the divisor using a modulo-2 division algorithm, resulting in a remainder. This remainder is appended to the data as a CRC code, which can be transmitted along with the data. The receiver can then perform the same polynomial division using the received data and the same divisor to obtain a remainder. If the remainder obtained by the receiver is zero, it indicates that the data has not been corrupted during transmission. If the remainder is non-zero, it indicates that an error has occurred, and the data needs to be retransmitted
-    
+
+# Devices
+## Hub vs Switch vs Router
+Switch may be considered an intelligent hub, and both are used to form networks. Whereas a router over the internet connects networks. Interestingly, both switches and routers operate at the 2nd and 3rd layer of the OSI model, or Data-link and Network layer. 
+
+## Default Gateway
+The  
+### Subnet Mask
+
+`255.255.255.0`: implies the `255` occupied sets are *network* addresses. The latter (`0`) is *host*
+- ex: `192.168.0.1` $\rArr$ `192.168.0` (`network`) `.1`(`host`) 
+
+# Unit Review 2
+IP layer header -- know the reason for each field of IP header
+> The header contains transfer information (in bits). This includes **Version (4), Header Length (4), Type of Service (8), Total Length (16), Identification (16), Flags (3), Fragment Offset (13), Time to Live (8), Protocol(8), Header Checksum (16), Source IP (32), Destination IP (32), Options (variable).** 
+
+IP checksum -- what does checksum do?
+> **IP checksum** uses two's complement addition to check errors. Calculations are made at the sender and destination, and if the same, passes the error check. 
+
+Fragmentation -- the fields of IP used for fragmentation and why packets are fragmented.
+> Breaking up packets into smaller packets. Uses: **Total Length, Identification, Flags, and Fragment Offset.** Under fragmentation, the header is copied to fragments and (a) Total length is updated (b) Flag field updated to show which is the last fragment (c) Fragment Offset updated to reflect offset relative to the start of the OG packet.
+
+IP address and class-A, class-B and class-C
+> Classes are divided into ranges of IP addresses. A, B, and C are used by devices on the internet. 
+> 
+> **A**: Large no. of hosts ($(2^8)^3 =$ 16,777,214), 126 networks, from 1to 127. 1.0.0.0 to 127.0.0.0
+>
+> **B**: Medium no. of hosts ($(2^8)^2=$ 65,534) Allows for 16,384 networks. From 128.0.0.0 to 191.255.0.0.
+>
+> **C**: Small number of hosts. Allows for 2,097,150 networks. From 192.0.0.0 to 223.255.255.0.
+
+Subnetting -- given a range of IP addresses know how to subnet a given network.
+> The subnet mask defines the network address under `255`. If a field is `255`, it is part of the network address. `255.255.255.0` means the host IP range is 0 to 255 for i.e. `192.168.0.1`$\rarr$`192.168.0.255`
+
+Know the difference between hub, switch and router.
+> Switch is an intelligent hub, that can send packets to its intended recipient. Routers may act as default gateways and connects networks as well as directs packets to its destination.
+
+Flooding, distance vector routing
+> **Flooding**: data packets are sent to all outgoing links except received. (*Uncontrolled*: to all neighbors, *Controlled*: Sequence Number Controlled Flooding--SNCP)
+>
+> **Distance Vector Routing** (Bellman-Ford algorithm): Calculates best route based on distance or hops. Given by:
+>$$ d_x(y) = min_v\{c(x,v) + d_v(y)\}$$
+>
+> Where:
+> 
+> $d_x(y)$ = The least distance from x to y
+> 
+> $c(x,v)$ = Node x's cost from each of its neighbor v
+> 
+> $d_v(y)$ = distance to each node from intial node
+> 
+> $min_v$ = selecting shortest distance
+
+What is the problem of distance vector routing, what is the count to infinity problem?
+> If a node goes offline, and other nodes are not immediately aware. Then packets are still sent through the node believing it is reachable. The distance to that node keeps increasing in the routing tables (to infinity) until hitting a max.
+
+What do we mean by hierarchy routing?
+> network is divided into multiple levels or tiers of routers.
+> It goes from:
+> 
+> "core routers" $\rarr$ "edge routers"
+>
+> This design allows for specialized routing protocols at each level of the hierarchy and can be optimized for needs. 
+
