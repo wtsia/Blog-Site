@@ -35,12 +35,13 @@ hidemeta = false
 - [Scripts](#scripts)
 - [Creating a DB from Scratch](#creating-a-db-from-scratch)
 - [SQL Query Clauses](#sql-query-clauses)
-- [Working with a DB (Assignment 6)](#working-with-a-db-assignment-6)
-    - [Displaying COUNT of rows](#displaying-count-of-rows)
-    - [Insert New 'Student'](#insert-new-student)
-    - [Inserting SCORE for STUDENT\_ID into table](#inserting-score-for-student_id-into-table)
-    - [Finding COUNT of "groups" of an "attribute"](#finding-count-of-groups-of-an-attribute)
-    - [Displaying Query by Value](#displaying-query-by-value)
+- [Lab: Queries and Sorting](#lab-queries-and-sorting)
+    - [Displaying COUNT of rows (2)](#displaying-count-of-rows-2)
+    - [Insert New 'Student' (3)](#insert-new-student-3)
+    - [Inserting SCORE for STUDENT\_ID into table (4)](#inserting-score-for-student_id-into-table-4)
+    - [Finding COUNT of "groups" of an "attribute" (5), (6)](#finding-count-of-groups-of-an-attribute-5-6)
+    - [Displaying Query by Value (7)](#displaying-query-by-value-7)
+    - [Group Query and Filter (8)](#group-query-and-filter-8)
 - [Database Triggers](#database-triggers)
   - [Stored Programs](#stored-programs)
 - [Midterm DB (3)](#midterm-db-3)
@@ -340,10 +341,15 @@ HAVING
 ORDER BY
 ```
 
-# Working with a DB (Assignment 6)
-Using a database. For example `studentdb` which has tables `STUDENT`, `grade_event`, and `score`.
+# Lab: Queries and Sorting
+Using a database. For example `studentdb` which has tables `STUDENT`, `grade_event`, and `score`. (1)
 
-### Displaying COUNT of rows
+```
+USE studentdb;  -- use the db
+SHOW tables;    -- show tables present i.e. STUDENT, ...
+```
+
+### Displaying COUNT of rows (2)
 Perhaps we want to know how many rows exist in each table. We can obtain this via `COUNT()` which counts the number of rows:
 ```
 mysql> SELECT COUNT(*) FROM STUDENT;
@@ -370,7 +376,7 @@ mysql> SELECT COUNT(*) FROM score;
 |      173 |
 +----------+
 ```
-### Insert New 'Student'
+### Insert New 'Student' (3)
 To insert a new row into a table, for example, `STUDENT`:
 ```
 INSERT INTO STUDENT VALUES ('JOESCHMO', 'M', '12345666');
@@ -389,7 +395,7 @@ mysql> SELECT COUNT(*) FROM STUDENT;
 
 Now, what if we wanted to update the `score` table with an event for our new "student" using the previous `INSERT` command?
 
-### Inserting SCORE for STUDENT_ID into table
+### Inserting SCORE for STUDENT_ID into table (4)
 ```
 mysql> INSERT INTO score VALUES (12345666, 10, 70);
 ```
@@ -423,7 +429,7 @@ mysql> INSERT INTO score VALUES (12345666, 10, 70);
 Query OK, 1 row affected (0.01 sec)
 ```
 
-### Finding COUNT of "groups" of an "attribute" 
+### Finding COUNT of "groups" of an "attribute" (5), (6)
 
 The command below finds the count of each group in EVENT_ID. In this case, we are finding the count of each `EVENT_ID` in the `score` table:
 ```
@@ -458,17 +464,42 @@ mysql> SELECT STUDENT_ID, COUNT(*) FROM score GROUP BY STUDENT_ID;
 +------------+----------+
 32 rows in set (0.00 sec)
 ```
-### Displaying Query by Value
+### Displaying Query by Value (7)
 Let's find the student who has the maximum score, minimum score, and their respective student names.
 
+Find MIN SCORE:
 ```
-SELECT 
-  STUDENT.name, score.SCORE 
-  FROM STUDENT INNER JOIN score 
-  ON STUDENT.STUDENT_ID = STUDENT.STUDENT_ID 
-    WHERE score.SCORE = (SELECT MIN(SCORE) FROM score);
+mysql> SELECT 
+  ->  STUDENT.name, score.SCORE 
+  ->  FROM STUDENT INNER JOIN score 
+  ->  ON STUDENT.STUDENT_ID = score.STUDENT_ID 
+  ->    WHERE score.SCORE = (SELECT MIN(SCORE) FROM score);
++--------+-------+
+| name   | SCORE |
++--------+-------+
+| Joseph |     7 |
++--------+-------+
+1 row in set (0.00 sec)
+```
 
+Find MAX SCORE:
 ```
+mysql> SELECT
+    ->   STUDENT.name, score.SCORE
+    ->   FROM STUDENT INNER JOIN score
+    ->   ON STUDENT.STUDENT_ID = score.STUDENT_ID
+    ->     WHERE score.SCORE = (SELECT MAX(SCORE) FROM score);
++-------+-------+
+| name  | SCORE |
++-------+-------+
+| Megan |   100 |
++-------+-------+
+1 row in set (0.00 sec)
+```
+
+How do we know this is correct? We can also check manually and cross reference each field. Noticably, the `MAX` score query is the same as the one for `MIN` score, only we filter for the `MAX()`. 
+
+### Group Query and Filter (8)
 
 # Database Triggers
 A history of edits made to tables in a database. 
