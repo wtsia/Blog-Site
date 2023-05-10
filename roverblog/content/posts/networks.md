@@ -49,6 +49,8 @@ network management.
   - [Default Gateway](#default-gateway)
     - [Subnet Mask](#subnet-mask)
 - [Unit Review 2](#unit-review-2)
+- [Programming](#programming)
+  - [Commands](#commands)
 # Networks: An Introduction
 - Why layers are used in Computer Networks
 - 7 layers of OSI, describe each layer
@@ -391,4 +393,16 @@ What do we mean by hierarchy routing?
 > "core routers" $\rarr$ "edge routers"
 >
 > This design allows for specialized routing protocols at each level of the hierarchy and can be optimized for needs. 
+
+# Programming
+## Commands
+```
+traceroute
+```
+Output of `man traceroute`:
+```
+DESCRIPTION
+
+traceroute tracks the route packets taken from an IP network on their way to a given host. It utilizes the IP protocol's time to live (TTL) field and attempts to  elicit an ICMP TIME_EXCEEDED response from each gateway along the path to the host.
+```
 
