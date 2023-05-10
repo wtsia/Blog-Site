@@ -57,10 +57,21 @@ network management.
 - parity is used to verify if information is correctly received--i.e. a 1 is added to `0100 0001` to make 'A' an 'odd parity'
 - *communication protocol*: agreement/rule 
 ### **OSI**
-Open System Interconnect (by International Standard Organization, or ISO)
-- Physical: sending bits via physical property i.e. voltage
-- Data Link: CRC (different error detection), Hamming, Flow Control, sliding window, shared ethernet channel
-  - MAC: bluetooth tech, RFID
+Open System Interconnect (by International Standard Organization, or ISO):
+
+1. Physical Layer: This layer is responsible for the physical transmission of data between devices, including the electrical, mechanical, and physical specifications of the physical medium.
+
+2. Data Link Layer: This layer is responsible for the reliable transmission of data between devices on the same network, including error detection and correction, flow control, and access to the physical layer.
+
+3. Network Layer: This layer is responsible for the logical addressing and routing of data between devices on different networks, including network addressing, packet forwarding, and congestion control.
+
+4. Transport Layer: This layer is responsible for the end-to-end transmission of data between devices, including error detection and correction, flow control, and reliability.
+
+5. Session Layer: This layer is responsible for establishing, managing, and terminating communication sessions between devices, including authentication, authorization, and accounting.
+
+6. Presentation Layer: This layer is responsible for the translation of data between the application layer and the lower layers, including data compression, encryption, and decryption.
+
+7. Application Layer: This layer is responsible for providing services to user applications, including protocols such as HTTP, FTP, SMTP, and DNS.
 
 ### Number Bases and Conversion
 - Base:
