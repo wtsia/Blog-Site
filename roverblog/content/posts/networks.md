@@ -49,6 +49,8 @@ network management.
   - [Default Gateway](#default-gateway)
     - [Subnet Mask](#subnet-mask)
 - [Unit Review 2](#unit-review-2)
+- [Programming](#programming)
+  - [Commands](#commands)
 # Networks: An Introduction
 - Why layers are used in Computer Networks
 - 7 layers of OSI, describe each layer
@@ -57,10 +59,21 @@ network management.
 - parity is used to verify if information is correctly received--i.e. a 1 is added to `0100 0001` to make 'A' an 'odd parity'
 - *communication protocol*: agreement/rule 
 ### **OSI**
-Open System Interconnect (by International Standard Organization, or ISO)
-- Physical: sending bits via physical property i.e. voltage
-- Data Link: CRC (different error detection), Hamming, Flow Control, sliding window, shared ethernet channel
-  - MAC: bluetooth tech, RFID
+Open System Interconnect (by International Standard Organization, or ISO):
+
+1. Physical Layer: This layer is responsible for the physical transmission of data between devices, including the electrical, mechanical, and physical specifications of the physical medium.
+
+2. Data Link Layer: This layer is responsible for the reliable transmission of data between devices on the same network, including error detection and correction, flow control, and access to the physical layer.
+
+3. Network Layer: This layer is responsible for the logical addressing and routing of data between devices on different networks, including network addressing, packet forwarding, and congestion control.
+
+4. Transport Layer: This layer is responsible for the end-to-end transmission of data between devices, including error detection and correction, flow control, and reliability.
+
+5. Session Layer: This layer is responsible for establishing, managing, and terminating communication sessions between devices, including authentication, authorization, and accounting.
+
+6. Presentation Layer: This layer is responsible for the translation of data between the application layer and the lower layers, including data compression, encryption, and decryption.
+
+7. Application Layer: This layer is responsible for providing services to user applications, including protocols such as HTTP, FTP, SMTP, and DNS.
 
 ### Number Bases and Conversion
 - Base:
@@ -380,4 +393,16 @@ What do we mean by hierarchy routing?
 > "core routers" $\rarr$ "edge routers"
 >
 > This design allows for specialized routing protocols at each level of the hierarchy and can be optimized for needs. 
+
+# Programming
+## Commands
+```
+traceroute
+```
+Output of `man traceroute`:
+```
+DESCRIPTION
+
+traceroute tracks the route packets taken from an IP network on their way to a given host. It utilizes the IP protocol's time to live (TTL) field and attempts to  elicit an ICMP TIME_EXCEEDED response from each gateway along the path to the host.
+```
 
