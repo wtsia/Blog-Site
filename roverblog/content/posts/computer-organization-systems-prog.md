@@ -31,6 +31,11 @@ hidemeta = false
       - [C++](#c)
       - [Assembly](#assembly)
     - [Data Representation](#data-representation)
+- [C Programming](#c-programming)
+  - [Memory Hierarchy](#memory-hierarchy)
+    - [SRAM vs DRAM](#sram-vs-dram)
+    - [ROM: Read-Only Memory](#rom-read-only-memory)
+    - [Nonvolatile vs Volatile Memory](#nonvolatile-vs-volatile-memory)
 
 # Bits, Bytes, and Integers
 Bits are stored as `0` or `1`.
@@ -70,3 +75,16 @@ mov  X,eax   ; move EAX to X
 |10 | 0000 1010 | A |
 |100 | 0000 0000 | |
 |1024 | 0000 0000 | |
+
+# C Programming
+## Memory Hierarchy
+### SRAM vs DRAM
+- Static vs Dynamic Random-Access-Memory
+  - volatile--does not maintain data when powered off
+
+### ROM: Read-Only Memory
+- Erasable, E-Erasable, Programmable, Flash Memory
+
+### Nonvolatile vs Volatile Memory
+Nonvolatile: ROMS, maintains data when pwoered off
+Volatile: 
