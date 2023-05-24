@@ -36,6 +36,11 @@ hidemeta = false
     - [SRAM vs DRAM](#sram-vs-dram)
     - [ROM: Read-Only Memory](#rom-read-only-memory)
     - [Nonvolatile vs Volatile Memory](#nonvolatile-vs-volatile-memory)
+    - [Bus](#bus)
+    - [Memory Systems](#memory-systems)
+      - [Disk Drive](#disk-drive)
+      - [PCI vs PCI Express Bus](#pci-vs-pci-express-bus)
+      - [Process of DMA: Direct Memory Access](#process-of-dma-direct-memory-access)
 
 # Bits, Bytes, and Integers
 Bits are stored as `0` or `1`.
@@ -86,5 +91,28 @@ mov  X,eax   ; move EAX to X
 - Erasable, E-Erasable, Programmable, Flash Memory
 
 ### Nonvolatile vs Volatile Memory
-Nonvolatile: ROMS, maintains data when pwoered off
-Volatile: 
+Nonvolatile: ROMS, maintains data when powered off
+
+### Bus
+wires that carry address data/control signals
+- memory operations involving the bus take longer
+
+### Memory Systems
+- register operations in the CPU are sub nanoseconds
+
+#### Disk Drive
+- made of platters that form cylinders, with tracks containing sectors separated by gaps
+- recording zone: disjoint subsets of the track/sectors
+  - capacity = average recording zone
+$$
+Capacity = byte/sector * sector/track * 
+  \\track/surface * surface/platter * platter/disk
+$$
+
+#### PCI vs PCI Express Bus
+- Express is point-to-point, whereas PCI is broadcast
+
+#### Process of DMA: Direct Memory Access
+```
+CPU -> Controller -> Disk -> Load to Main Memory -> Controller sends signal to CPU
+```

@@ -51,6 +51,7 @@ network management.
 - [Unit Review 2](#unit-review-2)
 - [Programming](#programming)
   - [Commands](#commands)
+- [Summary of Notes](#summary-of-notes)
 # Networks: An Introduction
 - Why layers are used in Computer Networks
 - 7 layers of OSI, describe each layer
@@ -406,3 +407,63 @@ DESCRIPTION
 traceroute tracks the route packets taken from an IP network on their way to a given host. It utilizes the IP protocol's time to live (TTL) field and attempts to  elicit an ICMP TIME_EXCEEDED response from each gateway along the path to the host.
 ```
 
+# Summary of Notes
+Seven layers of OSI and the function of each layer
+> The 7 Layers of OSI are as follows:
+>
+> 1. 
+> 2. 
+> 3. 
+> 4. 
+> 5. 
+> 6. 
+> 7. 
+
+Sine waves (amplitude, phase, frequency and period), composite signals
+
+Know how hamming code works and how we can add redundant bits for hamming
+
+Understand CSMA/CD and how it works.
+
+Know how CRC technique works and how we add redundant bits and the number of redundant bitsthat we add.
+
+The type of transmission impairments and cause of them
+Signal power and meaning of db values
+
+Frequency domain and how we know if a signal is periodic or nonperiodic.
+
+Know bit rate
+
+Broadband and baseband and know which signals are baseband and which are broadband.
+
+IP layer header -- know the reason for each field of IP header
+
+IP checksum -- what does checksum do?
+
+Fragmentation -- the fields of IP used for fragmentation and why packets are fragmented.
+
+IP address and class-A, class-B and class-C
+
+Subnetting -- given a range of IP addresses know how to subnet a given network.
+
+Know the difference between hub, switch and router.
+
+Flooding, distance vector routing
+
+What is the problem of distance vector routing, what is the count to infinity problem
+
+What do we mean by hierarchy routing?
+
+What does TCP and UDP stands for?
+
+What is the difference between connectionless and connection oriented in layer-4?
+
+Know the header TCP source and destination ports, reason for sequence and acknowledgementfields, flags in the header.
+
+Three way handshake of TCP connection
+
+What is a socket?
+
+Client and Server programming
+
+ARP and DNS
