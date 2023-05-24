@@ -41,14 +41,17 @@ network management.
     - [Push CDNs](#push-cdns)
     - [Pull CDNs](#pull-cdns)
     - [Disadvantages of CDNs:](#disadvantages-of-cdns)
-- [Unit Review 1](#unit-review-1)
-  - [Content Review:](#content-review)
-  - [Study Guide Questions](#study-guide-questions)
+- [Content Review](#content-review)
+    - [**CSMA/CD**](#csmacd)
+  - [Guide Questions](#guide-questions)
+    - [**Sin wave, Frequency, and Wavelength**](#sin-wave-frequency-and-wavelength)
+    - [**Amplitude, Period, and Frequency, and Wavelength**](#amplitude-period-and-frequency-and-wavelength)
+    - [**Hamming Code, and Finding the Hamming Code for 4 Bits**](#hamming-code-and-finding-the-hamming-code-for-4-bits)
 - [Devices](#devices)
   - [Hub vs Switch vs Router](#hub-vs-switch-vs-router)
   - [Default Gateway](#default-gateway)
     - [Subnet Mask](#subnet-mask)
-- [Unit Review 2](#unit-review-2)
+- [Content Review 2](#content-review-2)
 - [Programming](#programming)
   - [Commands](#commands)
 - [Summary of Notes](#summary-of-notes)
@@ -64,11 +67,11 @@ Open System Interconnect (by International Standard Organization, or ISO):
 
 1. Physical Layer: This layer is responsible for the physical transmission of data between devices, including the electrical, mechanical, and physical specifications of the physical medium.
 
-2. Data Link Layer: This layer is responsible for the reliable transmission of data between devices on the same network, including error detection and correction, flow control, and access to the physical layer.
+2. Data Link Layer: This layer is responsible for the reliable transmission of data between devices on the same network, including error detection and correction, flow control, and access to the physical layer. Examples of protocols operating at this layer include Ethernet, Point-to-Point Protocol (PPP), and Wi-Fi.
 
 3. Network Layer: This layer is responsible for the logical addressing and routing of data between devices on different networks, including network addressing, packet forwarding, and congestion control.
 
-4. Transport Layer: This layer is responsible for the end-to-end transmission of data between devices, including error detection and correction, flow control, and reliability.
+4. Transport Layer: This layer is responsible for the end-to-end transmission of data between devices, including segmentation, flow control, error recovery, and reassembly. Prominent protocols operating at this layer include Transmission Control Protocol (TCP) and User Datagram Protocol (UDP).
 
 5. Session Layer: This layer is responsible for establishing, managing, and terminating communication sessions between devices, including authentication, authorization, and accounting.
 
@@ -86,14 +89,16 @@ Open System Interconnect (by International Standard Organization, or ISO):
 `0x101` equivalent hex to decimal is: 
 
 $$
+
 1*16^2 + 0*16^1 + 1*16^0 = 256 + 0 + 1 = 257
+
 $$
 
 #### **Binary to Hex**
-Binary: 1, 0 -> Hex: 1, 0, A-F
-- 0000 -> 0
-- 1111 -> F
-- Order of binary: 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, ...
+Binary: `1, 0` -> Hex: `1, 0, A-F`
+- `0000` -> `0`
+- `1111` -> `F`
+- Order of binary: `0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, ...`
 
 #### **Binary to Decimal**
 Convert to hex first
@@ -178,18 +183,53 @@ Domain Name System vs Content Delivery Network
 >Summary: Push CDNs are good for sites that doesn't update content frequently, Pull CDNs for cites that need to update frequently. CDNs involve changing URLs for content to point to the CDN.
 
 
-# Unit Review 1
-## Content Review:
-Seven layers of OSI and the function of each layer
+# Content Review
+**Seven layers of OSI and the function of each layer**
 
 >(1) physical, (2) data link, medium access control (MAC, sublayer), (3) network, (4) transport, (5) session, (6) presentation, (7) application
 
-Sine waves (amplitude, phase, frequency and period), composite signals
->
+**Sine waves (amplitude, phase, frequency and period), composite signals**
+
+> Sine waves are fundamental waveforms in signal processing and represent a smooth, periodic oscillation. They are characterized by their amplitude, phase, frequency, and period.
+> 
+> **Amplitude**:
+The amplitude of a sine wave represents the maximum displacement or height of the waveform from its center or equilibrium position. It indicates the strength or intensity of the signal and is typically measured in units such as volts (V) or decibels (dB).
+> 
+> **Phase**:
+> The phase of a sine wave determines its position within a complete cycle. It represents the fraction of the cycle that has elapsed from a reference point. The phase is often measured in degrees or radians. A phase shift refers to a change in the starting point or timing of a waveform relative to a reference.
+> 
+> **Frequency**:
+> The frequency of a sine wave indicates the number of complete cycles or oscillations that occur per unit of time. It is measured in hertz (Hz) and represents the rate of change of the waveform. A higher frequency corresponds to a greater number of cycles per unit of time.
+> 
+> **Period**:
+> The period of a sine wave is the time it takes to complete one full cycle. It is the reciprocal of the frequency and is represented in units of time (e.g., seconds). The period and frequency are inversely related: a higher frequency corresponds to a shorter period, and vice versa.
+> 
+> **Composite signals**, also known as complex or compound signals, are formed by combining multiple individual signals of different frequencies, amplitudes, and phases. These individual signals are often sine waves, and their combination results in a complex waveform with a more intricate pattern. Composite signals can be created through techniques such as amplitude modulation (AM), frequency modulation (FM), or by adding together multiple sine waves with different frequencies and amplitudes.
+> 
+> **Composite signals** are commonly encountered in various fields, including telecommunications, audio processing, and radio frequency (RF) engineering. By analyzing composite signals, one can examine the different frequency components present and understand how they contribute to the overall signal's characteristics.
 
 Know how hamming code works and how we can add redundant bits for hamming
 
-Understand CSMA/CD and how it works.
+### **CSMA/CD**
+> CSMA/CD (Carrier Sense Multiple Access with Collision Detection) is a protocol used in Ethernet networks to regulate access to the network medium and handle collisions that may occur when multiple devices attempt to transmit data simultaneously. CSMA/CD is specifically designed for half-duplex Ethernet networks, where devices can either transmit or receive data but not both simultaneously.
+> 
+> Here's how CSMA/CD works:
+> 
+> **Carrier Sense (CS)**:
+Before transmitting data, a device using CSMA/CD listens to the network medium to check if it is idle (no other device is currently transmitting). If the medium is sensed as busy, the device waits for it to become idle before attempting to transmit.
+> 
+> **Multiple Access (MA)**:
+Once the medium is determined to be idle, the device can start transmitting its data.
+> 
+> **Collision Detection (CD)**:
+While transmitting, the device continuously monitors the medium to detect if a collision occurs. A collision happens when two or more devices start transmitting at the same time, causing their signals to interfere with each other and resulting in garbled data.
+>
+> **Collision Handling**:
+When a device detects a collision, it immediately stops transmitting and sends a jam signal to notify other devices on the network about the collision. The devices that initiated the collision then enter a backoff period, during which they wait for a random amount of time before attempting to retransmit.
+> 
+> The purpose of CSMA/CD is to ensure fair and efficient access to the network medium in shared Ethernet networks. By sensing the medium before transmitting, devices can minimize the chances of collisions. However, if collisions do occur, CD allows for their detection and subsequent handling to prevent data corruption.
+> 
+> It's worth noting that CSMA/CD is primarily used in legacy Ethernet networks operating at lower speeds, such as 10 Mbps and 100 Mbps. Higher-speed Ethernet networks, such as Gigabit Ethernet, utilize full-duplex communication and employ different protocols, such as CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance), which is used in switched Ethernet networks.
 
 Know how CRC technique works and how we add redundant bits and the number of redundant bits that we add.
 
@@ -205,7 +245,7 @@ Broadband and baseband and know which signals are baseband and which are broadba
 
 
 
-## Study Guide Questions
+## Guide Questions
 Know the relation between frequency and period
 >$$
 Frequency = 1/Period
@@ -244,6 +284,7 @@ $$
 
 Difference between baseband and broadband
 >Baseband refers to a signal that has not been modulated to a higher frequency. Broadband refers to a signal that has been modulated to a higher frequency, allowing multiple signals to be transmitted over the same channel simultaneously.
+### **Sin wave, Frequency, and Wavelength**
 
 Calculate a sinewave phase in degrees or radians given  the cycle’s offset
 >The phase of a sine wave can be calculated using the formula:
@@ -287,7 +328,7 @@ Most digital signals are periodic or non-periodic?
 Appropriate characteristics for analog signals
 >The appropriate characteristics for analog signals include amplitude, frequency, phase, and wavelength. These characteristics describe the physical properties of the analog signal, such as its strength, the number of cycles per second, the position of a particular point on the wave, and the distance between corresponding points on the wave.
 
-Amplitude, Frequency, phase and wavelength
+### **Amplitude, Period, and Frequency, and Wavelength**
 >Amplitude, or peak amplitude, is the absolute value of its highest intensity proportional to the energy it carries. **Period** is the amount of time a signal needs to complete one cycle, and **frequency** is the number of periods in 1s. **Wavelength** is propogation speed times *period*, or divided by *frequency*. 
 
 Appropriate characteristics for digital signals
@@ -324,8 +365,21 @@ Using dB = 10 log (p2 / p1)
 Given a generator polynomial and a pattern, find the redundant bits
 >To find the redundant bits in a pattern using a generator polynomial, you would perform polynomial division of the pattern by the generator polynomial. The remainder would then be the redundant bits.
 
-Find the hamming code for 4 bits
->The Hamming code for 4 bits is a binary code that adds 3 redundant bits to the original 4 bits to create a code word of 7 bits. The code is designed to detect and correct errors in the transmission of the code word. The specific code for the 4 bits would depend on the particular algorithm used to generate the Hamming code.
+### **Hamming Code, and Finding the Hamming Code for 4 Bits**
+> The basic idea behind Hamming code is to add parity bits at specific positions within a data word. These parity bits provide redundancy that enables error detection and correction. The position of the parity bits is determined by powers of $2,$ with each bit responsible for checking a specific subset of data bits.
+> Here's a simplified explanation of how Hamming code works:
+> 
+> **Data Encoding**:
+Let's say we have a data word of n bits. The number of parity bits (r) is determined by the formula $2^r \geq n + r + 1$. The parity bits are inserted at positions that are powers of $2,$ leaving the remaining positions for the data bits.
+> 
+> **Parity Bit Calculation**:
+> Each parity bit calculates its value based on the data bits it covers. For example, the parity bit at position $2^0$ (the least significant bit) checks all bits that have a "1" in their binary representation at this position. The parity bit at position $2^1$ checks every second bit, the one at $2^2$ checks every fourth bit, and so on. The calculated parity bit value is set to ensure that the total number of "1" bits (including the parity bit itself) in the covered positions is either odd or even, depending on the parity scheme being used (odd parity or even parity).
+> 
+> **Error Detection and Correction**:
+> During transmission or storage, if an error occurs and flips a bit, the parity bits can be used to detect and correct the error. By recalculating the parity bits from the received data and comparing them to the received parity bits, errors can be identified. If an error is detected, the position of the erroneous bit can be determined based on the parity bits and corrected.
+> Hamming code is capable of detecting and correcting single-bit errors. However, it is not designed to handle multiple or burst errors efficiently. More advanced error-correcting codes, such as Reed-Solomon codes, are used for more robust error correction in scenarios with higher error rates.
+>
+>*The Hamming code for 4 bits* is a binary code that adds 3 redundant bits to the original 4 bits to create a code word of 7 bits. The code is designed to detect and correct errors in the transmission of the code word. The specific code for the 4 bits would depend on the particular algorithm used to generate the Hamming code.
 
 Cyclic Redundancy Coding -- Know how to add extra bits and do the dividing to find the remainder
 >Cyclic redundancy coding (CRC) is a type of error-detecting code commonly used in digital communication systems to detect errors in data transmission. The basic idea behind CRC is to add a few extra bits to the data being transmitted, which are then used to detect and correct errors in the data.
@@ -343,7 +397,7 @@ The
 `255.255.255.0`: implies the `255` occupied sets are *network* addresses. The latter (`0`) is *host*
 - ex: `192.168.0.1` $\rArr$ `192.168.0` (`network`) `.1`(`host`) 
 
-# Unit Review 2
+# Content Review 2
 IP layer header -- know the reason for each field of IP header
 > The header contains transfer information (in bits). This includes **Version (4), Header Length (4), Type of Service (8), Total Length (16), Identification (16), Flags (3), Fragment Offset (13), Time to Live (8), Protocol(8), Header Checksum (16), Source IP (32), Destination IP (32), Options (variable).** 
 
@@ -408,22 +462,33 @@ traceroute tracks the route packets taken from an IP network on their way to a g
 ```
 
 # Summary of Notes
-Seven layers of OSI and the function of each layer
+Seven layers of [**OSI**](#osi) and the function of each layer
 > The 7 Layers of OSI are as follows:
->
-> 1. 
-> 2. 
-> 3. 
-> 4. 
-> 5. 
-> 6. 
-> 7. 
+> (P D N T S P A -> All People Seem To Need Data processing)
+> 1. Physical
+> 2. Data Link
+> 3. Network
+> 4. Transport
+> 5. Session
+> 6. Presentation
+> 7. Application
 
 Sine waves (amplitude, phase, frequency and period), composite signals
+> [**Sin wave, Frequency, and Wavelength**](#sin-wave-frequency-and-wavelength)
+> 
+> $$
+Frequency = 1/Period
+$$
+> [**Amplitude, Period, and Frequency, and Wavelength**](#amplitude-period-and-frequency-and-wavelength)
+> $$
+Phase = (Cycle_{offset} / Cycle_{length}) * 2π
+$$
 
 Know how hamming code works and how we can add redundant bits for hamming
-
+> [**Hamming Code, and Finding the Hamming Code for 4 Bits**](#hamming-code-and-finding-the-hamming-code-for-4-bits)
+ 
 Understand CSMA/CD and how it works.
+> 
 
 Know how CRC technique works and how we add redundant bits and the number of redundant bitsthat we add.
 
