@@ -6,6 +6,7 @@ date = 2022-05-14T04:35:39-07:00
 description = "General Notes on Python Usage"
 tags = [
     "Python",
+    "programming"
 ]
 categories = [
     "Computer Science",
