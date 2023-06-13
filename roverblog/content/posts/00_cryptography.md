@@ -26,6 +26,11 @@ hidemeta = false
 - [Concepts](#concepts)
   - [Schneier's Law](#schneiers-law)
   - [Kerckhoff's principle](#kerckhoffs-principle)
+  - [RSA: Rivest Shamir Adleman](#rsa-rivest-shamir-adleman)
+    - [**Encryption + Decryption**](#encryption--decryption)
+  - [Shor's Algorithm](#shors-algorithm)
+  - [Euclidean Algorithm](#euclidean-algorithm)
+  - [Diffie-Hellman](#diffie-hellman)
   - [Stream Cipher](#stream-cipher)
 
 # Introduction
@@ -52,5 +57,40 @@ Six design rules for military ciphers:
 6. Given the circumstance of use, it should be easy to use and not be stressful to use, nor require a long list of rules for usage.
 
 Note: some are not relevant due to computer's ability to perform encryption (likely $3$, $5$, or $6$). $2$. However is very important.
+
+## RSA: Rivest Shamir Adleman
+An asymmetric key exchange that utilizes prime factors.
+
+Concepts behind RSA:
+- **Factors**: The divisible components of a number s.t. $p,q \in \mathbb{Z}$, $S = (p*q)$, $p,q$ are factors
+- **Prime** ( $\mathbb{P}$ ): 
+$$p \in \mathbb{N}, p > 1$$
+- **Semi-Prime**: 
+$p*q$ for $p, q \in \mathbb{P}$
+- **Modular Arithmetic**: For $R =$ Remainder, $a = p ($ mod $q)=R\{\frac{p}{q}\}$
+- **Totient** ( $T$ ): For some $p,q \in \mathbb{P}$, the totient is $(p-1)*(q-1)$
+
+For $a, b \in \mathbb{P}$, Let $S_0 = a*b$, and $S_1 = (a-1)*(b-1)$. We may generated our public and private key adhereing to the following conditions for some keys $K_0, K_1$.
+
+**Public Key $=K_0$**
+- $K_0 \in \mathbb{P}$
+- $K_0 < T$
+- $\forall n \in \mathbb{Z}, (K_0*n) \neq T$
+   
+**Private Key $=K_1$**
+- $(K_0*K_1) ($mod $T) = 1$
+
+### **Encryption + Decryption**
+For N = Product, M = message and C = cipher:
+
+$$M^{K_0} (mod N) = C$$
+$$C^{K_1} (mod N)= M$$
+
+The Public and Private keys are commutative and may be used to interchangeably be the encryption or decryption method.
+## Shor's Algorithm
+
+
+## Euclidean Algorithm
+## Diffie-Hellman
 
 ## Stream Cipher
