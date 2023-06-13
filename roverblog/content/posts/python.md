@@ -19,7 +19,88 @@ norobots = true
 nodate = true
 hidemeta = false
 +++
-## Programming Fundamentals 
+# Contents
+- [Contents](#contents)
+- [Example Program](#example-program)
+- [Programming Fundamentals](#programming-fundamentals)
+  - [Methods](#methods)
+  - [Minor Concepts](#minor-concepts)
+- [Concepts](#concepts)
+  - [Basics](#basics)
+    - [Indentation](#indentation)
+  - [Operators and Expressions](#operators-and-expressions)
+    - [Format Method: `format()`](#format-method-format)
+    - [Escape Sequences](#escape-sequences)
+      - [Raw String](#raw-string)
+    - [Variable](#variable)
+    - [Naming](#naming)
+    - [Logical and Physical Line](#logical-and-physical-line)
+    - [Shortcut for math operation and assignment](#shortcut-for-math-operation-and-assignment)
+    - [Evaluation Order](#evaluation-order)
+  - [Functions](#functions)
+    - [Local Variables](#local-variables)
+    - [Keyword Arguments](#keyword-arguments)
+    - [DocStrings](#docstrings)
+    - [Modules](#modules)
+      - [Module anatomy](#module-anatomy)
+        - [WARNING: Remember that you should avoid using import-star, i.e. from mymodule import \*.](#warning-remember-that-you-should-avoid-using-import-star-ie-from-mymodule-import-)
+        - [Functions:](#functions-1)
+        - [Summary:](#summary)
+  - [Quick and Dirty: Objects and Classes](#quick-and-dirty-objects-and-classes)
+  - [Software Development Process](#software-development-process)
+  - [Object Oriented Programming](#object-oriented-programming)
+    - [Introduction to `self`](#introduction-to-self)
+    - [Methods](#methods-1)
+    - [The __init__ method](#the-init-method)
+    - [Class and Object Variables](#class-and-object-variables)
+    - [Inheritance](#inheritance)
+  - [Input and Output](#input-and-output)
+    - [Files](#files)
+    - [Pickle](#pickle)
+    - [Unicode](#unicode)
+  - [Exceptions](#exceptions)
+    - [Errors](#errors)
+    - [Handling Exceptions](#handling-exceptions)
+    - [Try...Finally](#tryfinally)
+    - [With Statement](#with-statement)
+  - [More](#more)
+    - [Passing Tuples Around](#passing-tuples-around)
+    - [Special Methods](#special-methods)
+    - [Single Statement Blocks](#single-statement-blocks)
+    - [Lambda Forms](#lambda-forms)
+- [Standard Library](#standard-library)
+  - [`sys` module](#sys-module)
+  - [`logging` module](#logging-module)
+
+# Example Program
+```
+# Function to calculate the factorial of a number
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+# Main program
+if __name__ == "__main__":
+    # Getting user input for a number
+    num = int(input("Enter a number: "))
+
+    # Computing and printing the factorial of the number
+    fact = factorial(num)
+    print("Factorial of", num, "is", fact)
+```
+
+In this program, you'll learn about:
+
+1. Functions: The factorial function is defined to calculate the factorial of a number using recursion.
+2. Conditional statements: The if-else statement is used to handle the base case in the factorial function.
+3. User input: The input function is used to get user input for a number.
+Variable assignment and manipulation: The num variable is assigned the value entered by the user, and the fact variable stores the factorial calculated by the factorial function.
+4. Printing output: The print function is used to display the result.
+
+To run this program, save it as a Python file (e.g., factorial.py) and execute it using a Python interpreter. The program will prompt you to enter a number, and it will then calculate and display the factorial of that number.
+# Programming Fundamentals 
 - For loop:
 ```
 for x in mylist:
