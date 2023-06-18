@@ -5,12 +5,12 @@ title = "Dockerfile"
 date = 2023-06-18T00:50:28-07:00
 description = "Notes on Dockerfile"
 tags = [
-    "tag1",
-    "tag2",
+    "Docker",
+    "Images",
 ]
 categories = [
-    "cat1",
-    "cat2",
+    "Computer Science",
+    "IT",
 ]
 math = true
 notaxonomy = false
@@ -22,4 +22,7 @@ nodate = true
 hidemeta = false
 +++
 
-![Replacement Text](/rover/img/<topic>/<image>.png)
+# Contents
+
+
+# Introduction
