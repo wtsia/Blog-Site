@@ -91,6 +91,20 @@ The Public and Private keys are commutative and may be used to interchangeably b
 
 
 ## Euclidean Algorithm
+Technique to find the GCD of two integers
+
+The Euclidean Algorithm for finding $GCD(A,B)$ is as follows:
+- If $A = 0$ then $GCD(A,B)=B$, since the $GCD(0,B)=B$, and we can stop.  
+- If $B = 0$ then $GCD(A,B)=A$, since the $GCD(A,0)=A$, and we can stop.  
+- Write $A$ in quotient remainder form $(A = B⋅Q + R)$
+- Find $GCD(B,R)$ using the Euclidean Algorithm since $GCD(A,B) = GCD(B,R)$
+
+Example:
+$$
+GCD(270, 192) \\ 
+\rArr 270 = 192 * 1 +78 \\ 
+\rArr GCD(270,192)=GCD(192,78)
+$$
 ## Diffie-Hellman
 
 ## Stream Cipher
