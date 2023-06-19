@@ -28,6 +28,7 @@ hidemeta = false
 - [Concepts](#concepts)
   - [Basics](#basics)
     - [Indentation](#indentation)
+    - [Tuples, Named Tuples, and Sets](#tuples-named-tuples-and-sets)
   - [Operators and Expressions](#operators-and-expressions)
     - [Format Method: `format()`](#format-method-format)
     - [Escape Sequences](#escape-sequences)
@@ -187,6 +188,12 @@ Strings: a sequence of characters, can specify using single quotes
 ### Indentation
 - Indentation: Whitespace at the beginning of the line
 
+### Tuples, Named Tuples, and Sets
+```
+my_tuple = ()
+my_named_tuple = (, []) 
+my_set = {}
+```
 ## Operators and Expressions
 - Only non-intuitive uses will be listed
     - `**`: exponent
