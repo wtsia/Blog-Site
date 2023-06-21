@@ -51,6 +51,8 @@ hidemeta = false
       - [Aliasing](#aliasing)
 - [Closing Ideas](#closing-ideas)
     - [Loops](#loops)
+- [Objects and Classes](#objects-and-classes)
+  - [ArrayList](#arraylist)
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
@@ -501,3 +503,11 @@ public class myObject {
   - use Eclipse to generate default Swing application (Final Lab):
     - File>>New>>Create Java Project>>New>>Project Explorer>>New>>Other>>Swing Designer>>Application Window
 - It is helpful to review Discussion posts, homework assignments, group projects and quizzes.
+
+# Objects and Classes
+## ArrayList
+Common Methods:
+- `add()`: Create space for and add the element at the end of the list.
+- `get()`: Returns the element at the specified list location known as the index. Indices start at 0.
+- `set()`: Returns the element at the specified list location known as the index. Indices start at 0.
+- `size()`: Returns the number of list elements.

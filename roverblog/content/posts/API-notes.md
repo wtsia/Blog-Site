@@ -33,6 +33,7 @@ hidemeta = false
     - [Amazon](#amazon)
     - [Disney](#disney)
     - [Summary:](#summary)
+- [API360 Model](#api360-model)
 
 # **API Design**
 ## Introduction
@@ -42,11 +43,11 @@ API means Application Programming Interface.
 APIs enable many tools within an enterprise:
 - Scalability for increased business
 - Ecosystem for developers
-- Accessibilty to customers
+- Accessibility to customers
 - Information gathering
 
 ## Business Benefits
-- New Revenue (Google Maps)
+- New Revenue (Google Maps, Reddit--2023)
 - Reach and Retention (npr)
 - Faster Partnerships (Kayak)
 - Mobile and Omnichannel (Capital One, Facebook, Amazon, mobile apps)
@@ -60,10 +61,24 @@ Business Goals -> Digital Reach -> Business Results -> Data-drive Insights -> Bu
 
 ## Case Studies
 ### Amazon
->Amazon's devleopment of APIs in 2001-2002 connected the Amazon organization via web services. With good API documentation, the use of APIs in Amazon allowed for expansion towards infrastructure provisioning services--going from book retailer to AWS. Seamless switching from website to mobile.
+>Amazon's development of APIs in 2001-2002 connected the Amazon organization via web services. With good API documentation, the use of APIs in Amazon allowed for expansion towards infrastructure provisioning services--going from book retailer to AWS. Seamless switching from website to mobile.
 
 ### Disney
 >Disney's use of a band is an IoT device that enabled an Omnichannel method to access keys, rides, etc. This allowed not only widespread usage, but also data-drive approaches to problems.
 
 ### Summary:
 Define APIs. Understand Digital Feedback Loop. Business benefits, and API value in real life.
+
+# API360 Model
+- Alignment & Usefulness
+  - Create API Strategy (Key Deliverables: **Roadmap, Organization, Business**)
+- Engagement & Usability
+  - Marketing APIs (Key Deliverables: **Dev Program, API/DX Design Principles, API Consumer Toolkits, Education**)
+    - Marketing, Engagement, Ease of Use, Tools required
+- Scalability & Evolvability (Key Deliverables: **Architecture Guidelines, API Lifecycle, Roadmaps, Skills Training**)
+  - Future-proof + Appropriate Constraints, Optimized Usage > Standardization
+  - *Runtime? Version? Factors affecting design time scalability? Trends? Constraints? Leveraging current assets?*
+- Manageability & Security (Key Policies: **Analytics/Monitoring, Identity/Security, Infrastructure/Operations, Mangement Platform**)
+  - Good Tracking, Access Management
+  - *Metrics? Control? Privacy? Threats?*
+  - Policies: Analytics/Monitoring, Identity/Security, Infrastructure/Operations, Mangement Platform
