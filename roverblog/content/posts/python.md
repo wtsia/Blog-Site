@@ -24,6 +24,7 @@ hidemeta = false
 - [Example Program](#example-program)
 - [Programming Fundamentals](#programming-fundamentals)
   - [Methods](#methods)
+    - [Sets](#sets)
   - [Minor Concepts](#minor-concepts)
 - [Concepts](#concepts)
   - [Basics](#basics)
@@ -137,6 +138,10 @@ while count < 5:
 `.startswith()`: returns true or false if starts with the string
 
 `.endswith()`: returns true or false if ends with the string
+
+### Sets
+
+`set1.difference(set2)`: elements of set1 not in set2
 
 ## Minor Concepts
 - Can apply numerical operations on strings as well as lists
@@ -631,3 +636,4 @@ print(points)
 ## `logging` module
 - useful for storing debugging or important messages
 - The cat command is used in the command line to read the 'test.log' file. If the cat command is not available, you can open the test.log file in a text editor instead.
+
