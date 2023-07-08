@@ -52,6 +52,7 @@ hidemeta = false
 - [Closing Ideas](#closing-ideas)
     - [Loops](#loops)
 - [Objects and Classes](#objects-and-classes)
+  - [Wrapper Classes](#wrapper-classes)
   - [ArrayList](#arraylist)
 
 # Introduction
@@ -505,6 +506,8 @@ public class myObject {
 - It is helpful to review Discussion posts, homework assignments, group projects and quizzes.
 
 # Objects and Classes
+## Wrapper Classes
+Java's Collectin library only works with objects. For example, you can create an ArrayList of `Integer` elements (not `int`)
 ## ArrayList
 Common Methods:
 - `add()`: Create space for and add the element at the end of the list.

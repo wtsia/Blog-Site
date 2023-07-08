@@ -139,6 +139,8 @@ while count < 5:
 
 `.endswith()`: returns true or false if ends with the string
 
+`.isdigit()`: returns true if the entire string is digits
+
 ### Sets
 
 `set1.difference(set2)`: elements of set1 not in set2
