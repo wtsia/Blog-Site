@@ -54,6 +54,12 @@ hidemeta = false
 - [Objects and Classes](#objects-and-classes)
   - [Wrapper Classes](#wrapper-classes)
   - [ArrayList](#arraylist)
+- [Output Formatting](#output-formatting)
+- [Inheritance and Polymorphism](#inheritance-and-polymorphism)
+  - [Garbage Collection in Inheritance](#garbage-collection-in-inheritance)
+  - [Instance Data vs Local Variable](#instance-data-vs-local-variable)
+  - [Formal vs Actual Parameter](#formal-vs-actual-parameter)
+  - [Example Program](#example-program)
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
@@ -514,3 +520,85 @@ Common Methods:
 - `get()`: Returns the element at the specified list location known as the index. Indices start at 0.
 - `set()`: Returns the element at the specified list location known as the index. Indices start at 0.
 - `size()`: Returns the number of list elements.
+
+# Output Formatting
+```
+Format specifier	Data type(s)	Notes
+%c	char	Prints a single Unicode character
+%d	int, long, short	Prints a decimal integer value.
+%o	int, long, short	Prints an octal integer value.
+%h	int, char, long, short	Prints a hexadecimal integer value.
+%f	float, double	Prints a floating-point value.
+%e	float, double	Prints a floating-point value in scientific notation.
+%s	String	Prints the characters in a String variable or literal.
+%%		Prints the "%" character.
+%n		Prints the platform-specific new-line character.
+```
+
+```
+Sub-specifier	Description	Example
+width	Specifies the minimum number of characters to print. If the formatted value has more characters than the width, the value will not be truncated. If the formatted value has fewer characters than the width, the output will be padded with spaces (or 0's if the '0' flag is specified).	printf("Value: %7.2f", myFloat);
+Value:   12.34
+.precision	Specifies the number of digits to print following the decimal point. If the precision is not specified, a default precision of 6 is used.	printf("%.4f", myFloat);
+12.3400
+
+printf("%3.4e", myFloat);
+1.2340e+01
+flags	-: Left aligns the output given the specified width, padding the output with spaces.
++: Prints a preceding + sign for positive values. Negative numbers are always printed with the - sign.
+0: Pads the output with 0's when the formatted value has fewer characters than the width.
+space: Prints a preceding space for positive value.	printf("%+f", myFloat);
++12.340000
+printf("%08.2f", myFloat);
+00012.3
+```
+
+```
+width	Specifies the minimum number of characters to print. If the formatted value has more characters than the width, the value will not be truncated. If the formatted value has fewer characters than the width, the output will be padded with spaces (or 0's if the '0' flag is specified).	printf("Value: %7d", myInt);
+Value:     301
+flags	-: Left aligns the output given the specified width, padding the output with spaces.
++: Print a preceding + sign for positive values. Negative numbers are always printed with the - sign.
+0: Pads the output with 0's when the formatted value has fewer characters than the width.
+space: Prints a preceding space for positive value.	printf("%+d", myInt);
++301
+
+printf("%08d", myInt);
+00000301
+
+printf("%+08d", myInt);
++0000301
+```
+
+# Inheritance and Polymorphism
+## Garbage Collection in Inheritance
+- Local and formal released to garbage collecion
+## Instance Data vs Local Variable
+- Instance Data Variables exist as long as the object does
+  - Local variables are released for garbage collection for method runtime
+
+## Formal vs Actual Parameter
+- Formal is declared by method header with method scope, for external info
+- Actual passed during invocation for sending info to a method
+
+## Example Program
+```
+public class myObject {
+	private double myInstanceDataVar; 
+
+	public myConstructor(FormalParameter myData) {
+    myInstanceDataVar = myData;
+	}
+	
+	public double myMethod(double myInput) {
+    // example method
+		thing = thing + myInput;
+		return thing;
+	}
+
+  public static void main(String[] args) {
+    FormalParameter myActualParameter = new FormalParameter();
+    myClassMethod(myActualParameter);
+  }
+
+}
+```
