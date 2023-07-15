@@ -49,17 +49,24 @@ hidemeta = false
     - [Static Fields and Methods](#static-fields-and-methods)
     - [Mutable vs Immutable Objects](#mutable-vs-immutable-objects)
       - [Aliasing](#aliasing)
-- [Closing Ideas](#closing-ideas)
+- [Summary So Far](#summary-so-far-1)
     - [Loops](#loops)
 - [Objects and Classes](#objects-and-classes)
   - [Wrapper Classes](#wrapper-classes)
   - [ArrayList](#arraylist)
 - [Output Formatting](#output-formatting)
-- [Inheritance and Polymorphism](#inheritance-and-polymorphism)
+- [Objects and Classes](#objects-and-classes-1)
+    - [*Encapsulation*](#encapsulation)
   - [Garbage Collection in Inheritance](#garbage-collection-in-inheritance)
   - [Instance Data vs Local Variable](#instance-data-vs-local-variable)
   - [Formal vs Actual Parameter](#formal-vs-actual-parameter)
+    - [`new`](#new)
+    - [`null`](#null)
+    - [toString()](#tostring)
+    - [hashCode()](#hashcode)
+  - [Primitives Review](#primitives-review)
   - [Example Program](#example-program)
+- [Inheritance and Polymorphism](#inheritance-and-polymorphism)
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
@@ -407,7 +414,7 @@ Rectangle box1 = new Rectangle(0, 0, 100, 200);
 Rectangle box2 = box1;
 ```
 
-# Closing Ideas
+# Summary So Far
 - Definition of methods besides the main method
   - A method  is a list of statements executed by invoking the method's name (this is known as a method call). There are user defined methods and built in methods.
     - i.e. `sqrt(x), pow(x,y), abs(x)`
@@ -569,7 +576,9 @@ printf("%+08d", myInt);
 +0000301
 ```
 
-# Inheritance and Polymorphism
+# Objects and Classes
+### *Encapsulation*
+- single class in charge of respective data/functionality. Self-governing, and implementation hidden from user
 ## Garbage Collection in Inheritance
 - Local and formal released to garbage collecion
 ## Instance Data vs Local Variable
@@ -580,7 +589,33 @@ printf("%+08d", myInt);
 - Formal is declared by method header with method scope, for external info
 - Actual passed during invocation for sending info to a method
 
-## Example Program
+### `new`
+- allocates memory, executes constructor, and returns reference to object
+
+### `null`
+- allowed as assignment to *Primitives*
+> #### Allowed/!Allowed Operations
+> Compare with `==`. Can be short-circuiting as null-check.
+> Cannot invoke methods on `null`. 
+
+### toString()
+- String representation of object
+### hashCode()
+- returns unique identifier for an object
+
+## Primitives Review
+
+In Java, primitives are basic data types that represent the most fundamental values. They are built-in types provided by the Java language itself. Java has eight primitive types, which include:
+
+- byte: A 1-byte integer type representing values from -128 to 127.
+- short: A 2-byte integer type representing values from -32,768 to 32,767.
+- int: A 4-byte integer type representing values from -2,147,483,648 to 2,147,483,647.
+- long: An 8-byte integer type representing larger integer values.
+- float: A 4-byte floating-point type representing single-precision decimal values.
+- double: An 8-byte floating-point type representing double-precision decimal values.
+- char: A 2-byte type representing a single character using the Unicode encoding scheme.
+- boolean: A 1-bit type representing true or false values.
+## Example Program 
 ```
 public class myObject {
 	private double myInstanceDataVar; 
@@ -602,3 +637,9 @@ public class myObject {
 
 }
 ```
+
+# Inheritance and Polymorphism
+| | Re-usability | Abstraction |
+|:----------:|:----------:|:----------:|
+| Inheritance  | Extending | Parent Classes|
+| Composition  | Using | Interfaces |
