@@ -28,7 +28,8 @@ hidemeta = false
   - [Minor Concepts](#minor-concepts)
 - [Concepts](#concepts)
   - [Basics](#basics)
-    - [Indentation](#indentation)
+  - [Data Types](#data-types)
+    - [Lists](#lists)
     - [Tuples, Named Tuples, and Sets](#tuples-named-tuples-and-sets)
   - [Operators and Expressions](#operators-and-expressions)
     - [Format Method: `format()`](#format-method-format)
@@ -192,8 +193,29 @@ Strings: a sequence of characters, can specify using single quotes
 - are immutable
 - C++ users: there is not separate `char` data type in Python.
 
-### Indentation
-- Indentation: Whitespace at the beginning of the line
+## Data Types
+| Type | Description |
+|:---:|:---:|
+| Lists | Lists are ordered collections of elements. They can contain elements of different data types, and their size can change dynamically. Lists are defined using square brackets []. |
+| Tuples | Tuples are similar to lists but are immutable, meaning their elements cannot be modified after creation. They are defined using parentheses (). |
+| Sets | Sets are unordered collections of unique elements. They do not allow duplicate values. Sets are useful for tasks like removing duplicates and performing mathematical set operations. Sets are defined using curly braces {} or the set() function. |
+| Dictionaries | Dictionaries are key-value pairs, where each value is associated with a unique key. They provide fast lookup based on keys and are useful for representing mappings and associations. Dictionaries are defined using curly braces {} and colon : to separate keys and values. |
+| Strings | Strings are sequences of characters. Although not explicitly a data structure, strings are fundamental in Python for representing and manipulating text data. They are immutable, meaning their characters cannot be changed after creation. |
+| Arrays | Arrays are fixed-size, homogenous collections of elements of the same type. They are provided by the array module in Python's standard library and offer efficient storage and manipulation of numerical data. |
+| Stacks | Stacks are a type of data structure that follows the Last-In-First-Out (LIFO) principle. Elements are added or removed from one end, known as the top of the stack. |
+| Queues | Queues are data structures that follow the First-In-First-Out (FIFO) principle. Elements are added at the end (rear) and removed from the front (front) of the queue. |
+| LinkedLists | Linked lists are dynamic data structures consisting of nodes that hold data and a reference to the next node. They are useful for efficient insertion and deletion of elements. |
+| Trees | Trees are hierarchical data structures composed of nodes connected by edges. They have a root node and child nodes, forming a tree-like structure. Examples include binary trees, AVL trees, and binary search trees. |
+| Graphs | Graphs are structures consisting of nodes (vertices) and edges that connect them. Graphs are useful for modeling complex relationships and are used in various algorithms and applications. |
+
+### Lists
+- **Ordered**: The elements in a list have a specific order, and this order is maintained. You can access elements by their index, starting from 0 for the first element.
+
+- **Mutable**: Lists can be modified after creation. You can add, remove, or change elements within a list.
+
+- **Heterogeneous**: A list can contain elements of different data types. It is not restricted to store elements of the same type.
+
+- **Variable Length**: Lists can dynamically grow or shrink in size. You can add or remove elements as needed.
 
 ### Tuples, Named Tuples, and Sets
 ```
