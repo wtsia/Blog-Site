@@ -52,11 +52,12 @@ hidemeta = false
 - [Summary So Far](#summary-so-far-1)
     - [Loops](#loops)
 - [Objects and Classes: Introduction](#objects-and-classes-introduction)
+    - [Operator](#operator)
     - [Methods:](#methods)
   - [Wrapper Classes](#wrapper-classes)
   - [ArrayList](#arraylist)
   - [Output Formatting](#output-formatting)
-- [Objects and Classes](#objects-and-classes)
+- [Objects and Classes: Design](#objects-and-classes-design)
     - [*Encapsulation*](#encapsulation)
   - [Garbage Collection in Inheritance](#garbage-collection-in-inheritance)
   - [Instance Data vs Local Variable](#instance-data-vs-local-variable)
@@ -68,7 +69,12 @@ hidemeta = false
   - [Primitives Review](#primitives-review)
   - [Example Program](#example-program)
 - [Inheritance and Polymorphism](#inheritance-and-polymorphism)
+  - [Concepts](#concepts-1)
+  - [Keywords](#keywords)
+  - [Inheritance](#inheritance)
+    - [Design](#design)
   - [Polymorphism](#polymorphism)
+  - [Programming and Common Errors](#programming-and-common-errors)
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
@@ -521,8 +527,12 @@ public class myObject {
 - It is helpful to review Discussion posts, homework assignments, group projects and quizzes.
 
 # Objects and Classes: Introduction
+### Operator
+- `instanceof`
+  - example: `if(obj instanceof MyObject) { }`
 ### Methods:
 - `equals()`: checks if two objects have the same *reference*.
+  - `equalsIgnoreCase()`
 ## Wrapper Classes
 Java's Collectin library only works with objects. For example, you can create an ArrayList of `Integer` elements (not `int`)
 ## ArrayList
@@ -533,18 +543,18 @@ Common Methods:
 - `size()`: Returns the number of list elements.
 
 ## Output Formatting
-```
-Format specifier	Data type(s)	Notes
-%c	char	Prints a single Unicode character
-%d	int, long, short	Prints a decimal integer value.
-%o	int, long, short	Prints an octal integer value.
-%h	int, char, long, short	Prints a hexadecimal integer value.
-%f	float, double	Prints a floating-point value.
-%e	float, double	Prints a floating-point value in scientific notation.
-%s	String	Prints the characters in a String variable or literal.
-%%		Prints the "%" character.
-%n		Prints the platform-specific new-line character.
-```
+| Format specifier |	Data type(s)	| Notes |
+|:---:|:---:|:---:|
+| %c	| char	| Prints a single Unicode character |
+| %d	| int, long, short	| Prints a decimal integer value. |
+| %o	| int, long, short	| Prints an octal integer value. |
+| %h	| int, char, long, short	| Prints a hexadecimal integer value. |
+| %f	| float, double	| Prints a floating-point value. |
+| %e	| float, double	| Prints a floating-point value in scientific notation. |
+| %s	| String	| Prints the characters in a String variable or literal. |
+| %%	| 	| Prints the "%" character. |
+| %n	| 	| Prints the platform-specific new-line character. |
+
 
 ```
 Sub-specifier	Description	Example
@@ -580,7 +590,7 @@ printf("%+08d", myInt);
 +0000301
 ```
 
-# Objects and Classes
+# Objects and Classes: Design
 ### *Encapsulation*
 - single class in charge of respective data/functionality. Self-governing, and implementation hidden from user
 ## Garbage Collection in Inheritance
@@ -611,14 +621,22 @@ printf("%+08d", myInt);
 
 In Java, primitives are basic data types that represent the most fundamental values. They are built-in types provided by the Java language itself. Java has eight primitive types, which include:
 
-- byte: A 1-byte integer type representing values from -128 to 127.
-- short: A 2-byte integer type representing values from -32,768 to 32,767.
-- int: A 4-byte integer type representing values from -2,147,483,648 to 2,147,483,647.
-- long: An 8-byte integer type representing larger integer values.
-- float: A 4-byte floating-point type representing single-precision decimal values.
-- double: An 8-byte floating-point type representing double-precision decimal values.
-- char: A 2-byte type representing a single character using the Unicode encoding scheme.
-- boolean: A 1-bit type representing true or false values.
+- `byte`: 
+  - A 1-byte integer type representing values from -128 to 127.
+- `short`: 
+  - A 2-byte integer type representing values from -32,768 to 32,767.
+- `int`: 
+  - A 4-byte integer type representing values from -2,147,483,648 to 2,147,483,647.
+- `long`: 
+  - An 8-byte integer type representing larger integer values.
+- `float`: 
+  - A 4-byte floating-point type representing single-precision decimal values.
+- `double`: 
+  - An 8-byte floating-point type representing double-precision decimal values.
+- `char`: 
+  - A 2-byte type representing a single character using the Unicode encoding scheme.
+- `boolean`: 
+  - A 1-bit type representing true or false values.
 ## Example Program 
 ```
 public class myObject {
@@ -643,12 +661,61 @@ public class myObject {
 ```
 
 # Inheritance and Polymorphism
+## Concepts
+- Downcasting/Upcasting:
+  - Casting an object down and up a hierarchy
+  - `Animal myAnimal = new Dog()`
+    - Dog is subclass of animal, therefore Dog is upacasted to Animal Animal
+## Keywords
+- `final`: restricts Inheritance
+## Inheritance
 | | Re-usability | Abstraction |
 |:----------:|:----------:|:----------:|
 | Inheritance  | Extending | Parent Classes|
 | Composition  | Using | Interfaces |
 
+### Design
+1. Always is-a
+2. Optimize Reuse--push methods high in the hierarchy
+3. Purposeful Overriding
+4. Encapsulation
+5. Override general Object methods (`toStirng`, `equals`)
+6. Optimize visibility modifiers--zero trust
 ## Polymorphism
-Treating different classes as objects of one superclass.
+Treating different classes as objects of one superclass. Objects have declared and actual types. Utilizes `instanceof` and downcasting. Uses a single interface.
 
-There are two main types of polymorphism: compile-time polymorphism (also known as method overloading) and runtime polymorphism (also known as method overriding)
+There are two main types of polymorphism: compile-time polymorphism (**overloading**) and runtime polymorphism (**overriding**)
+```
+public class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+    
+    // Overloading
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+```
+
+## Programming and Common Errors
+- `equals` Method header (Overriding `equals()`):
+```
+public boolean Object(Employee e) {
+// Should be type Object, not Employee i.e. (Object obj)
+  if (obj instanceof Employee) {
+    Employee otherEmployee = (Employee) obj; // Casting to type Employee
+  }
+}
+```
