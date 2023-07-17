@@ -51,11 +51,12 @@ hidemeta = false
       - [Aliasing](#aliasing)
 - [Summary So Far](#summary-so-far-1)
     - [Loops](#loops)
-- [Objects and Classes](#objects-and-classes)
+- [Objects and Classes: Introduction](#objects-and-classes-introduction)
+    - [Methods:](#methods)
   - [Wrapper Classes](#wrapper-classes)
   - [ArrayList](#arraylist)
-- [Output Formatting](#output-formatting)
-- [Objects and Classes](#objects-and-classes-1)
+  - [Output Formatting](#output-formatting)
+- [Objects and Classes](#objects-and-classes)
     - [*Encapsulation*](#encapsulation)
   - [Garbage Collection in Inheritance](#garbage-collection-in-inheritance)
   - [Instance Data vs Local Variable](#instance-data-vs-local-variable)
@@ -67,6 +68,7 @@ hidemeta = false
   - [Primitives Review](#primitives-review)
   - [Example Program](#example-program)
 - [Inheritance and Polymorphism](#inheritance-and-polymorphism)
+  - [Polymorphism](#polymorphism)
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
@@ -236,8 +238,8 @@ values = new double[size];
 // (at the time the array is created)
 ```
 
-- `toString`, returns a string representation of an array.
-- `copyOf` , copies an array
+- `toString()`, returns a string representation of an array.
+- `copyOf()` , copies an array
   - `double[] data = Arrays.copyOf(values, 3);`
 
 #### Array are references
@@ -518,7 +520,9 @@ public class myObject {
     - File>>New>>Create Java Project>>New>>Project Explorer>>New>>Other>>Swing Designer>>Application Window
 - It is helpful to review Discussion posts, homework assignments, group projects and quizzes.
 
-# Objects and Classes
+# Objects and Classes: Introduction
+### Methods:
+- `equals()`: checks if two objects have the same *reference*.
 ## Wrapper Classes
 Java's Collectin library only works with objects. For example, you can create an ArrayList of `Integer` elements (not `int`)
 ## ArrayList
@@ -528,7 +532,7 @@ Common Methods:
 - `set()`: Returns the element at the specified list location known as the index. Indices start at 0.
 - `size()`: Returns the number of list elements.
 
-# Output Formatting
+## Output Formatting
 ```
 Format specifier	Data type(s)	Notes
 %c	char	Prints a single Unicode character
@@ -643,3 +647,8 @@ public class myObject {
 |:----------:|:----------:|:----------:|
 | Inheritance  | Extending | Parent Classes|
 | Composition  | Using | Interfaces |
+
+## Polymorphism
+Treating different classes as objects of one superclass.
+
+There are two main types of polymorphism: compile-time polymorphism (also known as method overloading) and runtime polymorphism (also known as method overriding)

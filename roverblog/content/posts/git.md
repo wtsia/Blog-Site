@@ -1,9 +1,9 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "{{ replace .Name "-" " " | title }}"
-date = {{ .Date }}
-description = "Notes on {{ replace .Name "-" " " | title }}"
+title = "Git"
+date = 2023-07-16T19:47:45-07:00
+description = "Notes on Git"
 tags = [
     "tag1",
     "tag2",
@@ -26,3 +26,12 @@ hidemeta = false
 
 # Contents
 - [Contents](#contents)
+- [Basic Commands](#basic-commands)
+  - [VSCode](#vscode)
+
+# Basic Commands
+## VSCode
+- Pushing code to a repo
+```
+Ctrl + Shift + P -> Type "Git: Push"
+```
