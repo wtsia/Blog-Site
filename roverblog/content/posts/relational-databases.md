@@ -501,6 +501,7 @@ How do we know this is correct? We can also check manually and cross reference e
 
 ### Group Query and Filter (8)
 
+
 # Database Triggers
 A history of edits made to tables in a database. 
 

@@ -144,6 +144,10 @@ World
 - To declare a constant variable, use `final`: `final double varName = 111`
 
 ### Unit Tests
+```
+// assert testExpression: detailedMessage;
+assert (myVal(0,1) == 0) : "Assertion (0,1) failed"; 
+```
 
 ### Formatted Strings
 ```
