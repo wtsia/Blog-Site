@@ -144,10 +144,16 @@ World
 - To declare a constant variable, use `final`: `final double varName = 111`
 
 ### Unit Tests
+Unit tests test a programs intended function by inputing data, its expected output, and its real output, or a FAILED statement.
+
+**Single Unit Tests**:
 ```
 // assert testExpression: detailedMessage;
 assert (myVal(0,1) == 0) : "Assertion (0,1) failed"; 
 ```
+
+**Class-wide**:
+You can test across a class using multiple methods and printing FAIL statements.
 
 ### Formatted Strings
 ```
