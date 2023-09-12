@@ -24,6 +24,7 @@ hidemeta = false
 - [Relational Databases: MySQL](#relational-databases-mysql)
   - [Outcomes](#outcomes)
 - [Basic Commands](#basic-commands)
+- [Relational Algebra](#relational-algebra)
 - [Starting a MySQL Instance](#starting-a-mysql-instance)
 - [Entity Relationship (ER) Model](#entity-relationship-er-model)
   - [ER Diagram Example](#er-diagram-example)
@@ -77,6 +78,36 @@ updating a table entry:
 ```
 UPDATE table_name SET field='value' WHERE attribute='value';
 ```
+# Relational Algebra
+Relational algebra is a formal and mathematical framework used to manipulate and query data stored in relational database management systems (RDBMS). It provides a set of operations and rules for working with relational databases, allowing users to retrieve, modify, and combine data in a structured and systematic way. Relational algebra serves as the foundation for SQL (Structured Query Language), which is the standard language for interacting with relational databases.
+
+The fundamental components of relational algebra are:
+
+1. Relations: In relational algebra, data is organized into tables called relations. Each relation consists of rows (tuples) and columns (attributes). Rows represent individual records, while columns represent the attributes or characteristics of the data.
+
+2. Operations: Relational algebra defines various operations that can be applied to relations. These operations can be categorized into two main types:
+
+   a. Unary Operations: These operations work on a single relation.
+      - Selection (σ): It selects rows from a relation that satisfy a specified condition. For example, you can use the selection operation to retrieve all customers with a certain age.
+
+      - Projection (π): It selects specific columns (attributes) from a relation while preserving the rows. This operation helps in creating new relations with a subset of attributes.
+
+      - Renaming (ρ): This operation is used to assign new names to relations and their attributes. It can be helpful when combining multiple relations.
+
+   b. Binary Operations: These operations involve two relations and are used to create new relations by combining or comparing existing ones.
+      - Union (∪): Combines two relations to produce a new relation containing all distinct rows from both input relations.
+
+      - Intersection (∩): Generates a new relation containing rows that are common to both input relations.
+
+      - Set Difference (-): Produces a new relation containing rows from the first input relation that are not present in the second input relation.
+
+      - Cartesian Product (×): Combines all possible pairs of rows from two input relations, resulting in a new relation with a potentially large number of rows.
+
+      - Join (⨝): This operation combines rows from two relations based on a specified condition. Joins are essential for retrieving related data from multiple tables.
+
+Relational algebra operations can be combined and nested to create complex queries that retrieve, transform, and filter data as needed. SQL queries are essentially expressions in relational algebra, with SQL providing a more user-friendly interface for interacting with relational databases.
+
+In summary, relational algebra is a mathematical framework used to perform operations on relational databases. It provides a formal and systematic way to query and manipulate data stored in tables, and it forms the basis for the SQL language used in practice for working with relational databases.
 
 # Starting a MySQL Instance
 Per instructions on [mysql's docker page](https://hub.docker.com/_/mysql), we will be making a docker compose file with the following recommended settings. This will be done on a Linux based OS:
