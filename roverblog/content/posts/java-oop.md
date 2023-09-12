@@ -75,6 +75,7 @@ hidemeta = false
     - [Design](#design)
   - [Polymorphism](#polymorphism)
   - [Programming and Common Errors](#programming-and-common-errors)
+- [Algorithms](#algorithms)
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
@@ -729,3 +730,5 @@ public boolean Object(Employee e) {
   }
 }
 ```
+
+# Algorithms

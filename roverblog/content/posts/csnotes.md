@@ -47,6 +47,8 @@ hidemeta = false
   - [Algorithms](#algorithms)
     - [Binary Search](#binary-search)
     - [Selection Sort](#selection-sort)
+    - [Insertion Sort](#insertion-sort)
+    - [Shell Sort](#shell-sort)
     - [Merge sort:](#merge-sort)
     - [Binary tree](#binary-tree)
     - [Heap:](#heap)
@@ -370,11 +372,29 @@ $\Omega (n)$
 
 ## Algorithms
 ### Binary Search
-- Check middle element and search from middle element, similar to math approximation algorithm when finding root values.
+- Check middle element and search from middle element going left or right, similar to math approximation algorithm when finding root values.
 
 ### Selection Sort
-- Linear scan $O(n^2)$
+A sorting algorithm that treats the input as two parts, a sorted part and an unsorted part, and repeatedly selects the proper next value to move from the unsorted part to the end of the sorted part.
+  - $O(n^2)$
     
+### Insertion Sort
+is a sorting algorithm that treats the input as two parts, a sorted part and an unsorted part, and repeatedly inserts the next value from the unsorted part into the correct location in the sorted part.
+
+The algorithm iterates over the data like so:
+$$
+N + (N-1) + (N-1) + ... + 2
+= N(N+1)/2 - 2 
+\\ = 1/2(N^2 + N) - 2
+$$
+- The time complexity reduces to $O(n^2)$
+### Shell Sort
+A sorting algorithm that treats the input as a collection of interleaved lists, and sorts each list individually with a variant of the insertion sort algorithm. Shell sort uses gap values to determine the number of interleaved lists. A gap value is a positive integer representing the distance between elements in an interleaved list. For each interleaved list, if an element is at index i, the next element is at index i + gap value.
+
+Shell sort begins by choosing a gap value K and sorting K interleaved lists in place. Shell sort finishes by performing a standard insertion sort on the entire array. Because the interleaved parts have already been sorted, smaller elements will be close to the array's beginning and larger elements towards the end. Insertion sort can then quickly sort the nearly-sorted array.
+
+Any positive integer gap value can be chosen. In the case that the array size is not evenly divisible by the gap value, some interleaved lists will have fewer items than others.
+
 ### Merge sort: 
 - splits collection into subcollections that can be sorted in constant time
 - merge $log(n)$ sublists
