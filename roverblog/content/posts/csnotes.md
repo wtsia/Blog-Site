@@ -45,19 +45,22 @@ hidemeta = false
     - [O-notation](#o-notation)
     - [$\\Omega$-notation](#omega-notation)
   - [Algorithms](#algorithms)
-    - [Binary Search](#binary-search)
-    - [Selection Sort](#selection-sort)
-    - [Insertion Sort](#insertion-sort)
-    - [Shell Sort](#shell-sort)
-    - [Merge sort:](#merge-sort)
-    - [Binary tree](#binary-tree)
-    - [Heap:](#heap)
+    - [Search](#search)
+      - [Binary Search](#binary-search)
     - [Depth First Search:](#depth-first-search)
     - [Breadth First Search:](#breadth-first-search)
-    - [Edges and Vertices](#edges-and-vertices)
-    - [Dijkstra's Algorithm](#dijkstras-algorithm)
-    - [Topological Sort](#topological-sort)
-    - [Hash Map](#hash-map)
+    - [Sort](#sort)
+      - [Selection Sort](#selection-sort)
+      - [Insertion Sort](#insertion-sort)
+      - [Shell Sort](#shell-sort)
+      - [Quicksort](#quicksort)
+      - [Merge sort:](#merge-sort)
+      - [Topological Sort](#topological-sort)
+      - [Binary tree](#binary-tree)
+      - [Heap:](#heap)
+      - [Edges and Vertices](#edges-and-vertices)
+      - [Dijkstra's Algorithm](#dijkstras-algorithm)
+      - [Hash Map](#hash-map)
 # Basics
 ## Bits/Bytes
 - `0`s and `1`s are known as bits--*binary digits*
@@ -371,14 +374,29 @@ $\Omega (n)$
 
 
 ## Algorithms
-### Binary Search
+### Search
+#### Binary Search
 - Check middle element and search from middle element going left or right, similar to math approximation algorithm when finding root values.
 
-### Selection Sort
+### Depth First Search: 
+iterates vertically through first branch to the end, then the other leaf nodes
+- Stack: a collection that supports push (add to end) and pop (remove from end)
+    - Last in First Out
+    - Recursion
+        - if Recursion exceeds amount of depth, you get stack overflow
+
+### Breadth First Search: 
+iterates through horizontal branches and progresses downward
+- Queue: First in First Out
+
+
+### Sort
+
+#### Selection Sort
 A sorting algorithm that treats the input as two parts, a sorted part and an unsorted part, and repeatedly selects the proper next value to move from the unsorted part to the end of the sorted part.
   - $O(n^2)$
     
-### Insertion Sort
+#### Insertion Sort
 is a sorting algorithm that treats the input as two parts, a sorted part and an unsorted part, and repeatedly inserts the next value from the unsorted part into the correct location in the sorted part.
 
 The algorithm iterates over the data like so:
@@ -388,14 +406,43 @@ N + (N-1) + (N-1) + ... + 2
 \\ = 1/2(N^2 + N) - 2
 $$
 - The time complexity reduces to $O(n^2)$
-### Shell Sort
+
+
+#### Shell Sort
 A sorting algorithm that treats the input as a collection of interleaved lists, and sorts each list individually with a variant of the insertion sort algorithm. Shell sort uses gap values to determine the number of interleaved lists. A gap value is a positive integer representing the distance between elements in an interleaved list. For each interleaved list, if an element is at index i, the next element is at index i + gap value.
+```
+mainArray = [ 79, 13, 91, 67, 65, 98 ];
+gapArray = [ 3, 2, 1 ];
+
+Shell sort of the original array with a gap value of 3 sorts 3 interleaved arrays:
+[ 79, 67 ] -> [ 67, 79 ]
+[ 13, 65 ] -> [ 13, 65 ]
+[ 91, 98 ] -> [ 91, 98 ]
+Resulting array: [ 67, 13, 91, 79, 65, 98 ]
+
+Shell sort of the resulting array with a gap value of 2 sorts 2 interleaved arrays:
+[ 67, 91, 65 ] -> [ 65, 67, 91 ]
+[ 13, 79, 98 ] -> [ 13, 79, 98 ]
+Resulting array: [ 65, 13, 67, 79, 91, 98 ]
+
+Shell sort of the resulting array with a gap value of 1 is a regular insertion sort and gives the sorted array: [ 13, 65, 67, 79, 91, 98 ]
+```
 
 Shell sort begins by choosing a gap value K and sorting K interleaved lists in place. Shell sort finishes by performing a standard insertion sort on the entire array. Because the interleaved parts have already been sorted, smaller elements will be close to the array's beginning and larger elements towards the end. Insertion sort can then quickly sort the nearly-sorted array.
 
 Any positive integer gap value can be chosen. In the case that the array size is not evenly divisible by the gap value, some interleaved lists will have fewer items than others.
 
-### Merge sort: 
+The algorithm iterates over the data like so:
+$$
+
+$$
+
+#### Quicksort
+A sorting algorithm that repeatedly partitions the input into low and high parts (each part unsorted), and then recursively sorts each of those parts. To partition the input, quicksort chooses a pivot to divide the data into low and high parts. The pivot can be any value within the array being sorted, commonly the value of the middle array element. Ex: For the list (4, 34, 10, 25, 1), the middle element is located at index 2 (the middle of indices [0, 4]) and has a value of 10.
+
+Once the pivot is chosen, the quicksort algorithm divides the array into two parts, referred to as the low partition and the high partition. All values in the low partition are less than or equal to the pivot value. All values in the high partition are greater than or equal to the pivot value. The values in each partition are not necessarily sorted. Ex: Partitioning (4, 34, 10, 25, 1) with a pivot value of 10 results in a low partition of (4, 1, 10) and a high partition of (25, 34). Values equal to the pivot may appear in either or both of the partitions.
+
+#### Merge sort: 
 - splits collection into subcollections that can be sorted in constant time
 - merge $log(n)$ sublists
 - cost of merging 2 sorted lists $O(n)$
@@ -405,33 +452,31 @@ Any positive integer gap value can be chosen. In the case that the array size is
 - `linked list`: packed data into nodes that point to another node, null is end of the list
     - appending to dynamically sized array costs $O(1)$ average time complexity
 
-### Binary tree
+#### Topological Sort
+
+
+#### Binary tree
 - node with no children is called leaf node
 - Binary Search Tree: Value of the key of the left sub-tree is less than the value of its parent node's key, while right is greater or equal to the value of parent's (root) node key
     - $O(H)$ where H is height of the tree, for operations of search, insert, and delete
     - Red/Black trees: maintain features to accomplish $O(log(n))$
-### Heap: 
+
+#### Heap: 
 A tree based data structure where parent nodes have >= priority as children nodes
 - Priority Queue: abstract data type where elements have priority and higher priority elements are served first (common in heap)
 - Min heap, max heap
 - Heap Insertion/Deletion costs $O(log(n))$
 - Retrieving highest priority costs $O(1)$
 - building heap costs $O(n)$
-### Depth First Search: 
-iterates vertically through first branch to the end, then the other leaf nodes
-- Stack: a collection that supports push (add to end) and pop (remove from end)
-    - Last in First Out
-    - Recursion
-        - if Recursion exceeds amount of depth, you get stack overflow
-### Breadth First Search: 
-iterates through horizontal branches and progresses downward
-- Queue: First in First Out
-### Edges and Vertices
+
+#### Edges and Vertices
 - Edges are relationships between vertices
 - ex. Google Maps
     - vertices of 3 places, where distance between a home node to a destination is 8 (home to secondary) + 8 (secondary to destination) on one end and a direct edge of 20 (home to destination) on the other
         - BFS gives shortest path by vertices, not by weight (length), so use Dijkstra's Algorithm
-### Dijkstra's Algorithm
+
+
+#### Dijkstra's Algorithm
 - [Computerphile - Dijikstra's Algorithm](https://www.youtube.com/watch?v=GazC3A4OQTE)
 - A path-finding algorithm, useful for routing
 - Analogy: Roads
@@ -448,9 +493,8 @@ iterates through horizontal branches and progresses downward
     4. after considering unvisited nodes, mark current nodes, remove from unvisited set
     5. if destination has been visited, or smallest tentative distance among unvisited nodes is infinity, return finished.
     6. else select unvisited node that is marked with smallest tentative distance and set it as new current node, return to step 3.
-
-### Topological Sort
-### Hash Map
+   
+#### Hash Map
 - Data structure built on top of an array optimized to store key-value pairs
 - Can retrieve delete and store data in $O(1)$ (but not strictly)
 - Hash function: takes key and returns hash code
