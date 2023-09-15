@@ -55,6 +55,7 @@ hidemeta = false
       - [Shell Sort](#shell-sort)
       - [Quicksort](#quicksort)
       - [Merge sort:](#merge-sort)
+      - [Radix Sort](#radix-sort)
       - [Topological Sort](#topological-sort)
       - [Binary tree](#binary-tree)
       - [Heap:](#heap)
@@ -443,14 +444,21 @@ A sorting algorithm that repeatedly partitions the input into low and high parts
 Once the pivot is chosen, the quicksort algorithm divides the array into two parts, referred to as the low partition and the high partition. All values in the low partition are less than or equal to the pivot value. All values in the high partition are greater than or equal to the pivot value. The values in each partition are not necessarily sorted. Ex: Partitioning (4, 34, 10, 25, 1) with a pivot value of 10 results in a low partition of (4, 1, 10) and a high partition of (25, 34). Values equal to the pivot may appear in either or both of the partitions.
 
 #### Merge sort: 
+A sorting algorithm that divides a list into two halves, recursively sorts each half, and then merges the sorted halves to produce a sorted list. The recursive partitioning continues until a list of 1 element is reached, as a list of 1 element is already sorted
+
 - splits collection into subcollections that can be sorted in constant time
 - merge $log(n)$ sublists
 - cost of merging 2 sorted lists $O(n)$
-- merge sort runs $n*log(n) = O(n log(n))$
+- merge sort runs $n*log(n) = O(n\ log(n))$
 
 - `array`: continuous memory space
 - `linked list`: packed data into nodes that point to another node, null is end of the list
     - appending to dynamically sized array costs $O(1)$ average time complexity
+
+#### Radix Sort
+Radix sort is a sorting algorithm designed specifically for integers. The algorithm makes use of a concept called buckets and is a type of bucket sort.
+
+Any array of integer values can be subdivided into buckets by using the integer values' digits. A bucket is a collection of integer values that all share a particular digit value. Ex: Values 57, 97, 77, and 17 all have a 7 as the 1's digit, and would all be placed into bucket 7 when subdividing by the 1's digit.
 
 #### Topological Sort
 
