@@ -96,9 +96,90 @@ _______________________ n = 0
 _________     _________ n = 1
 ___   ___     ___   ___ n = 2
 _ _   _ _     _ _   _ _ n = 3
-...
+...                     n = N
 ```
 
 Similarly, for $n$ depth, our char array for a Sierpinski Triangle will have some length of points removed within the line. Because of the nature of the problem, we are dealing with a *discrete* line, of which we have to figure out what portion of the length is removed, and being able to discern the pattern of removal. 
+
+However, a unique quirk of the problem is that the removal will have to be spaced, as to print an upside-down triangle within a triangle, each line removed gets smaller as the triangle tends to the end of the `char` array. For example, a 4 sided triangle:
+```
+   *
+  ***
+ ******
+********
+```
+with its center removed, 
+```
+   *
+  ***
+ *   *
+*** ***
+```
+and deconstructed, when printed from left to right, becomes:
+```
+char[] thisArray = [
+    '*','*','*','*','*',' ',' ',' ','*','*','*','*',' ','*','*','*'
+    ]
+```
+
+Example (`depth = 0, 1, 2`)
+```
+// depth = 0
+       *
+      ***
+     *****
+    *******
+   *********
+  ***********
+ *************
+***************
+
+// depth = 1
+       *
+      ***
+     *****
+    *******
+   *       *
+  ***     ***
+ *****   *****
+******* *******
+
+=> spaces as 0 =>
+
+*****************0000000****00000********000************0*******
+|_______________||_____||__||___||______||_||__________|||_____|
+        16          7    4    5      8    3      12     1   7
+```
+
+Noticeably, the asterisks and spaces follow a pattern like so:
+
+$$
+'*' = \{16, 4, 8, 12, 7\}
+\\\\
+'\ \ ' = \{7, 5, 3, 1\}
+$$
+
+And for `depth = 2`, since it recursively iterates on the previous `depth = 1` triangle, we simply remove asterisks from the same `char[]` array:
+```
+// depth = 2
+       *
+      ***
+     *   *
+    *** ***
+   *       *
+  ***     ***
+ *   *   *   *
+*** *** *** ***
+
+// old line
+*****************0000000****00000********000************0*******
+|_______________||_____||__||___||______||_||__________|||_____|
+        16          7    4    5      8    3      12     1   7
+=> spaces as 0 =>
+// new line
+*****000****0****0000000****00000****000*000*000****0***0***0***
+|___|___|___|___||_____||__||___||__||_|||_|||_||__|||_|||_|||_|
+      3     1                         3       3     1       1
+```
 
 ### As Two-Dimensional `char[][]` Array

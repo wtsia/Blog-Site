@@ -107,6 +107,20 @@ The fundamental components of relational algebra are:
 
 Relational algebra operations can be combined and nested to create complex queries that retrieve, transform, and filter data as needed. SQL queries are essentially expressions in relational algebra, with SQL providing a more user-friendly interface for interacting with relational databases.
 
+| Operation         | Description                                                                                             |
+|-------------------|---------------------------------------------------------------------------------------------------------|
+| **Unary Operations** | These operations work on a single relation.                                                              |
+| Selection (σ)      | It selects rows from a relation that satisfy a specified condition. For example, you can use the selection operation to retrieve all customers with a certain age. |
+| Projection (π)     | It selects specific columns (attributes) from a relation while preserving the rows. This operation helps in creating new relations with a subset of attributes. |
+| Renaming (ρ)       | This operation is used to assign new names to relations and their attributes. It can be helpful when combining multiple relations. |
+| **Binary Operations** | These operations involve two relations and are used to create new relations by combining or comparing existing ones. |
+| Union (∪)           | Combines two relations to produce a new relation containing all distinct rows from both input relations. |
+| Intersection (∩)   | Generates a new relation containing rows that are common to both input relations. |
+| Set Difference (-) | Produces a new relation containing rows from the first input relation that are not present in the second input relation. |
+| Cartesian Product (×) | Combines all possible pairs of rows from two input relations, resulting in a new relation with a potentially large number of rows. |
+| Join (⨝)           | This operation combines rows from two relations based on a specified condition. Joins are essential for retrieving related data from multiple tables. |
+
+
 In summary, relational algebra is a mathematical framework used to perform operations on relational databases. It provides a formal and systematic way to query and manipulate data stored in tables, and it forms the basis for the SQL language used in practice for working with relational databases.
 
 # Starting a MySQL Instance
