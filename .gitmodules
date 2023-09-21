@@ -3,3 +3,6 @@
 	url = https://github.com/dataCobra/hugo-vitae.git
 	branch = main
 
+[submodule "main"]
+	path = roverblog/public
+	url = https://github.com/wtsia/rover.git
