@@ -2,3 +2,8 @@
 	path = roverblog/public
 	url = https://github.com/wtsia/rover.git
 	branch = main
+[submodule "roverblog/themes/hugo-vitae"]
+	path = roverblog/themes/hugo-vitae
+	url = https://github.com/dataCobra/hugo-vitae.git
+	branch = main
+
