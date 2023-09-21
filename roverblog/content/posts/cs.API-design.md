@@ -19,9 +19,7 @@ norobots = true
 nodate = true
 hidemeta = false
 +++
-
-![Replacement Text](/rover/img/<topic>/<image>.png)
-
+![API Designer](https://learnupon.s3.eu-west-1.amazonaws.com/badges/183846/badge/Badge-Designer.png)
 # Contents
 - [Contents](#contents)
 - [**API Design**](#api-design)
@@ -55,6 +53,42 @@ hidemeta = false
 ## Introduction
 API means Application Programming Interface.
 
+**CRUD** and **REST** are two fundamental concepts in web development and API design:
+
+**CRUD**:
+
+1. **CRUD** stands for Create, Read, Update, and Delete. It represents the basic operations that can be performed on data in most relational databases and web services. Here's what each operation entails:
+
+   - **Create**: This operation involves creating new data records or resources. In a web context, it typically corresponds to an HTTP POST request, where data is sent to a server to create a new resource.
+
+   - **Read**: The Read operation is about retrieving data from a database or server. In web services, it corresponds to an HTTP GET request, which retrieves data without modifying it.
+
+   - **Update**: Updating is the process of modifying existing data. In web services, it's often implemented with an HTTP PUT or PATCH request, where data is sent to the server to update an existing resource.
+
+   - **Delete**: The Delete operation is used to remove data or resources. It corresponds to an HTTP DELETE request, which instructs the server to remove a specific resource.
+
+CRUD operations are essential for managing data in web applications, and they map directly to the HTTP methods for web services.
+
+**REST**:
+
+1. **REST** stands for Representational State Transfer. It is an architectural style and set of constraints for designing networked applications. RESTful systems are designed to be stateless, scalable, and simple. Here are some key principles of REST:
+
+   - **Resources**: In REST, data or entities are represented as resources. Resources can be identified by URIs (Uniform Resource Identifiers).
+
+   - **HTTP Methods**: REST uses standard HTTP methods (GET, POST, PUT, DELETE) to perform CRUD operations on resources. Each HTTP method maps to a specific CRUD operation.
+
+   - **Statelessness**: RESTful services are stateless, meaning each request from a client to the server must contain all the information needed to understand and process the request. The server does not store any client state between requests.
+
+   - **Representation**: Resources can have multiple representations (e.g., JSON, XML, HTML), and clients can request the representation they prefer using content negotiation.
+
+   - **Uniform Interface**: REST enforces a uniform and consistent interface for interactions between clients and servers. This simplifies client-server interactions and promotes scalability.
+
+   - **Client-Server**: REST separates the client and server components, allowing them to evolve independently. This separation enhances scalability and simplifies client development.
+
+   - **Stateless Communication**: Each request from a client to a server must include all the information necessary for the server to understand and process the request. Servers do not store client state.
+
+RESTful APIs are widely used in web services and are known for their simplicity, scalability, and ease of use. They have become the foundation for building many modern web APIs, and adhering to REST principles helps create consistent and predictable APIs.
+
 ### APIs: Digital Enablers
 APIs enable many tools within an enterprise:
 - Scalability for increased business
@@ -80,7 +114,7 @@ Business Goals -> Digital Reach -> Business Results -> Data-drive Insights -> Bu
 >Amazon's development of APIs in 2001-2002 connected the Amazon organization via web services. With good API documentation, the use of APIs in Amazon allowed for expansion towards infrastructure provisioning services--going from book retailer to AWS. Seamless switching from website to mobile.
 
 ##### Disney
->Disney's use of a band is an IoT device that enabled an Omnichannel method to access keys, rides, etc. This allowed not only widespread usage, but also data-drive approaches to problems.
+>Disney's use of a band is an IoT device that enabled an Omnichannel method to access keys, rides, etc. This allowed not only widespread usage, but also data-driven approaches to problems.
 
 ##### Summary:
 Define APIs. Understand Digital Feedback Loop. Business benefits, and API value in real life.
@@ -161,7 +195,7 @@ print(customer_info)
   - HTTP methods as operations
   - Server serializes internal obj
   - Clients use URIs tp pass obj
-- *Advantages*: well=known, tooling is good, "hacking": easy
+- *Advantages*: well-known, tooling is good, "hacking": easy
 - *Disadvantages*: URI modeling N/A, HTTP method set is small, and may become "chatty"
 
 > Example: A RESTful API for a blogging platform. Clients can use HTTP methods to perform CRUD operations on blog posts. For instance, to create a new post, a client sends a POST request to /api/posts, and to retrieve a specific post, a client sends a GET request to /api/posts/{post_id}. Example in Node.js using Express:
@@ -350,7 +384,7 @@ These different API styles and acronyms offer various approaches to building and
 - Feelings in regards to the human experience
 
 ### Developer Experience (DX)
-A good DX means encouraging adoption of the API. Good APID design incorporate constraints, business drivers, and devs. API designers look to improve the dev experience:
+A good DX means encouraging adoption of the API. Good API design incorporate constraints, business drivers, and devs. API designers look to improve the dev experience:
 - Morville's UX Honeycomb
   - Useful
   - Usable
