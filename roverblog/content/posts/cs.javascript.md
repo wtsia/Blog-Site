@@ -1,0 +1,85 @@
++++
+author = "Winston Tsia"
+authorlink = ""
+title = "Cs.javascript"
+date = 2023-09-29T23:31:11-07:00
+description = "Notes on Cs.javascript"
+tags = [
+    "tag1",
+    "tag2",
+]
+categories = [
+    "cat1",
+    "cat2",
+]
+math = true
+notaxonomy = false
+images = ["/img/<folder>/example.jpg"]
+imagetext = "An example text for an image you could add!"
+hidden = true
+norobots = true
+nodate = true
+hidemeta = false
++++
+
+![Replacement Text](/rover/img/<topic>/<image>.png)
+
+# Contents
+- [Contents](#contents)
+- [Introduction](#introduction)
+  - [Interpreting Syntax](#interpreting-syntax)
+- [Async-await](#async-await)
+- [Debugging](#debugging)
+- [Destructuring](#destructuring)
+- [Template literals](#template-literals)
+
+# Introduction
+
+## Interpreting Syntax
+```
+const ageStr = age > 5 ? 'old' : 'young' 
+// if age > 5 is true, 'old', else 'young'
+```
+# Async-await
+Express asynchronous code in synchronous format
+```
+const sumRandomAsyncNums = async() => {
+    const first = await random();
+    const second = await random();
+    const third = await random();
+}
+```
+
+# Debugging
+**Computer Property Names**: Console logging may be input into an object with css styling:
+```
+console.log('%c Title', 'color: orange');
+console.log({ var1, var2, var3});
+
+// track time
+console.time('name_given');
+// run logic
+console.timeEnd('name_given');
+
+// find origination of console log
+const deleteMe = () => console.trace('bye bye database');
+```
+
+# Destructuring
+When a function takes in an object, we can make readability simpler by passing in the object's properties into the function:
+```
+function feed(object) {
+    const { prop1, prop2, prop3 } = object;
+    return `This sentence: ${prop1} ${prop2} ${prop3}`;
+}
+```
+
+# Template literals
+You can interpolate instead of concatenating values together
+```
+const { prop1, prop2, prop3 } = object;
+
+newVar = `Backticks are needed to ${prop1} ${prop2} ${prop3}`;
+console.log(newVar);
+```
+
