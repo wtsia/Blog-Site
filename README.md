@@ -46,6 +46,9 @@ This is not required for this repo, but useful to know for new blog sites:
 
 ``
 git submodule add -b main <repository url> <folder>
+
+git submodule add --name <name> <repository url> <folder>
+
 ``
 ## Design
 The site per hugo-vitae holds multiple pages of which a tags and category page will organize each document's respective classification.

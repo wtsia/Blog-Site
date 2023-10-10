@@ -33,6 +33,21 @@ $$
 \\\\ \square
 $$
 
+## Geometric Series Proof
+Consider a series represented as such:
+$$
+\Sigma_{n=0}^{n} ar^n = a + ar + ar^2 + ar^3 + ...
+$$
+The formula is:
+$$
+S_n = a_1(\frac{1 - r^n}{1 - r})
+$$
+
+Proof:
+$$
+
+$$
+
 ## Karatsuba's Algorithm (Multiplication)
 ### Context
 Kolmogorov's Conjecture: Any algorithm for multiplying two $N$-digit numbers requires of the order of $N^2$ steps.

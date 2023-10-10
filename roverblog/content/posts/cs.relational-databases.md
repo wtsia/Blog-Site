@@ -25,6 +25,7 @@ hidemeta = false
   - [Outcomes](#outcomes)
 - [Basic Commands](#basic-commands)
 - [Relational Algebra](#relational-algebra)
+    - [Extended Projection](#extended-projection)
 - [Starting a MySQL Instance](#starting-a-mysql-instance)
 - [Entity Relationship (ER) Model](#entity-relationship-er-model)
   - [ER Diagram Example](#er-diagram-example)
@@ -117,11 +118,15 @@ Relational algebra operations can be combined and nested to create complex queri
 | Union (∪)           | Combines two relations to produce a new relation containing all distinct rows from both input relations. |
 | Intersection (∩)   | Generates a new relation containing rows that are common to both input relations. |
 | Set Difference (-) | Produces a new relation containing rows from the first input relation that are not present in the second input relation. |
-| Cartesian Product (×) | Combines all possible pairs of rows from two input relations, resulting in a new relation with a potentially large number of rows. |
+| Cartesian Product (×) | Combines all possible pairs of rows from two input relations, resulting in a new relation with a potentially large number of rows.  For $n$ rows in $A$ and $m$ rows in $B$, $n*m$ new rows are made.|
 | Join (⨝)           | This operation combines rows from two relations based on a specified condition. Joins are essential for retrieving related data from multiple tables. |
 
 
 In summary, relational algebra is a mathematical framework used to perform operations on relational databases. It provides a formal and systematic way to query and manipulate data stored in tables, and it forms the basis for the SQL language used in practice for working with relational databases.
+
+### Extended Projection
+Creates a table with column condition , but may add in original columns i.e.: 
+$π_{A + B -> C, A, A}(R)$ will create a column C, A, A with C values being the result of A + B. 
 
 # Starting a MySQL Instance
 Per instructions on [mysql's docker page](https://hub.docker.com/_/mysql), we will be making a docker compose file with the following recommended settings. This will be done on a Linux based OS:
