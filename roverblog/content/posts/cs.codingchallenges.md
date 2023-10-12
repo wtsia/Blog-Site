@@ -24,33 +24,6 @@ hidemeta = false
 
 Relevant References: [Neetcode](https://neetcode.io/)
 
-# Definitions
-## Time Complexity (TC)
-Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
-$$
-f(l) = t
-$$
-
-or more commonly:
-$$
-O(x), x \in 1, n, n^2, \log n, n \log n, 2^n, n! ...
-$$
-
-Where $O(x)$ denotes O-notation, or "Order" notation.
-
-A time-complexity analysis will require evaluating run time on each step of a program.
-
-> Time complexity deals with finding out how the computational time of an algorithm changes with the change in size of the input.
-
-## Space Complexity (SC)
-While Space Complexity may also be described by O-notation, they are unrelated and not dependent on each other. For example, an $O(1)$ space complexity denotes the same amount of space usage per input data of any size.
-
-A program that uses a variable to swap values, while swapping multiple values for the variable, will still only use one variable.
-
-> Space complexity deals with finding out how much (extra) space would be required by the algorithm with change in the input size.
-
-#### References: [Differences between time complexity and space complexity?](https://stackoverflow.com/questions/18686121/differences-between-time-complexity-and-space-complexity#:~:text=Time%20complexity%20deals%20with%20finding,change%20in%20the%20input%20size.)
-
 # Problems
 ## Contains Duplicate
 Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.

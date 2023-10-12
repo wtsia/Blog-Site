@@ -19,6 +19,69 @@ hidemeta = true
 
 MIT 6.046J Design and Analysis of Algorithms, Spring 2015 [here](http://ocw.mit.edu/6-046JS15)
 
+# Contents
+- [Contents](#contents)
+- [Definitions](#definitions)
+  - [Time Complexity (TC)](#time-complexity-tc)
+  - [Space Complexity (SC)](#space-complexity-sc)
+- [Algorithm Runtime Complexity](#algorithm-runtime-complexity)
+  - [Constant Time $O(1)$](#constant-time-o1)
+  - [](#)
+  - [](#-1)
+  - [](#-2)
+      - [References: Differences between time complexity and space complexity?](#references-differences-between-time-complexity-and-space-complexity)
+    - [MIT 6.046J Subtopic Overview:](#mit-6046j-subtopic-overview)
+- [Design and Analysis of Algorithms, MIT 6.046J 2015](#design-and-analysis-of-algorithms-mit-6046j-2015)
+  - [Notes Summary](#notes-summary)
+        - [1. Course Overview, Interval Scheduling](#1-course-overview-interval-scheduling)
+  - [1. Course Overview, Interval Scheduling](#1-course-overview-interval-scheduling-1)
+    - [Theme of Lecture:](#theme-of-lecture)
+    - [Weighted Interval Scheduling](#weighted-interval-scheduling)
+
+# Definitions
+## Time Complexity (TC)
+Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
+$$
+f(l) = t
+$$
+
+or more commonly:
+$$
+O(x), x \in 1, n, n^2, \log n, n \log n, 2^n, n! ...
+$$
+
+Where $O(x)$ denotes O-notation, or "Order" notation.
+
+A time-complexity analysis will require evaluating run time on each step of a program.
+
+> Time complexity deals with finding out how the computational time of an algorithm changes with the change in size of the input.
+
+## Space Complexity (SC)
+While Space Complexity may also be described by O-notation, they are unrelated and not dependent on each other. For example, an $O(1)$ space complexity denotes the same amount of space usage per input data of any size.
+
+A program that uses a variable to swap values, while swapping multiple values for the variable, will still only use one variable.
+
+> Space complexity deals with finding out how much (extra) space would be required by the algorithm with change in the input size.
+
+# Algorithm Runtime Complexity
+## Constant Time $O(1)$
+Same time regardless of input size.
+
+Generally constant operations
+- Arithmetic of fixed size/floating point values
+- Assignment of fixed size data value (reference, pointer)
+- Comparison of two fixed values
+- Read or write an arr element 
+
+##
+
+##
+
+##
+
+
+#### References: [Differences between time complexity and space complexity?](https://stackoverflow.com/questions/18686121/differences-between-time-complexity-and-space-complexity#:~:text=Time%20complexity%20deals%20with%20finding,change%20in%20the%20input%20size.)
+
 ### MIT 6.046J Subtopic Overview:
 - Divide and Conquer
 - Optimization: Greedy, Dynamic programming
@@ -26,6 +89,8 @@ MIT 6.046J Design and Analysis of Algorithms, Spring 2015 [here](http://ocw.mit.
 - Intractibility -- approximation
 - Distributed Algorithmns Plan
 - Cryptography
+
+
 
 # Design and Analysis of Algorithms, MIT 6.046J 2015 
 ## Notes Summary

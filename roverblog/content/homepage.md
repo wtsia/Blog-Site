@@ -15,12 +15,12 @@ Welcome! This is a site I've made to keep notes that I'd like LaTeX syntax avail
 
 ## Notes Quicklinks
 ## Topics:
-#### [Coding Challenges](./posts/00_codingchallenges)
-#### [P vs NP](./posts/pvsnp)
+#### [Coding Challenges](./posts/cs.codingchallenges)
+#### [P vs NP](./posts/cs.pvsnp)
 
 ### System Design:
-#### [Scalability](./posts/scalability)
-#### [Networks](./posts/networks)
-#### [Databases](./posts/00_databases)
-#### [Tradeoffs](./posts/tradeoffs)
+#### [Scalability](./posts/cs.0.scalability)
+#### [Networks](./posts/cs.0.networks)
+#### [Databases](./posts/cs.0.databases)
+#### [Tradeoffs](./posts/cs.0.tradeoffs)
 

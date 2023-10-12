@@ -77,6 +77,10 @@ hidemeta = false
   - [Programming and Common Errors](#programming-and-common-errors)
 - [Algorithms](#algorithms)
 - [Abstract Data Types (ADT)](#abstract-data-types-adt)
+  - [Search Algos](#search-algos)
+    - [Linear Search](#linear-search)
+    - [Binary Search (Divide and Conquer)](#binary-search-divide-and-conquer)
+  - [O-Notation](#o-notation)
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
@@ -744,3 +748,37 @@ public boolean Object(Employee e) {
 | Peek(stack)       | Returns but does not remove item at top  | Peek(stack) returns 99. Stack still: 99, 77     |
 | IsEmpty(stack)    | Returns true if stack has no items        | IsEmpty(stack) returns false.                   |
 | GetLength(stack)  | Returns the number of items in the stack  | GetLength(stack) returns 2.                     |
+
+## Search Algos
+### Linear Search
+Sequentially evaluating each element. Pseudocode:
+```
+public static int linearSearch {
+  for (start; end; increment) {
+    if (element == target) {
+      return element;
+    } 
+  }
+  return -1; // not found
+}
+```
+
+### Binary Search (Divide and Conquer)
+Utilizes sorted inputs and divides the list in half repeatedly. For $N$ elements, max steps to reduce searches pace is $[log_{2}N] + 1$.
+```
+public static int binarySearch {
+  int left = beginning;
+  int right = end;
+  while (left <= right) {
+    // take middle value
+    // if middle is target, FOUND!
+    // compare and either:
+    // set left and right to left partition
+    // left and right to right partition
+  }
+  return -1
+}
+```
+
+## O-Notation
+[O-Notation notes](./posts/cs.algorithm-analysis)
