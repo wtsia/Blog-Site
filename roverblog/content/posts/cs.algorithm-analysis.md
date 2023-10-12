@@ -26,6 +26,7 @@ MIT 6.046J Design and Analysis of Algorithms, Spring 2015 [here](http://ocw.mit.
   - [Space Complexity (SC)](#space-complexity-sc)
 - [Algorithm Runtime Complexity](#algorithm-runtime-complexity)
   - [Constant Time $O(1)$](#constant-time-o1)
+  - [Upper Bound, Lower Bound](#upper-bound-lower-bound)
   - [](#)
   - [](#-1)
   - [](#-2)
@@ -72,6 +73,16 @@ Generally constant operations
 - Assignment of fixed size data value (reference, pointer)
 - Comparison of two fixed values
 - Read or write an arr element 
+
+## Upper Bound, Lower Bound
+Analyzing upper and lower bounds render insights into algorithm performance.
+
+| Notation    | Description                                          |
+|------------|------------------------------------------------------|
+| O notation | Provides a growth rate for an algorithm's upper bound. |
+| Ω notation | Provides a growth rate for an algorithm's lower bound. |
+| Θ notation | Provides a growth rate that is both an upper and lower bound. |
+
 
 ##
 
