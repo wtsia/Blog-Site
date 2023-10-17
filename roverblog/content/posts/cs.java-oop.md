@@ -76,11 +76,13 @@ hidemeta = false
   - [Polymorphism](#polymorphism)
   - [Programming and Common Errors](#programming-and-common-errors)
 - [Algorithms](#algorithms)
-- [Abstract Data Types (ADT)](#abstract-data-types-adt)
+  - [O-Notation](#o-notation)
+  - [Abstract Data Types (ADT)](#abstract-data-types-adt)
   - [Search Algos](#search-algos)
     - [Linear Search](#linear-search)
     - [Binary Search (Divide and Conquer)](#binary-search-divide-and-conquer)
-  - [O-Notation](#o-notation)
+  - [](#)
+    - [AVL Balanced Tree (Adelson-Velsky and Landis)](#avl-balanced-tree-adelson-velsky-and-landis)
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
@@ -737,8 +739,10 @@ public boolean Object(Employee e) {
 ```
 
 # Algorithms
+## O-Notation
+[O-Notation notes](./posts/cs.algorithm-analysis)
 
-# Abstract Data Types (ADT)
+## Abstract Data Types (ADT)
 **Stacks** are a Last In First Out (**LIFO**) ADT. 
 
 | Operation         | Description                                | Example starting with stack: 99, 77 (top is 99).   |
@@ -780,5 +784,8 @@ public static int binarySearch {
 }
 ```
 
-## O-Notation
-[O-Notation notes](./posts/cs.algorithm-analysis)
+## 
+
+### AVL Balanced Tree (Adelson-Velsky and Landis)
+An AVL tree is a BST with a height balance property and specific operations to rebalance the tree when a node is inserted or removed. This section discusses the balance property; another section discusses the operations. A BST is height balanced if for any node, the heights of the node's left and right subtrees differ by only 0 or 1. Guarantees $O(log\ n)$ search, insertion, and delete.
+

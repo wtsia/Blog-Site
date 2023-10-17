@@ -27,9 +27,9 @@ MIT 6.046J Design and Analysis of Algorithms, Spring 2015 [here](http://ocw.mit.
 - [Algorithm Runtime Complexity](#algorithm-runtime-complexity)
   - [Constant Time $O(1)$](#constant-time-o1)
   - [Upper Bound, Lower Bound](#upper-bound-lower-bound)
+  - [Amortized Analysis](#amortized-analysis)
   - [](#)
   - [](#-1)
-  - [](#-2)
       - [References: Differences between time complexity and space complexity?](#references-differences-between-time-complexity-and-space-complexity)
     - [MIT 6.046J Subtopic Overview:](#mit-6046j-subtopic-overview)
 - [Design and Analysis of Algorithms, MIT 6.046J 2015](#design-and-analysis-of-algorithms-mit-6046j-2015)
@@ -84,7 +84,8 @@ Analyzing upper and lower bounds render insights into algorithm performance.
 | Θ notation | Provides a growth rate that is both an upper and lower bound. |
 
 
-##
+## Amortized Analysis
+In computer science and algorithms, amortized analysis is a technique used to estimate the average time complexity of an algorithm over a sequence of operations, rather than the worst-case complexity of individual operations
 
 ##
 
