@@ -83,6 +83,10 @@ hidemeta = false
     - [Binary Search (Divide and Conquer)](#binary-search-divide-and-conquer)
   - [](#)
     - [AVL Balanced Tree (Adelson-Velsky and Landis)](#avl-balanced-tree-adelson-velsky-and-landis)
+- [Data Structures](#data-structures)
+  - [Hash Tables](#hash-tables)
+    - [Hash Function](#hash-function)
+      - [Collisions](#collisions)
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
@@ -789,3 +793,15 @@ public static int binarySearch {
 ### AVL Balanced Tree (Adelson-Velsky and Landis)
 An AVL tree is a BST with a height balance property and specific operations to rebalance the tree when a node is inserted or removed. This section discusses the balance property; another section discusses the operations. A BST is height balanced if for any node, the heights of the node's left and right subtrees differ by only 0 or 1. Guarantees $O(log\ n)$ search, insertion, and delete.
 
+# Data Structures
+## Hash Tables
+$O(1)$ time complexity. 
+
+### Hash Function
+index = key % table_size
+
+#### Collisions
+Separate Chaining
+- Index points to a linked list for same-index values
+Open Addressing
+- Look for next available slot (linear/quadratic probing or double hashing)
