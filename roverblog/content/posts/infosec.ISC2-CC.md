@@ -26,3 +26,15 @@ hidemeta = false
 
 # Contents
 - [Contents](#contents)
+- [Security Principles](#security-principles)
+  - [CIA Triad](#cia-triad)
+
+# Security Principles
+## CIA Triad
+Confidentiality-Integrity-Availability
+- C: Access management (sensitivity)
+- I: Accurate, consistent data (baseline and state)
+- A: Timely + Reliable accessible (criticality)
+
+Authentication
+- Knowledge, Token, or Characteristic
