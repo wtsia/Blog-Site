@@ -63,6 +63,14 @@ hidemeta = false
       - [Dijkstra's Algorithm](#dijkstras-algorithm)
       - [Hash Map](#hash-map)
 # Basics
+Some good development practices:
+1. being resourceful (Learn to solve problems, develop critical thinking, discuss issues with teammates, read documentation) 
+2. version control (advanced concepts in GIT and GITHUB)
+3. data structure & code efficiency ( learn how to manipulate data in a creative way so that you can save time and storage)
+4. scripting and automation (learn how to speed making scripts of tasks that are repetitive and that can make you save a ton of time)
+5. Asynchronous programming  (learn how run programs in "parallel" )
+6. CI & CD : continuous integration and continuous deployment (take at least the basic concepts)
+7. clear and precise and accurate communication
 ## Bits/Bytes
 - `0`s and `1`s are known as bits--*binary digits*
 - Bytes are `8` bits
