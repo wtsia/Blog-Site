@@ -741,3 +741,22 @@ Further down this entry in the manual:
 ```
 UPDATE score SET STUDENT_ID=20, EVENT_ID=15 WHERE STUDENT_ID=10 AND EVENT_ID=5;
 ```
+
+# Relational Design
+## Overview
+This section covers relational design, where mega relations and their properties may be decomposed into final sets of relations that are normal form. These come in the form of Functional dependencies creating Boyce-Codd Normal Forms, and Multivalued dependencies creating fourth normal forms.
+
+## Functional Dependencies
+Below are definitions:
+**Functional Dependency**: A unique attribute has another attribute that must always occur given said unique attribute. It is said the other attribute has a functional dependency on the unique attribute.
+**Boyce-Codd Normal Form**: If $A->B$ then $A$ is a key.
+
+$$
+\forall t,u \in Student, t.GPA = u.GPA \rArr t.priority = u.priority
+\n GPA \rArr priority  
+$$
+This is an example of a  functional dependency.
+
+We also want "lossless" joins after decomposition.
+
+
