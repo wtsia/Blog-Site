@@ -109,7 +109,13 @@ $$
 $$
 
 ## Integer Overflow
-- **overflow** occurs when
+- **Integer overflow** in Java occurs when the result of an arithmetic operation on integers exceeds the maximum value that can be represented by the data type. In Java, integer types (int and long) have fixed sizes and ranges.
+
+| Data Type | Minimum Value | Maximum Value          |
+|-----------|---------------|------------------------|
+| int       | -2^31         | 2^31 - 1               |
+| long      | -2^63         | 2^63 - 1               |
+
 
 # Basics of Java
 ```
@@ -742,7 +748,7 @@ public boolean Object(Employee e) {
 }
 ```
 
-# Algorithms
+# [Algorithms](./posts/cs.0.algorithms)
 ## O-Notation
 [O-Notation notes](./posts/cs.algorithm-analysis)
 
