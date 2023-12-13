@@ -40,11 +40,11 @@ hidemeta = false
   - [Time Complexity (TC)](#time-complexity-tc)
   - [Space Complexity (SC)](#space-complexity-sc)
 - [Data Structures and Algorithms](#data-structures-and-algorithms)
+  - [Algorithms](#algorithms)
   - [Dynamic Programming \& Memoization](#dynamic-programming--memoization)
   - [Algorithm Efficiency: Big $O/\\Omega$-Notation](#algorithm-efficiency-big-oomega-notation)
     - [O-notation](#o-notation)
     - [$\\Omega$-notation](#omega-notation)
-  - [Algorithms](#algorithms)
 # Basics
 Some good development practices:
 1. being resourceful (Learn to solve problems, develop critical thinking, discuss issues with teammates, read documentation) 
@@ -345,6 +345,9 @@ References: [Differences between time complexity and space complexity?](https://
 
 # Data Structures and Algorithms
 
+## [Algorithms](./posts/cs.0.algorithms)
+See section header link for detailed notes.
+
 ## Dynamic Programming & Memoization
 A way of making algorithms more efficient by storing the intermediary results.
 - Memoization: In computing, memoization or memoisation is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again
@@ -364,5 +367,3 @@ $O(1)$, $O(log n)$, $O(n)$, $O(n log n)$, $O(n^2)$, $O(2^n)$, $O(n!)$
 $\Omega (n)$
 - denotes **minimum** bound for runtime. 
 
-
-## [Algorithms](./posts/cs.0.algorithms)

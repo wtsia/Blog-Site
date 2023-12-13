@@ -49,6 +49,19 @@ hidemeta = false
 - [Midterm DB (3)](#midterm-db-3)
 - [Database Transactions](#database-transactions)
     - [Lab](#lab)
+- [Relational Design](#relational-design)
+  - [Overview](#overview)
+  - [Functional Dependencies](#functional-dependencies)
+- [Review](#review)
+    - [Relational Database Modeling and Design:](#relational-database-modeling-and-design)
+    - [SQL Constraints and Triggers:](#sql-constraints-and-triggers)
+    - [Indexes and Authorization:](#indexes-and-authorization)
+    - [Sample Questions and Answers:](#sample-questions-and-answers)
+      - [Question 1: Relational Schema Design (4 points)](#question-1-relational-schema-design-4-points)
+      - [Question 2: Schema Definition and SQL Constraints (4 points)](#question-2-schema-definition-and-sql-constraints-4-points)
+      - [Question 3: SQL Assertions (4 points)](#question-3-sql-assertions-4-points)
+      - [Question 4: SQL Triggers (4 points)](#question-4-sql-triggers-4-points)
+      - [Question 5: SQL Triggers (4 points)](#question-5-sql-triggers-4-points)
 # Relational Databases: MySQL
 Guide based on Joel Murach's MySQL (3rd Edition, 2019)
 
@@ -758,5 +771,109 @@ $$
 This is an example of a  functional dependency.
 
 We also want "lossless" joins after decomposition.
+
+# Review
+Review of the following topics:
+- Relational Database Modelling and Design
+- SQL Constraints and Triggers
+- Indexes and Authorization
+
+Example questions:
+- Question 1: Relational Schema Design (4 points)
+-  Question 2: Schema Definition and SQL Constraints (4 points) 
+-  Question 3: SQL Assertions (4 points) 
+-  Question 4: SQL Triggers (4 points)
+-  Question 5: SQL Triggers (4 points)
+
+
+### Relational Database Modeling and Design:
+
+Relational database modeling involves the process of defining the structure of a database, including tables, relationships, and constraints, to ensure efficient data storage and retrieval. Key concepts include:
+
+1. **Entities and Attributes:**
+   - Entities are objects or concepts with an independent existence (e.g., Customer, Product).
+   - Attributes are properties that describe the characteristics of entities.
+
+2. **Relationships:**
+   - Relationships establish connections between entities.
+   - Types of relationships include one-to-one, one-to-many, and many-to-many.
+
+3. **Normalization:**
+   - Normalization is the process of organizing data to reduce redundancy and dependency.
+   - It involves breaking down tables into smaller, related tables to minimize data duplication.
+
+4. **ER Diagrams:**
+   - Entity-Relationship (ER) diagrams visually represent the database structure, showing entities, attributes, and relationships.
+
+### SQL Constraints and Triggers:
+
+1. **Constraints:**
+   - Constraints ensure data integrity and accuracy.
+   - Common constraints include PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, and CHECK.
+   - They prevent the entry of invalid or inconsistent data into the database.
+
+2. **Triggers:**
+   - Triggers are special stored procedures that automatically execute in response to predefined events (e.g., INSERT, UPDATE, DELETE).
+   - They are used to enforce business rules, perform auditing, and maintain referential integrity.
+
+### Indexes and Authorization:
+
+1. **Indexes:**
+   - Indexes are data structures that enhance query performance by allowing quicker data retrieval.
+   - They provide a fast access path to rows based on the values in one or more columns.
+   - Common types include B-tree, hash, and bitmap indexes.
+
+2. **Authorization:**
+   - Authorization involves controlling access to database objects (tables, views, procedures) based on user roles and privileges.
+   - Roles define sets of privileges, and users are assigned to roles.
+   - Privileges include SELECT, INSERT, UPDATE, DELETE, and EXECUTE.
+
+### Sample Questions and Answers:
+
+#### Question 1: Relational Schema Design (4 points)
+
+**Question:**
+Explain the importance of normalization in relational schema design. Provide an example scenario where normalization is beneficial.
+
+**Answer:**
+Normalization is crucial in relational schema design to minimize data redundancy and dependency. It ensures that data is stored efficiently, reducing the risk of anomalies during updates, insertions, and deletions. For example, consider a denormalized table storing customer data along with order details. If a customer's address changes, updating multiple records becomes error-prone. Normalizing this data into separate tables like Customers and Orders eliminates such issues.
+
+#### Question 2: Schema Definition and SQL Constraints (4 points)
+
+**Question:**
+Describe the role of SQL constraints in maintaining data integrity. Provide an example of each of the following constraints: PRIMARY KEY, FOREIGN KEY, and CHECK.
+
+**Answer:**
+SQL constraints play a vital role in ensuring data integrity by defining rules that the data must adhere to. 
+- PRIMARY KEY: Ensures uniqueness of a column and prevents NULL values. Example: `CREATE TABLE Employees (EmployeeID INT PRIMARY KEY, Name VARCHAR(50));`
+- FOREIGN KEY: Maintains referential integrity by linking two tables based on a column. Example: `CREATE TABLE Orders (OrderID INT PRIMARY KEY, CustomerID INT FOREIGN KEY REFERENCES Customers(CustomerID));`
+- CHECK: Enforces a condition on a column. Example: `CREATE TABLE Students (StudentID INT, Age INT CHECK (Age >= 18));`
+
+#### Question 3: SQL Assertions (4 points)
+
+**Question:**
+Explain the concept of SQL assertions and provide a practical example of how they can be used to enforce business rules.
+
+**Answer:**
+SQL assertions are conditions specified in a CREATE ASSERTION statement to enforce business rules that span multiple rows or tables. For instance, consider an assertion to ensure that the total quantity of items in an order does not exceed the available stock. This prevents inconsistent data, ensuring that the business rule "order quantity must not exceed stock" is always maintained.
+
+#### Question 4: SQL Triggers (4 points)
+
+**Question:**
+Discuss the role of SQL triggers in a database system. Provide an example scenario where a trigger would be beneficial.
+
+**Answer:**
+SQL triggers are special stored procedures that automatically execute in response to predefined events. They play a crucial role in maintaining data consistency and enforcing business rules. For example, consider a trigger that automatically updates the "last modified" timestamp whenever a row in the Orders table is updated. This ensures accurate tracking of when orders were last modified without manual intervention.
+
+#### Question 5: SQL Triggers (4 points)
+
+**Question:**
+Differentiate between BEFORE and AFTER triggers in SQL. Provide a scenario for each where their usage is appropriate.
+
+**Answer:**
+BEFORE triggers execute before the triggering event (e.g., INSERT, UPDATE), allowing modification of data before it is written to the database. They are useful for validating or modifying data before it is stored. For example, a BEFORE INSERT trigger can be employed to automatically set a default value for a column if none is provided.
+
+AFTER triggers, on the other hand, execute after the triggering event, making them suitable for tasks that should occur after data modification. For instance, an AFTER UPDATE trigger could be used to log the changes made to a specific table in an audit log, providing a historical record of updates.
+
 
 
