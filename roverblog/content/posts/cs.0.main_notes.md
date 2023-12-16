@@ -398,6 +398,7 @@ iterates vertically through first branch to the end, then the other leaf nodes
 iterates through horizontal branches and progresses downward
 - Queue: First in First Out
 
+When implemented for a graph, BFS visits a starting vertex and visits nodes at 1 distance from it, then 2... s.t. the algorithm obeys the squence: $S_n = {1, 2, ..., n}$ until all nodes are exhausted
 
 ### Sort
 

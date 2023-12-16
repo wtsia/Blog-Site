@@ -49,6 +49,9 @@ hidemeta = false
 - [Midterm DB (3)](#midterm-db-3)
 - [Database Transactions](#database-transactions)
     - [Lab](#lab)
+- [Relational Design](#relational-design)
+  - [Overview](#overview)
+  - [Functional Dependencies](#functional-dependencies)
 # Relational Databases: MySQL
 Guide based on Joel Murach's MySQL (3rd Edition, 2019)
 
@@ -753,7 +756,7 @@ Below are definitions:
 
 $$
 \forall t,u \in Student, t.GPA = u.GPA \rArr t.priority = u.priority
-\n GPA \rArr priority  
+\\ GPA \rArr priority  
 $$
 This is an example of a  functional dependency.
 
