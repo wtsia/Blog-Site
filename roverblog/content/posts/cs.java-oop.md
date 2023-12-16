@@ -23,6 +23,8 @@ hidemeta = false
 # Java Topics
 - [Java Topics](#java-topics)
 - [Introduction](#introduction)
+  - [Key Features](#key-features)
+  - [Notes](#notes)
 - [Concepts](#concepts)
   - [Binary](#binary)
     - [8-bit](#8-bit)
@@ -90,6 +92,29 @@ hidemeta = false
 
 # Introduction
 ![Introduction to Java](/rover/img/ComputerScience/introJava.jpg)
+
+Java is a high-level, object-oriented programming language designed for platform independence, allowing it to run on various devices without modification. Developed by James Gosling and his team at Sun Microsystems, Java was released in 1995. Known for its simplicity, portability, and robustness, Java has become a popular choice for building diverse applications, from web and mobile apps to large-scale enterprise systems.
+
+## Key Features
+
+1. **Write Once, Run Anywhere (WORA):** Java's "Write Once, Run Anywhere" philosophy enables the execution of Java programs on any device with a Java Virtual Machine (JVM).
+
+2. **Object-Oriented:** Java is a pure object-oriented programming language, emphasizing the use of classes and objects for modular and scalable code.
+
+3. **Automatic Memory Management:** Java features automatic memory management through garbage collection, simplifying memory handling and reducing the risk of memory leaks.
+
+4. **Security:** Java provides a secure runtime environment, with features such as sandboxing applets and a robust set of APIs for encryption and authentication.
+
+5. **Rich Standard Library:** Java comes with a comprehensive standard library that simplifies common programming tasks, including input/output operations, networking, and GUI development.
+
+6. **Multithreading:** Java supports multithreading, allowing developers to build concurrent and scalable applications efficiently.
+
+7. **Community Support:** Java has a large and active community, providing extensive documentation, tutorials, and support through various forums and resources.
+
+Java remains a prominent language in software development, widely used in web development, mobile app development (Android), enterprise systems, and cloud computing.
+
+## Notes
+
 - At its core level, computers are switches, and store information in bytes (8 bits).
   - memory stores information in binary (1 or 0, like a switch!)
   - instructions go to the processor, and turns executable (in binary `1101 1011 ...`), then an assembler creates the high level instruction.
@@ -109,7 +134,13 @@ $$
 $$
 
 ## Integer Overflow
-- **overflow** occurs when
+- **Integer overflow** in Java occurs when the result of an arithmetic operation on integers exceeds the maximum value that can be represented by the data type. In Java, integer types (int and long) have fixed sizes and ranges.
+
+| Data Type | Minimum Value | Maximum Value          |
+|-----------|---------------|------------------------|
+| int       | -2^31         | 2^31 - 1               |
+| long      | -2^63         | 2^63 - 1               |
+
 
 # Basics of Java
 ```
@@ -742,7 +773,7 @@ public boolean Object(Employee e) {
 }
 ```
 
-# Algorithms
+# [Algorithms](./posts/cs.0.algorithms)
 ## O-Notation
 [O-Notation notes](./posts/cs.algorithm-analysis)
 
