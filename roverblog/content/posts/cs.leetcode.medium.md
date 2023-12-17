@@ -1,7 +1,7 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "Cs.leetcode.medium"
+title = "Leetcode - Medium"
 date = 2023-11-04T02:35:51-07:00
 description = "Notes on Cs.leetcode.medium"
 tags = [

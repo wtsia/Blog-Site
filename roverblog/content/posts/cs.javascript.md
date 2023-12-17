@@ -1,9 +1,9 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "Cs.javascript"
+title = "Javascript"
 date = 2023-09-29T23:31:11-07:00
-description = "Notes on Cs.javascript"
+description = "Notes on Javascript"
 tags = [
     "tag1",
     "tag2",
