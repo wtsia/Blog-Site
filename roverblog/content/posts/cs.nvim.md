@@ -1,7 +1,7 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "Cs.nvim"
+title = "Nvim"
 date = 2023-11-12T14:59:40-08:00
 description = "Notes on Cs.nvim"
 tags = [

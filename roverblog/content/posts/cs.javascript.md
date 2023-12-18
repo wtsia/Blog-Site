@@ -1,9 +1,9 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "Cs.javascript"
+title = "Javascript"
 date = 2023-09-29T23:31:11-07:00
-description = "Notes on Cs.javascript"
+description = "Notes on Javascript"
 tags = [
     "tag1",
     "tag2",
@@ -32,6 +32,15 @@ hidemeta = false
 - [Debugging](#debugging)
 - [Destructuring](#destructuring)
 - [Template literals](#template-literals)
+- [Review](#review)
+  - [JavaScript: Introduction](#javascript-introduction)
+  - [JavaScript: Control Statements](#javascript-control-statements)
+  - [JavaScript: Functions](#javascript-functions)
+  - [JavaScript: Arrays](#javascript-arrays)
+  - [JavaScript: Objects](#javascript-objects)
+  - [JavaScript: Object Model and Misc jQuery](#javascript-object-model-and-misc-jquery)
+  - [Ajax](#ajax)
+  - [Misc jQuery](#misc-jquery)
 
 # Introduction
 
@@ -82,4 +91,94 @@ const { prop1, prop2, prop3 } = object;
 newVar = `Backticks are needed to ${prop1} ${prop2} ${prop3}`;
 console.log(newVar);
 ```
+
+# Review
+## JavaScript: Introduction
+- object
+- method
+- document.write
+- var
+- alert
+- document.forms["myform"].elements["num"].value
+- elementById
+- innerHTML
+- equality and relational operators
+- parseInt
+- parseFloat
+- toFixed()
+- if statement
+
+## JavaScript: Control Statements
+- if...else statement
+- nested if
+- while statement
+- assignment operators such as +=
+- increment operators such as ++
+- switch statement
+- break
+- default
+- continue
+- for statement
+- nested for statements
+- logical operators such as ||
+- isNaN
+
+## JavaScript: Functions
+- function definition syntax
+- function call
+- function argument
+- Math.pow
+- Math.round
+- Math.floor
+- Math.random
+- local and global variables
+
+## JavaScript: Arrays
+- definition of array
+- subscript
+- defining a new array
+- array initialization
+- 2-dimensional array
+- looping through an array using the for statement
+- pull-down menu
+- form field validation
+
+## JavaScript: Objects
+- string.split
+- string.charAt
+- string.indexOf
+- string.substr
+- string.substring
+- indexOf
+- Date methods
+- Math.floor
+- Math.round
+- regular expressions
+- window.open
+
+## JavaScript: Object Model and Misc jQuery
+- className
+- document style elements
+- onload
+- onmouseover
+- onmouseout
+- getElementsByTagname
+- jQuery navigation bar
+- jQuery login slider
+
+## Ajax
+- What is Ajax
+- XMLHttpRequest
+- "try and catch" statement
+- onreadystatechange
+- xmlHttp.readyState
+- sending a Request to the Server
+
+## Misc jQuery
+- Show/hide instructions
+- Fade an element
+- Validate input form data for numeric
+- Masking input form data
+- val()
+
 

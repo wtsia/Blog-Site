@@ -766,7 +766,7 @@ Below are definitions:
 
 $$
 \forall t,u \in Student, t.GPA = u.GPA \rArr t.priority = u.priority
-\n GPA \rArr priority  
+\\ GPA \rArr priority  
 $$
 This is an example of a  functional dependency.
 

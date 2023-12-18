@@ -1,7 +1,7 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "Cs.leetcode.easy"
+title = "Leetcode - Easy"
 date = 2023-11-04T02:35:42-07:00
 description = "Notes on Cs.leetcode.easy"
 tags = [

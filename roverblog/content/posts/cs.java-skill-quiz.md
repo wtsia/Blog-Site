@@ -1,7 +1,7 @@
 +++
 author = "Winston Tsia"
 authorlink = ""
-title = "Cs.java Skill Quiz"
+title = "Java Skill Quiz"
 date = 2023-09-30T00:02:04-07:00
 description = "Notes on Cs.java Skill Quiz"
 tags = [
