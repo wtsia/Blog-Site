@@ -809,7 +809,7 @@ Relational database modeling involves the process of defining the structure of a
 
 1. **Constraints:**
    - Constraints ensure data integrity and accuracy.
-   - Common constraints include PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, and CHECK.
+   - Common constraints include PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, ATTRIBUTE, TUPLE, GENERAL ASSERTION.
    - They prevent the entry of invalid or inconsistent data into the database.
 
 2. **Triggers:**
