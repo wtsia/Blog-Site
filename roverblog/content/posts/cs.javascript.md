@@ -41,6 +41,7 @@ hidemeta = false
   - [JavaScript: Object Model and Misc jQuery](#javascript-object-model-and-misc-jquery)
   - [Ajax](#ajax)
   - [Misc jQuery](#misc-jquery)
+  - [Must Know Mentions](#must-know-mentions)
 
 # Introduction
 
@@ -194,9 +195,7 @@ Certainly! Here's the information about the JavaScript topics you provided, form
 
 - **string.charAt:** `charAt` is a method that returns the character at a specified index in a string.
 
-- **string.indexOf
-
-:** `indexOf` is a method that returns the index of the first occurrence of a specified value in a string.
+- **string.indexOf** `indexOf` is a method that returns the index of the first occurrence of a specified value in a string.
 
 - **string.substr:** `substr` is a method that returns a portion of a string starting from a specified index and for a specified number of characters.
 
@@ -258,4 +257,12 @@ Certainly! Here's the information about the JavaScript topics you provided, form
 
 - **val():** `val()` is a jQuery method used to get or set the value of form elements like input fields and text areas.
 
+## Must Know Mentions
+- **Dynamic Imports:** JS bundles may be split into a by-need basis and sent over the network to decrease load times.
 
+- **JS Bundles:** HTML and JavaScript code that must be bundled into usable static assets by web browsers.
+```
+const lazyBundle = await import('./lazy.js');
+```
+
+-**TypeScript:** may be used to improve static code quality.
