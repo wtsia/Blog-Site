@@ -19,6 +19,8 @@ hidemeta = true
 
 # Security Topics
 - [Security Topics](#security-topics)
+- [Introduction](#introduction)
+  - [ISC2 Certified in Cybersecurity](#isc2-certified-in-cybersecurity)
 - [Secure Shell (SSH)](#secure-shell-ssh)
 - [Hypertext Transfer Protocol Secure (HTTPS)](#hypertext-transfer-protocol-secure-https)
   - [Transport Layer Security (TLS)](#transport-layer-security-tls)
@@ -28,6 +30,9 @@ hidemeta = true
 - [Ghidra](#ghidra)
 - [Golang](#golang)
 - [Reverse Engineering](#reverse-engineering)
+
+# Introduction
+## [ISC2 Certified in Cybersecurity](./posts/infosec.ISC2-CC)
 
 # Secure Shell (SSH)
 ![Secure Shell](https://i.stack.imgur.com/VhMqi.jpg)
