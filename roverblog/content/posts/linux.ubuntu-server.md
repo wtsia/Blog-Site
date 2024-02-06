@@ -38,6 +38,8 @@ hidemeta = false
   - [Maldet: Linux Malware Detection](#maldet-linux-malware-detection)
     - [Installation](#installation-1)
 - [Media](#media)
+  - [Jellyfin](#jellyfin)
+    - [Unlock locked user account](#unlock-locked-user-account)
     - [Installing Jellyfin (Docker)](#installing-jellyfin-docker)
     - [Transcoding](#transcoding)
     - [Converting mkv to h264 with FFmpeg](#converting-mkv-to-h264-with-ffmpeg)
@@ -337,6 +339,21 @@ Make sure to have `clamav` installed so that maldet can utilize the clamav binar
  
 
 # Media
+## Jellyfin
+### Unlock locked user account
+When the admin account is locked out and the Forgot Password feature is not working, you have to unlock the user manually. To do that, you need to find the `jellyfin.db` file on your system. The default location on Linux is: `/var/lib/jellyfin/data/`. For paths in other environments, see server paths.
+
+Linux CLI
+Before continuing, make sure that you have sqlite3 installed. When sqlite3 is not installed, you can install it under Debian based systems with apt install sqlite3. After that do the following commands/SQL query:
+```
+sqlite3 /PATH/TO/JELLYFIN/DB/jellyfin.db
+```
+```
+UPDATE Users SET InvalidLoginAttemptCount = 0 WHERE Username = 'LockedUserName';
+UPDATE Permissions SET Value = 0 WHERE Kind = 2 AND UserId IN (SELECT Id FROM Users WHERE Username = 'LockedUserName');
+.exit
+```
+
 ### Installing Jellyfin (Docker) 
 https://jellyfin.org/docs/general/administration/installing.html
 ### Transcoding
