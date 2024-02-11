@@ -34,6 +34,7 @@ hidemeta = false
     - [Privacy](#privacy)
   - [Risk Management](#risk-management)
     - [Methods of Risk Management](#methods-of-risk-management)
+    - [Security Controls, Governance, Ethics](#security-controls-governance-ethics)
 
 # Overview
 5 Chapters, 20+ modules
@@ -59,7 +60,12 @@ Laws to act in accordance with:
 **Risk assessment, analysis, mitigation, remediation and communication**. IT Risk $\subset$ Business Risk. Threat actors utilize threat vectors and stand at the opposing side to mitigating risk. **Probability** and **Impact** are important concepts in a subjective risk analysis.
 
 ### Methods of Risk Management
-- Avoidance: Desisting operations to "avoid"
 - Acceptance: Deeming something an "acceptable" risk 
-- Mitigation: Preventative measures like controls, policies, procedures
 - Transfer: i.e. Insurance Policy
+- Avoidance: Desisting operations to "avoid"
+- Mitigation: Preventative measures like controls, policies, procedures, hiring expertise
+  
+Risk may be presented with a risk matrix, a graph with an $x(+)$ and $y(+)$ axis, one corresponding to **likelihood** and the other axis corresponding to **impact**.
+
+### Security Controls, Governance, Ethics
+Security Controls are the physical (entry badge), technical (logical controls, computer implemented) and administrative mechanisms that act as safeguards or countermeasures prescribed for an information system to protect the confidentiality, integrity and availability of the system and its information
