@@ -28,13 +28,13 @@ hidemeta = false
   - [2. Encoding Tolerance](#2-encoding-tolerance)
       - [Techniques:](#techniques)
 - [Mind-Map](#mind-map)
-  - [GRIND Map](#grind-map)
+  - [GRINDE Map](#grinde-map)
     - [Grouped](#grouped)
     - [Reflective](#reflective)
     - [Interconnected](#interconnected)
     - [Non-verbal](#non-verbal)
     - [Directional $\\bigstar$](#directional-bigstar)
-    - [Explained](#explained)
+    - [Emphasized](#emphasized)
 ## Standard Practice
 1) Context broadening: Relating a theoretical concept with a real life story or incident. Having an example or event visual in your mind.
 2) Emotional implication: Getting emotionally invested with the topic, knowing what would be the future use.
@@ -125,7 +125,7 @@ Source [Youtube](https://www.youtube.com/watch?v=VcT8puLpNKA)
 Summary of Benefits:
 - Effective, enhances creativity, improves critical thinking, and increases metacognition (but demotivating)
 
-## GRIND Map
+## GRINDE Map
 - Grouped, Reflective, Interconnected, Non-verbal, Directional
 
 ### Grouped
@@ -145,7 +145,7 @@ Summary of Benefits:
     - Higher level of learning!
     - A clean organized mind produces a clean mind-map
 
-### Explained
+### Emphasized
 - Low cognitive load used on technique used on high cognitive learning
 - using word art can enhance points
 - notes should reflect the learning process in the head!

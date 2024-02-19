@@ -35,6 +35,12 @@ hidemeta = false
   - [Risk Management](#risk-management)
     - [Methods of Risk Management](#methods-of-risk-management)
     - [Security Controls, Governance, Ethics](#security-controls-governance-ethics)
+      - [Regulation and Laws](#regulation-and-laws)
+      - [Standards](#standards)
+- [Business Continuity, Disaster Recovery, Incidence Response](#business-continuity-disaster-recovery-incidence-response)
+  - [Business Continuity Plan](#business-continuity-plan)
+  - [Disaster Recovery](#disaster-recovery)
+  - [Incidence Response](#incidence-response)
 
 # Overview
 5 Chapters, 20+ modules
@@ -69,3 +75,24 @@ Risk may be presented with a risk matrix, a graph with an $x(+)$ and $y(+)$ axis
 
 ### Security Controls, Governance, Ethics
 Security Controls are the physical (entry badge), technical (logical controls, computer implemented) and administrative mechanisms that act as safeguards or countermeasures prescribed for an information system to protect the confidentiality, integrity and availability of the system and its information
+- Policy: Sets guidelines/standards
+- Procedure: Explicit sets of actions to undertake
+
+#### Regulation and Laws
+- (HIPAA, 1996) Health Insurance Portability and Accountability Act: must keep protected health information (PHI) secure, 1996.
+- (GDPR, 2016) General Data Protection Regulation: EU provisions for personally identifiable information (PII) protections
+
+#### Standards
+- (ISO) International Organization for Standardization
+- (NIST) National Institute of Standards and Technology: Dept. of Commerce, US Infosec standards. 
+- (IETF) Internet Engineering Task Force: Body that regulates communication standards
+- (IEEE) Institute of Electrical and Electronic Engineers: sets subject standards
+
+# Business Continuity, Disaster Recovery, Incidence Response
+## Business Continuity Plan
+Components include: team members, procedures/checlists, notifications, guidence for managers, how/when, critical supply chain contacts.
+- Red Book: "Red Book" typically refers to a comprehensive document or set of guidelines that outlines security policies, procedures, and best practices for a specific organization or system (often given to entities outside the facility)
+
+## Disaster Recovery
+
+## Incidence Response
