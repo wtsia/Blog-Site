@@ -63,6 +63,16 @@ network management.
 - parity is used to verify if information is correctly received--i.e. a 1 is added to `0100 0001` to make 'A' an 'odd parity'
 - *communication protocol*: agreement/rule 
 ### **OSI**
+| Layer | Name                    | Description                                                                                          |
+|-------|-------------------------|------------------------------------------------------------------------------------------------------|
+| 7     | Application Layer       | Provides network services directly to end-users or applications. It includes protocols like HTTP, SMTP, and FTP. |
+| 6     | Presentation Layer      | Responsible for data translation, encryption, and compression. It ensures that data is presented in a format that the application layer can understand. |
+| 5     | Session Layer           | Manages communication sessions between applications, including establishing, maintaining, and terminating connections. |
+| 4     | Transport Layer         | Ensures reliable data transfer between hosts. It manages flow control, error correction, and segmentation of data. Protocols include TCP and UDP. |
+| 3     | Network Layer           | Handles logical addressing and routing of data packets between different networks. IP is the primary protocol at this layer. |
+| 2     | Data Link Layer         | Responsible for the physical addressing of data packets and the transmission of data frames within a single network segment. Ethernet and Wi-Fi are examples of data link layer protocols. |
+| 1     | Physical Layer          | Deals with the physical transmission of data over the network medium. It includes specifications for cables, connectors, and other hardware components. |
+
 Open System Interconnect (by International Standard Organization, or ISO):
 
 1. Physical Layer: This layer is responsible for the physical transmission of data between devices, including the electrical, mechanical, and physical specifications of the physical medium.

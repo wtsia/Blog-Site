@@ -41,6 +41,12 @@ hidemeta = false
   - [Business Continuity Plan](#business-continuity-plan)
   - [Disaster Recovery](#disaster-recovery)
   - [Incidence Response](#incidence-response)
+- [Access Control Concepts](#access-control-concepts)
+  - [Defense Strategies](#defense-strategies)
+  - [Physical Access](#physical-access)
+  - [Logical Access](#logical-access)
+    - [Access Controls:](#access-controls)
+- [**Network Security**](#network-security)
 
 # Overview
 5 Chapters, 20+ modules
@@ -94,5 +100,55 @@ Components include: team members, procedures/checlists, notifications, guidence 
 - Red Book: "Red Book" typically refers to a comprehensive document or set of guidelines that outlines security policies, procedures, and best practices for a specific organization or system (often given to entities outside the facility)
 
 ## Disaster Recovery
+The Disaster Recovery (DR) plan may include the following components: executive summary providing a high-level overview of the plan, department-specific plans, technical guides for IT personnel responsible for implementing and maintaining critical backup systems, full copies of the plan for critical disaster recovery team members, and checklists for certain individuals.
 
 ## Incidence Response
+The four main components of Incident Response are: Preparation; Detection and Analysis; Containment, Eradication and Recovery; and Post-Incident Activity
+
+# Access Control Concepts
+- Subjects
+- Objects
+- Rule
+
+## Defense Strategies
+- Defense in Depth
+- Least Privilege 
+- Privileged Access Management
+  - Privileged Accounts
+  - Segregation of Duties
+    - Two-Person Integrity: paired access to secure objects
+  - User Provisioning: Creating accounts and managing access privileges for users
+  
+
+## Physical Access
+- Badge/Gate Entry
+- Enviromental Design
+- Biometrics (Physiological, Behavioral)
+  - Behavioral: Keystroke analysis
+
+## Logical Access
+General:
+- Passwords
+- Biometrics
+- Badge/token
+
+### Access Controls:
+- Discretionary Access Control: subjects who have been granted access to information may pass, grant, change security, choose security, change access control on objects
+- Mandatory Access Control: administrator based access control on objects, and subset of subjects are given a subset of objects to access
+- Role-based Access Control: user based roles
+
+# **Network Security**
+Basic networks include LAN, WAN networks. 
+- Recall [OSI Layers](./posts/cs.networks/#osi)
+
+| Layer | Name                    | Description                                                                                          |
+|-------|-------------------------|------------------------------------------------------------------------------------------------------|
+| 7     | Application Layer       | Provides network services directly to end-users or applications. It includes protocols like HTTP, SMTP, and FTP. |
+| 6     | Presentation Layer      | Responsible for data translation, encryption, and compression. It ensures that data is presented in a format that the application layer can understand. |
+| 5     | Session Layer           | Manages communication sessions between applications, including establishing, maintaining, and terminating connections. |
+| 4     | Transport Layer         | Ensures reliable data transfer between hosts. It manages flow control, error correction, and segmentation of data. Protocols include TCP and UDP. |
+| 3     | Network Layer           | Handles logical addressing and routing of data packets between different networks. IP is the primary protocol at this layer. |
+| 2     | Data Link Layer         | Responsible for the physical addressing of data packets and the transmission of data frames within a single network segment. Ethernet and Wi-Fi are examples of data link layer protocols. |
+| 1     | Physical Layer          | Deals with the physical transmission of data over the network medium. It includes specifications for cables, connectors, and other hardware components. |
+
+- TCP/IP is easy to hack, as it was designed for usability not security
