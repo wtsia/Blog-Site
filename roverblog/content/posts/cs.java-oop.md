@@ -143,7 +143,7 @@ $$
 
 
 # Basics of Java
-```
+```java
 import java.util.Scanner; // import scanner
 
 public class Salary {                       
@@ -245,7 +245,7 @@ isWhitespace('x')  // false
 - for something to happen regardless of condition
 - `do/while` vs `while`:
   - `do/while` executes a code block once before condition checking
-```
+```java
 count = 0;
 num = 6;
 
@@ -270,7 +270,7 @@ word.toUpperCase();
 ```
 
 ### Input Validation
-```
+```java
 if (!in.**hasNextDouble()**) {
 
     String word = in.next();
@@ -285,7 +285,7 @@ if (!in.**hasNextDouble()**) {
 ```
 
 ## Arrays
-```
+```java
 // Create Arrays
 String[] names;
 double[] values;
@@ -304,12 +304,12 @@ values = new double[size];
 #### Array are references
 When you make an assignment to an array variable, it simply **copies the reference**. But it doesn’t copy the array itself. For example:
 
-```
+```java
 double[] values = new double[3];
 double[] data = values;
 ```
 #### Traversing Arrays
-```
+```java
 int[] array = {1, 2, 3, 4, 5};
 for (int i = 0; i < array.length; i++) {
     array[i] *= array[i];
@@ -329,7 +329,7 @@ for (int i = 0; i < array.length; i++) {
     - `int, double, String`.
   - Values returned by methods may be of any type, such as, but not limited to: 
     - `boolean, int, double, String`.
-```
+```java
 <access_modifier> <return_type> <method_name>( list_of_parameters) {
     //body
 }
@@ -350,7 +350,7 @@ public int subtractNumbers(int m, int n) {
 ## Enhanced Loops
 -  for-each: reduces programming burden but removes incrementing capabilities
    -  cannot change your 'value' within the for each loop.
-```
+```java
 int[] values = { 1, 2, 3, 4, 5 };
 
 for (int value:values) {
@@ -447,6 +447,7 @@ Create space for and add the element at the end of the list.
 // List originally empty
 valsList.add(31); // List now: 31 
 valsList.add(41); // List now: 31 41
+
 get()	get(index) 
 Returns the element at the specified list location known as the index. Indices start at 0.	
 // List originally: 31 41 59. Assume x is an int. 
@@ -454,10 +455,12 @@ x = valsList.get(0);  // Assigns 31 to x
 x = valsList.get(1);  // Assigns 41
 x = valsList.get(2);  // Assigns 59
 x = valsList.get(3);  // Error: No such element
+
 set()	set(index, element) 
 Replaces the element at the specified position in this list with the specified element.	
 // List originally: 31 41 59 
 valsList.set(1, 119);  // List now 31 119 59
+
 size()	size()
 Returns the number of list elements.	
 // List originally: 31 41 59. Assume x is an int. 
@@ -488,13 +491,13 @@ Rectangle box2 = box1;
 - To call a method:
 ```
 public class VeganClass { 
-   public static double calcVegan() {
+   public static double calcNum() {
       // some calculations and logic
    }
 
    public static void main(String[] args) {
-      // Calls method calcVegan and prints the result
-      System.out.println(calcVegan());
+      // Calls method calcNum and prints the result
+      System.out.println(calcNum());
    }
 }
 
