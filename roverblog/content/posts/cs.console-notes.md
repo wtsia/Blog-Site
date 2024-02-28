@@ -26,7 +26,12 @@ hidemeta = false
 
 # Contents
 - [Contents](#contents)
-
+- [Windows](#windows)
+  - [Command Prompt](#command-prompt)
+    - [Creating Files](#creating-files)
+  - [Scripts](#scripts)
+    - [Creating Scripts](#creating-scripts)
+    - [CLI](#cli)
 
 # Windows
 ## Command Prompt
@@ -52,7 +57,9 @@ To create a file in Windows, you can use several methods:
 4. **Using File Explorer:**
    You can also create a file by right-clicking in the File Explorer, selecting New > Text Document, and then renaming the file as needed.
 
-### Creating Script
+## Scripts
+
+### Creating Scripts
 
 To create a batch script (a file with a `.bat` extension) using the Command Line Interface (CLI) in Windows, you can use any text editor like Notepad or you can use the command prompt itself. Here's how to create a batch script using the command prompt:
 
@@ -74,7 +81,7 @@ This will create a batch script named `hello.bat` in the current directory, cont
 
 After creating the batch script, you can execute it by simply typing its name in the command prompt and pressing Enter (e.g., `hello.bat`).
 
-## Scripts
+### CLI 
 EXAMPLE: removing duplicate `mp3` files (first echoing):
 
 ```bat
