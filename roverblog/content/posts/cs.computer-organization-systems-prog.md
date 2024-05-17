@@ -43,6 +43,43 @@ hidemeta = false
       - [Disk Drive](#disk-drive)
       - [PCI vs PCI Express Bus](#pci-vs-pci-express-bus)
       - [Process of DMA: Direct Memory Access](#process-of-dma-direct-memory-access)
+  - [Programming Introduction](#programming-introduction)
+    - [Datatypes](#datatypes)
+    - [Arithmetic Operations](#arithmetic-operations)
+      - [Additional Notes:](#additional-notes)
+    - [Format Specifiers](#format-specifiers)
+    - [`include<stdio.h>`](#includestdioh)
+    - [Math Functions](#math-functions)
+    - [if-else, switch](#if-else-switch)
+      - [Usage Examples:](#usage-examples)
+        - [`if` Statement:](#if-statement)
+        - [`if-else` Statement:](#if-else-statement)
+        - [`if-else if-else` Statement:](#if-else-if-else-statement)
+        - [`switch` Statement:](#switch-statement)
+    - [Logical Operators](#logical-operators)
+        - [Ternary Operator](#ternary-operator)
+    - [Functions](#functions)
+      - [User-Defined Functions](#user-defined-functions)
+      - [Function Prototype](#function-prototype)
+      - [Example: User-Defined Function with Prototype](#example-user-defined-function-with-prototype)
+      - [Why Use Function Prototypes?](#why-use-function-prototypes)
+      - [Best Practices](#best-practices)
+    - [String Functions](#string-functions)
+    - [Loops](#loops)
+      - [Examples](#examples)
+      - [`for` Loop:](#for-loop)
+      - [`while` Loop:](#while-loop)
+      - [`do-while` Loop:](#do-while-loop)
+    - [Arrays](#arrays)
+      - [Basics of Arrays](#basics-of-arrays)
+        - [Declaration](#declaration)
+        - [Initialization](#initialization)
+        - [Accessing Array Elements](#accessing-array-elements)
+      - [Properties of Arrays](#properties-of-arrays)
+      - [Multidimensional Arrays](#multidimensional-arrays)
+      - [Dynamic Arrays](#dynamic-arrays)
+      - [Limitations and Considerations](#limitations-and-considerations)
+    - [Final Practice](#final-practice)
 
 # CPU Architecture
 Comprised of the ALU, Control Unit, Clock, and Memory Registers
@@ -122,3 +159,569 @@ $$
 ```
 CPU -> Controller -> Disk -> Load to Main Memory -> Controller sends signal to CPU
 ```
+
+## Programming Introduction
+### Datatypes
+| Data Type             | Size (Typical) | Range of Values                                         |
+|-----------------------|----------------|---------------------------------------------------------|
+| `char`                | 1 byte         | -128 to 127 or 0 to 255                                 |
+| `unsigned char`       | 1 byte         | 0 to 255                                                |
+| `signed char`         | 1 byte         | -128 to 127                                             |
+| `int`                 | 4 bytes        | -2,147,483,648 to 2,147,483,647                         |
+| `unsigned int`        | 4 bytes        | 0 to 4,294,967,295                                      |
+| `short`               | 2 bytes        | -32,768 to 32,767                                       |
+| `unsigned short`      | 2 bytes        | 0 to 65,535                                             |
+| `long`                | 4 or 8 bytes   | -2,147,483,648 to 2,147,483,647 (4 bytes)               |
+| `unsigned long`       | 4 or 8 bytes   | 0 to 4,294,967,295 (4 bytes)                            |
+| `long long`           | 8 bytes        | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+| `unsigned long long`  | 8 bytes        | 0 to 18,446,744,073,709,551,615                         |
+| `float`               | 4 bytes        | Approximately 1.2E-38 to 3.4E+38 (7 digits precision)   |
+| `double`              | 8 bytes        | Approximately 2.3E-308 to 1.7E+308 (15 digits precision)|
+| `long double`         | 8 or 16 bytes  | Varies, often 3.4E-4932 to 1.1E+4932 (19 digits precision)|
+
+
+Additional Notes:
+- The exact size and range can depend on the architecture, compiler, and whether the system is 32-bit or 64-bit. For instance, long on many Unix-like systems on 64-bit architectures is typically 8 bytes.
+- The size of long double can vary significantly between different systems and compilers.
+- char can be either signed or unsigned by default, which depends on the compiler and system settings. This affects whether char interprets its bits as ranging from -128 to 127 or 0 to 255.
+
+### Arithmetic Operations
+| Operator | Description        | Syntax        | Example        | Result Description          |
+|----------|--------------------|---------------|----------------|-----------------------------|
+| `+`      | Addition           | `a + b`       | `5 + 3`        | Adds `a` and `b`            |
+| `-`      | Subtraction        | `a - b`       | `5 - 3`        | Subtracts `b` from `a`      |
+| `*`      | Multiplication     | `a * b`       | `5 * 3`        | Multiplies `a` by `b`       |
+| `/`      | Division           | `a / b`       | `6 / 3`        | Divides `a` by `b`          |
+| `%`      | Modulus            | `a % b`       | `5 % 3`        | Remainder of `a` divided by `b` |
+| `++`     | Increment          | `a++` or `++a`| `a = 5; a++`   | Increments `a` by 1         |
+| `--`     | Decrement          | `a--` or `--a`| `a = 5; a--`   | Decrements `a` by 1         |
+
+#### Additional Notes:
+- **Division (`/`)**: When used with integers, this operation performs integer division (i.e., the fractional part is discarded). If either operand is a floating-point number, the division will result in a floating-point quotient.
+- **Modulus (`%`)**: Only applicable to integer types. It returns the remainder of dividing the first operand by the second operand.
+- **Increment (`++`)** and **Decrement (`--`)**: These operators can be used in two forms—postfix (`a++`, `a--`), where the operation is performed after the value is used in an expression, and prefix (`++a`, `--a`), where the operation is performed before the value is used.
+- **Important**: In the case of division by zero, the behavior is undefined in C.
+
+### Format Specifiers
+| Format Specifier | Description                                       | Data Type              |
+|------------------|---------------------------------------------------|------------------------|
+| `%d`             | Decimal integer                                  | `int`                  |
+| `%ld`            | Long decimal integer                             | `long`                 |
+| `%lld`           | Long long decimal integer                        | `long long`            |
+| `%u`             | Unsigned decimal integer                         | `unsigned int`         |
+| `%lu`            | Unsigned long decimal integer                    | `unsigned long`        |
+| `%llu`           | Unsigned long long decimal integer               | `unsigned long long`   |
+| `%o`             | Octal integer                                    | `int`                  |
+| `%lo`            | Long octal integer                               | `long`                 |
+| `%llo`           | Long long octal integer                          | `long long`            |
+| `%x` or `%X`     | Hexadecimal integer                              | `int`                  |
+| `%lx` or `%lX`   | Long hexadecimal integer                         | `long`                 |
+| `%llx` or `%llX` | Long long hexadecimal integer                    | `long long`            |
+| `%c`             | Character                                        | `char`                 |
+| `%s`             | String                                           | `char *`               |
+| `%f`             | Floating-point number (standard notation)        | `float` or `double`    |
+| `%e` or `%E`     | Floating-point number (scientific notation)      | `float` or `double`    |
+| `%g` or `%G`     | Floating-point number (compact notation)         | `float` or `double`    |
+| `%p`             | Pointer                                          | `void *`               |
+| `%n`             | Stores the number of characters written so far   | `int *`                |
+
+
+### `include<stdio.h>`
+The `#include <stdio.h>` directive is a preprocessor command in the C programming language that instructs the compiler to include the Standard Input/Output library, known as `stdio.h`, into a program before the actual compilation begins. This header file contains declarations of functions and macros that provide input and output facilities. Here’s a breakdown of its main components and functionalities:
+
+1. **Input/Output Functions**:
+   - `printf()`: Used to print the formatted output to the standard output (usually the screen).
+   - `scanf()`: Used for formatted input, it reads data from the standard input (usually the keyboard).
+   - `puts()`: Writes a string to stdout and appends a newline character.
+   - `gets()`: Reads a string from stdin until a newline character is encountered (not safe to use because of buffer overflow issues).
+
+2. **File Handling Functions**:
+   - `fopen()`: Opens a file and returns a pointer to a `FILE` object associated with the file name specified.
+   - `fclose()`: Closes an open file associated with a `FILE` pointer.
+   - `fprintf()`, `fscanf()`: Similar to `printf()` and `scanf()`, but these work with file streams.
+   - `fread()`, `fwrite()`: Used for reading and writing binary data to and from files.
+   - `feof()`, `ferror()`: Check for end-of-file or errors when reading from or writing to files.
+
+3. **Character Input/Output**:
+   - `fgetc()`, `getc()`, `getchar()`: Used for reading a single character from a file or standard input.
+   - `fputc()`, `putc()`, `putchar()`: Write a single character to a file or standard output.
+
+4. **Buffer Manipulation**:
+   - `setbuf()`, `setvbuf()`: Functions to set the buffer for a file stream, which can optimize I/O performance by reducing the number of actual input and output operations.
+
+5. **Error Handling**:
+   - `perror()`: Prints an error message to standard error, describing the last error encountered during a call to a standard I/O function.
+
+6. **Positioning**:
+   - `rewind()`, `fseek()`, `ftell()`: Functions to move the read/write position in a file.
+
+7. **Temporary Files**:
+   - `tmpfile()`, `tmpnam()`: Functions for creating temporary files and names, useful in situations where a short-lived file is needed without leaving traces on the file system.
+
+Including `stdio.h` in a C program is essential for performing standard input and output operations, which are fundamental to most applications. This header is part of the C Standard Library, included in the C Standard defined by the ISO/IEC 9899:2011 (commonly known as C11) and its predecessors. Using `#include <string.h>` for `fgets()`.
+
+### Math Functions
+Often includes `#include <math.h>`
+| Function           | Description                                  |
+|--------------------|----------------------------------------------|
+| `fabs(x)`          | Absolute value of `x`                        |
+| `ceil(x)`          | Smallest integer not less than `x`           |
+| `floor(x)`         | Largest integer not greater than `x`         |
+| `sqrt(x)`          | Square root of `x`                           |
+| `pow(x, y)`        | `x` raised to the power of `y`               |
+| `exp(x)`           | Exponential function (e^x)                   |
+| `log(x)`           | Natural logarithm (base `e`) of `x`          |
+| `log10(x)`         | Base 10 logarithm of `x`                     |
+| `sin(x)`           | Sine of `x` (in radians)                     |
+| `cos(x)`           | Cosine of `x` (in radians)                   |
+| `tan(x)`           | Tangent of `x` (in radians)                  |
+| `asin(x)`          | Arcsine of `x` (in radians)                  |
+| `acos(x)`          | Arccosine of `x` (in radians)                |
+| `atan(x)`          | Arctangent of `x` (in radians)               |
+| `sinh(x)`          | Hyperbolic sine of `x`                       |
+| `cosh(x)`          | Hyperbolic cosine of `x`                     |
+| `tanh(x)`          | Hyperbolic tangent of `x`                    |
+| `asinh(x)`         | Inverse hyperbolic sine of `x`               |
+| `acosh(x)`         | Inverse hyperbolic cosine of `x`             |
+| `atanh(x)`         | Inverse hyperbolic tangent of `x`            |
+| `fmod(x, y)`       | Floating-point remainder of `x/y`            |
+| `remainder(x, y)`  | Floating-point remainder of `x/y`            |
+| `hypot(x, y)`      | Euclidean distance function sqrt(x^2 + y^2)  |
+
+### if-else, switch
+
+| Statement             | Description                                                                                               |
+|-----------------------|-----------------------------------------------------------------------------------------------------------|
+| `if` statement        | Conditional statement that executes a block of code if the given condition is true.                       |
+| `if-else` statement   | Conditional statement that executes one block of code if the condition is true, and another if false.     |
+| `if-else if-else`     | Chain of conditional statements where each `else if` condition is evaluated only if previous conditions fail. |
+| `switch` statement    | Multi-way decision statement that evaluates an expression and executes code based on matching case labels.  |
+
+#### Usage Examples:
+
+##### `if` Statement:
+```c
+int x = 10;
+if (x > 0) {
+    printf("Positive\n");
+}
+```
+
+##### `if-else` Statement:
+```c
+int x = 0;
+if (x > 0) {
+    printf("Positive\n");
+} else {
+    printf("Non-positive\n");
+}
+```
+
+##### `if-else if-else` Statement:
+```c
+int x = 0;
+if (x > 0) {
+    printf("Positive\n");
+} else if (x < 0) {
+    printf("Negative\n");
+} else {
+    printf("Zero\n");
+}
+```
+
+##### `switch` Statement:
+```c
+int day = 3;
+switch (day) {
+    case 1:
+        printf("Monday\n");
+        break;
+    case 2:
+        printf("Tuesday\n");
+        break;
+    case 3:
+        printf("Wednesday\n");
+        break;
+    default:
+        printf("Invalid day\n");
+}
+```
+- Note the use of `break;` statements to stop continuation of the cases.
+
+### Logical Operators
+| Operator | Description                 | Example        | Result |
+|----------|-----------------------------|----------------|--------|
+| `&&`     | Logical AND                 | `a && b`       | True if both `a` and `b` are true, false otherwise |
+| `\|\|`   | Logical OR                  | `a \|\| b`     | True if at least one of `a` or `b` is true, false otherwise |
+| `!`      | Logical NOT (negation)      | `!a`           | True if `a` is false, false if `a` is true |
+
+##### Ternary Operator
+Shortcut to an if/else statement when assigning/returning a value.
+
+`condition ? expression1 : expression2`
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num = 10;
+    char* result = (num % 2 == 0) ? "even" : "odd";
+    printf("%d is %s\n", num, result); // 10 is even
+    return 0;
+}
+```
+
+### Functions
+User-defined functions are custom functions that you write to perform specific tasks, making your code modular, reusable, and easier to read. These functions allow you to break complex problems into smaller, manageable parts.
+
+#### User-Defined Functions
+User-defined functions are declared and defined by the programmer, specifying what operations the function will carry out. Each function typically performs a dedicated task that can be used throughout the program.
+
+**Structure of a User-Defined Function**:
+1. **Function Declaration/Prototype**: Introduces the function to the compiler before its actual implementation. It specifies the function's name, return type, and parameters (if any).
+2. **Function Definition**: Contains the actual body of the function—i.e., the code that executes when the function is called.
+3. **Function Call**: This is where you use the function in your code.
+
+#### Function Prototype
+> Note: many C compilers do not check for parameter matching
+
+A function prototype is a declaration of a function that specifies the function’s name, return type, and its parameters (type and order), but not the body. It tells the compiler what the function looks like. It allows the compiler to handle the function call correctly and is particularly useful for managing and maintaining code where functions are defined after they are called.
+
+**Syntax of a Function Prototype**:
+```c
+return_type function_name(type1 parameter1, type2 parameter2, ...);
+```
+
+#### Example: User-Defined Function with Prototype
+```c
+#include <stdio.h>
+
+// Function prototype
+int add(int, int);
+
+int main() {
+    int result = add(10, 20);
+    printf("The sum is: %d\n", result);
+    return 0;
+}
+
+// Function definition
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+In this example:
+- The function prototype for `add(int, int)` is declared before the `main()` function.
+- The function `add` is defined after `main`. It takes two integers, adds them, and returns the sum.
+- The prototype ensures that the compiler knows about the `add` function when it is called in `main`.
+
+#### Why Use Function Prototypes?
+- **Type Checking**: Function prototypes enable the compiler to perform type checks on the function arguments, reducing errors.
+- **Program Organization**: They help in organizing the program into logical blocks and can be declared in header files for use across multiple source files.
+- **Forward Declarations**: Useful in scenarios involving mutually recursive functions or when functions are defined in a different order than their calls.
+
+#### Best Practices
+- Always declare function prototypes at the beginning of your files or in a header file.
+- Match the function prototype with the function definition exactly to avoid any mismatch and compiler errors.
+- Use meaningful function names and parameter names to make your code self-explanatory.
+
+
+### String Functions
+| Function        | Description                                                     | Header       | Notes                                                                                         |
+|-----------------|-----------------------------------------------------------------|--------------|-----------------------------------------------------------------------------------------------|
+| `strlen()`      | Returns the length of a string excluding the null terminator    | `<string.h>` | Counts characters until the null terminator                                                  |
+| `strcpy()`      | Copies a string from source to destination                       | `<string.h>` | Destination must have enough space to hold the source string                                   |
+| `strncpy()`     | Copies a portion of a string from source to destination          | `<string.h>` | Allows you to specify the number of characters to copy                                         |
+| `strcat()`      | Concatenates two strings                                        | `<string.h>` | Appends the contents of the source string to the destination string                           |
+| `strncat()`     | Concatenates a portion of a string to another string             | `<string.h>` | Allows you to specify the number of characters to concatenate                                 |
+| `strcmp()`      | Compares two strings lexicographically                          | `<string.h>` | Returns 0 if strings are equal, negative value if str1 < str2, positive value if str1 > str2  |
+| `strncmp()`     | Compares a portion of two strings lexicographically              | `<string.h>` | Allows you to specify the number of characters to compare                                     |
+| `strchr()`      | Returns a pointer to the first occurrence of a character        | `<string.h>` | Searches for the first occurrence of the specified character in the string                    |
+| `strrchr()`     | Returns a pointer to the last occurrence of a character         | `<string.h>` | Searches for the last occurrence of the specified character in the string                     |
+| `strstr()`      | Returns a pointer to the first occurrence of a substring        | `<string.h>` | Searches for the first occurrence of the specified substring in the string                   |
+| `strtok()`      | Splits a string into tokens based on delimiters                  | `<string.h>` | Used for tokenizing strings                                                                   |
+| `sprintf()`     | Formats and stores a series of characters into a string          | `<stdio.h>`  | Similar to `printf()` but writes output to a string instead of stdout                         |
+| `snprintf()`    | Writes formatted data to a string with specified maximum length | `<stdio.h>`  | Same as `sprintf()` but specifies maximum length to prevent buffer overflow                   |
+| `strcmp()`      | Compares two strings lexicographically                          | `<string.h>` | Returns 0 if strings are equal, negative value if str1 < str2, positive value if str1 > str2  |
+| `strncmp()`     | Compares a portion of two strings lexicographically              | `<string.h>` | Allows you to specify the number of characters to compare                                     |
+| `strstr()`      | Returns a pointer to the first occurrence of a substring        | `<string.h>` | Searches for the first occurrence of the specified substring in the string                   |
+| `strtok()`      | Splits a string into tokens based on delimiters                  | `<string.h>` | Used for tokenizing strings                                                                   |
+| `sprintf()`     | Formats and stores a series of characters into a string          | `<stdio.h>`  | Similar to `printf()` but writes output to a string instead of stdout                         |
+| `snprintf()`    | Writes formatted data to a string with specified maximum length | `<stdio.h>`  | Same as `sprintf()` but specifies maximum length to prevent buffer overflow                   |
+
+### Loops
+| Loop            | Description                                                                                      |
+|-----------------|--------------------------------------------------------------------------------------------------|
+| `for` loop      | Executes a block of code a specified number of times, with initialization, condition, and increment/decrement expressions |
+| `while` loop    | Executes a block of code as long as the specified condition evaluates to true                    |
+| `do-while` loop | Executes a block of code at least once, and then repeatedly as long as the specified condition evaluates to true |
+
+#### Examples
+#### `for` Loop:
+```c
+#include <stdio.h>
+
+int main() {
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", i);
+    }
+    // Outputs: 0 1 2 3 4
+    return 0;
+}
+```
+
+#### `while` Loop:
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    while (i < 5) {
+        printf("%d ", i);
+        i++;
+    }
+    // Outputs: 0 1 2 3 4
+    return 0;
+}
+```
+
+#### `do-while` Loop:
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    do {
+        printf("%d ", i);
+        i++;
+    } while (i < 5);
+    // Outputs: 0 1 2 3 4
+    return 0;
+}
+```
+
+### Arrays
+Arrays in C are fundamental data structures that allow you to store multiple items of the same data type under a single variable name. Arrays provide a convenient way to access and manipulate collections of data systematically using an index. Here’s an in-depth exploration of arrays in C:
+
+#### Basics of Arrays
+An array is a collection of elements of the same type placed in contiguous memory locations. Each element in the array can be uniquely identified by an array index.
+
+##### Declaration
+To declare an array in C, you specify the type of its elements and the number of elements required by it:
+
+```c
+int arr[10]; // Declares an array of ten integers
+```
+
+##### Initialization
+Arrays can be initialized at the time of declaration. If some elements are initialized, the rest will be automatically initialized to the default zero value of the declared type.
+
+```c
+int arr[5] = {1, 2, 3}; // Initializes the first three elements, others set to 0
+```
+
+If you provide an initializer list with fewer values than the size of the array, the remaining elements are set to zero:
+
+```c
+int arr[5] = {1, 2}; // Output: arr = {1, 2, 0, 0, 0}
+```
+
+You can also omit the size of the array if you initialize it at declaration:
+
+```c
+int arr[] = {1, 2, 3, 4, 5}; // The compiler will size the array as 5
+```
+
+##### Accessing Array Elements
+Array elements are accessed using the subscript (index) notation. The index of the first element is 0, the second element is 1, and so forth.
+
+```c
+arr[0] = 10; // Set the first element
+int x = arr[1]; // Read the second element
+```
+
+#### Properties of Arrays
+- **Fixed Size**: Once declared, the size of the array cannot be changed.
+- **Contiguous Memory Allocation**: Elements are stored in contiguous memory locations, which allows efficient access using indices.
+- **Index Based Access**: Elements are accessed using indices, which are zero-based.
+
+#### Multidimensional Arrays
+C supports multidimensional arrays, which are arrays of arrays. The most common type is the two-dimensional array.
+
+```c
+int matrix[3][4]; // Declare a 2D array (3 rows and 4 columns)
+```
+
+Initialize a 2D array:
+
+```c
+int matrix[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+```
+
+Access elements in a 2D array:
+
+```c
+int value = matrix[0][2]; // Accesses the third element of the first row
+```
+
+#### Dynamic Arrays
+While C does not directly support dynamic arrays as part of its standard array data structure, you can simulate them using pointers and memory management functions (`malloc`, `realloc`).
+
+```c
+int* arr = malloc(10 * sizeof(int)); // Dynamically allocated array of 10 integers
+if (arr != NULL) {
+    arr[0] = 1; // Set the first element
+    // Use the array
+    free(arr); // Don't forget to free the allocated memory
+}
+```
+
+#### Limitations and Considerations
+- **No Bounds Checking**: C does not perform bounds checking on arrays. Accessing out-of-bounds elements can lead to undefined behavior and potential security risks, such as buffer overflows.
+- **Fixed Length**: The length of a static array is determined at compile-time and cannot be modified at runtime.
+
+Arrays are a powerful, low-level data structure that forms the basis for more complex data structures in C and other programming languages. They allow efficient data storage and access but require careful management to avoid common pitfalls such as buffer overflows.
+
+
+
+### Final Practice
+Complete the following functions to generate different sequences of numbers:
+
+- `int* Fibonacci(int n)`
+  - Create an array of integers and size n
+  - Fill in the array with the first n Fibonacci numbers. The Fibonacci sequence begins with 0 and then 1 follows. All subsequent values are the sum of the previous two, ex: 0, 1, 1, 2, 3, 5, 8, 13.
+  - Return the array
+- `int* Squares(int n)`
+  - Create an array of integers and size n
+  - Fill in the array with the squares of 1 to n (inclusive). Ex: 1, 4, 9, …, n2
+  - Return the array
+- `int* Concatenate(int* array1, int size1, int* array2, int size2)`
+  - Create an array of integers and size = size1 + size2
+  - Fill in the array with the elements of array1 followed by the elements of array2
+  - Return the array
+  - main() reads the size of the Fibonacci and the squares sequences and calls the three functions above to create the arrays. Then main() calls PrintArray() provided in the template to print the arrays.
+
+Ex: If the input is:
+
+```
+6 4
+```
+the output is:
+
+```
+0 1 1 2 3 5 
+1 4 9 16 
+0 1 1 2 3 5 1 4 9 16
+```
+> My Interpretation: 
+
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+void PrintArray(int* array, int size) {
+   for (int j = 0; j < size; ++j) {
+      printf("%d ", array[j]);
+   }
+}
+
+// Return the first n Fibonacci numbers
+int* Fibonacci(int n) {
+   int* seq = malloc(n * sizeof(int)); // Allocate memory for n integers
+   if (n > 0) seq[0] = 0; // First Fibonacci number
+   if (n > 1) seq[1] = 1; // Second Fibonacci number
+
+   for (int j = 2; j < n; ++j) {
+      seq[j] = seq[j - 1] + seq[j - 2];
+   }
+
+   return seq;
+}
+
+// Return sequence of squares for 1..n (inclusive)
+int* Squares(int n) {
+   int* seq = malloc(n * sizeof(int)); // Allocate memory for n integers
+
+   for (int j = 0; j < n; ++j) {
+      seq[j] = (j + 1) * (j + 1); // Square of (j + 1)
+   }
+
+   return seq;
+}
+
+// Return an array that is a copy of array1 followed by the elements of array2
+int* Concatenate(int* array1, int size1, int* array2, int size2) {
+   int* seq = malloc((size1 + size2) * sizeof(int)); // Allocate memory for size1 + size2 integers
+
+   for (int j = 0; j < size1; ++j) {
+      seq[j] = array1[j]; // Copy elements of array1
+   }
+   for (int j = 0; j < size2; ++j) {
+      seq[size1 + j] = array2[j]; // Copy elements of array2
+   }
+
+   return seq;
+}
+
+int main(void) {
+
+   int fibn; // Number of Fibonacci numbers
+   int sqrn; // Number of squares
+   scanf("%d %d", &fibn, &sqrn);
+
+   int* fibs;
+   int* sqrs;
+   int* conc;
+
+   fibs = Fibonacci(fibn);
+   PrintArray(fibs, fibn);
+   printf("\n");
+
+   sqrs = Squares(sqrn);
+   PrintArray(sqrs, sqrn);
+   printf("\n");
+
+   conc = Concatenate(fibs, fibn, sqrs, sqrn);
+   PrintArray(conc, fibn + sqrn);
+   printf("\n");
+
+   // Free the dynamically allocated memory
+   free(fibs);
+   free(sqrs);
+   free(conc);
+
+   return 0;
+}
+```
+
+Program Breakdown:
+
+1. **Including Headers and Defining Functions:**
+   - `#include <stdio.h>`: This includes the Standard Input Output header file, allowing the use of input/output functions like `printf` and `scanf`.
+   - `#include <stdlib.h>`: This includes the Standard Library header file, which is necessary for memory allocation and management functions such as `malloc` and `free`.
+
+2. **PrintArray Function:**
+   - `void PrintArray(int* array, int size)`: This function takes a pointer to an integer array and the size of the array as arguments. It iterates through the array and prints each element followed by a space. This function is used to output the results of the various sequences generated in the program.
+
+3. **Fibonacci Function:**
+   - `int* Fibonacci(int n)`: This function generates the first `n` Fibonacci numbers and returns a pointer to the array containing these numbers. Memory for `n` integers is allocated using `malloc`. The Fibonacci sequence starts with 0 and 1, and every subsequent number is the sum of the two preceding ones. The function fills the array accordingly and returns it.
+
+4. **Squares Function:**
+   - `int* Squares(int n)`: This function calculates the squares of integers from 1 to `n` and returns a pointer to the array containing these square numbers. Memory for `n` integers is allocated, and each element at index `j` is set to `(j+1)*(j+1)`.
+
+5. **Concatenate Function:**
+   - `int* Concatenate(int* array1, int size1, int* array2, int size2)`: This function takes two arrays and their sizes as input, allocates memory for a new array that can hold the contents of both input arrays, and then fills this new array first with the elements of `array1` and then with `array2`. It returns a pointer to the concatenated array.
+
+6. **Main Function:**
+   - `int main(void)`: This is the main function where execution begins. The user is prompted to enter two integers, `fibn` and `sqrn`, which represent the number of Fibonacci numbers and square numbers to be generated, respectively.
+   - The Fibonacci numbers for `fibn` and the square numbers for `sqrn` are generated by calling `Fibonacci(fibn)` and `Squares(sqrn)`. The results are stored in dynamically allocated arrays `fibs` and `sqrs`.
+   - The `PrintArray` function is called three times to print the Fibonacci sequence, the square numbers, and their concatenated result.
+   - Memory cleanup is performed using `free` to release the dynamically allocated memory for `fibs`, `sqrs`, and the concatenated array `conc`.
+
+7. **Memory Management:**
+   - The program carefully manages memory using `malloc` for allocation and `free` for deallocation, ensuring no memory leaks occur.

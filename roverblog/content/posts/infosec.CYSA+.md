@@ -37,6 +37,7 @@ hidemeta = false
     - [Internal, External, Credentialed, non-Credentialed, Active, and Passive Scans](#internal-external-credentialed-non-credentialed-active-and-passive-scans)
       - [Active/Passive Scans](#activepassive-scans)
       - [Code Analysis: Static/Dynamic](#code-analysis-staticdynamic)
+  - [Vulnerability Management Reporting](#vulnerability-management-reporting)
 - [Core Content](#core-content)
 
 # Security Operations
@@ -129,6 +130,9 @@ Static, or source code analysis, analyzes code before compilation using Static A
 **Interception Proxy**: Man-in-the-Middle attack which crawls application
 
 Tools: Nmap, Zenmap, Nessus, OSWAP Zap, Metasploit
+
+# Reporting
+## Vulnerability Management Reporting
 
 # Core Content
 Skip to main content

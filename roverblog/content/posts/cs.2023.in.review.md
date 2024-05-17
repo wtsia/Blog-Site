@@ -14,15 +14,15 @@ categories = [
 ]
 math = true
 notaxonomy = false
-images = ["/img/<folder>/example.jpg"]
-imagetext = "An example text for an image you could add!"
 hidden = true
 norobots = true
 nodate = true
 hidemeta = false
 +++
 
-![Replacement Text](/rover/img/<topic>/<image>.png)
+Based on the [2023 StackOverflow Survey](https://survey.stackoverflow.co/2023/#technology)
 
 # Contents
 - [Contents](#contents)
+
+Most popular languages
