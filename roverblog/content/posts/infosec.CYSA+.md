@@ -37,6 +37,18 @@ hidemeta = false
     - [Internal, External, Credentialed, non-Credentialed, Active, and Passive Scans](#internal-external-credentialed-non-credentialed-active-and-passive-scans)
       - [Active/Passive Scans](#activepassive-scans)
       - [Code Analysis: Static/Dynamic](#code-analysis-staticdynamic)
+- [Attack Models and Responses](#attack-models-and-responses)
+  - [Attack Models](#attack-models)
+    - [Cyber Kill Chain](#cyber-kill-chain)
+    - [Diamond Model of Intrusion Analysis](#diamond-model-of-intrusion-analysis)
+      - [Adversary](#adversary)
+      - [Victim](#victim)
+    - [MITRE ATT\&CK](#mitre-attck)
+    - [Open Source Security Testing Methodology Manual (OSSTMM)](#open-source-security-testing-methodology-manual-osstmm)
+    - [Open Web Application Security Project (OWASP)](#open-web-application-security-project-owasp)
+      - [OWASP ESAPI (Enterprise Security API)](#owasp-esapi-enterprise-security-api)
+      - [OWASP ESAPI](#owasp-esapi)
+      - [OWASP ModSecurity](#owasp-modsecurity)
 - [Core Content](#core-content)
 
 # Security Operations
@@ -129,6 +141,59 @@ Static, or source code analysis, analyzes code before compilation using Static A
 **Interception Proxy**: Man-in-the-Middle attack which crawls application
 
 Tools: Nmap, Zenmap, Nessus, OSWAP Zap, Metasploit
+
+
+# Attack Models and Responses
+## Attack Models
+### Cyber Kill Chain
+| Stage               | Description                                                                 |
+|---------------------|-----------------------------------------------------------------------------|
+| Reconnaissance (Recon) | The attacker gathers information about the target, such as vulnerabilities, network architecture, and potential entry points. |
+| Weaponization       | The attacker creates or obtains the necessary tools or exploits to carry out the attack based on the information gathered during reconnaissance. |
+| Delivery            | The attacker delivers the weaponized payload to the target system or network. This could be through various means such as email attachments, compromised websites, or physical access. |
+| Exploitation       | The attacker exploits vulnerabilities in the target system or network using the delivered payload to gain unauthorized access or execute malicious code. |
+| Installation        | The attacker installs malware or establishes a persistent presence within the compromised system or network, ensuring continued access and control. |
+| Command & Control (C&C) | The attacker establishes communication channels and infrastructure to remotely manage and control the compromised systems, enabling further malicious activities. |
+| Action              | The attacker executes their intended objectives, which could range from data theft and surveillance to system disruption or destruction. |
+
+### Diamond Model of Intrusion Analysis
+
+| Actor             | Infrastructure        | Capability       |
+|-------------------|-----------------------|------------------|
+| **Adversary**    | TTPs (Tactics, Techniques, Procedures) | Tools & Methods |
+| **Victim**       | Targeted Infrastructure             | Vulnerabilities  |
+
+#### Adversary
+- **TTPs (Tactics, Techniques, Procedures):** Methods employed by the adversary to carry out the attack, including reconnaissance, weaponization, delivery, exploitation, installation, command & control, and action.
+- **Tools & Methods:** The specific tools, malware, or techniques used by the adversary, such as exploit kits, phishing emails, remote access trojans (RATs), etc.
+
+#### Victim
+- **Targeted Infrastructure:** Systems, networks, or assets targeted by the adversary for exploitation or compromise.
+- **Vulnerabilities:** Weaknesses or flaws in the victim's infrastructure that the adversary exploits to gain unauthorized access or achieve their objectives.
+
+### MITRE ATT&CK
+
+### Open Source Security Testing Methodology Manual (OSSTMM)
+
+### Open Web Application Security Project (OWASP)
+| Security Practice                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|-----------|----------|
+| Incorporate Security Early and Throughout the Software Development Lifecycle (SDLC) | Integrate security practices from the beginning of the development process and throughout all stages, including design, development, testing, and deployment.                                                                                                                                                                                                                                                                                    |
+| Perform Regular Security Assessments and Audits                       | Conduct regular security assessments, including penetration testing, code reviews, and vulnerability assessments to identify and address security issues.                                                                                                                                                                                                                                                                                           |
+| Input Validation                                                      | Ensure all user input is validated for type, length, format, and range. This helps prevent injection attacks like SQL Injection and Cross-Site Scripting (XSS).                                                                                                                                                                                                                                                                                |
+| Output Encoding and Escaping                                          | Properly encode or escape data output to the user to prevent XSS attacks and ensure that user-supplied data is rendered safely.                                                                                                                                                                                                                                                                                                                   |
+| Implement Proper Authentication and Session Management                | Use strong authentication mechanisms and ensure that session management is secure to prevent attacks like session hijacking and fixation.                                                                                                                                                                                                                                                                                                           |
+| Enforce Strong Access Control Measures                                | Implement robust access control policies to ensure users can only access resources and perform actions that they are authorized to.                                                                                                                                                                                                                                                                                                                 |
+| Protect Data in Transit and at Rest                                   | Use encryption, such as TLS, for data in transit and encrypt sensitive data at rest to protect it from unauthorized access.                                                                                                                                                                                                                                                                                                                        |
+| Error Handling and Logging                                            | Implement proper error handling to avoid revealing sensitive information in error messages. Ensure that logs capture sufficient information for security monitoring but do not contain sensitive data.                                                                                                                                                                                                                                                |
+#### OWASP ESAPI (Enterprise Security API)
+The OWASP Enterprise Security API (ESAPI) is a free, open-source, web application security control library. Its primary goal is to provide developers with a way to write lower-risk applications by offering a set of security controls that help prevent vulnerabilities in the code.
+
+#### OWASP ESAPI 
+Includes functions for authentication, access control, data validation, encoding, and encryption. It is designed to be easily adaptable to fit the specific needs of applications. It also assists developers in writing more secure code by providing a set of well-tested security functions.
+
+#### OWASP ModSecurity
+ModSecurity is an open-source, cross-platform web application firewall (WAF) engine. It provides protection from a range of attacks against web applications and allows for HTTP traffic monitoring, logging, and real-time analysis. The platform uses a flexible rule engine to perform various types of checks. It offers virtual patching capabilities to mitigate vulnerabilities quickly. OWASP ModSecurity platform allows the creation of custom rules tailored to specific applications. It immensely helps in monitoring HTTP traffic and provides detailed logging for analysis.
 
 # Core Content
 Skip to main content
