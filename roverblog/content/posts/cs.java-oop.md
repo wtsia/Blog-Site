@@ -52,7 +52,9 @@ hidemeta = false
     - [Mutable vs Immutable Objects](#mutable-vs-immutable-objects)
       - [Aliasing](#aliasing)
 - [Summary So Far](#summary-so-far-1)
-    - [Loops](#loops)
+  - [General](#general)
+  - [Loops](#loops)
+  - [Objects](#objects-1)
 - [Objects and Classes: Introduction](#objects-and-classes-introduction)
     - [Operator](#operator)
     - [Methods:](#methods)
@@ -479,6 +481,7 @@ Rectangle box2 = box1;
 ```
 
 # Summary So Far
+## General
 - Definition of methods besides the main method
   - A method  is a list of statements executed by invoking the method's name (this is known as a method call). There are user defined methods and built in methods.
     - i.e. `sqrt(x), pow(x,y), abs(x)`
@@ -545,9 +548,10 @@ switch (userVal) {
       break;
 }
 ```
-### Loops
+## Loops
 - for and for-each (Find: **Enhanced Loops**)
 - while and do-while (Find: **Do/While Loop**)
+## Objects
 - Mutable and Immutable Objects
   - Mutable: can be changed
     - `StringBuilder`, `Point origin`, `Point blank`, `double dist`
@@ -581,6 +585,8 @@ public class myObject {
   - use Eclipse to generate default Swing application (Final Lab):
     - File>>New>>Create Java Project>>New>>Project Explorer>>New>>Other>>Swing Designer>>Application Window
 - It is helpful to review Discussion posts, homework assignments, group projects and quizzes.
+
+
 
 # Objects and Classes: Introduction
 ### Operator
@@ -776,7 +782,8 @@ public boolean Object(Employee e) {
 }
 ```
 
-# [Algorithms](./posts/cs.0.algorithms)
+# Algorithms
+[Algorithms notes](./posts/cs.0.algorithms)
 ## O-Notation
 [O-Notation notes](./posts/cs.algorithm-analysis)
 

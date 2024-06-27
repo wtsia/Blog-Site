@@ -93,6 +93,19 @@ hidemeta = false
       - [Example Uses of Pointers](#example-uses-of-pointers)
       - [Table of Pointer Operations](#table-of-pointer-operations)
       - [Key Points](#key-points)
+  - [Combinatorial Logic](#combinatorial-logic)
+    - [Boolean Laws](#boolean-laws)
+      - [1. Identity Laws](#1-identity-laws)
+      - [2. Null Laws](#2-null-laws)
+      - [3. Idempotent Laws](#3-idempotent-laws)
+      - [4. Dominance Laws](#4-dominance-laws)
+      - [5. Complement Laws](#5-complement-laws)
+      - [6. Commutative Laws](#6-commutative-laws)
+      - [7. Associative Laws](#7-associative-laws)
+      - [8. Distributive Laws](#8-distributive-laws)
+      - [9. Absorption Laws](#9-absorption-laws)
+      - [10. Involution Law](#10-involution-law)
+      - [11. De Morgan's Theorems](#11-de-morgans-theorems)
     - [Final Practice](#final-practice)
 
 # CPU Architecture
@@ -721,7 +734,54 @@ Pointers in C are fundamental to programming in this language, providing powerfu
 
 Understanding and using pointers effectively is crucial for developing efficient and powerful C programs, as they provide direct access to memory and facilitate complex data structures like linked lists, trees, and more.
 
+## Combinatorial Logic
+Boolean algebra is a branch of algebra that deals with binary variables and logical operations. It forms the basis for designing and analyzing digital circuits and systems. Here are the fundamental properties of Boolean algebra that are commonly used:
 
+### Boolean Laws
+#### 1. Identity Laws
+- **Identity Law for OR**: \( A + 0 = A \)
+- **Identity Law for AND**: \( A \cdot 1 = A \)
+
+#### 2. Null Laws
+- **Null Law for OR**: \( A + 1 = 1 \)
+- **Null Law for AND**: \( A \cdot 0 = 0 \)
+
+#### 3. Idempotent Laws
+- **Idempotent Law for OR**: \( A + A = A \)
+- **Idempotent Law for AND**: \( A \cdot A = A \)
+
+#### 4. Dominance Laws
+- **Dominance Law for OR**: \( A + 1 = 1 \)
+- **Dominance Law for AND**: \( A \cdot 0 = 0 \)
+
+#### 5. Complement Laws
+- **Complement Law for OR**: \( A + A' = 1 \)
+- **Complement Law for AND**: \( A \cdot A' = 0 \)
+
+#### 6. Commutative Laws
+- **Commutative Law for OR**: \( A + B = B + A \)
+- **Commutative Law for AND**: \( A \cdot B = B \cdot A \)
+
+#### 7. Associative Laws
+- **Associative Law for OR**: \( (A + B) + C = A + (B + C) \)
+- **Associative Law for AND**: \( (A \cdot B) \cdot C = A \cdot (B \cdot C) \)
+
+#### 8. Distributive Laws
+- **Distributive Law for OR over AND**: \( A + (B \cdot C) = (A + B) \cdot (A + C) \)
+- **Distributive Law for AND over OR**: \( A \cdot (B + C) = (A \cdot B) + (A \cdot C) \)
+
+#### 9. Absorption Laws
+- **Absorption Law for OR**: \( A + AB = A \)
+- **Absorption Law for AND**: \( A(A + B) = A \)
+
+#### 10. Involution Law
+- **Involution**: \( (A')' = A \)
+
+#### 11. De Morgan's Theorems
+- **De Morgan's for OR**: \( (A + B)' = A' \cdot B' \)
+- **De Morgan's for AND**: \( (A \cdot B)' = A' + B' \)
+
+These properties and theorems are instrumental in simplifying Boolean expressions, which can reduce the complexity of logic circuits. They are also essential for proving equivalences between different Boolean expressions or circuits, which is a critical task in digital logic design and optimization.
 
 
 ### Final Practice
