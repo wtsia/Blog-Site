@@ -27,6 +27,9 @@ hidemeta = false
 # Contents
 - [Contents](#contents)
 - [Security Operations](#security-operations)
+    - [ELK Stack](#elk-stack)
+    - [Agents](#agents)
+    - [Use in a Homelab](#use-in-a-homelab)
   - [Operating System Concepts](#operating-system-concepts)
 - [Threat Hunting Concepts/Tools](#threat-hunting-conceptstools)
   - [Windows Event Logging with PowerShell Script](#windows-event-logging-with-powershell-script)
@@ -52,6 +55,30 @@ hidemeta = false
 - [Core Content](#core-content)
 
 # Security Operations
+ELK and agents are essential components for monitoring and analyzing network traffic and system logs to enhance security.
+
+### ELK Stack
+**ELK** stands for Elasticsearch, Logstash, and Kibana, which are three open-source tools used together for searching, analyzing, and visualizing log data in real time.
+
+- **Elasticsearch** is a highly scalable search engine that allows for the storage, search, and analysis of large volumes of data quickly and in near real time.
+- **Logstash** is a server‑side data processing pipeline that ingests data from multiple sources simultaneously, transforms it, and then sends it to a "stash" like Elasticsearch.
+- **Kibana** is a visualization layer that works on top of Elasticsearch, providing users with the ability to visualize data with charts and graphs and perform advanced data analysis.
+
+### Agents
+In the ELK context, **agents** refer to lightweight data shippers that you install on different servers in your network to send specific types of log data or metrics to Logstash or directly to Elasticsearch. These are often crucial for gathering the necessary data from various sources, which then becomes searchable and analyzable via the ELK stack. Some common agents used with ELK include:
+
+- **Filebeat**: A lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+- **Metricbeat**: This agent collects metrics from your systems and services. From CPU to memory, Redis to NGINX, and much more, Metricbeat is a lightweight way to send system and service statistics.
+
+### Use in a Homelab
+In a cybersecurity homelab, using ELK with these agents can help you simulate and monitor security incidents. For example, you can:
+- Gather logs from all your network devices to a central location to analyze potential security breaches or anomalies.
+- Set up dashboards in Kibana to visualize network traffic, login attempts, and other security-related events in real-time.
+- Experiment with rules and filters in Logstash to detect unusual activities or configurations that could indicate a security issue.
+
+Setting up an ELK stack in your homelab involves planning the network architecture to ensure all critical data points are covered by agents, configuring Elasticsearch to handle the data influx, designing Logstash filters for data processing, and building dashboards in Kibana to analyze the data effectively. This setup gives hands-on experience with real tools used in enterprise environments, enhancing your understanding and skills in network security monitoring and incident response.
+
+
 ## Operating System Concepts
 - Hardware Abstraction
 - Process Management: Process, Threads, Scheduling, Synchronization, Multitasking, Process Isolation

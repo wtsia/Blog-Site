@@ -39,6 +39,21 @@ hidemeta = false
   - [HTTP](#http)
   - [Best Practices for API Security](#best-practices-for-api-security)
   - [API Security Specifications](#api-security-specifications)
+  - [OAuth 2.0](#oauth-20)
+    - [Learning Objectives](#learning-objectives)
+    - [Key Points](#key-points-1)
+  - [OpenID Connect](#openid-connect)
+    - [1. OpenID Connect as an Authentication Layer](#1-openid-connect-as-an-authentication-layer)
+    - [2. Identity as a Resource](#2-identity-as-a-resource)
+    - [3. OpenID Connect's Authentication Flow](#3-openid-connects-authentication-flow)
+    - [4. General Specifications of the OpenID Connect Protocol Suite](#4-general-specifications-of-the-openid-connect-protocol-suite)
+    - [Conclusion](#conclusion)
+- [OAuth 2.0 Threats](#oauth-20-threats)
+    - [OAuth 2.0 Threat Models](#oauth-20-threat-models)
+      - [1. **Client Threat Models**](#1-client-threat-models)
+      - [2. **Endpoint Threat Models**](#2-endpoint-threat-models)
+      - [3. **Token Threat Models**](#3-token-threat-models)
+    - [Additional Measures and Resources](#additional-measures-and-resources)
 
 # Introduction
 ## Outcomes
@@ -60,7 +75,7 @@ hidemeta = false
 6. Overflow: overwriting fragments of processes 
 
 ### API Security Top 10
-These are common security vulnerabilities and issues that can specifically affect APIs (Application Programming Interfaces). Let's explore each of them in the context of API security:
+These are common security vulnerabilities and issues that can specifically affect APIs (Application Programming Interfaces):
 
 1. **Broken Object Level Authorization**:
    
@@ -218,3 +233,138 @@ HTTP provides access authentication--servers reject unauthorized access and chal
 ## API Security Specifications
 - OAuth Authorization
 - OpenID Connect Authentication
+
+## OAuth 2.0
+### Learning Objectives
+
+1. **Explain the purpose of OAuth 2.0 as a framework for authorization**:
+   - **Definition**: OAuth 2.0 is an open standard for access delegation, commonly used as a way to grant websites or applications limited access to user information without exposing passwords. It allows third-party services to exchange data on behalf of the user.
+   - **Purpose**: The main goal of OAuth 2.0 is to allow users to grant applications access to their resources on other services without sharing their credentials (username and password).
+
+2. **Describe the authorization code flow**:
+   - **Definition**: The authorization code flow is a type of OAuth 2.0 grant. It is used to obtain an authorization code, which is then exchanged for an access token.
+   - **Steps**:
+     1. The client application directs the user to the authorization server.
+     2. The user authenticates and authorizes the client.
+     3. The authorization server redirects the user back to the client with an authorization code.
+     4. The client application exchanges the authorization code for an access token at the authorization server.
+
+3. **Summarize and compare four different authorization grant types**:
+   - **Authorization Code**: Used for server-side applications. Involves exchanging an authorization code for an access token.
+   - **Implicit**: Used for mobile or web applications. Directly issues an access token without an authorization code.
+   - **Resource Owner Password Credentials**: Used when the application has a high degree of trust. The user provides their credentials (username and password) directly to the application.
+   - **Client Credentials**: Used when the client is acting on its own behalf. The application authenticates with the authorization server directly.
+
+4. **Describe the current challenges of OAuth 2.0 implementation**:
+   - **Challenges**:
+     - **Security**: Ensuring secure transmission and storage of tokens.
+     - **Complexity**: Implementing OAuth 2.0 correctly can be complex and error-prone.
+     - **Token Expiry and Refresh**: Managing token expiration and refreshing tokens securely.
+     - **Interoperability**: Ensuring compatibility between different implementations and services.
+
+### Key Points
+
+The OAuth 2.0 authorization code flow involves the following roles and components:
+
+1. **Resource Owner (End User)**:
+   - The user who owns the data or resources and grants access to them.
+
+2. **Client Application**:
+   - The application requesting access to the user's resources.
+
+3. **Authorization Server**:
+   - The server that authenticates the resource owner and issues access tokens to the client application.
+
+4. **Resource Server and APIs**:
+   - The server hosting the protected resources, capable of accepting and responding to protected resource requests using access tokens.
+
+There are four grant types available in OAuth 2.0:
+
+1. **Authorization Code**:
+   - Suitable for server-side applications. It involves obtaining an authorization code which is then exchanged for an access token.
+
+2. **Implicit**:
+   - Used for public clients like single-page applications (SPA). Directly issues an access token, often considered less secure than the authorization code flow.
+
+3. **Resource Owner Password Credentials**:
+   - The resource owner provides their username and password directly to the client application, which then exchanges these credentials for an access token. Used when there is a high degree of trust between the resource owner and the client.
+
+4. **Client Credentials**:
+   - Used when the client application needs to access resources or perform actions on its own behalf rather than on behalf of a user. The client authenticates directly with the authorization server to obtain an access token.
+
+## OpenID Connect
+### 1. OpenID Connect as an Authentication Layer
+**OpenID Connect** is a simple identity layer on top of the OAuth 2.0 protocol. It allows clients to verify the identity of an end-user based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the end-user in an interoperable and REST-like manner.
+
+**Example:** When a user logs into a service like Spotify using their Google account, OpenID Connect allows Spotify to authenticate the user's identity through Google without needing the user's password. This process uses tokens (ID tokens specifically) issued by Google to confirm identity securely.
+
+### 2. Identity as a Resource
+In the context of OpenID Connect, **identity is treated as a resource**. This means that a user's identity information (like their username, email, or profile details) is considered a resource that can be accessed with the user's permission, typically through secure tokens.
+
+**Example:** A third-party application (like a travel booking site) might request access to your email and basic profile to autofill your details. This access is granted after your consent and managed through tokens.
+
+### 3. OpenID Connect's Authentication Flow
+**Authentication Flow** refers to the steps involved in authenticating a user and providing the client application access to the user's identity data.
+
+**Example of Authentication Flow:**
+- **User requests to log in** using a social identity provider (like Facebook).
+- **Client application redirects** to the identity provider.
+- **User authenticates** themselves on the identity provider's page.
+- The **identity provider issues an ID token and access token** to the client application.
+- The client application **decodes the ID token** to verify the user's identity and can use the access token to retrieve user details.
+
+### 4. General Specifications of the OpenID Connect Protocol Suite
+**OpenID Connect Protocol Suite** is divided into three levels of implementation: **Minimal, Dynamic, and Complete**.
+- **Minimal:** Basic ID token and user info endpoint functionality.
+- **Dynamic:** Adds discovery and dynamic client registration capabilities.
+- **Complete:** Includes session management and additional security features.
+
+**Example of a Complete Implementation:**
+A financial service application implementing OpenID Connect for secure transactions may use the complete suite to ensure robust security, session management, and dynamic client registrations, adapting to the varying needs of both the application and its users.
+
+### Conclusion
+Understanding these aspects of OpenID Connect helps in implementing secure and efficient user authentication systems that protect identities and provide seamless integration across different services. Each level of implementation in the protocol suite offers varying complexities and security features, suited for different use cases in applications.
+
+
+# OAuth 2.0 Threats
+The documents you provided outline various threat models associated with OAuth 2.0, a popular framework for authorization. Below, I will detail the different types of threat models mentioned and offer examples and recommendations for mitigating these threats.
+
+### OAuth 2.0 Threat Models
+#### 1. **Client Threat Models**
+   **Examples**:
+   - **Attacker obtaining client secrets**: This could happen if an attacker gains access to the source code where client secrets are hard-coded.
+   - **Attacker obtaining access and refresh tokens**: This might occur via interception of tokens during transmission, especially over insecure networks.
+   - **Phishing for credentials**: An attacker could spoof a login page to steal user credentials.
+   - **Open redirection**: Manipulating the redirect URIs that are not correctly validated by the client, leading users to malicious websites.
+
+   **Recommendation**: Implement robust application access control mechanisms and validate all redirection URIs to prevent unauthorized access and redirects.
+
+#### 2. **Endpoint Threat Models**
+   **Examples**:
+   - **Phishing by counterfeit authorization server**: An attacker mimics a legitimate authorization server to steal credentials.
+   - **Interception of traffic to resource server**: Attackers might intercept sensitive data by compromising network security.
+   - **Malicious client obtains existing authorization**: An attacker uses fraudulent means to gain access to tokens or secrets.
+   - **Open redirection**: Similar to client threat models, this involves redirecting users to unintended and potentially harmful destinations.
+
+   **Recommendation**: Use technologies such as Certificate Pinning and Proof Key for Code Exchange (PKCE) to enhance security.
+
+#### 3. **Token Threat Models**
+   **Examples**:
+   - **Eavesdropping access tokens**: Interception of tokens during transmission over insecure connections.
+   - **Obtaining access tokens from authorization server database**: An attacker could breach the database storing these tokens.
+   - **Disclosure of client credentials during transmission**: Unsecured transmission can expose client secrets.
+   - **Obtaining client secret by online guessing**: Poor security practices might allow attackers to guess secrets.
+
+   **Recommendation**: Implement Token Binding and enhance database security to protect tokens and secrets.
+
+### Additional Measures and Resources
+
+The documents also suggest multiple RFCs (Request for Comments) which are technical documents used by the engineering and computer science communities to define protocols, processes, and methodologies for the Internet. These include:
+
+- **RFC 6819** - Provides a thorough analysis of threat models specific to OAuth 2.0.
+- **RFC 7591** - Discusses dynamic client registration which can mitigate some threats by automating the client registration process securely.
+- **RFC 7636** - Describes PKCE, which enhances the security of OAuth 2.0 by preventing interception of the authorization code.
+
+These documents are part of an essential body of knowledge that helps define secure implementations of OAuth 2.0 and are useful for developers and security professionals looking to enhance the security of their applications.
+
+In practice, setting up OAuth securely involves understanding these threat models and actively implementing the recommendations. For example, using secure connections (HTTPS), regularly rotating secrets, and employing additional security measures like two-factor authentication can significantly reduce the risk of these threats. Monitoring and regularly updating the security practices in line with new findings and exploits are also crucial.
