@@ -34,12 +34,12 @@ Relevant References: [Neetcode](https://neetcode.io/)
   - [LeetCode Hard](#leetcode-hard)
 
 # Easy
-## [LeetCode Easy](./posts/cs.leetcode.easy)
+## [LeetCode Easy](../../posts/cs.leetcode.easy)
 
 # Medium
-## [LeetCode Medium](./posts/cs.leetcode.medium)
+## [LeetCode Medium](../../posts/cs.leetcode.medium)
 
 # Hard
-## [LeetCode Hard](./posts/cs.leetcode.hard)
+## [LeetCode Hard](../../posts/cs.leetcode.hard)
 
 
